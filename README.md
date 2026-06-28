@@ -3,7 +3,7 @@
 </p>
 
 
-# 🌌 Solas Billing
+Solas Billing
 
 > **The Zero-SDK LLM Billing Proxy & Credit Gating layer for AI startups.**
 > Re-route your client requests, track token costs in real-time, implement self-healing fallback providers, and auto-block requests on low credit balances instantly.
