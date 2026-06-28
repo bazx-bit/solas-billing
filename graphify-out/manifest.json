@@ -1,0 +1,127 @@
+{
+  "apps/dashboard/.oxlintrc.json": {
+    "mtime": 1782678399.3155713,
+    "ast_hash": "5e6e3cea3e89137071c142dd7835b0ef",
+    "semantic_hash": ""
+  },
+  "apps/dashboard/package.json": {
+    "mtime": 1782678499.0193336,
+    "ast_hash": "8660b2f2d725631cd202f0fc84ae1116",
+    "semantic_hash": ""
+  },
+  "apps/dashboard/src/App.jsx": {
+    "mtime": 1782678519.2636058,
+    "ast_hash": "070c9a42b082ac2b5038b9dc0f164172",
+    "semantic_hash": ""
+  },
+  "apps/dashboard/src/main.jsx": {
+    "mtime": 1782678523.1357753,
+    "ast_hash": "1a09784350cddbc4a2fddad944b24a91",
+    "semantic_hash": ""
+  },
+  "apps/dashboard/vite.config.js": {
+    "mtime": 1782678399.3097017,
+    "ast_hash": "88439104b3c207f17d33ef3160e3b080",
+    "semantic_hash": ""
+  },
+  "apps/server/db.js": {
+    "mtime": 1782678374.797303,
+    "ast_hash": "adb205d133ed610ee1a6d72588e59ba3",
+    "semantic_hash": ""
+  },
+  "apps/server/package.json": {
+    "mtime": 1782678431.143743,
+    "ast_hash": "b402aa5c1bfffc749647b6e6e7b32431",
+    "semantic_hash": ""
+  },
+  "apps/server/server.js": {
+    "mtime": 1782678538.0156958,
+    "ast_hash": "4f3165e88c27ad864bdb21532987ef67",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1782678687.390148,
+    "ast_hash": "d81c47bcaa0535f363683d897ec58f3a",
+    "semantic_hash": ""
+  },
+  "packages/auth/index.js": {
+    "mtime": 1782678675.4200184,
+    "ast_hash": "77a391f66997d30ad844c22750a6e90f",
+    "semantic_hash": ""
+  },
+  "packages/auth/package.json": {
+    "mtime": 1782678671.3000488,
+    "ast_hash": "32e58e2ea96c20b0afebc14b49179676",
+    "semantic_hash": ""
+  },
+  "packages/solas-sdk/index.js": {
+    "mtime": 1782678563.85256,
+    "ast_hash": "cf532208c6e59ff59cf3e0b94df70e2a",
+    "semantic_hash": ""
+  },
+  "packages/solas-sdk/package.json": {
+    "mtime": 1782678559.4718058,
+    "ast_hash": "2c454cab1b1339b2d420040cb5e55d1d",
+    "semantic_hash": ""
+  },
+  "packages/stripe-sync/index.js": {
+    "mtime": 1782678667.3519275,
+    "ast_hash": "d83040e8a7da8c77089bd0be59d664cb",
+    "semantic_hash": ""
+  },
+  "packages/stripe-sync/package.json": {
+    "mtime": 1782678661.9266393,
+    "ast_hash": "67de7f641cb77ba71a54b1d8a8e24f5b",
+    "semantic_hash": ""
+  },
+  "scripts/dev.js": {
+    "mtime": 1782678682.1355743,
+    "ast_hash": "ed1a2575aef4f4d5d5a54a6c410b4b13",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1782678531.7252786,
+    "ast_hash": "4b15e94b7add72bb3ac1b8da59331f85",
+    "semantic_hash": ""
+  },
+  "apps/dashboard/README.md": {
+    "mtime": 1782678399.3895264,
+    "ast_hash": "75eb386f17caf77fd6fe3ce1d90968ee",
+    "semantic_hash": ""
+  },
+  "apps/dashboard/index.html": {
+    "mtime": 1782678408.9339726,
+    "ast_hash": "ea9ba2dd86426356d2b7861bec7564db",
+    "semantic_hash": ""
+  },
+  "docker-compose.yml": {
+    "mtime": 1782678648.5258825,
+    "ast_hash": "f2b867557d62805c0d480639770e538f",
+    "semantic_hash": ""
+  },
+  "apps/dashboard/public/favicon.svg": {
+    "mtime": 1782678399.4594045,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": ""
+  },
+  "apps/dashboard/public/icons.svg": {
+    "mtime": 1782678399.495643,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": ""
+  },
+  "apps/dashboard/src/assets/hero.png": {
+    "mtime": 1782678399.419139,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": ""
+  },
+  "apps/dashboard/src/assets/react.svg": {
+    "mtime": 1782678399.5542097,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": ""
+  },
+  "apps/dashboard/src/assets/vite.svg": {
+    "mtime": 1782678399.6079617,
+    "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": ""
+  }
+}

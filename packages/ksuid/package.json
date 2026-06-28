@@ -1,0 +1,7 @@
+{
+  "name": "solas-ksuid",
+  "version": "1.0.0",
+  "description": "Timestamp-sortable unique identifier generator for Solas Billing transactions",
+  "main": "index.js",
+  "type": "module"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "solas-logging",
+  "version": "1.0.0",
+  "description": "Structured logging formatter for Solas Billing Proxy analytics",
+  "main": "index.js",
+  "type": "module"
+}

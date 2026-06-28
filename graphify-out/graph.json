@@ -1,0 +1,2277 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": ".oxlintrc.json",
+      "file_type": "code",
+      "source_file": "apps/dashboard/.oxlintrc.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "dashboard_oxlintrc",
+      "community": 8,
+      "norm_label": ".oxlintrc.json"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": "apps/dashboard/.oxlintrc.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "dashboard_oxlintrc_schema",
+      "community": 8,
+      "norm_label": "$schema"
+    },
+    {
+      "label": "plugins",
+      "file_type": "code",
+      "source_file": "apps/dashboard/.oxlintrc.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "dashboard_oxlintrc_plugins",
+      "community": 8,
+      "norm_label": "plugins"
+    },
+    {
+      "label": "rules",
+      "file_type": "code",
+      "source_file": "apps/dashboard/.oxlintrc.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "dashboard_oxlintrc_rules",
+      "community": 8,
+      "norm_label": "rules"
+    },
+    {
+      "label": "react/rules-of-hooks",
+      "file_type": "code",
+      "source_file": "apps/dashboard/.oxlintrc.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "dashboard_oxlintrc_rules_react_rules_of_hooks",
+      "community": 8,
+      "norm_label": "react/rules-of-hooks"
+    },
+    {
+      "label": "react/only-export-components",
+      "file_type": "code",
+      "source_file": "apps/dashboard/.oxlintrc.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "dashboard_oxlintrc_rules_react_only_export_components",
+      "community": 8,
+      "norm_label": "react/only-export-components"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "dashboard_package",
+      "community": 1,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "dashboard_package_name",
+      "community": 1,
+      "norm_label": "name"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "dashboard_package_private",
+      "community": 1,
+      "norm_label": "private"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "dashboard_package_version",
+      "community": 1,
+      "norm_label": "version"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "dashboard_package_type",
+      "community": 1,
+      "norm_label": "type"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "dashboard_package_scripts",
+      "community": 1,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "dashboard_package_scripts_dev",
+      "community": 1,
+      "norm_label": "dev"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "dashboard_package_scripts_build",
+      "community": 1,
+      "norm_label": "build"
+    },
+    {
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "dashboard_package_scripts_lint",
+      "community": 1,
+      "norm_label": "lint"
+    },
+    {
+      "label": "preview",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "dashboard_package_scripts_preview",
+      "community": 1,
+      "norm_label": "preview"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "dashboard_package_dependencies",
+      "community": 1,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "lucide-react",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "dashboard_package_dependencies_lucide_react",
+      "community": 1,
+      "norm_label": "lucide-react"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "dashboard_package_dependencies_react",
+      "community": 1,
+      "norm_label": "react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "dashboard_package_dependencies_react_dom",
+      "community": 1,
+      "norm_label": "react-dom"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "dashboard_package_devdependencies",
+      "community": 9,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "dashboard_package_devdependencies_types_react",
+      "community": 9,
+      "norm_label": "@types/react"
+    },
+    {
+      "label": "@types/react-dom",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "dashboard_package_devdependencies_types_react_dom",
+      "community": 9,
+      "norm_label": "@types/react-dom"
+    },
+    {
+      "label": "@vitejs/plugin-react",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "dashboard_package_devdependencies_vitejs_plugin_react",
+      "community": 9,
+      "norm_label": "@vitejs/plugin-react"
+    },
+    {
+      "label": "oxlint",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "dashboard_package_devdependencies_oxlint",
+      "community": 9,
+      "norm_label": "oxlint"
+    },
+    {
+      "label": "vite",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "dashboard_package_devdependencies_vite",
+      "community": 9,
+      "norm_label": "vite"
+    },
+    {
+      "label": "App.jsx",
+      "file_type": "code",
+      "source_file": "apps/dashboard/src/App.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app",
+      "community": 15,
+      "norm_label": "app.jsx"
+    },
+    {
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "apps/dashboard/src/App.jsx",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "src_app_app",
+      "community": 15,
+      "norm_label": "app()"
+    },
+    {
+      "label": "main.jsx",
+      "file_type": "code",
+      "source_file": "apps/dashboard/src/main.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_main",
+      "community": 15,
+      "norm_label": "main.jsx"
+    },
+    {
+      "label": "vite.config.js",
+      "file_type": "code",
+      "source_file": "apps/dashboard/vite.config.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "dashboard_vite_config",
+      "community": 16,
+      "norm_label": "vite.config.js"
+    },
+    {
+      "label": "db.js",
+      "file_type": "code",
+      "source_file": "apps/server/db.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "server_db",
+      "community": 3,
+      "norm_label": "db.js"
+    },
+    {
+      "label": "__filename",
+      "file_type": "code",
+      "source_file": "apps/server/db.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "server_db_filename",
+      "community": 3,
+      "norm_label": "__filename"
+    },
+    {
+      "label": "__dirname",
+      "file_type": "code",
+      "source_file": "apps/server/db.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "server_db_dirname",
+      "community": 3,
+      "norm_label": "__dirname"
+    },
+    {
+      "label": "dbPath",
+      "file_type": "code",
+      "source_file": "apps/server/db.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "server_db_dbpath",
+      "community": 3,
+      "norm_label": "dbpath"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "apps/server/db.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "server_db_db",
+      "community": 3,
+      "norm_label": "db"
+    },
+    {
+      "label": "initDB()",
+      "file_type": "code",
+      "source_file": "apps/server/db.js",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "server_db_initdb",
+      "community": 3,
+      "norm_label": "initdb()"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "server_package",
+      "community": 0,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "server_package_name",
+      "community": 0,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "server_package_version",
+      "community": 0,
+      "norm_label": "version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "server_package_description",
+      "community": 0,
+      "norm_label": "description"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "server_package_main",
+      "community": 0,
+      "norm_label": "main"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "server_package_type",
+      "community": 0,
+      "norm_label": "type"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "server_package_scripts",
+      "community": 0,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "start",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "server_package_scripts_start",
+      "community": 0,
+      "norm_label": "start"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "server_package_scripts_dev",
+      "community": 0,
+      "norm_label": "dev"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "server_package_dependencies",
+      "community": 0,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "@fastify/cors",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "server_package_dependencies_fastify_cors",
+      "community": 0,
+      "norm_label": "@fastify/cors"
+    },
+    {
+      "label": "better-sqlite3",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "server_package_dependencies_better_sqlite3",
+      "community": 0,
+      "norm_label": "better-sqlite3"
+    },
+    {
+      "label": "dotenv",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "server_package_dependencies_dotenv",
+      "community": 0,
+      "norm_label": "dotenv"
+    },
+    {
+      "label": "fastify",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "server_package_dependencies_fastify",
+      "community": 0,
+      "norm_label": "fastify"
+    },
+    {
+      "label": "js-tiktoken",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "server_package_dependencies_js_tiktoken",
+      "community": 0,
+      "norm_label": "js-tiktoken"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "server_package_devdependencies",
+      "community": 0,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "nodemon",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "server_package_devdependencies_nodemon",
+      "community": 0,
+      "norm_label": "nodemon"
+    },
+    {
+      "label": "server.js",
+      "file_type": "code",
+      "source_file": "apps/server/server.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "server_server",
+      "community": 3,
+      "norm_label": "server.js"
+    },
+    {
+      "label": "app",
+      "file_type": "code",
+      "source_file": "apps/server/server.js",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "server_server_app",
+      "community": 3,
+      "norm_label": "app"
+    },
+    {
+      "label": "generateApiKey()",
+      "file_type": "code",
+      "source_file": "apps/server/server.js",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "server_server_generateapikey",
+      "community": 3,
+      "norm_label": "generateapikey()"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "package",
+      "community": 2,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "package_name",
+      "community": 2,
+      "norm_label": "name"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "package_private",
+      "community": 2,
+      "norm_label": "private"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "package_version",
+      "community": 2,
+      "norm_label": "version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "package_description",
+      "community": 2,
+      "norm_label": "description"
+    },
+    {
+      "label": "workspaces",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "package_workspaces",
+      "community": 2,
+      "norm_label": "workspaces"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "package_scripts",
+      "community": 2,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "package_scripts_dev",
+      "community": 2,
+      "norm_label": "dev"
+    },
+    {
+      "label": "dev:server",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "package_scripts_dev_server",
+      "community": 2,
+      "norm_label": "dev:server"
+    },
+    {
+      "label": "dev:dashboard",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "package_scripts_dev_dashboard",
+      "community": 2,
+      "norm_label": "dev:dashboard"
+    },
+    {
+      "label": "install:all",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "package_scripts_install_all",
+      "community": 2,
+      "norm_label": "install:all"
+    },
+    {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "packages/auth/index.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "auth_index",
+      "community": 14,
+      "norm_label": "index.js"
+    },
+    {
+      "label": "hashApiKey()",
+      "file_type": "code",
+      "source_file": "packages/auth/index.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "auth_index_hashapikey",
+      "community": 14,
+      "norm_label": "hashapikey()"
+    },
+    {
+      "label": "verifyApiKey()",
+      "file_type": "code",
+      "source_file": "packages/auth/index.js",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "auth_index_verifyapikey",
+      "community": 14,
+      "norm_label": "verifyapikey()"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "auth_package",
+      "community": 6,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "auth_package_name",
+      "community": 6,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "auth_package_version",
+      "community": 6,
+      "norm_label": "version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "auth_package_description",
+      "community": 6,
+      "norm_label": "description"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "auth_package_main",
+      "community": 6,
+      "norm_label": "main"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "auth_package_type",
+      "community": 6,
+      "norm_label": "type"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "auth_package_dependencies",
+      "community": 6,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/index.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "solas_sdk_index",
+      "community": 11,
+      "norm_label": "index.js"
+    },
+    {
+      "label": "SolasClient",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/index.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "solas_sdk_index_solasclient",
+      "community": 11,
+      "norm_label": "solasclient"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/index.js",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "solas_sdk_index_solasclient_constructor",
+      "community": 11,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".getOpenAIConfig()",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/index.js",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "solas_sdk_index_solasclient_getopenaiconfig",
+      "community": 11,
+      "norm_label": ".getopenaiconfig()"
+    },
+    {
+      "label": ".getBalance()",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/index.js",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "solas_sdk_index_solasclient_getbalance",
+      "community": 11,
+      "norm_label": ".getbalance()"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "solas_sdk_package",
+      "community": 7,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "solas_sdk_package_name",
+      "community": 7,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "solas_sdk_package_version",
+      "community": 7,
+      "norm_label": "version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "solas_sdk_package_description",
+      "community": 7,
+      "norm_label": "description"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "solas_sdk_package_main",
+      "community": 7,
+      "norm_label": "main"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "solas_sdk_package_type",
+      "community": 7,
+      "norm_label": "type"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "solas_sdk_package_dependencies",
+      "community": 7,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/index.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "stripe_sync_index",
+      "community": 13,
+      "norm_label": "index.js"
+    },
+    {
+      "label": "StripeSync",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/index.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "stripe_sync_index_stripesync",
+      "community": 13,
+      "norm_label": "stripesync"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/index.js",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "stripe_sync_index_stripesync_constructor",
+      "community": 13,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".handleWebhook()",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/index.js",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "stripe_sync_index_stripesync_handlewebhook",
+      "community": 13,
+      "norm_label": ".handlewebhook()"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "stripe_sync_package",
+      "community": 5,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "stripe_sync_package_name",
+      "community": 5,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "stripe_sync_package_version",
+      "community": 5,
+      "norm_label": "version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "stripe_sync_package_description",
+      "community": 5,
+      "norm_label": "description"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "stripe_sync_package_main",
+      "community": 5,
+      "norm_label": "main"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "stripe_sync_package_type",
+      "community": 5,
+      "norm_label": "type"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "stripe_sync_package_dependencies",
+      "community": 5,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "stripe",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "stripe_sync_package_dependencies_stripe",
+      "community": 5,
+      "norm_label": "stripe"
+    },
+    {
+      "label": "dev.js",
+      "file_type": "code",
+      "source_file": "scripts/dev.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scripts_dev",
+      "community": 10,
+      "norm_label": "dev.js"
+    },
+    {
+      "label": "__filename",
+      "file_type": "code",
+      "source_file": "scripts/dev.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "scripts_dev_filename",
+      "community": 10,
+      "norm_label": "__filename"
+    },
+    {
+      "label": "__dirname",
+      "file_type": "code",
+      "source_file": "scripts/dev.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "scripts_dev_dirname",
+      "community": 10,
+      "norm_label": "__dirname"
+    },
+    {
+      "label": "rootDir",
+      "file_type": "code",
+      "source_file": "scripts/dev.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "scripts_dev_rootdir",
+      "community": 10,
+      "norm_label": "rootdir"
+    },
+    {
+      "label": "server",
+      "file_type": "code",
+      "source_file": "scripts/dev.js",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "scripts_dev_server",
+      "community": 10,
+      "norm_label": "server"
+    },
+    {
+      "label": "dashboard",
+      "file_type": "code",
+      "source_file": "scripts/dev.js",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "scripts_dev_dashboard",
+      "community": 10,
+      "norm_label": "dashboard"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme",
+      "community": 4,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Solas Billing",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_solas_billing",
+      "community": 4,
+      "norm_label": "solas billing"
+    },
+    {
+      "label": "\u26a1 Key Features",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "readme_key_features",
+      "community": 4,
+      "norm_label": "\u26a1 key features"
+    },
+    {
+      "label": "\ud83d\udcc2 Codebase Structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "readme_codebase_structure",
+      "community": 4,
+      "norm_label": "\ud83d\udcc2 codebase structure"
+    },
+    {
+      "label": "\ud83d\udee0\ufe0f Getting Started",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "readme_getting_started",
+      "community": 4,
+      "norm_label": "\ud83d\udee0\ufe0f getting started"
+    },
+    {
+      "label": "1. Start the Proxy Server",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "readme_1_start_the_proxy_server",
+      "community": 4,
+      "norm_label": "1. start the proxy server"
+    },
+    {
+      "label": "2. Start the Admin Dashboard",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "readme_2_start_the_admin_dashboard",
+      "community": 4,
+      "norm_label": "2. start the admin dashboard"
+    },
+    {
+      "label": "\ud83d\ude80 How to use (Client Example)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "readme_how_to_use_client_example",
+      "community": 4,
+      "norm_label": "\ud83d\ude80 how to use (client example)"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "apps/dashboard/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "dashboard_readme",
+      "community": 12,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "React + Vite",
+      "file_type": "document",
+      "source_file": "apps/dashboard/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "dashboard_readme_react_vite",
+      "community": 12,
+      "norm_label": "react + vite"
+    },
+    {
+      "label": "React Compiler",
+      "file_type": "document",
+      "source_file": "apps/dashboard/README.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "dashboard_readme_react_compiler",
+      "community": 12,
+      "norm_label": "react compiler"
+    },
+    {
+      "label": "Expanding the Oxlint configuration",
+      "file_type": "document",
+      "source_file": "apps/dashboard/README.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "dashboard_readme_expanding_the_oxlint_configuration",
+      "community": 12,
+      "norm_label": "expanding the oxlint configuration"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/.oxlintrc.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "dashboard_oxlintrc",
+      "target": "dashboard_oxlintrc_plugins",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/.oxlintrc.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_oxlintrc",
+      "target": "dashboard_oxlintrc_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/.oxlintrc.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "dashboard_oxlintrc",
+      "target": "dashboard_oxlintrc_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/.oxlintrc.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "dashboard_oxlintrc_rules",
+      "target": "dashboard_oxlintrc_rules_react_only_export_components",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/.oxlintrc.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "dashboard_oxlintrc_rules",
+      "target": "dashboard_oxlintrc_rules_react_rules_of_hooks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "dashboard_package",
+      "target": "dashboard_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "dashboard_package",
+      "target": "dashboard_package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "dashboard_package",
+      "target": "dashboard_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "dashboard_package",
+      "target": "dashboard_package_private",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "dashboard_package",
+      "target": "dashboard_package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "dashboard_package",
+      "target": "dashboard_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_package",
+      "target": "dashboard_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "dashboard_package_scripts",
+      "target": "dashboard_package_scripts_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "dashboard_package_scripts",
+      "target": "dashboard_package_scripts_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "dashboard_package_scripts",
+      "target": "dashboard_package_scripts_lint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "dashboard_package_scripts",
+      "target": "dashboard_package_scripts_preview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "dashboard_package_dependencies",
+      "target": "dashboard_package_dependencies_lucide_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "dashboard_package_dependencies",
+      "target": "dashboard_package_dependencies_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "dashboard_package_dependencies",
+      "target": "dashboard_package_dependencies_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "dashboard_package_devdependencies",
+      "target": "dashboard_package_devdependencies_oxlint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "dashboard_package_devdependencies",
+      "target": "dashboard_package_devdependencies_types_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "dashboard_package_devdependencies",
+      "target": "dashboard_package_devdependencies_types_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "dashboard_package_devdependencies",
+      "target": "dashboard_package_devdependencies_vite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "dashboard_package_devdependencies",
+      "target": "dashboard_package_devdependencies_vitejs_plugin_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/src/App.jsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "src_app_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/src/main.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_main",
+      "target": "src_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/src/main.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_main",
+      "target": "src_app_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/db.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "server_db",
+      "target": "server_db_db",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/db.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "server_db",
+      "target": "server_db_dbpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/db.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "server_db",
+      "target": "server_db_dirname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/db.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "server_db",
+      "target": "server_db_filename",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/db.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "server_db",
+      "target": "server_db_initdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/server.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "server_server",
+      "target": "server_db",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/server.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "server_server",
+      "target": "server_db_db",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/server.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "server_server",
+      "target": "server_db_initdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "server_package",
+      "target": "server_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "server_package",
+      "target": "server_package_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "server_package",
+      "target": "server_package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "server_package",
+      "target": "server_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "server_package",
+      "target": "server_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "server_package",
+      "target": "server_package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "server_package",
+      "target": "server_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "server_package",
+      "target": "server_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "server_package_scripts",
+      "target": "server_package_scripts_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "server_package_scripts",
+      "target": "server_package_scripts_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_better_sqlite3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_dotenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_fastify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_fastify_cors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_js_tiktoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "server_package_devdependencies",
+      "target": "server_package_devdependencies_nodemon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/server.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "server_server",
+      "target": "server_server_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/server.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "server_server",
+      "target": "server_server_generateapikey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_private",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_workspaces",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_dev_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_dev_server",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_install_all",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/auth/index.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "auth_index",
+      "target": "auth_index_hashapikey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/auth/index.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "auth_index",
+      "target": "auth_index_verifyapikey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/auth/index.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "auth_index_verifyapikey",
+      "target": "auth_index_hashapikey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "auth_package",
+      "target": "auth_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "auth_package",
+      "target": "auth_package_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "auth_package",
+      "target": "auth_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "auth_package",
+      "target": "auth_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "auth_package",
+      "target": "auth_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "auth_package",
+      "target": "auth_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/solas-sdk/index.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "solas_sdk_index",
+      "target": "solas_sdk_index_solasclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/solas-sdk/index.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "solas_sdk_index_solasclient",
+      "target": "solas_sdk_index_solasclient_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/solas-sdk/index.js",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "solas_sdk_index_solasclient",
+      "target": "solas_sdk_index_solasclient_getbalance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/solas-sdk/index.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "solas_sdk_index_solasclient",
+      "target": "solas_sdk_index_solasclient_getopenaiconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "solas_sdk_package",
+      "target": "solas_sdk_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "solas_sdk_package",
+      "target": "solas_sdk_package_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "solas_sdk_package",
+      "target": "solas_sdk_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "solas_sdk_package",
+      "target": "solas_sdk_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "solas_sdk_package",
+      "target": "solas_sdk_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "solas_sdk_package",
+      "target": "solas_sdk_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/stripe-sync/index.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "stripe_sync_index",
+      "target": "stripe_sync_index_stripesync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/stripe-sync/index.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "stripe_sync_index_stripesync",
+      "target": "stripe_sync_index_stripesync_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/stripe-sync/index.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "stripe_sync_index_stripesync",
+      "target": "stripe_sync_index_stripesync_handlewebhook",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "stripe_sync_package",
+      "target": "stripe_sync_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "stripe_sync_package",
+      "target": "stripe_sync_package_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "stripe_sync_package",
+      "target": "stripe_sync_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "stripe_sync_package",
+      "target": "stripe_sync_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "stripe_sync_package",
+      "target": "stripe_sync_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "stripe_sync_package",
+      "target": "stripe_sync_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "stripe_sync_package_dependencies",
+      "target": "stripe_sync_package_dependencies_stripe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/dev.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "scripts_dev",
+      "target": "scripts_dev_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/dev.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "scripts_dev",
+      "target": "scripts_dev_dirname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/dev.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "scripts_dev",
+      "target": "scripts_dev_filename",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/dev.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "scripts_dev",
+      "target": "scripts_dev_rootdir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/dev.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "scripts_dev",
+      "target": "scripts_dev_server",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "readme_solas_billing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "readme_solas_billing",
+      "target": "readme_codebase_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "readme_solas_billing",
+      "target": "readme_getting_started",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "readme_solas_billing",
+      "target": "readme_how_to_use_client_example",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "readme_solas_billing",
+      "target": "readme_key_features",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "readme_getting_started",
+      "target": "readme_1_start_the_proxy_server",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "readme_getting_started",
+      "target": "readme_2_start_the_admin_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "dashboard_readme",
+      "target": "dashboard_readme_react_vite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/README.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "dashboard_readme_react_vite",
+      "target": "dashboard_readme_expanding_the_oxlint_configuration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/README.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "dashboard_readme_react_vite",
+      "target": "dashboard_readme_react_compiler",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "d36eaa198f5e73332528340e6c09e09d0f5411e1"
+}

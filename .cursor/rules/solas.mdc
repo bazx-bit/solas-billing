@@ -1,0 +1,15 @@
+---
+description: Codebase style, proxy constraints, and database conventions for Solas Billing.
+globs: apps/**/*, packages/**/*
+---
+# Solas Billing Development Guidelines
+
+## Project Structure
+- This is a monorepo workspace.
+- Place user interfaces in `apps/`.
+- Place independent, reusable modules and SDK integrations in `packages/`.
+
+## Coding Guidelines
+- **Zero-SDK Proxy**: Keep the proxy compatible with the OpenAI API specification. Any endpoint modifications must not require the end-user to change their default API completion payload structure.
+- **Credit Gating**: Ensure that input cost estimation checks occur BEFORE calling external LLM providers to prevent negative balance overdrafts.
+- **Database (SQLite)**: Use WAL journal mode for SQLite connections to allow concurrently reading logs and writing token transactions. Always wrap multi-table state changes (e.g. credit updates + logging transactions) inside `db.transaction()`.
