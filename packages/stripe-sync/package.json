@@ -1,0 +1,10 @@
+{
+  "name": "stripe-sync",
+  "version": "1.0.0",
+  "description": "Stripe webhook synchronizer helper for Solas Billing",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "stripe": "^14.22.0"
+  }
+}

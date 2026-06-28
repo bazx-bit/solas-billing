@@ -1,0 +1,8 @@
+{
+  "name": "solas-sdk",
+  "version": "1.0.0",
+  "description": "NodeJS client wrapper for Solas Billing Proxy wallets",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {}
+}

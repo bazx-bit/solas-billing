@@ -1,0 +1,8 @@
+{
+  "name": "solas-auth",
+  "version": "1.0.0",
+  "description": "API authorization & credential utilities for Solas Billing",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {}
+}

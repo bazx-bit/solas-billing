@@ -1,0 +1,16 @@
+{
+  "name": "solas-billing-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Zero-SDK LLM Billing Proxy & Credit Gating Monorepo",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "dev:server": "npm run dev --workspace=apps/server",
+    "dev:dashboard": "npm run dev --workspace=apps/dashboard",
+    "install:all": "npm install --workspaces"
+  }
+}

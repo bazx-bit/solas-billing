@@ -1,0 +1,21 @@
+{
+  "name": "solas-billing-server",
+  "version": "1.0.0",
+  "description": "Zero-SDK LLM Billing Proxy & Credit Tracker Backend",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "better-sqlite3": "^11.0.0",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.0",
+    "js-tiktoken": "^1.0.21"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
