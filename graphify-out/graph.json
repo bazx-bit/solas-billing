@@ -17,11 +17,31 @@
       "label": "App()",
       "file_type": "code",
       "source_file": "apps/dashboard/src/App.jsx",
-      "source_location": "L30",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "src_app_app",
       "community": 8,
       "norm_label": "app()"
+    },
+    {
+      "label": "Logo.jsx",
+      "file_type": "code",
+      "source_file": "apps/dashboard/src/Logo.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_logo",
+      "community": 8,
+      "norm_label": "logo.jsx"
+    },
+    {
+      "label": "Logo()",
+      "file_type": "code",
+      "source_file": "apps/dashboard/src/Logo.jsx",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "src_logo_logo",
+      "community": 8,
+      "norm_label": "logo()"
     },
     {
       "label": "server.js",
@@ -29,9 +49,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "server_server",
       "community": 3,
-      "norm_label": "server.js"
+      "norm_label": "server.js",
+      "id": "server_server"
     },
     {
       "label": "app",
@@ -39,9 +59,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "server_server_app",
       "community": 3,
-      "norm_label": "app"
+      "norm_label": "app",
+      "id": "server_server_app"
     },
     {
       "label": "generateApiKey()",
@@ -49,9 +69,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "server_server_generateapikey",
       "community": 3,
-      "norm_label": "generateapikey()"
+      "norm_label": "generateapikey()",
+      "id": "server_server_generateapikey"
     },
     {
       "label": "FAILOVER_ROUTES",
@@ -59,9 +79,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L27",
       "_origin": "ast",
-      "id": "server_server_failover_routes",
       "community": 3,
-      "norm_label": "failover_routes"
+      "norm_label": "failover_routes",
+      "id": "server_server_failover_routes"
     },
     {
       "label": "executeProviderCall()",
@@ -69,9 +89,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L176",
       "_origin": "ast",
-      "id": "server_server_executeprovidercall",
       "community": 3,
-      "norm_label": "executeprovidercall()"
+      "norm_label": "executeprovidercall()",
+      "id": "server_server_executeprovidercall"
     },
     {
       "label": "README.md",
@@ -439,7 +459,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 41,
+      "community": 39,
       "norm_label": "self",
       "id": "self"
     },
@@ -459,7 +479,7 @@
       "source_file": "apps/leaf/src/db.rs",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 39,
+      "community": 15,
       "norm_label": "db.rs",
       "id": "src_db"
     },
@@ -469,7 +489,7 @@
       "source_file": "apps/leaf/src/db.rs",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 39,
+      "community": 15,
       "norm_label": "init_db()",
       "id": "src_db_init_db"
     },
@@ -479,7 +499,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 39,
+      "community": 15,
       "norm_label": "connection",
       "id": "connection"
     },
@@ -489,7 +509,7 @@
       "source_file": "apps/leaf/src/db.rs",
       "source_location": "L76",
       "_origin": "ast",
-      "community": 39,
+      "community": 15,
       "norm_label": "userrecord",
       "id": "src_db_userrecord"
     },
@@ -499,7 +519,7 @@
       "source_file": "apps/leaf/src/db.rs",
       "source_location": "L87",
       "_origin": "ast",
-      "community": 39,
+      "community": 15,
       "norm_label": "modelpricing",
       "id": "src_db_modelpricing"
     },
@@ -509,7 +529,7 @@
       "source_file": "apps/leaf/src/db.rs",
       "source_location": "L95",
       "_origin": "ast",
-      "community": 39,
+      "community": 15,
       "norm_label": "get_user_by_key()",
       "id": "src_db_get_user_by_key"
     },
@@ -519,7 +539,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 39,
+      "community": 15,
       "norm_label": "option",
       "id": "option"
     },
@@ -529,7 +549,7 @@
       "source_file": "apps/leaf/src/db.rs",
       "source_location": "L114",
       "_origin": "ast",
-      "community": 39,
+      "community": 15,
       "norm_label": "get_model_pricing()",
       "id": "src_db_get_model_pricing"
     },
@@ -539,7 +559,7 @@
       "source_file": "apps/leaf/src/db.rs",
       "source_location": "L131",
       "_origin": "ast",
-      "community": 39,
+      "community": 15,
       "norm_label": "check_rpm()",
       "id": "src_db_check_rpm"
     },
@@ -549,7 +569,7 @@
       "source_file": "apps/leaf/src/db.rs",
       "source_location": "L141",
       "_origin": "ast",
-      "community": 39,
+      "community": 15,
       "norm_label": "check_tpm()",
       "id": "src_db_check_tpm"
     },
@@ -559,7 +579,7 @@
       "source_file": "apps/leaf/src/db.rs",
       "source_location": "L151",
       "_origin": "ast",
-      "community": 39,
+      "community": 15,
       "norm_label": "deduct_and_log()",
       "id": "src_db_deduct_and_log"
     },
@@ -569,7 +589,7 @@
       "source_file": "apps/leaf/src/db.rs",
       "source_location": "L196",
       "_origin": "ast",
-      "community": 39,
+      "community": 15,
       "norm_label": "get_cached_response()",
       "id": "src_db_get_cached_response"
     },
@@ -579,7 +599,7 @@
       "source_file": "apps/leaf/src/db.rs",
       "source_location": "L208",
       "_origin": "ast",
-      "community": 39,
+      "community": 15,
       "norm_label": "set_cached_response()",
       "id": "src_db_set_cached_response"
     },
@@ -589,7 +609,7 @@
       "source_file": "apps/leaf/src/gateway.rs",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 41,
+      "community": 39,
       "norm_label": "gateway.rs",
       "id": "src_gateway"
     },
@@ -609,7 +629,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 41,
+      "community": 39,
       "norm_label": "client",
       "id": "client"
     },
@@ -629,7 +649,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 39,
+      "community": 15,
       "norm_label": "response",
       "id": "response"
     },
@@ -799,7 +819,7 @@
       "source_file": "apps/leaf/src/main.rs",
       "source_location": "L133",
       "_origin": "ast",
-      "community": 39,
+      "community": 15,
       "norm_label": "proxy_handler()",
       "id": "src_main_proxy_handler"
     },
@@ -809,7 +829,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 39,
+      "community": 15,
       "norm_label": "headermap",
       "id": "headermap"
     },
@@ -819,7 +839,7 @@
       "source_file": "apps/leaf/src/main.rs",
       "source_location": "L350",
       "_origin": "ast",
-      "community": 41,
+      "community": 15,
       "norm_label": "error_response()",
       "id": "src_main_error_response"
     },
@@ -829,7 +849,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 41,
+      "community": 15,
       "norm_label": "statuscode",
       "id": "statuscode"
     },
@@ -939,7 +959,7 @@
       "source_file": "apps/leaf/src/types.rs",
       "source_location": "L71",
       "_origin": "ast",
-      "community": 41,
+      "community": 39,
       "norm_label": ".from_str()",
       "id": "src_types_provider_from_str"
     },
@@ -999,7 +1019,7 @@
       "source_file": "apps/leaf/src/types.rs",
       "source_location": "L120",
       "_origin": "ast",
-      "community": 39,
+      "community": 15,
       "norm_label": "get_failover_route()",
       "id": "src_types_get_failover_route"
     },
@@ -3207,6 +3227,28 @@
       "target": "src_app_app"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/src/App.jsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "src_logo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/src/App.jsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "src_logo_logo",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -3216,6 +3258,16 @@
       "confidence_score": 1.0,
       "source": "apps_dashboard_src_main_jsx_src_main",
       "target": "src_app_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/src/Logo.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_logo",
+      "target": "src_logo_logo",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -7006,5 +7058,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8452e2dcc6a68df9e697501ab708d77af48ba509"
+  "built_at_commit": "16f23e10302e9ceef7f58ca567c02b792303d2ce"
 }

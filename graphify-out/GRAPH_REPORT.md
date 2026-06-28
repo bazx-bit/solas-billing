@@ -1,16 +1,16 @@
 # Graph Report - solas-billing  (2026-06-29)
 
 ## Corpus Check
-- 51 files · ~14,225 words
+- 52 files · ~14,453 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 318 nodes · 370 edges · 40 communities (30 shown, 10 thin omitted)
+- 320 nodes · 373 edges · 41 communities (31 shown, 10 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 15 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8452e2dc`
+- Built from commit: `16f23e10`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -30,6 +30,7 @@
 - [[_COMMUNITY_Community 12|Community 12]]
 - [[_COMMUNITY_Community 13|Community 13]]
 - [[_COMMUNITY_Community 14|Community 14]]
+- [[_COMMUNITY_Community 15|Community 15]]
 - [[_COMMUNITY_Community 17|Community 17]]
 - [[_COMMUNITY_Community 18|Community 18]]
 - [[_COMMUNITY_Community 21|Community 21]]
@@ -63,19 +64,19 @@
 ## Surprising Connections (you probably didn't know these)
 - `main()` --calls--> `init_db()`  [INFERRED]
   apps/leaf/src/main.rs → apps/leaf/src/db.rs
-- `proxy_handler()` --calls--> `get_user_by_key()`  [INFERRED]
-  apps/leaf/src/main.rs → apps/leaf/src/db.rs
-- `proxy_handler()` --calls--> `get_model_pricing()`  [INFERRED]
-  apps/leaf/src/main.rs → apps/leaf/src/db.rs
-- `proxy_handler()` --calls--> `check_rpm()`  [INFERRED]
-  apps/leaf/src/main.rs → apps/leaf/src/db.rs
-- `proxy_handler()` --calls--> `check_tpm()`  [INFERRED]
-  apps/leaf/src/main.rs → apps/leaf/src/db.rs
+- `proxy_handler()` --calls--> `call_provider()`  [INFERRED]
+  apps/leaf/src/main.rs → apps/leaf/src/gateway.rs
+- `proxy_handler()` --calls--> `compute_cache_key()`  [INFERRED]
+  apps/leaf/src/main.rs → apps/leaf/src/types.rs
+- `proxy_handler()` --calls--> `estimate_messages_tokens()`  [INFERRED]
+  apps/leaf/src/main.rs → apps/leaf/src/types.rs
+- `proxy_handler()` --calls--> `estimate_tokens()`  [INFERRED]
+  apps/leaf/src/main.rs → apps/leaf/src/types.rs
 
 ## Import Cycles
 - None detected.
 
-## Communities (40 total, 10 thin omitted)
+## Communities (41 total, 10 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.12
@@ -121,6 +122,10 @@ Nodes (5): dashboard, __dirname, __filename, rootDir, server
 Cohesion: 0.50
 Nodes (3): Development, Features, Solas Billing Dashboard
 
+### Community 15 - "Community 15"
+Cohesion: 0.22
+Nodes (18): Connection, HeaderMap, Option, Response, check_rpm(), check_tpm(), deduct_and_log(), get_cached_response() (+10 more)
+
 ### Community 17 - "Community 17"
 Cohesion: 0.33
 Nodes (5): description, main, name, type, version
@@ -154,16 +159,16 @@ Cohesion: 0.11
 Nodes (17): files, ignoreUnknown, formatter, enabled, indentStyle, quoteStyle, javascript, formatter (+9 more)
 
 ### Community 39 - "Community 39"
-Cohesion: 0.13
-Nodes (33): Connection, Error, HeaderMap, Option, Response, Result, check_rpm(), check_tpm() (+25 more)
+Cohesion: 0.16
+Nodes (19): Client, Error, Result, Self, call_provider(), ChatCompletionRequest, ChatCompletionResponse, ChatMessage (+11 more)
 
 ### Community 40 - "Community 40"
 Cohesion: 0.10
 Nodes (20): dependsOn, cache, dependsOn, outputs, outputs, cache, dependsOn, persistent (+12 more)
 
 ### Community 41 - "Community 41"
-Cohesion: 0.12
-Nodes (22): Arc, Client, HashMap, IntoResponse, Json, Mutex, Self, Semaphore (+14 more)
+Cohesion: 0.17
+Nodes (18): Arc, HashMap, IntoResponse, Json, Mutex, Semaphore, CreditLockManager, AnalyticsEvent (+10 more)
 
 ## Knowledge Gaps
 - **147 isolated node(s):** `app`, `FAILOVER_ROUTES`, `Development`, `Features`, `name` (+142 more)
@@ -173,9 +178,11 @@ Nodes (22): Arc, Client, HashMap, IntoResponse, Json, Mutex, Self, Semaphore (+1
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `proxy_handler()` connect `Community 39` to `Community 41`?**
+- **Why does `proxy_handler()` connect `Community 15` to `Community 41`, `Community 39`?**
   _High betweenness centrality (0.016) - this node is a cross-community bridge._
-- **Why does `AppState` connect `Community 41` to `Community 39`?**
+- **Why does `AppState` connect `Community 41` to `Community 15`, `Community 39`?**
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+- **Why does `call_provider()` connect `Community 39` to `Community 15`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Are the 12 inferred relationships involving `proxy_handler()` (e.g. with `check_rpm()` and `check_tpm()`) actually correct?**
   _`proxy_handler()` has 12 INFERRED edges - model-reasoned connections that need verification._
@@ -185,5 +192,3 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
-- **Should `Community 37` be split into smaller, more focused modules?**
-  _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._

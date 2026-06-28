@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   "apps/dashboard/src/App.jsx": {
-    "mtime": 1782683705.7224832,
-    "ast_hash": "684bdbe7a246777afa522221326cf035",
+    "mtime": 1782683796.2205565,
+    "ast_hash": "10fd46566807acb930b2a20c458d2fe2",
     "semantic_hash": ""
   },
   "apps/dashboard/src/main.jsx": {
@@ -292,6 +292,11 @@
   "turbo.json": {
     "mtime": 1782679913.2329292,
     "ast_hash": "9aeee7db39c1221b2b100d8c5c205b41",
+    "semantic_hash": ""
+  },
+  "apps/dashboard/src/Logo.jsx": {
+    "mtime": 1782683786.6697354,
+    "ast_hash": "5f26d611ceb8c8bf6bc286665851a27a",
     "semantic_hash": ""
   }
 }
