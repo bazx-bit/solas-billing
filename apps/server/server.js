@@ -73,26 +73,27 @@ app.get('/api/users', async (request, reply) => {
 
 app.post('/api/users', async (request, reply) => {
   try {
-    const { email, credits, rate_limit_rpm, fallback_allowed } = request.body || {};
+    const { email, credits, rate_limit_rpm, rate_limit_tpm, fallback_allowed } = request.body || {};
     if (!email) return reply.status(400).send({ error: 'Email is required' });
 
     const id = crypto.randomUUID();
     const apiKey = generateApiKey();
     const startCredits = credits !== undefined ? parseFloat(credits) : 10.00;
     const rpm = rate_limit_rpm !== undefined ? parseInt(rate_limit_rpm) : 60;
+    const tpm = rate_limit_tpm !== undefined ? parseInt(rate_limit_tpm) : 50000;
     const fallback = fallback_allowed !== undefined ? parseInt(fallback_allowed) : 1;
 
     db.prepare(`
-      INSERT INTO users (id, email, api_key, credits, rate_limit_rpm, fallback_allowed)
-      VALUES (?, ?, ?, ?, ?, ?)
-    `).run(id, email, apiKey, startCredits, rpm, fallback);
+      INSERT INTO users (id, email, api_key, credits, rate_limit_rpm, rate_limit_tpm, fallback_allowed)
+      VALUES (?, ?, ?, ?, ?, ?, ?)
+    `).run(id, email, apiKey, startCredits, rpm, tpm, fallback);
 
     db.prepare(`
       INSERT INTO transactions (id, user_id, amount, type, description)
       VALUES (?, ?, ?, ?, ?)
     `).run(crypto.randomUUID(), id, startCredits, 'credit', 'Signup free credits');
 
-    return { id, email, api_key: apiKey, credits: startCredits, rate_limit_rpm: rpm, fallback_allowed: fallback };
+    return { id, email, api_key: apiKey, credits: startCredits, rate_limit_rpm: rpm, rate_limit_tpm: tpm, fallback_allowed: fallback };
   } catch (error) {
     reply.status(500).send({ error: 'Failed to create user' });
   }
@@ -208,7 +209,7 @@ async function executeProviderCall(provider, model, messages, stream, requestBod
 }
 
 // ----------------------------------------------------
-// ZERO-SDK PROXY INTERCEPTOR
+// ZERO-SDK PROXY INTERCEPTOR WITH CACHING & TPM
 // ----------------------------------------------------
 app.post('/v1/chat/completions', async (request, reply) => {
   const authHeader = request.headers.authorization || '';
@@ -223,23 +224,33 @@ app.post('/v1/chat/completions', async (request, reply) => {
     return reply.status(401).send({ error: { message: 'Invalid API Key', type: 'invalid_api_key' } });
   }
 
-  // Rate Limiting Check
-  const requestsLastMin = db.prepare(`
-    SELECT count(*) as count FROM request_logs 
-    WHERE user_id = ? AND timestamp > datetime('now', '-1 minute')
-  `).get(user.id).count;
+  let { model, messages, stream } = request.body || {};
+  if (!model || !messages) {
+    return reply.status(400).send({ error: { message: 'Missing parameters', type: 'bad_request' } });
+  }
 
-  if (requestsLastMin >= user.rate_limit_rpm) {
-    return reply.status(429).send({ error: { message: 'Rate limit exceeded.', type: 'rate_limit_exceeded' } });
+  const estimatedInputTokens = countMessagesTokens(messages, model);
+
+  // 1. Rate Limiting Check (RPM & TPM)
+  const lastMinLogs = db.prepare(`
+    SELECT count(*) as count, sum(input_tokens + output_tokens) as tokens 
+    FROM request_logs 
+    WHERE user_id = ? AND timestamp > datetime('now', '-1 minute')
+  `).get(user.id);
+
+  const currentRpm = lastMinLogs.count;
+  const currentTpm = lastMinLogs.tokens || 0;
+
+  if (currentRpm >= user.rate_limit_rpm) {
+    return reply.status(429).send({ error: { message: 'RPM Rate limit exceeded.', type: 'rate_limit_exceeded' } });
+  }
+
+  if ((currentTpm + estimatedInputTokens) >= user.rate_limit_tpm) {
+    return reply.status(429).send({ error: { message: 'TPM (Tokens Per Minute) Rate limit exceeded.', type: 'rate_limit_exceeded' } });
   }
 
   if (user.credits <= 0) {
     return reply.status(402).send({ error: { message: 'Insufficient funds.', type: 'billing_hard_limit' } });
-  }
-
-  let { model, messages, stream } = request.body || {};
-  if (!model || !messages) {
-    return reply.status(400).send({ error: { message: 'Missing parameters', type: 'bad_request' } });
   }
 
   // Look up pricing
@@ -247,7 +258,6 @@ app.post('/v1/chat/completions', async (request, reply) => {
     model_name: model, provider: 'openai', input_cost_per_million: 5.0, output_cost_per_million: 15.0
   };
 
-  const estimatedInputTokens = countMessagesTokens(messages, model);
   let estimatedInputCost = (estimatedInputTokens / 1000000) * priceInfo.input_cost_per_million;
   let recoveryModel = null;
 
@@ -277,6 +287,31 @@ app.post('/v1/chat/completions', async (request, reply) => {
 
   const requestId = crypto.randomUUID();
   let provider = priceInfo.provider;
+
+  // 2. Smart Cache Intercept (Only for non-streaming requests)
+  const cacheKey = crypto.createHash('sha256').update(JSON.stringify({ model, messages })).digest('hex');
+  if (!stream) {
+    const cachedResponse = db.prepare('SELECT * FROM response_cache WHERE key_hash = ?').get(cacheKey);
+    if (cachedResponse) {
+      // Deduct discounted billing rate for cache hit (10% of standard pricing)
+      const inputCost = (cachedResponse.input_tokens / 1000000) * priceInfo.input_cost_per_million;
+      const outputCost = (cachedResponse.output_tokens / 1000000) * priceInfo.output_cost_per_million;
+      const totalCost = (inputCost + outputCost) * 0.10; // 90% discount!
+
+      db.transaction(() => {
+        db.prepare('UPDATE users SET credits = credits - ? WHERE id = ?').run(totalCost, user.id);
+        db.prepare(`
+          INSERT INTO request_logs (id, user_id, model, provider, input_tokens, output_tokens, cost, status, fallback_triggered, cache_hit)
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 1)
+        `).run(requestId, user.id, model, provider, cachedResponse.input_tokens, cachedResponse.output_tokens, totalCost, 200, recoveryModel);
+      })();
+
+      reply.header('X-Solas-Cache', 'HIT');
+      reply.header('X-Solas-Billed-Cost', totalCost.toFixed(6));
+      return reply.send(JSON.parse(cachedResponse.response_payload));
+    }
+  }
+
   let rawResponse;
   let activeFailoverFrom = null;
 
@@ -284,8 +319,6 @@ app.post('/v1/chat/completions', async (request, reply) => {
   try {
     try {
       rawResponse = await executeProviderCall(provider, model, messages, stream, request.body);
-      
-      // If primary provider is offline/fails, trigger Self-Healing Failover
       if (!rawResponse.ok && (rawResponse.status >= 500 || rawResponse.status === 429)) {
         throw new Error(`Primary provider error: HTTP ${rawResponse.status}`);
       }
@@ -303,7 +336,7 @@ app.post('/v1/chat/completions', async (request, reply) => {
         console.log(`[Solas Failover] Primary failed (${primaryError.message}). Self-Healing Failover to ${model} (${provider})`);
         rawResponse = await executeProviderCall(provider, model, messages, stream, request.body);
       } else {
-        throw primaryError; // No backup route configured
+        throw primaryError;
       }
     }
 
@@ -363,8 +396,15 @@ app.post('/v1/chat/completions', async (request, reply) => {
           INSERT INTO request_logs (id, user_id, model, provider, input_tokens, output_tokens, cost, status, fallback_triggered)
           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
         `).run(requestId, user.id, model, provider, inputTokens, outputTokens, totalCost, 200, recoveryModel || activeFailoverFrom);
+        
+        // Cache successful response
+        db.prepare(`
+          INSERT OR REPLACE INTO response_cache (key_hash, model, response_payload, input_tokens, output_tokens)
+          VALUES (?, ?, ?, ?, ?)
+        `).run(cacheKey, model, JSON.stringify(originalPayload), inputTokens, outputTokens);
       })();
 
+      reply.header('X-Solas-Cache', 'MISS');
       if (recoveryModel) reply.header('X-Solas-Fallback-Triggered', 'true');
       if (activeFailoverFrom) reply.header('X-Solas-Failover-Active', 'true');
       return reply.send(originalPayload);

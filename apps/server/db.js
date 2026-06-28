@@ -21,6 +21,7 @@ export function initDB() {
       api_key TEXT UNIQUE NOT NULL,
       credits REAL DEFAULT 10.0, -- Default $10 free credits
       rate_limit_rpm INTEGER DEFAULT 60, -- Requests per minute limit
+      rate_limit_tpm INTEGER DEFAULT 50000, -- Tokens per minute limit
       fallback_allowed INTEGER DEFAULT 1, -- 1 = Auto-fallback to cheaper models when credits are low
       stripe_customer_id TEXT,
       created_at DATETIME DEFAULT CURRENT_TIMESTAMP
@@ -63,10 +64,23 @@ export function initDB() {
       input_tokens INTEGER DEFAULT 0,
       output_tokens INTEGER DEFAULT 0,
       cost REAL DEFAULT 0.0,
-      status INTEGER NOT NULL, -- HTTP response status (200, 400, etc.)
+      status INTEGER NOT NULL, -- HTTP response status (200, 206, 400, etc.)
       fallback_triggered TEXT, -- Records model name if fallback happened
+      cache_hit INTEGER DEFAULT 0, -- 1 if served from cache, 0 otherwise
       timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
       FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
+    )
+  `).run();
+
+  // 5. Smart Response Cache Table
+  db.prepare(`
+    CREATE TABLE IF NOT EXISTS response_cache (
+      key_hash TEXT PRIMARY KEY,
+      model TEXT NOT NULL,
+      response_payload TEXT NOT NULL,
+      input_tokens INTEGER NOT NULL,
+      output_tokens INTEGER NOT NULL,
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP
     )
   `).run();
 
