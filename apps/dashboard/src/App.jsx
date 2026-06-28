@@ -24,6 +24,7 @@ import {
   Layers,
   Database
 } from 'lucide-react';
+import Logo from './Logo';
 
 const API_BASE = 'http://localhost:8080/api';
 
@@ -394,7 +395,7 @@ export default function App() {
       {/* SIDEBAR */}
       <div className="sidebar">
         <div className="sidebar-logo">
-          <div className="logo-icon">S</div>
+          <Logo size={28} />
           <span className="logo-text">Solas Billing</span>
           <span className="logo-badge">v1.0</span>
         </div>

@@ -1,7 +1,7 @@
 # Graph Report - solas-billing  (2026-06-29)
 
 ## Corpus Check
-- 51 files · ~13,412 words
+- 51 files · ~14,225 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `974a7ab0`
+- Built from commit: `8452e2dc`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

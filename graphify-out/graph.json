@@ -29,9 +29,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "server_server",
       "community": 3,
-      "norm_label": "server.js",
-      "id": "server_server"
+      "norm_label": "server.js"
     },
     {
       "label": "app",
@@ -39,9 +39,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L10",
       "_origin": "ast",
+      "id": "server_server_app",
       "community": 3,
-      "norm_label": "app",
-      "id": "server_server_app"
+      "norm_label": "app"
     },
     {
       "label": "generateApiKey()",
@@ -49,9 +49,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L22",
       "_origin": "ast",
+      "id": "server_server_generateapikey",
       "community": 3,
-      "norm_label": "generateapikey()",
-      "id": "server_server_generateapikey"
+      "norm_label": "generateapikey()"
     },
     {
       "label": "FAILOVER_ROUTES",
@@ -59,19 +59,19 @@
       "source_file": "apps/server/server.js",
       "source_location": "L27",
       "_origin": "ast",
+      "id": "server_server_failover_routes",
       "community": 3,
-      "norm_label": "failover_routes",
-      "id": "server_server_failover_routes"
+      "norm_label": "failover_routes"
     },
     {
       "label": "executeProviderCall()",
       "file_type": "code",
       "source_file": "apps/server/server.js",
-      "source_location": "L161",
+      "source_location": "L176",
       "_origin": "ast",
+      "id": "server_server_executeprovidercall",
       "community": 3,
-      "norm_label": "executeprovidercall()",
-      "id": "server_server_executeprovidercall"
+      "norm_label": "executeprovidercall()"
     },
     {
       "label": "README.md",
@@ -7006,5 +7006,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "974a7ab0b819bd6bc06445d8782380cda092bd9b"
+  "built_at_commit": "8452e2dcc6a68df9e697501ab708d77af48ba509"
 }
