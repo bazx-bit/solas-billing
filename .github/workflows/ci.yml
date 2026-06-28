@@ -26,5 +26,8 @@ jobs:
     - name: Install dependencies
       run: npm run install:all
 
+    - name: Install native Linux binding for linter
+      run: npm install @oxlint/binding-linux-x64-gnu --workspace=apps/dashboard --no-save
+
     - name: Run lint
       run: npm run lint --workspaces --if-present
