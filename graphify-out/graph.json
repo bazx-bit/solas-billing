@@ -4,14 +4,324 @@
   "graph": {},
   "nodes": [
     {
+      "label": "main.rs",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_main",
+      "community": 15,
+      "norm_label": "main.rs"
+    },
+    {
+      "label": "AppState",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "src_main_appstate",
+      "community": 15,
+      "norm_label": "appstate"
+    },
+    {
+      "label": "Arc",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "arc",
+      "community": 15,
+      "norm_label": "arc"
+    },
+    {
+      "label": "Mutex",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "mutex",
+      "community": 15,
+      "norm_label": "mutex"
+    },
+    {
+      "label": "Connection",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "connection",
+      "community": 15,
+      "norm_label": "connection"
+    },
+    {
+      "label": "Client",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "client",
+      "community": 15,
+      "norm_label": "client"
+    },
+    {
+      "label": "ChatMessage",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "src_main_chatmessage",
+      "community": 15,
+      "norm_label": "chatmessage"
+    },
+    {
+      "label": "String",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "string",
+      "community": 15,
+      "norm_label": "string"
+    },
+    {
+      "label": "ChatCompletionRequest",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "src_main_chatcompletionrequest",
+      "community": 15,
+      "norm_label": "chatcompletionrequest"
+    },
+    {
+      "label": "Vec",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "vec",
+      "community": 15,
+      "norm_label": "vec"
+    },
+    {
+      "label": "Option",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "option",
+      "community": 15,
+      "norm_label": "option"
+    },
+    {
+      "label": "ErrorDetail",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "src_main_errordetail",
+      "community": 15,
+      "norm_label": "errordetail"
+    },
+    {
+      "label": "ErrorResponse",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "src_main_errorresponse",
+      "community": 15,
+      "norm_label": "errorresponse"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "src_main_main",
+      "community": 15,
+      "norm_label": "main()"
+    },
+    {
+      "label": "handle_chat_completions()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L75",
+      "_origin": "ast",
+      "id": "src_main_handle_chat_completions",
+      "community": 15,
+      "norm_label": "handle_chat_completions()"
+    },
+    {
+      "label": "State",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "state",
+      "community": 15,
+      "norm_label": "state"
+    },
+    {
+      "label": "HeaderMap",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "headermap",
+      "community": 15,
+      "norm_label": "headermap"
+    },
+    {
+      "label": "Json",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "json",
+      "community": 15,
+      "norm_label": "json"
+    },
+    {
+      "label": "Response",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "response",
+      "community": 15,
+      "norm_label": "response"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "package",
+      "community": 2,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "package_name",
+      "community": 2,
+      "norm_label": "name"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "package_private",
+      "community": 2,
+      "norm_label": "private"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "package_version",
+      "community": 2,
+      "norm_label": "version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "package_description",
+      "community": 2,
+      "norm_label": "description"
+    },
+    {
+      "label": "workspaces",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "package_workspaces",
+      "community": 2,
+      "norm_label": "workspaces"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "package_scripts",
+      "community": 2,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "package_scripts_dev",
+      "community": 2,
+      "norm_label": "dev"
+    },
+    {
+      "label": "dev:server",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "package_scripts_dev_server",
+      "community": 2,
+      "norm_label": "dev:server"
+    },
+    {
+      "label": "dev:dashboard",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "package_scripts_dev_dashboard",
+      "community": 2,
+      "norm_label": "dev:dashboard"
+    },
+    {
+      "label": "install:all",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "package_scripts_install_all",
+      "community": 2,
+      "norm_label": "install:all"
+    },
+    {
+      "label": "build:leaf",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "package_scripts_build_leaf",
+      "community": 2,
+      "norm_label": "build:leaf"
+    },
+    {
       "label": "db.js",
       "file_type": "code",
       "source_file": "apps/server/db.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "server_db",
       "community": 3,
-      "norm_label": "db.js"
+      "norm_label": "db.js",
+      "id": "server_db"
     },
     {
       "label": "__filename",
@@ -19,9 +329,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "server_db_filename",
       "community": 3,
-      "norm_label": "__filename"
+      "norm_label": "__filename",
+      "id": "server_db_filename"
     },
     {
       "label": "__dirname",
@@ -29,9 +339,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "server_db_dirname",
       "community": 3,
-      "norm_label": "__dirname"
+      "norm_label": "__dirname",
+      "id": "server_db_dirname"
     },
     {
       "label": "dbPath",
@@ -39,9 +349,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "server_db_dbpath",
       "community": 3,
-      "norm_label": "dbpath"
+      "norm_label": "dbpath",
+      "id": "server_db_dbpath"
     },
     {
       "label": "db",
@@ -49,9 +359,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "server_db_db",
       "community": 3,
-      "norm_label": "db"
+      "norm_label": "db",
+      "id": "server_db_db"
     },
     {
       "label": "initDB()",
@@ -59,9 +369,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "server_db_initdb",
       "community": 3,
-      "norm_label": "initdb()"
+      "norm_label": "initdb()",
+      "id": "server_db_initdb"
     },
     {
       "label": "server.js",
@@ -69,9 +379,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "server_server",
       "community": 3,
-      "norm_label": "server.js"
+      "norm_label": "server.js",
+      "id": "server_server"
     },
     {
       "label": "app",
@@ -79,9 +389,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "server_server_app",
       "community": 3,
-      "norm_label": "app"
+      "norm_label": "app",
+      "id": "server_server_app"
     },
     {
       "label": "generateApiKey()",
@@ -89,9 +399,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "server_server_generateapikey",
       "community": 3,
-      "norm_label": "generateapikey()"
+      "norm_label": "generateapikey()",
+      "id": "server_server_generateapikey"
     },
     {
       "label": "FAILOVER_ROUTES",
@@ -99,9 +409,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L27",
       "_origin": "ast",
-      "id": "server_server_failover_routes",
       "community": 3,
-      "norm_label": "failover_routes"
+      "norm_label": "failover_routes",
+      "id": "server_server_failover_routes"
     },
     {
       "label": "executeProviderCall()",
@@ -109,9 +419,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L160",
       "_origin": "ast",
-      "id": "server_server_executeprovidercall",
       "community": 3,
-      "norm_label": "executeprovidercall()"
+      "norm_label": "executeprovidercall()",
+      "id": "server_server_executeprovidercall"
     },
     {
       "label": "biome.json",
@@ -1104,16 +1414,6 @@
       "id": "src_app_app"
     },
     {
-      "label": "main.jsx",
-      "file_type": "code",
-      "source_file": "apps/dashboard/src/main.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 15,
-      "norm_label": "main.jsx",
-      "id": "src_main"
-    },
-    {
       "label": "vite.config.js",
       "file_type": "code",
       "source_file": "apps/dashboard/vite.config.js",
@@ -1392,116 +1692,6 @@
       "community": 21,
       "norm_label": "dbpath",
       "id": "testbench_benchmark_dbpath"
-    },
-    {
-      "label": "package.json",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 2,
-      "norm_label": "package.json",
-      "id": "package"
-    },
-    {
-      "label": "name",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "community": 2,
-      "norm_label": "name",
-      "id": "package_name"
-    },
-    {
-      "label": "private",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "community": 2,
-      "norm_label": "private",
-      "id": "package_private"
-    },
-    {
-      "label": "version",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "community": 2,
-      "norm_label": "version",
-      "id": "package_version"
-    },
-    {
-      "label": "description",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L5",
-      "_origin": "ast",
-      "community": 2,
-      "norm_label": "description",
-      "id": "package_description"
-    },
-    {
-      "label": "workspaces",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L6",
-      "_origin": "ast",
-      "community": 2,
-      "norm_label": "workspaces",
-      "id": "package_workspaces"
-    },
-    {
-      "label": "scripts",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L10",
-      "_origin": "ast",
-      "community": 2,
-      "norm_label": "scripts",
-      "id": "package_scripts"
-    },
-    {
-      "label": "dev",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L11",
-      "_origin": "ast",
-      "community": 2,
-      "norm_label": "dev",
-      "id": "package_scripts_dev"
-    },
-    {
-      "label": "dev:server",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L12",
-      "_origin": "ast",
-      "community": 2,
-      "norm_label": "dev:server",
-      "id": "package_scripts_dev_server"
-    },
-    {
-      "label": "dev:dashboard",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L13",
-      "_origin": "ast",
-      "community": 2,
-      "norm_label": "dev:dashboard",
-      "id": "package_scripts_dev_dashboard"
-    },
-    {
-      "label": "install:all",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L14",
-      "_origin": "ast",
-      "community": 2,
-      "norm_label": "install:all",
-      "id": "package_scripts_install_all"
     },
     {
       "label": "index.js",
@@ -2405,6 +2595,406 @@
     }
   ],
   "links": [
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/src/main.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_main",
+      "target": "src_app"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/src/main.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_main",
+      "target": "src_app_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_main",
+      "target": "src_main_appstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "src_main",
+      "target": "src_main_chatcompletionrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "src_main",
+      "target": "src_main_chatmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "src_main",
+      "target": "src_main_errordetail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "src_main",
+      "target": "src_main_errorresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "src_main",
+      "target": "src_main_handle_chat_completions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "src_main",
+      "target": "src_main_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_main_appstate",
+      "target": "arc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_main_appstate",
+      "target": "client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_appstate",
+      "target": "connection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_appstate",
+      "target": "mutex",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_handle_chat_completions",
+      "target": "src_main_appstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_handle_chat_completions",
+      "target": "arc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L27",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_chatcompletionrequest",
+      "target": "src_main_chatmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_main_chatmessage",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_main_chatcompletionrequest",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L35",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_main_errordetail",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_main_chatcompletionrequest",
+      "target": "option",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L27",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_main_chatcompletionrequest",
+      "target": "vec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_handle_chat_completions",
+      "target": "src_main_chatcompletionrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L40",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_main_errorresponse",
+      "target": "src_main_errordetail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_handle_chat_completions",
+      "target": "headermap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "src_main_handle_chat_completions",
+      "target": "json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_main_handle_chat_completions",
+      "target": "response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_handle_chat_completions",
+      "target": "state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_description"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_name"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_private"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_scripts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_version"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_workspaces"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_build_leaf",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_dev"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_dev_dashboard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_dev_server"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_install_all"
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -3399,28 +3989,6 @@
       "target": "src_app_app"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/dashboard/src/main.jsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_main",
-      "target": "src_app"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/dashboard/src/main.jsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_main",
-      "target": "src_app_app"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/leaf/leaf-engine.js",
@@ -3672,106 +4240,6 @@
       "confidence_score": 1.0,
       "source": "testbench_benchmark",
       "target": "testbench_benchmark_filename"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_description"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_name"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_private"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_scripts"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_version"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_workspaces"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_dev"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_dev_dashboard"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_dev_server"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_install_all"
     },
     {
       "relation": "contains",
@@ -4486,5 +4954,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "3b4fabe053b98568613e52a1900f7d19b5bc58dd"
+  "built_at_commit": "1d101d7cd6f5ea575b2b48eecb211057adcf8547"
 }

@@ -1,16 +1,16 @@
 # Graph Report - solas-billing  (2026-06-29)
 
 ## Corpus Check
-- 47 files · ~10,882 words
+- 48 files · ~11,573 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 240 nodes · 207 edges · 39 communities (28 shown, 11 thin omitted)
+- 259 nodes · 233 edges · 39 communities (29 shown, 10 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3b4fabe0`
+- Built from commit: `1d101d7c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -49,15 +49,15 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `workspaces` - 10 edges
-2. `scripts` - 5 edges
-3. `scripts` - 5 edges
-4. `Solas Billing` - 5 edges
-5. `vcs` - 4 edges
-6. `Proposal: Multi-Tenant Database Scale Migration (SQLite to PostgreSQL)` - 4 edges
-7. `SolasClient` - 4 edges
-8. `Solas Billing Development Roadmap` - 4 edges
-9. `formatter` - 3 edges
-10. `linter` - 3 edges
+2. `handle_chat_completions()` - 8 edges
+3. `AppState` - 6 edges
+4. `ChatCompletionRequest` - 6 edges
+5. `scripts` - 6 edges
+6. `scripts` - 5 edges
+7. `Solas Billing` - 5 edges
+8. `vcs` - 4 edges
+9. `Proposal: Multi-Tenant Database Scale Migration (SQLite to PostgreSQL)` - 4 edges
+10. `SolasClient` - 4 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -65,7 +65,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (39 total, 11 thin omitted)
+## Communities (39 total, 10 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.12
@@ -76,8 +76,8 @@ Cohesion: 0.10
 Nodes (19): dependencies, lucide-react, react, react-dom, devDependencies, oxlint, @types/react, @types/react-dom (+11 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.18
-Nodes (10): description, name, private, scripts, dev, dev:dashboard, dev:server, install:all (+2 more)
+Cohesion: 0.17
+Nodes (11): description, name, private, scripts, build:leaf, dev, dev:dashboard, dev:server (+3 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.22
@@ -115,6 +115,10 @@ Nodes (5): dashboard, __dirname, __filename, rootDir, server
 Cohesion: 0.50
 Nodes (3): Expanding the Oxlint configuration, React Compiler, React + Vite
 
+### Community 15 - "Community 15"
+Cohesion: 0.13
+Nodes (18): Arc, Client, Connection, HeaderMap, Json, Mutex, Option, Response (+10 more)
+
 ### Community 17 - "Community 17"
 Cohesion: 0.33
 Nodes (5): description, main, name, type, version
@@ -148,19 +152,21 @@ Cohesion: 0.11
 Nodes (17): files, ignoreUnknown, formatter, enabled, indentStyle, quoteStyle, javascript, formatter (+9 more)
 
 ## Knowledge Gaps
-- **136 isolated node(s):** `__filename`, `__dirname`, `dbPath`, `app`, `FAILOVER_ROUTES` (+131 more)
+- **137 isolated node(s):** `name`, `private`, `version`, `description`, `workspaces` (+132 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **What connects `__filename`, `__dirname`, `dbPath` to the rest of the system?**
-  _136 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `name`, `private`, `version` to the rest of the system?**
+  _137 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
+- **Should `Community 15` be split into smaller, more focused modules?**
+  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
 - **Should `Community 37` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
 - **Should `Community 38` be split into smaller, more focused modules?**

@@ -1,259 +1,352 @@
+mod credit_lock;
+mod db;
+mod gateway;
+mod jobs;
+mod types;
+
 use axum::{
     extract::State,
     http::{HeaderMap, StatusCode},
     response::{IntoResponse, Response},
-    routing::post,
+    routing::{get, post},
     Json, Router,
 };
-use rusqlite::{params, Connection};
-use serde::{Deserialize, Serialize};
+use rusqlite::Connection;
+use serde_json::json;
 use std::sync::{Arc, Mutex};
-use std::time::{SystemTime, UNIX_EPOCH};
+use std::time::Instant;
+use tokio::sync::mpsc;
 
+use crate::credit_lock::CreditLockManager;
+use crate::db::*;
+use crate::gateway::call_provider;
+use crate::jobs::*;
+use crate::types::*;
+
+/// Shared application state across all handler threads
 struct AppState {
     db: Arc<Mutex<Connection>>,
     http_client: reqwest::Client,
-}
-
-#[derive(Deserialize, Serialize, Clone)]
-struct ChatMessage {
-    role: String,
-    content: String,
-}
-
-#[derive(Deserialize, Serialize)]
-struct ChatCompletionRequest {
-    model: String,
-    messages: Vec<ChatMessage>,
-    stream: Option<bool>,
-}
-
-#[derive(Serialize)]
-struct ErrorDetail {
-    message: String,
-    #[serde(rename = "type")]
-    error_type: String,
-}
-
-#[derive(Serialize)]
-struct ErrorResponse {
-    error: ErrorDetail,
+    credit_locks: CreditLockManager,
+    job_tx: mpsc::UnboundedSender<BackgroundJob>,
 }
 
 #[tokio::main]
 async fn main() {
-    // Initialize logging
     tracing_subscriber::fmt::init();
     dotenvy::dotenv().ok();
 
-    // Connect to SQLite database
-    let db_path = std::env::var("DATABASE_URL").unwrap_or_else(|_| "../server/solas.db".to_string());
-    let conn = Connection::open(&db_path).expect("Failed to connect to SQLite database");
-    
-    // Set journal mode to WAL for concurrent performance
-    conn.pragma_update(None, "journal_mode", &"WAL").ok();
+    let db_path = std::env::var("DATABASE_URL").unwrap_or_else(|_| "../server/solas.db".into());
+    let conn = Connection::open(&db_path).expect("Failed to open SQLite database");
+    init_db(&conn);
 
-    let shared_state = Arc::new(AppState {
+    // Spawn background job processor
+    let job_tx = spawn_job_processor(db_path.clone());
+    spawn_cron_tasks(job_tx.clone());
+
+    let state = Arc::new(AppState {
         db: Arc::new(Mutex::new(conn)),
         http_client: reqwest::Client::new(),
+        credit_locks: CreditLockManager::new(),
+        job_tx,
     });
 
-    // Define router
     let app = Router::new()
-        .route("/v1/chat/completions", post(handle_chat_completions))
-        .with_state(shared_state);
+        .route("/health", get(health_check))
+        .route("/v1/chat/completions", post(proxy_handler))
+        .route("/webhooks/stripe", post(stripe_webhook_handler))
+        .with_state(state);
 
-    let port = std::env::var("PORT").unwrap_or_else(|_| "8080".to_string());
+    let port = std::env::var("PORT").unwrap_or_else(|_| "8080".into());
     let listener = tokio::net::TcpListener::bind(format!("0.0.0.0:{}", port))
         .await
         .unwrap();
-        
-    println!("\n🚀 Solas Rust Leaf Engine proxy running on port {}\n", port);
+
+    println!("\n🦀 Solas Leaf Engine v1.0.0 on http://0.0.0.0:{}", port);
+    println!("   ├─ Proxy:     POST /v1/chat/completions");
+    println!("   ├─ Webhooks:  POST /webhooks/stripe");
+    println!("   └─ Health:    GET  /health\n");
+
     axum::serve(listener, app).await.unwrap();
 }
 
-async fn handle_chat_completions(
+/// Health check endpoint
+async fn health_check() -> impl IntoResponse {
+    Json(json!({
+        "status": "ok",
+        "engine": "solas-leaf-rust",
+        "version": "1.0.0",
+        "features": [
+            "per_user_credit_locking",
+            "background_job_queue",
+            "smart_response_cache",
+            "multi_provider_failover",
+            "rpm_tpm_rate_limiting",
+            "streaming_penalty_guard",
+            "log_rotation_archival",
+            "analytics_sink_support"
+        ]
+    }))
+}
+
+/// Stripe webhook handler — dispatches to background queue instantly
+async fn stripe_webhook_handler(
+    State(state): State<Arc<AppState>>,
+    Json(payload): Json<serde_json::Value>,
+) -> impl IntoResponse {
+    let event_type = payload["type"].as_str().unwrap_or("");
+
+    if event_type == "checkout.session.completed" {
+        let email = payload["data"]["object"]["customer_details"]["email"]
+            .as_str()
+            .unwrap_or("");
+        let amount_cents = payload["data"]["object"]["amount_total"].as_f64().unwrap_or(0.0);
+        let session_id = payload["data"]["object"]["id"].as_str().unwrap_or("unknown");
+
+        // Look up user by email
+        let conn = state.db.lock().unwrap();
+        let user_id: Option<String> = conn
+            .query_row(
+                "SELECT id FROM users WHERE email = ?1",
+                rusqlite::params![email],
+                |row| row.get(0),
+            )
+            .ok();
+        drop(conn);
+
+        if let Some(uid) = user_id {
+            // Fire-and-forget to background worker — returns HTTP 200 instantly
+            state.job_tx.send(BackgroundJob::StripeWebhook {
+                user_id: uid,
+                amount: amount_cents / 100.0,
+                stripe_session_id: session_id.to_string(),
+            }).ok();
+
+            return (StatusCode::OK, Json(json!({ "received": true })));
+        }
+    }
+
+    (StatusCode::OK, Json(json!({ "received": true, "processed": false })))
+}
+
+/// Main proxy handler with per-user credit locking
+async fn proxy_handler(
     State(state): State<Arc<AppState>>,
     headers: HeaderMap,
     Json(payload): Json<ChatCompletionRequest>,
 ) -> Response {
-    // 1. Extract and validate authorization token
-    let auth_header = match headers.get("authorization") {
-        Some(h) => h.to_str().unwrap_or(""),
-        None => {
-            return (
-                StatusCode::UNAUTHORIZED,
-                Json(ErrorResponse {
-                    error: ErrorDetail {
-                        message: "Missing Authorization Header".to_string(),
-                        error_type: "unauthorized".to_string(),
-                    },
-                }),
-            )
-                .into_response();
+    let started = Instant::now();
+
+    // ── 1. Auth ──────────────────────────────────────────
+    let api_key = match headers.get("authorization") {
+        Some(v) => v.to_str().unwrap_or("").replace("Bearer ", "").trim().to_string(),
+        None => return error_response(StatusCode::UNAUTHORIZED, "Missing Bearer token", "unauthorized"),
+    };
+
+    let user = {
+        let conn = state.db.lock().unwrap();
+        match get_user_by_key(&conn, &api_key) {
+            Some(u) => u,
+            None => return error_response(StatusCode::UNAUTHORIZED, "Invalid API key", "invalid_api_key"),
         }
     };
 
-    let api_key = auth_header.replace("Bearer ", "").trim().to_string();
-    let db = state.db.lock().unwrap();
+    // ── 2. Acquire per-user credit lock (prevents overdraft) ──
+    let user_lock = state.credit_locks.get_lock(&user.id).await;
+    let _permit = match user_lock.acquire().await {
+        Ok(p) => p,
+        Err(_) => return error_response(StatusCode::INTERNAL_SERVER_ERROR, "Lock acquisition failed", "internal"),
+    };
 
-    // 2. Fetch User wallet metadata
-    let mut stmt = match db.prepare("SELECT id, email, credits, rate_limit_rpm FROM users WHERE api_key = ?1") {
-        Ok(s) => s,
-        Err(_) => {
-            return (
-                StatusCode::INTERNAL_SERVER_ERROR,
-                Json(ErrorResponse {
-                    error: ErrorDetail {
-                        message: "Database connection failure".to_string(),
-                        error_type: "db_error".to_string(),
-                    },
-                }),
-            )
-                .into_response();
+    // Re-read credits under lock for consistency
+    let user = {
+        let conn = state.db.lock().unwrap();
+        match get_user_by_key(&conn, &api_key) {
+            Some(u) => u,
+            None => return error_response(StatusCode::UNAUTHORIZED, "Invalid API key", "invalid_api_key"),
         }
     };
 
-    let user_row = stmt.query_row(params![api_key], |row| {
-        Ok((
-            row.get::<_, String>(0)?, // id
-            row.get::<_, String>(1)?, // email
-            row.get::<_, f64>(2)?,    // credits
-            row.get::<_, i32>(3)?,    // rpm
-        ))
-    });
+    // ── 3. Balance gate ──────────────────────────────────
+    if user.credits <= 0.0 {
+        return error_response(StatusCode::PAYMENT_REQUIRED, "Insufficient funds", "billing_hard_limit");
+    }
 
-    let (user_id, email, credits, rpm) = match user_row {
-        Ok(data) => data,
-        Err(_) => {
-            return (
-                StatusCode::UNAUTHORIZED,
-                Json(ErrorResponse {
-                    error: ErrorDetail {
-                        message: "Invalid API key".to_string(),
-                        error_type: "invalid_api_key".to_string(),
-                    },
-                }),
-            )
-                .into_response();
+    // ── 4. Rate limit (RPM + TPM) ────────────────────────
+    let estimated_input = estimate_messages_tokens(&payload.messages);
+    {
+        let conn = state.db.lock().unwrap();
+        let current_rpm = check_rpm(&conn, &user.id);
+        if current_rpm >= user.rate_limit_rpm as i64 {
+            return error_response(StatusCode::TOO_MANY_REQUESTS, "RPM rate limit exceeded", "rate_limit");
         }
+        let current_tpm = check_tpm(&conn, &user.id);
+        if (current_tpm + estimated_input) >= user.rate_limit_tpm as i64 {
+            return error_response(StatusCode::TOO_MANY_REQUESTS, "TPM rate limit exceeded", "rate_limit");
+        }
+    }
+
+    // ── 5. Pricing lookup ────────────────────────────────
+    let mut model = payload.model.clone();
+    let mut pricing = {
+        let conn = state.db.lock().unwrap();
+        get_model_pricing(&conn, &model).unwrap_or(ModelPricing {
+            model_name: model.clone(),
+            provider: "openai".into(),
+            input_cost_per_million: 5.0,
+            output_cost_per_million: 15.0,
+        })
     };
+    let mut provider = Provider::from_str(&pricing.provider);
+    let mut recovery_model: Option<String> = None;
 
-    // 3. Balance gating checks
-    if credits <= 0.0 {
-        return (
-            StatusCode::PAYMENT_REQUIRED,
-            Json(ErrorResponse {
-                error: ErrorDetail {
-                    message: "Insufficient funds".to_string(),
-                    error_type: "insufficient_credits".to_string(),
-                },
-            }),
-        )
-            .into_response();
-    }
+    // ── 6. Low-balance fallback ──────────────────────────
+    let est_input_cost = (estimated_input as f64 / 1_000_000.0) * pricing.input_cost_per_million;
+    if est_input_cost > user.credits && user.fallback_allowed {
+        let conn = state.db.lock().unwrap();
+        let mut stmt = conn
+            .prepare("SELECT model_name, provider, input_cost_per_million, output_cost_per_million FROM model_pricing WHERE provider = ?1 AND input_cost_per_million < ?2 ORDER BY input_cost_per_million ASC LIMIT 1")
+            .unwrap();
 
-    // 4. Rate limiting check (RPM)
-    let requests_last_min: i64 = db
-        .query_row(
-            "SELECT count(*) FROM request_logs WHERE user_id = ?1 AND timestamp > datetime('now', '-1 minute')",
-            params![user_id],
-            |row| row.get(0),
-        )
-        .unwrap_or(0);
-
-    if requests_last_min >= rpm as i64 {
-        return (
-            StatusCode::TOO_MANY_REQUESTS,
-            Json(ErrorResponse {
-                error: ErrorDetail {
-                    message: format!("Rate limit exceeded. Maximum {} requests per minute.", rpm),
-                    error_type: "rate_limit_exceeded".to_string(),
-                },
-            }),
-        )
-            .into_response();
-    }
-
-    // 5. Cost estimation (prompt chars / 4 as local estimate)
-    let total_prompt_chars: usize = payload.messages.iter().map(|m| m.content.len()).sum();
-    let estimated_tokens = (total_prompt_chars / 4) + 12;
-    let cost_per_million = 5.0; // Default gpt-4o pricing
-    let estimated_cost = (estimated_tokens as f64 / 1_000_000.0) * cost_per_million;
-
-    if estimated_cost > credits {
-        return (
-            StatusCode::PAYMENT_REQUIRED,
-            Json(ErrorResponse {
-                error: ErrorDetail {
-                    message: format!(
-                        "Insufficient credits for prompt query cost: estimated cost is ${:.6}",
-                        estimated_cost
-                    ),
-                    error_type: "insufficient_credits".to_string(),
-                },
-            }),
-        )
-            .into_response();
-    }
-
-    // 6. Forwarding request to OpenAI backend (demonstration proxy forwarder)
-    let openapi_key = std::env::var("OPENAI_API_KEY").unwrap_or_else(|_| "dummy_key".to_string());
-    
-    let target_url = "https://api.openai.com/v1/chat/completions";
-    let res = state.http_client
-        .post(target_url)
-        .header("Content-Type", "application/json")
-        .header("Authorization", format!("Bearer {}", openapi_key))
-        .json(&payload)
-        .send()
-        .await;
-
-    match res {
-        Ok(response) => {
-            let status = response.status();
-            let body_text = response.text().await.unwrap_or_default();
-
-            // 7. Balance deduction on successful completion
-            if status.is_success() {
-                let output_tokens = 50; // Mock output token length
-                let final_cost = ((estimated_tokens + output_tokens) as f64 / 1_000_000.0) * cost_per_million;
-                
-                // Deduct credits in SQLite
-                db.execute(
-                    "UPDATE users SET credits = credits - ?1 WHERE id = ?2",
-                    params![final_cost, user_id],
-                ).ok();
-
-                // Log request transaction
-                let request_id = uuid::Uuid::new_v4().to_string();
-                db.execute(
-                    "INSERT INTO request_logs (id, user_id, model, provider, input_tokens, output_tokens, cost, status)
-                     VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)",
-                    params![request_id, user_id, payload.model, "openai", estimated_tokens, output_tokens, final_cost, 200],
-                ).ok();
-
-                println!("[Rust Engine] Request logged successfully. Billed ${:.6} to {}", final_cost, email);
+        if let Ok(cheaper) = stmt.query_row(
+            rusqlite::params![pricing.provider, pricing.input_cost_per_million],
+            |row| {
+                Ok(ModelPricing {
+                    model_name: row.get(0)?,
+                    provider: row.get(1)?,
+                    input_cost_per_million: row.get(2)?,
+                    output_cost_per_million: row.get(3)?,
+                })
+            },
+        ) {
+            let fb_cost = (estimated_input as f64 / 1_000_000.0) * cheaper.input_cost_per_million;
+            if fb_cost <= user.credits {
+                recovery_model = Some(model.clone());
+                model = cheaper.model_name.clone();
+                pricing = cheaper;
             }
-
-            // Return response
-            Response::builder()
-                .status(status.as_u16())
-                .header("Content-Type", "application/json")
-                .body(body_text.into())
-                .unwrap()
-        }
-        Err(_) => {
-            (
-                StatusCode::BAD_GATEWAY,
-                Json(ErrorResponse {
-                    error: ErrorDetail {
-                        message: "Failed to communicate with OpenAI backend".to_string(),
-                        error_type: "gateway_error".to_string(),
-                    },
-                }),
-            )
-                .into_response()
         }
     }
+
+    let final_est_cost = (estimated_input as f64 / 1_000_000.0) * pricing.input_cost_per_million;
+    if final_est_cost > user.credits {
+        return error_response(StatusCode::PAYMENT_REQUIRED, "Insufficient credits", "billing_pre_limit");
+    }
+
+    let stream = payload.stream.unwrap_or(false);
+    let request_id = uuid::Uuid::new_v4().to_string();
+
+    // ── 7. Cache check (non-stream only) ─────────────────
+    let cache_key = compute_cache_key(&model, &payload.messages);
+    if !stream {
+        let conn = state.db.lock().unwrap();
+        if let Some((cached_payload, cached_in, cached_out)) = get_cached_response(&conn, &cache_key) {
+            let in_cost = (cached_in as f64 / 1_000_000.0) * pricing.input_cost_per_million;
+            let out_cost = (cached_out as f64 / 1_000_000.0) * pricing.output_cost_per_million;
+            let total_cost = (in_cost + out_cost) * 0.10;
+            let latency = started.elapsed().as_millis() as i64;
+
+            deduct_and_log(&conn, &request_id, &user.id, &model, provider.as_str(), cached_in, cached_out, total_cost, 200, recovery_model.as_deref(), true, latency);
+            drop(conn);
+
+            return Response::builder()
+                .status(200)
+                .header("Content-Type", "application/json")
+                .header("X-Solas-Cache", "HIT")
+                .header("X-Solas-Latency-Ms", latency.to_string())
+                .body(cached_payload.into())
+                .unwrap();
+        }
+    }
+
+    // ── 8. Provider call with failover ───────────────────
+    let mut failover_from: Option<String> = None;
+
+    let response = match call_provider(&state.http_client, &provider, &model, &payload.messages, stream, &payload).await {
+        Ok(resp) if resp.status().is_server_error() || resp.status().as_u16() == 429 => {
+            if let Some(route) = get_failover_route(&model) {
+                failover_from = Some(model.clone());
+                model = route.model.to_string();
+                provider = route.provider;
+                tracing::warn!("Failover: {} -> {}", failover_from.as_ref().unwrap(), model);
+                call_provider(&state.http_client, &provider, &model, &payload.messages, stream, &payload).await
+            } else {
+                Ok(resp)
+            }
+        }
+        other => other,
+    };
+
+    let resp = match response {
+        Ok(r) => r,
+        Err(e) => {
+            tracing::error!("Gateway error: {}", e);
+            return error_response(StatusCode::BAD_GATEWAY, "Provider unreachable", "gateway_error");
+        }
+    };
+
+    let status_code = resp.status().as_u16();
+    let body_text = resp.text().await.unwrap_or_default();
+    let latency = started.elapsed().as_millis() as i64;
+
+    // ── 9. Billing & Analytics ───────────────────────────
+    let conn = state.db.lock().unwrap();
+
+    if status_code == 200 {
+        let output_tokens = if let Ok(parsed) = serde_json::from_str::<serde_json::Value>(&body_text) {
+            parsed["usage"]["completion_tokens"].as_i64().unwrap_or_else(|| {
+                let content = parsed["choices"][0]["message"]["content"].as_str().unwrap_or("");
+                estimate_tokens(content)
+            })
+        } else {
+            50
+        };
+
+        let in_cost = (estimated_input as f64 / 1_000_000.0) * pricing.input_cost_per_million;
+        let out_cost = (output_tokens as f64 / 1_000_000.0) * pricing.output_cost_per_million;
+        let total_cost = in_cost + out_cost;
+
+        let fb = recovery_model.as_deref().or(failover_from.as_deref());
+        deduct_and_log(&conn, &request_id, &user.id, &model, provider.as_str(), estimated_input, output_tokens, total_cost, 200, fb, false, latency);
+
+        if !stream {
+            set_cached_response(&conn, &cache_key, &model, &body_text, estimated_input, output_tokens);
+        }
+
+        // Dispatch analytics event to background worker (non-blocking)
+        state.job_tx.send(BackgroundJob::AnalyticsFlush {
+            batch: vec![AnalyticsEvent {
+                request_id: request_id.clone(),
+                user_id: user.id.clone(),
+                model: model.clone(),
+                provider: provider.as_str().to_string(),
+                input_tokens: estimated_input,
+                output_tokens,
+                cost: total_cost,
+                latency_ms: latency,
+                cache_hit: false,
+                timestamp: chrono::Utc::now().to_rfc3339(),
+            }],
+        }).ok();
+    } else {
+        deduct_and_log(&conn, &request_id, &user.id, &model, provider.as_str(), 0, 0, 0.0, status_code as i32, None, false, latency);
+    }
+
+    drop(conn);
+
+    // ── 10. Return ───────────────────────────────────────
+    let mut builder = Response::builder()
+        .status(status_code)
+        .header("Content-Type", "application/json")
+        .header("X-Solas-Cache", "MISS")
+        .header("X-Solas-Latency-Ms", latency.to_string());
+
+    if failover_from.is_some() { builder = builder.header("X-Solas-Failover-Active", "true"); }
+    if recovery_model.is_some() { builder = builder.header("X-Solas-Fallback-Triggered", "true"); }
+
+    builder.body(body_text.into()).unwrap()
+}
+
+fn error_response(status: StatusCode, message: &str, error_type: &str) -> Response {
+    (status, Json(json!({ "error": { "message": message, "type": error_type } }))).into_response()
 }
