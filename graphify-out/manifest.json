@@ -1,9 +1,4 @@
 {
-  "apps/dashboard/.oxlintrc.json": {
-    "mtime": 1782678399.3155713,
-    "ast_hash": "5e6e3cea3e89137071c142dd7835b0ef",
-    "semantic_hash": ""
-  },
   "apps/dashboard/package.json": {
     "mtime": 1782678499.0193336,
     "ast_hash": "8660b2f2d725631cd202f0fc84ae1116",
@@ -85,8 +80,8 @@
     "semantic_hash": ""
   },
   "apps/dashboard/README.md": {
-    "mtime": 1782678399.3895264,
-    "ast_hash": "75eb386f17caf77fd6fe3ce1d90968ee",
+    "mtime": 1782680348.5782907,
+    "ast_hash": "3d6327dffcb3af03cb99dcc2e235e3b0",
     "semantic_hash": ""
   },
   "apps/dashboard/index.html": {
@@ -112,16 +107,6 @@
   "apps/dashboard/src/assets/hero.png": {
     "mtime": 1782678399.419139,
     "ast_hash": "aead493361b27e7510691c5d7072dfc1",
-    "semantic_hash": ""
-  },
-  "apps/dashboard/src/assets/react.svg": {
-    "mtime": 1782678399.5542097,
-    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
-    "semantic_hash": ""
-  },
-  "apps/dashboard/src/assets/vite.svg": {
-    "mtime": 1782678399.6079617,
-    "ast_hash": "9960a24288958394ac50e57ff638b036",
     "semantic_hash": ""
   },
   "packages/ksuid/index.js": {
@@ -157,11 +142,6 @@
   ".vscode/settings.json": {
     "mtime": 1782679073.6595082,
     "ast_hash": "771372d0e99d3990e53a088fac1fb09c",
-    "semantic_hash": ""
-  },
-  ".zed/settings.json": {
-    "mtime": 1782679080.856865,
-    "ast_hash": "94b85ffbb5d6dac9264991ee719210a5",
     "semantic_hash": ""
   },
   "ai/prompts.json": {

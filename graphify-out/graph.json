@@ -4,3176 +4,6 @@
   "graph": {},
   "nodes": [
     {
-      "label": "checkout.js",
-      "file_type": "code",
-      "source_file": "apps/checkout/checkout.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "checkout_checkout",
-      "community": 26,
-      "norm_label": "checkout.js"
-    },
-    {
-      "label": "simulateCheckout()",
-      "file_type": "code",
-      "source_file": "apps/checkout/checkout.js",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "checkout_checkout_simulatecheckout",
-      "community": 26,
-      "norm_label": "simulatecheckout()"
-    },
-    {
-      "label": ".oxlintrc.json",
-      "file_type": "code",
-      "source_file": "apps/dashboard/.oxlintrc.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "dashboard_oxlintrc",
-      "community": 8,
-      "norm_label": ".oxlintrc.json"
-    },
-    {
-      "label": "$schema",
-      "file_type": "code",
-      "source_file": "apps/dashboard/.oxlintrc.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "dashboard_oxlintrc_schema",
-      "community": 8,
-      "norm_label": "$schema"
-    },
-    {
-      "label": "plugins",
-      "file_type": "code",
-      "source_file": "apps/dashboard/.oxlintrc.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "dashboard_oxlintrc_plugins",
-      "community": 8,
-      "norm_label": "plugins"
-    },
-    {
-      "label": "rules",
-      "file_type": "code",
-      "source_file": "apps/dashboard/.oxlintrc.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "dashboard_oxlintrc_rules",
-      "community": 8,
-      "norm_label": "rules"
-    },
-    {
-      "label": "react/rules-of-hooks",
-      "file_type": "code",
-      "source_file": "apps/dashboard/.oxlintrc.json",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "dashboard_oxlintrc_rules_react_rules_of_hooks",
-      "community": 8,
-      "norm_label": "react/rules-of-hooks"
-    },
-    {
-      "label": "react/only-export-components",
-      "file_type": "code",
-      "source_file": "apps/dashboard/.oxlintrc.json",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "dashboard_oxlintrc_rules_react_only_export_components",
-      "community": 8,
-      "norm_label": "react/only-export-components"
-    },
-    {
-      "label": "package.json",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "dashboard_package",
-      "community": 1,
-      "norm_label": "package.json"
-    },
-    {
-      "label": "name",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "dashboard_package_name",
-      "community": 1,
-      "norm_label": "name"
-    },
-    {
-      "label": "private",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "dashboard_package_private",
-      "community": 1,
-      "norm_label": "private"
-    },
-    {
-      "label": "version",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "dashboard_package_version",
-      "community": 1,
-      "norm_label": "version"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "dashboard_package_type",
-      "community": 1,
-      "norm_label": "type"
-    },
-    {
-      "label": "scripts",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "dashboard_package_scripts",
-      "community": 1,
-      "norm_label": "scripts"
-    },
-    {
-      "label": "dev",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "dashboard_package_scripts_dev",
-      "community": 1,
-      "norm_label": "dev"
-    },
-    {
-      "label": "build",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "dashboard_package_scripts_build",
-      "community": 1,
-      "norm_label": "build"
-    },
-    {
-      "label": "lint",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "dashboard_package_scripts_lint",
-      "community": 1,
-      "norm_label": "lint"
-    },
-    {
-      "label": "preview",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "dashboard_package_scripts_preview",
-      "community": 1,
-      "norm_label": "preview"
-    },
-    {
-      "label": "dependencies",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "dashboard_package_dependencies",
-      "community": 1,
-      "norm_label": "dependencies"
-    },
-    {
-      "label": "lucide-react",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "dashboard_package_dependencies_lucide_react",
-      "community": 1,
-      "norm_label": "lucide-react"
-    },
-    {
-      "label": "react",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "dashboard_package_dependencies_react",
-      "community": 1,
-      "norm_label": "react"
-    },
-    {
-      "label": "react-dom",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "dashboard_package_dependencies_react_dom",
-      "community": 1,
-      "norm_label": "react-dom"
-    },
-    {
-      "label": "devDependencies",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L17",
-      "_origin": "ast",
-      "id": "dashboard_package_devdependencies",
-      "community": 1,
-      "norm_label": "devdependencies"
-    },
-    {
-      "label": "@types/react",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "dashboard_package_devdependencies_types_react",
-      "community": 1,
-      "norm_label": "@types/react"
-    },
-    {
-      "label": "@types/react-dom",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "dashboard_package_devdependencies_types_react_dom",
-      "community": 1,
-      "norm_label": "@types/react-dom"
-    },
-    {
-      "label": "@vitejs/plugin-react",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "dashboard_package_devdependencies_vitejs_plugin_react",
-      "community": 1,
-      "norm_label": "@vitejs/plugin-react"
-    },
-    {
-      "label": "oxlint",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L21",
-      "_origin": "ast",
-      "id": "dashboard_package_devdependencies_oxlint",
-      "community": 1,
-      "norm_label": "oxlint"
-    },
-    {
-      "label": "vite",
-      "file_type": "code",
-      "source_file": "apps/dashboard/package.json",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "dashboard_package_devdependencies_vite",
-      "community": 1,
-      "norm_label": "vite"
-    },
-    {
-      "label": "App.jsx",
-      "file_type": "code",
-      "source_file": "apps/dashboard/src/App.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_app",
-      "community": 39,
-      "norm_label": "app.jsx"
-    },
-    {
-      "label": "App()",
-      "file_type": "code",
-      "source_file": "apps/dashboard/src/App.jsx",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "src_app_app",
-      "community": 39,
-      "norm_label": "app()"
-    },
-    {
-      "label": "main.jsx",
-      "file_type": "code",
-      "source_file": "apps/dashboard/src/main.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_dashboard_src_main_jsx_src_main",
-      "community": 39,
-      "norm_label": "main.jsx"
-    },
-    {
-      "label": "vite.config.js",
-      "file_type": "code",
-      "source_file": "apps/dashboard/vite.config.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "dashboard_vite_config",
-      "community": 16,
-      "norm_label": "vite.config.js"
-    },
-    {
-      "label": "credit_lock.rs",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/credit_lock.rs",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_credit_lock",
-      "community": 41,
-      "norm_label": "credit_lock.rs"
-    },
-    {
-      "label": "CreditLockManager",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/credit_lock.rs",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "src_credit_lock_creditlockmanager",
-      "community": 41,
-      "norm_label": "creditlockmanager"
-    },
-    {
-      "label": "Mutex",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "mutex",
-      "community": 41,
-      "norm_label": "mutex"
-    },
-    {
-      "label": "HashMap",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "hashmap",
-      "community": 41,
-      "norm_label": "hashmap"
-    },
-    {
-      "label": "String",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "string",
-      "community": 39,
-      "norm_label": "string"
-    },
-    {
-      "label": "Arc",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "arc",
-      "community": 41,
-      "norm_label": "arc"
-    },
-    {
-      "label": "Semaphore",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "semaphore",
-      "community": 41,
-      "norm_label": "semaphore"
-    },
-    {
-      "label": ".new()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/credit_lock.rs",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "src_credit_lock_creditlockmanager_new",
-      "community": 41,
-      "norm_label": ".new()"
-    },
-    {
-      "label": "Self",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "self",
-      "community": 41,
-      "norm_label": "self"
-    },
-    {
-      "label": ".get_lock()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/credit_lock.rs",
-      "source_location": "L26",
-      "_origin": "ast",
-      "id": "src_credit_lock_creditlockmanager_get_lock",
-      "community": 41,
-      "norm_label": ".get_lock()"
-    },
-    {
-      "label": "db.rs",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/db.rs",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_db",
-      "community": 15,
-      "norm_label": "db.rs"
-    },
-    {
-      "label": "init_db()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/db.rs",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "src_db_init_db",
-      "community": 15,
-      "norm_label": "init_db()"
-    },
-    {
-      "label": "Connection",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "connection",
-      "community": 15,
-      "norm_label": "connection"
-    },
-    {
-      "label": "UserRecord",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/db.rs",
-      "source_location": "L76",
-      "_origin": "ast",
-      "id": "src_db_userrecord",
-      "community": 15,
-      "norm_label": "userrecord"
-    },
-    {
-      "label": "ModelPricing",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/db.rs",
-      "source_location": "L87",
-      "_origin": "ast",
-      "id": "src_db_modelpricing",
-      "community": 15,
-      "norm_label": "modelpricing"
-    },
-    {
-      "label": "get_user_by_key()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/db.rs",
-      "source_location": "L95",
-      "_origin": "ast",
-      "id": "src_db_get_user_by_key",
-      "community": 15,
-      "norm_label": "get_user_by_key()"
-    },
-    {
-      "label": "Option",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "option",
-      "community": 15,
-      "norm_label": "option"
-    },
-    {
-      "label": "get_model_pricing()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/db.rs",
-      "source_location": "L114",
-      "_origin": "ast",
-      "id": "src_db_get_model_pricing",
-      "community": 15,
-      "norm_label": "get_model_pricing()"
-    },
-    {
-      "label": "check_rpm()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/db.rs",
-      "source_location": "L131",
-      "_origin": "ast",
-      "id": "src_db_check_rpm",
-      "community": 15,
-      "norm_label": "check_rpm()"
-    },
-    {
-      "label": "check_tpm()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/db.rs",
-      "source_location": "L141",
-      "_origin": "ast",
-      "id": "src_db_check_tpm",
-      "community": 15,
-      "norm_label": "check_tpm()"
-    },
-    {
-      "label": "deduct_and_log()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/db.rs",
-      "source_location": "L151",
-      "_origin": "ast",
-      "id": "src_db_deduct_and_log",
-      "community": 15,
-      "norm_label": "deduct_and_log()"
-    },
-    {
-      "label": "get_cached_response()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/db.rs",
-      "source_location": "L196",
-      "_origin": "ast",
-      "id": "src_db_get_cached_response",
-      "community": 15,
-      "norm_label": "get_cached_response()"
-    },
-    {
-      "label": "set_cached_response()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/db.rs",
-      "source_location": "L208",
-      "_origin": "ast",
-      "id": "src_db_set_cached_response",
-      "community": 15,
-      "norm_label": "set_cached_response()"
-    },
-    {
-      "label": "gateway.rs",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/gateway.rs",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_gateway",
-      "community": 39,
-      "norm_label": "gateway.rs"
-    },
-    {
-      "label": "call_provider()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/gateway.rs",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "src_gateway_call_provider",
-      "community": 39,
-      "norm_label": "call_provider()"
-    },
-    {
-      "label": "Client",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "client",
-      "community": 39,
-      "norm_label": "client"
-    },
-    {
-      "label": "Result",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "result",
-      "community": 39,
-      "norm_label": "result"
-    },
-    {
-      "label": "Response",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "response",
-      "community": 15,
-      "norm_label": "response"
-    },
-    {
-      "label": "Error",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "error",
-      "community": 39,
-      "norm_label": "error"
-    },
-    {
-      "label": "jobs.rs",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/jobs.rs",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_jobs",
-      "community": 41,
-      "norm_label": "jobs.rs"
-    },
-    {
-      "label": "BackgroundJob",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/jobs.rs",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "src_jobs_backgroundjob",
-      "community": 41,
-      "norm_label": "backgroundjob"
-    },
-    {
-      "label": "AnalyticsEvent",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/jobs.rs",
-      "source_location": "L29",
-      "_origin": "ast",
-      "id": "src_jobs_analyticsevent",
-      "community": 41,
-      "norm_label": "analyticsevent"
-    },
-    {
-      "label": "spawn_job_processor()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/jobs.rs",
-      "source_location": "L45",
-      "_origin": "ast",
-      "id": "src_jobs_spawn_job_processor",
-      "community": 41,
-      "norm_label": "spawn_job_processor()"
-    },
-    {
-      "label": "UnboundedSender",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "unboundedsender",
-      "community": 41,
-      "norm_label": "unboundedsender"
-    },
-    {
-      "label": "spawn_cron_tasks()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/jobs.rs",
-      "source_location": "L164",
-      "_origin": "ast",
-      "id": "src_jobs_spawn_cron_tasks",
-      "community": 41,
-      "norm_label": "spawn_cron_tasks()"
-    },
-    {
-      "label": "main.rs",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_leaf_src_main_rs_src_main",
-      "community": 15,
-      "norm_label": "main.rs"
-    },
-    {
-      "label": "AppState",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L27",
-      "_origin": "ast",
-      "id": "src_main_appstate",
-      "community": 41,
-      "norm_label": "appstate"
-    },
-    {
-      "label": "main()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L35",
-      "_origin": "ast",
-      "id": "src_main_main",
-      "community": 41,
-      "norm_label": "main()"
-    },
-    {
-      "label": "health_check()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L74",
-      "_origin": "ast",
-      "id": "src_main_health_check",
-      "community": 15,
-      "norm_label": "health_check()"
-    },
-    {
-      "label": "IntoResponse",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "intoresponse",
-      "community": 15,
-      "norm_label": "intoresponse"
-    },
-    {
-      "label": "stripe_webhook_handler()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L93",
-      "_origin": "ast",
-      "id": "src_main_stripe_webhook_handler",
-      "community": 15,
-      "norm_label": "stripe_webhook_handler()"
-    },
-    {
-      "label": "State",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "state",
-      "community": 15,
-      "norm_label": "state"
-    },
-    {
-      "label": "Json",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "json",
-      "community": 15,
-      "norm_label": "json"
-    },
-    {
-      "label": "Value",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "value",
-      "community": 15,
-      "norm_label": "value"
-    },
-    {
-      "label": "proxy_handler()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L133",
-      "_origin": "ast",
-      "id": "src_main_proxy_handler",
-      "community": 15,
-      "norm_label": "proxy_handler()"
-    },
-    {
-      "label": "HeaderMap",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "headermap",
-      "community": 15,
-      "norm_label": "headermap"
-    },
-    {
-      "label": "error_response()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L350",
-      "_origin": "ast",
-      "id": "src_main_error_response",
-      "community": 15,
-      "norm_label": "error_response()"
-    },
-    {
-      "label": "StatusCode",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "statuscode",
-      "community": 15,
-      "norm_label": "statuscode"
-    },
-    {
-      "label": "types.rs",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/types.rs",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_types",
-      "community": 39,
-      "norm_label": "types.rs"
-    },
-    {
-      "label": "ChatMessage",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/types.rs",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "src_types_chatmessage",
-      "community": 39,
-      "norm_label": "chatmessage"
-    },
-    {
-      "label": "ChatCompletionRequest",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/types.rs",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "src_types_chatcompletionrequest",
-      "community": 39,
-      "norm_label": "chatcompletionrequest"
-    },
-    {
-      "label": "Vec",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "vec",
-      "community": 39,
-      "norm_label": "vec"
-    },
-    {
-      "label": "ChatCompletionResponse",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/types.rs",
-      "source_location": "L26",
-      "_origin": "ast",
-      "id": "src_types_chatcompletionresponse",
-      "community": 39,
-      "norm_label": "chatcompletionresponse"
-    },
-    {
-      "label": "CompletionChoice",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/types.rs",
-      "source_location": "L36",
-      "_origin": "ast",
-      "id": "src_types_completionchoice",
-      "community": 39,
-      "norm_label": "completionchoice"
-    },
-    {
-      "label": "UsageInfo",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/types.rs",
-      "source_location": "L43",
-      "_origin": "ast",
-      "id": "src_types_usageinfo",
-      "community": 39,
-      "norm_label": "usageinfo"
-    },
-    {
-      "label": "ErrorResponse",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/types.rs",
-      "source_location": "L51",
-      "_origin": "ast",
-      "id": "src_types_errorresponse",
-      "community": 39,
-      "norm_label": "errorresponse"
-    },
-    {
-      "label": "ErrorDetail",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/types.rs",
-      "source_location": "L56",
-      "_origin": "ast",
-      "id": "src_types_errordetail",
-      "community": 39,
-      "norm_label": "errordetail"
-    },
-    {
-      "label": "Provider",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/types.rs",
-      "source_location": "L64",
-      "_origin": "ast",
-      "id": "src_types_provider",
-      "community": 39,
-      "norm_label": "provider"
-    },
-    {
-      "label": ".from_str()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/types.rs",
-      "source_location": "L71",
-      "_origin": "ast",
-      "id": "src_types_provider_from_str",
-      "community": 41,
-      "norm_label": ".from_str()"
-    },
-    {
-      "label": ".as_str()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/types.rs",
-      "source_location": "L79",
-      "_origin": "ast",
-      "id": "src_types_provider_as_str",
-      "community": 39,
-      "norm_label": ".as_str()"
-    },
-    {
-      "label": "estimate_tokens()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/types.rs",
-      "source_location": "L89",
-      "_origin": "ast",
-      "id": "src_types_estimate_tokens",
-      "community": 39,
-      "norm_label": "estimate_tokens()"
-    },
-    {
-      "label": "estimate_messages_tokens()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/types.rs",
-      "source_location": "L94",
-      "_origin": "ast",
-      "id": "src_types_estimate_messages_tokens",
-      "community": 39,
-      "norm_label": "estimate_messages_tokens()"
-    },
-    {
-      "label": "compute_cache_key()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/types.rs",
-      "source_location": "L103",
-      "_origin": "ast",
-      "id": "src_types_compute_cache_key",
-      "community": 39,
-      "norm_label": "compute_cache_key()"
-    },
-    {
-      "label": "FailoverRoute",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/types.rs",
-      "source_location": "L114",
-      "_origin": "ast",
-      "id": "src_types_failoverroute",
-      "community": 39,
-      "norm_label": "failoverroute"
-    },
-    {
-      "label": "get_failover_route()",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/types.rs",
-      "source_location": "L120",
-      "_origin": "ast",
-      "id": "src_types_get_failover_route",
-      "community": 39,
-      "norm_label": "get_failover_route()"
-    },
-    {
-      "label": "picker.js",
-      "file_type": "code",
-      "source_file": "apps/scope-picker/picker.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scope_picker_picker",
-      "community": 28,
-      "norm_label": "picker.js"
-    },
-    {
-      "label": "validateScope()",
-      "file_type": "code",
-      "source_file": "apps/scope-picker/picker.js",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "scope_picker_picker_validatescope",
-      "community": 28,
-      "norm_label": "validatescope()"
-    },
-    {
-      "label": "integration.test.js",
-      "file_type": "code",
-      "source_file": "apps/sdk-test/integration.test.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "sdk_test_integration_test",
-      "community": 14,
-      "norm_label": "integration.test.js"
-    },
-    {
-      "label": "db.js",
-      "file_type": "code",
-      "source_file": "apps/server/db.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "server_db",
-      "community": 3,
-      "norm_label": "db.js"
-    },
-    {
-      "label": "__filename",
-      "file_type": "code",
-      "source_file": "apps/server/db.js",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "server_db_filename",
-      "community": 3,
-      "norm_label": "__filename"
-    },
-    {
-      "label": "__dirname",
-      "file_type": "code",
-      "source_file": "apps/server/db.js",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "server_db_dirname",
-      "community": 3,
-      "norm_label": "__dirname"
-    },
-    {
-      "label": "dbPath",
-      "file_type": "code",
-      "source_file": "apps/server/db.js",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "server_db_dbpath",
-      "community": 3,
-      "norm_label": "dbpath"
-    },
-    {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "apps/server/db.js",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "server_db_db",
-      "community": 3,
-      "norm_label": "db"
-    },
-    {
-      "label": "initDB()",
-      "file_type": "code",
-      "source_file": "apps/server/db.js",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "server_db_initdb",
-      "community": 3,
-      "norm_label": "initdb()"
-    },
-    {
-      "label": "package.json",
-      "file_type": "code",
-      "source_file": "apps/server/package.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "server_package",
-      "community": 0,
-      "norm_label": "package.json"
-    },
-    {
-      "label": "name",
-      "file_type": "code",
-      "source_file": "apps/server/package.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "server_package_name",
-      "community": 0,
-      "norm_label": "name"
-    },
-    {
-      "label": "version",
-      "file_type": "code",
-      "source_file": "apps/server/package.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "server_package_version",
-      "community": 0,
-      "norm_label": "version"
-    },
-    {
-      "label": "description",
-      "file_type": "code",
-      "source_file": "apps/server/package.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "server_package_description",
-      "community": 0,
-      "norm_label": "description"
-    },
-    {
-      "label": "main",
-      "file_type": "code",
-      "source_file": "apps/server/package.json",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "server_package_main",
-      "community": 0,
-      "norm_label": "main"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "apps/server/package.json",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "server_package_type",
-      "community": 0,
-      "norm_label": "type"
-    },
-    {
-      "label": "scripts",
-      "file_type": "code",
-      "source_file": "apps/server/package.json",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "server_package_scripts",
-      "community": 0,
-      "norm_label": "scripts"
-    },
-    {
-      "label": "start",
-      "file_type": "code",
-      "source_file": "apps/server/package.json",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "server_package_scripts_start",
-      "community": 0,
-      "norm_label": "start"
-    },
-    {
-      "label": "dev",
-      "file_type": "code",
-      "source_file": "apps/server/package.json",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "server_package_scripts_dev",
-      "community": 0,
-      "norm_label": "dev"
-    },
-    {
-      "label": "dependencies",
-      "file_type": "code",
-      "source_file": "apps/server/package.json",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "server_package_dependencies",
-      "community": 0,
-      "norm_label": "dependencies"
-    },
-    {
-      "label": "@fastify/cors",
-      "file_type": "code",
-      "source_file": "apps/server/package.json",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "server_package_dependencies_fastify_cors",
-      "community": 0,
-      "norm_label": "@fastify/cors"
-    },
-    {
-      "label": "better-sqlite3",
-      "file_type": "code",
-      "source_file": "apps/server/package.json",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "server_package_dependencies_better_sqlite3",
-      "community": 0,
-      "norm_label": "better-sqlite3"
-    },
-    {
-      "label": "dotenv",
-      "file_type": "code",
-      "source_file": "apps/server/package.json",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "server_package_dependencies_dotenv",
-      "community": 0,
-      "norm_label": "dotenv"
-    },
-    {
-      "label": "fastify",
-      "file_type": "code",
-      "source_file": "apps/server/package.json",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "server_package_dependencies_fastify",
-      "community": 0,
-      "norm_label": "fastify"
-    },
-    {
-      "label": "js-tiktoken",
-      "file_type": "code",
-      "source_file": "apps/server/package.json",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "server_package_dependencies_js_tiktoken",
-      "community": 0,
-      "norm_label": "js-tiktoken"
-    },
-    {
-      "label": "devDependencies",
-      "file_type": "code",
-      "source_file": "apps/server/package.json",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "server_package_devdependencies",
-      "community": 0,
-      "norm_label": "devdependencies"
-    },
-    {
-      "label": "nodemon",
-      "file_type": "code",
-      "source_file": "apps/server/package.json",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "server_package_devdependencies_nodemon",
-      "community": 0,
-      "norm_label": "nodemon"
-    },
-    {
-      "label": "server.js",
-      "file_type": "code",
-      "source_file": "apps/server/server.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "server_server",
-      "community": 3,
-      "norm_label": "server.js"
-    },
-    {
-      "label": "app",
-      "file_type": "code",
-      "source_file": "apps/server/server.js",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "server_server_app",
-      "community": 3,
-      "norm_label": "app"
-    },
-    {
-      "label": "generateApiKey()",
-      "file_type": "code",
-      "source_file": "apps/server/server.js",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "server_server_generateapikey",
-      "community": 3,
-      "norm_label": "generateapikey()"
-    },
-    {
-      "label": "FAILOVER_ROUTES",
-      "file_type": "code",
-      "source_file": "apps/server/server.js",
-      "source_location": "L27",
-      "_origin": "ast",
-      "id": "server_server_failover_routes",
-      "community": 3,
-      "norm_label": "failover_routes"
-    },
-    {
-      "label": "executeProviderCall()",
-      "file_type": "code",
-      "source_file": "apps/server/server.js",
-      "source_location": "L160",
-      "_origin": "ast",
-      "id": "server_server_executeprovidercall",
-      "community": 3,
-      "norm_label": "executeprovidercall()"
-    },
-    {
-      "label": "benchmark.js",
-      "file_type": "code",
-      "source_file": "apps/testbench/benchmark.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "testbench_benchmark",
-      "community": 21,
-      "norm_label": "benchmark.js"
-    },
-    {
-      "label": "__filename",
-      "file_type": "code",
-      "source_file": "apps/testbench/benchmark.js",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "testbench_benchmark_filename",
-      "community": 21,
-      "norm_label": "__filename"
-    },
-    {
-      "label": "__dirname",
-      "file_type": "code",
-      "source_file": "apps/testbench/benchmark.js",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "testbench_benchmark_dirname",
-      "community": 21,
-      "norm_label": "__dirname"
-    },
-    {
-      "label": "dbPath",
-      "file_type": "code",
-      "source_file": "apps/testbench/benchmark.js",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "testbench_benchmark_dbpath",
-      "community": 21,
-      "norm_label": "dbpath"
-    },
-    {
-      "label": "biome.json",
-      "file_type": "code",
-      "source_file": "biome.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "biome",
-      "community": 38,
-      "norm_label": "biome.json"
-    },
-    {
-      "label": "$schema",
-      "file_type": "code",
-      "source_file": "biome.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "biome_schema",
-      "community": 38,
-      "norm_label": "$schema"
-    },
-    {
-      "label": "vcs",
-      "file_type": "code",
-      "source_file": "biome.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "biome_vcs",
-      "community": 38,
-      "norm_label": "vcs"
-    },
-    {
-      "label": "enabled",
-      "file_type": "code",
-      "source_file": "biome.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "biome_vcs_enabled",
-      "community": 38,
-      "norm_label": "enabled"
-    },
-    {
-      "label": "clientKind",
-      "file_type": "code",
-      "source_file": "biome.json",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "biome_vcs_clientkind",
-      "community": 38,
-      "norm_label": "clientkind"
-    },
-    {
-      "label": "useIgnoreFile",
-      "file_type": "code",
-      "source_file": "biome.json",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "biome_vcs_useignorefile",
-      "community": 38,
-      "norm_label": "useignorefile"
-    },
-    {
-      "label": "files",
-      "file_type": "code",
-      "source_file": "biome.json",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "biome_files",
-      "community": 38,
-      "norm_label": "files"
-    },
-    {
-      "label": "ignoreUnknown",
-      "file_type": "code",
-      "source_file": "biome.json",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "biome_files_ignoreunknown",
-      "community": 38,
-      "norm_label": "ignoreunknown"
-    },
-    {
-      "label": "formatter",
-      "file_type": "code",
-      "source_file": "biome.json",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "biome_formatter",
-      "community": 38,
-      "norm_label": "formatter"
-    },
-    {
-      "label": "enabled",
-      "file_type": "code",
-      "source_file": "biome.json",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "biome_formatter_enabled",
-      "community": 38,
-      "norm_label": "enabled"
-    },
-    {
-      "label": "indentStyle",
-      "file_type": "code",
-      "source_file": "biome.json",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "biome_formatter_indentstyle",
-      "community": 38,
-      "norm_label": "indentstyle"
-    },
-    {
-      "label": "linter",
-      "file_type": "code",
-      "source_file": "biome.json",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "biome_linter",
-      "community": 38,
-      "norm_label": "linter"
-    },
-    {
-      "label": "enabled",
-      "file_type": "code",
-      "source_file": "biome.json",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "biome_linter_enabled",
-      "community": 38,
-      "norm_label": "enabled"
-    },
-    {
-      "label": "rules",
-      "file_type": "code",
-      "source_file": "biome.json",
-      "source_location": "L17",
-      "_origin": "ast",
-      "id": "biome_linter_rules",
-      "community": 38,
-      "norm_label": "rules"
-    },
-    {
-      "label": "recommended",
-      "file_type": "code",
-      "source_file": "biome.json",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "biome_rules_recommended",
-      "community": 38,
-      "norm_label": "recommended"
-    },
-    {
-      "label": "javascript",
-      "file_type": "code",
-      "source_file": "biome.json",
-      "source_location": "L21",
-      "_origin": "ast",
-      "id": "biome_javascript",
-      "community": 38,
-      "norm_label": "javascript"
-    },
-    {
-      "label": "formatter",
-      "file_type": "code",
-      "source_file": "biome.json",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "biome_javascript_formatter",
-      "community": 38,
-      "norm_label": "formatter"
-    },
-    {
-      "label": "quoteStyle",
-      "file_type": "code",
-      "source_file": "biome.json",
-      "source_location": "L23",
-      "_origin": "ast",
-      "id": "biome_formatter_quotestyle",
-      "community": 38,
-      "norm_label": "quotestyle"
-    },
-    {
-      "label": "knip.json",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "knip",
-      "community": 37,
-      "norm_label": "knip.json"
-    },
-    {
-      "label": "$schema",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "knip_schema",
-      "community": 37,
-      "norm_label": "$schema"
-    },
-    {
-      "label": "exclude",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "knip_exclude",
-      "community": 37,
-      "norm_label": "exclude"
-    },
-    {
-      "label": "ignoreWorkspaces",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "knip_ignoreworkspaces",
-      "community": 37,
-      "norm_label": "ignoreworkspaces"
-    },
-    {
-      "label": "workspaces",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "knip_workspaces",
-      "community": 37,
-      "norm_label": "workspaces"
-    },
-    {
-      "label": "apps/server",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "knip_workspaces_apps_server",
-      "community": 37,
-      "norm_label": "apps/server"
-    },
-    {
-      "label": "entry",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L21",
-      "_origin": "ast",
-      "id": "knip_apps_server_entry",
-      "community": 37,
-      "norm_label": "entry"
-    },
-    {
-      "label": "project",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "knip_apps_server_project",
-      "community": 37,
-      "norm_label": "project"
-    },
-    {
-      "label": "apps/dashboard",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L24",
-      "_origin": "ast",
-      "id": "knip_workspaces_apps_dashboard",
-      "community": 37,
-      "norm_label": "apps/dashboard"
-    },
-    {
-      "label": "entry",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L25",
-      "_origin": "ast",
-      "id": "knip_apps_dashboard_entry",
-      "community": 37,
-      "norm_label": "entry"
-    },
-    {
-      "label": "project",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L26",
-      "_origin": "ast",
-      "id": "knip_apps_dashboard_project",
-      "community": 37,
-      "norm_label": "project"
-    },
-    {
-      "label": "apps/checkout",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L28",
-      "_origin": "ast",
-      "id": "knip_workspaces_apps_checkout",
-      "community": 37,
-      "norm_label": "apps/checkout"
-    },
-    {
-      "label": "entry",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L29",
-      "_origin": "ast",
-      "id": "knip_apps_checkout_entry",
-      "community": 37,
-      "norm_label": "entry"
-    },
-    {
-      "label": "project",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L30",
-      "_origin": "ast",
-      "id": "knip_apps_checkout_project",
-      "community": 37,
-      "norm_label": "project"
-    },
-    {
-      "label": "apps/docs",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L32",
-      "_origin": "ast",
-      "id": "knip_workspaces_apps_docs",
-      "community": 37,
-      "norm_label": "apps/docs"
-    },
-    {
-      "label": "project",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L33",
-      "_origin": "ast",
-      "id": "knip_apps_docs_project",
-      "community": 37,
-      "norm_label": "project"
-    },
-    {
-      "label": "apps/leaf",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L35",
-      "_origin": "ast",
-      "id": "knip_workspaces_apps_leaf",
-      "community": 37,
-      "norm_label": "apps/leaf"
-    },
-    {
-      "label": "entry",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L36",
-      "_origin": "ast",
-      "id": "knip_apps_leaf_entry",
-      "community": 37,
-      "norm_label": "entry"
-    },
-    {
-      "label": "project",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "knip_apps_leaf_project",
-      "community": 37,
-      "norm_label": "project"
-    },
-    {
-      "label": "apps/scope-picker",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L39",
-      "_origin": "ast",
-      "id": "knip_workspaces_apps_scope_picker",
-      "community": 37,
-      "norm_label": "apps/scope-picker"
-    },
-    {
-      "label": "entry",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L40",
-      "_origin": "ast",
-      "id": "knip_apps_scope_picker_entry",
-      "community": 37,
-      "norm_label": "entry"
-    },
-    {
-      "label": "project",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L41",
-      "_origin": "ast",
-      "id": "knip_apps_scope_picker_project",
-      "community": 37,
-      "norm_label": "project"
-    },
-    {
-      "label": "apps/sdk-test",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L43",
-      "_origin": "ast",
-      "id": "knip_workspaces_apps_sdk_test",
-      "community": 37,
-      "norm_label": "apps/sdk-test"
-    },
-    {
-      "label": "entry",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L44",
-      "_origin": "ast",
-      "id": "knip_apps_sdk_test_entry",
-      "community": 37,
-      "norm_label": "entry"
-    },
-    {
-      "label": "project",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L45",
-      "_origin": "ast",
-      "id": "knip_apps_sdk_test_project",
-      "community": 37,
-      "norm_label": "project"
-    },
-    {
-      "label": "apps/testbench",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L47",
-      "_origin": "ast",
-      "id": "knip_workspaces_apps_testbench",
-      "community": 37,
-      "norm_label": "apps/testbench"
-    },
-    {
-      "label": "entry",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L48",
-      "_origin": "ast",
-      "id": "knip_apps_testbench_entry",
-      "community": 37,
-      "norm_label": "entry"
-    },
-    {
-      "label": "project",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L49",
-      "_origin": "ast",
-      "id": "knip_apps_testbench_project",
-      "community": 37,
-      "norm_label": "project"
-    },
-    {
-      "label": "apps/website",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L51",
-      "_origin": "ast",
-      "id": "knip_workspaces_apps_website",
-      "community": 37,
-      "norm_label": "apps/website"
-    },
-    {
-      "label": "project",
-      "file_type": "code",
-      "source_file": "knip.json",
-      "source_location": "L52",
-      "_origin": "ast",
-      "id": "knip_apps_website_project",
-      "community": 37,
-      "norm_label": "project"
-    },
-    {
-      "label": "package.json",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "package",
-      "community": 2,
-      "norm_label": "package.json"
-    },
-    {
-      "label": "name",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "package_name",
-      "community": 2,
-      "norm_label": "name"
-    },
-    {
-      "label": "private",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "package_private",
-      "community": 2,
-      "norm_label": "private"
-    },
-    {
-      "label": "version",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "package_version",
-      "community": 2,
-      "norm_label": "version"
-    },
-    {
-      "label": "description",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "package_description",
-      "community": 2,
-      "norm_label": "description"
-    },
-    {
-      "label": "workspaces",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "package_workspaces",
-      "community": 2,
-      "norm_label": "workspaces"
-    },
-    {
-      "label": "scripts",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "package_scripts",
-      "community": 2,
-      "norm_label": "scripts"
-    },
-    {
-      "label": "dev",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "package_scripts_dev",
-      "community": 2,
-      "norm_label": "dev"
-    },
-    {
-      "label": "dev:server",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "package_scripts_dev_server",
-      "community": 2,
-      "norm_label": "dev:server"
-    },
-    {
-      "label": "dev:dashboard",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "package_scripts_dev_dashboard",
-      "community": 2,
-      "norm_label": "dev:dashboard"
-    },
-    {
-      "label": "install:all",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "package_scripts_install_all",
-      "community": 2,
-      "norm_label": "install:all"
-    },
-    {
-      "label": "build:leaf",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "package_scripts_build_leaf",
-      "community": 2,
-      "norm_label": "build:leaf"
-    },
-    {
-      "label": "index.js",
-      "file_type": "code",
-      "source_file": "packages/auth/index.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "auth_index",
-      "community": 14,
-      "norm_label": "index.js"
-    },
-    {
-      "label": "hashApiKey()",
-      "file_type": "code",
-      "source_file": "packages/auth/index.js",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "auth_index_hashapikey",
-      "community": 14,
-      "norm_label": "hashapikey()"
-    },
-    {
-      "label": "verifyApiKey()",
-      "file_type": "code",
-      "source_file": "packages/auth/index.js",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "auth_index_verifyapikey",
-      "community": 14,
-      "norm_label": "verifyapikey()"
-    },
-    {
-      "label": "package.json",
-      "file_type": "code",
-      "source_file": "packages/auth/package.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "auth_package",
-      "community": 6,
-      "norm_label": "package.json"
-    },
-    {
-      "label": "name",
-      "file_type": "code",
-      "source_file": "packages/auth/package.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "auth_package_name",
-      "community": 6,
-      "norm_label": "name"
-    },
-    {
-      "label": "version",
-      "file_type": "code",
-      "source_file": "packages/auth/package.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "auth_package_version",
-      "community": 6,
-      "norm_label": "version"
-    },
-    {
-      "label": "description",
-      "file_type": "code",
-      "source_file": "packages/auth/package.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "auth_package_description",
-      "community": 6,
-      "norm_label": "description"
-    },
-    {
-      "label": "main",
-      "file_type": "code",
-      "source_file": "packages/auth/package.json",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "auth_package_main",
-      "community": 6,
-      "norm_label": "main"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "packages/auth/package.json",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "auth_package_type",
-      "community": 6,
-      "norm_label": "type"
-    },
-    {
-      "label": "dependencies",
-      "file_type": "code",
-      "source_file": "packages/auth/package.json",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "auth_package_dependencies",
-      "community": 6,
-      "norm_label": "dependencies"
-    },
-    {
-      "label": "gateway-router.js",
-      "file_type": "code",
-      "source_file": "packages/gateway/gateway-router.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "gateway_gateway_router",
-      "community": 27,
-      "norm_label": "gateway-router.js"
-    },
-    {
-      "label": "getBackendEndpoint()",
-      "file_type": "code",
-      "source_file": "packages/gateway/gateway-router.js",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "gateway_gateway_router_getbackendendpoint",
-      "community": 27,
-      "norm_label": "getbackendendpoint()"
-    },
-    {
-      "label": "index.js",
-      "file_type": "code",
-      "source_file": "packages/ksuid/index.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "ksuid_index",
-      "community": 20,
-      "norm_label": "index.js"
-    },
-    {
-      "label": "generateKsuid()",
-      "file_type": "code",
-      "source_file": "packages/ksuid/index.js",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "ksuid_index_generateksuid",
-      "community": 20,
-      "norm_label": "generateksuid()"
-    },
-    {
-      "label": "package.json",
-      "file_type": "code",
-      "source_file": "packages/ksuid/package.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "ksuid_package",
-      "community": 17,
-      "norm_label": "package.json"
-    },
-    {
-      "label": "name",
-      "file_type": "code",
-      "source_file": "packages/ksuid/package.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "ksuid_package_name",
-      "community": 17,
-      "norm_label": "name"
-    },
-    {
-      "label": "version",
-      "file_type": "code",
-      "source_file": "packages/ksuid/package.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "ksuid_package_version",
-      "community": 17,
-      "norm_label": "version"
-    },
-    {
-      "label": "description",
-      "file_type": "code",
-      "source_file": "packages/ksuid/package.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "ksuid_package_description",
-      "community": 17,
-      "norm_label": "description"
-    },
-    {
-      "label": "main",
-      "file_type": "code",
-      "source_file": "packages/ksuid/package.json",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "ksuid_package_main",
-      "community": 17,
-      "norm_label": "main"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "packages/ksuid/package.json",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "ksuid_package_type",
-      "community": 17,
-      "norm_label": "type"
-    },
-    {
-      "label": "index.js",
-      "file_type": "code",
-      "source_file": "packages/logging/index.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "logging_index",
-      "community": 19,
-      "norm_label": "index.js"
-    },
-    {
-      "label": "logInfo()",
-      "file_type": "code",
-      "source_file": "packages/logging/index.js",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "logging_index_loginfo",
-      "community": 19,
-      "norm_label": "loginfo()"
-    },
-    {
-      "label": "logError()",
-      "file_type": "code",
-      "source_file": "packages/logging/index.js",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "logging_index_logerror",
-      "community": 19,
-      "norm_label": "logerror()"
-    },
-    {
-      "label": "logWarn()",
-      "file_type": "code",
-      "source_file": "packages/logging/index.js",
-      "source_location": "L26",
-      "_origin": "ast",
-      "id": "logging_index_logwarn",
-      "community": 19,
-      "norm_label": "logwarn()"
-    },
-    {
-      "label": "package.json",
-      "file_type": "code",
-      "source_file": "packages/logging/package.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "logging_package",
-      "community": 18,
-      "norm_label": "package.json"
-    },
-    {
-      "label": "name",
-      "file_type": "code",
-      "source_file": "packages/logging/package.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "logging_package_name",
-      "community": 18,
-      "norm_label": "name"
-    },
-    {
-      "label": "version",
-      "file_type": "code",
-      "source_file": "packages/logging/package.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "logging_package_version",
-      "community": 18,
-      "norm_label": "version"
-    },
-    {
-      "label": "description",
-      "file_type": "code",
-      "source_file": "packages/logging/package.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "logging_package_description",
-      "community": 18,
-      "norm_label": "description"
-    },
-    {
-      "label": "main",
-      "file_type": "code",
-      "source_file": "packages/logging/package.json",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "logging_package_main",
-      "community": 18,
-      "norm_label": "main"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "packages/logging/package.json",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "logging_package_type",
-      "community": 18,
-      "norm_label": "type"
-    },
-    {
-      "label": "mcp-server.js",
-      "file_type": "code",
-      "source_file": "packages/mcp/mcp-server.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "mcp_mcp_server",
-      "community": 24,
-      "norm_label": "mcp-server.js"
-    },
-    {
-      "label": "mcpTools",
-      "file_type": "code",
-      "source_file": "packages/mcp/mcp-server.js",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "mcp_mcp_server_mcptools",
-      "community": 24,
-      "norm_label": "mcptools"
-    },
-    {
-      "label": "handleMcpRequest()",
-      "file_type": "code",
-      "source_file": "packages/mcp/mcp-server.js",
-      "source_location": "L31",
-      "_origin": "ast",
-      "id": "mcp_mcp_server_handlemcprequest",
-      "community": 24,
-      "norm_label": "handlemcprequest()"
-    },
-    {
-      "label": "index.js",
-      "file_type": "code",
-      "source_file": "packages/solas-sdk/index.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "solas_sdk_index",
-      "community": 11,
-      "norm_label": "index.js"
-    },
-    {
-      "label": "SolasClient",
-      "file_type": "code",
-      "source_file": "packages/solas-sdk/index.js",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "solas_sdk_index_solasclient",
-      "community": 11,
-      "norm_label": "solasclient"
-    },
-    {
-      "label": ".constructor()",
-      "file_type": "code",
-      "source_file": "packages/solas-sdk/index.js",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "solas_sdk_index_solasclient_constructor",
-      "community": 11,
-      "norm_label": ".constructor()"
-    },
-    {
-      "label": ".getOpenAIConfig()",
-      "file_type": "code",
-      "source_file": "packages/solas-sdk/index.js",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "solas_sdk_index_solasclient_getopenaiconfig",
-      "community": 11,
-      "norm_label": ".getopenaiconfig()"
-    },
-    {
-      "label": ".getBalance()",
-      "file_type": "code",
-      "source_file": "packages/solas-sdk/index.js",
-      "source_location": "L30",
-      "_origin": "ast",
-      "id": "solas_sdk_index_solasclient_getbalance",
-      "community": 11,
-      "norm_label": ".getbalance()"
-    },
-    {
-      "label": "package.json",
-      "file_type": "code",
-      "source_file": "packages/solas-sdk/package.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "solas_sdk_package",
-      "community": 7,
-      "norm_label": "package.json"
-    },
-    {
-      "label": "name",
-      "file_type": "code",
-      "source_file": "packages/solas-sdk/package.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "solas_sdk_package_name",
-      "community": 7,
-      "norm_label": "name"
-    },
-    {
-      "label": "version",
-      "file_type": "code",
-      "source_file": "packages/solas-sdk/package.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "solas_sdk_package_version",
-      "community": 7,
-      "norm_label": "version"
-    },
-    {
-      "label": "description",
-      "file_type": "code",
-      "source_file": "packages/solas-sdk/package.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "solas_sdk_package_description",
-      "community": 7,
-      "norm_label": "description"
-    },
-    {
-      "label": "main",
-      "file_type": "code",
-      "source_file": "packages/solas-sdk/package.json",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "solas_sdk_package_main",
-      "community": 7,
-      "norm_label": "main"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "packages/solas-sdk/package.json",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "solas_sdk_package_type",
-      "community": 7,
-      "norm_label": "type"
-    },
-    {
-      "label": "dependencies",
-      "file_type": "code",
-      "source_file": "packages/solas-sdk/package.json",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "solas_sdk_package_dependencies",
-      "community": 7,
-      "norm_label": "dependencies"
-    },
-    {
-      "label": "index.js",
-      "file_type": "code",
-      "source_file": "packages/stripe-sync/index.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "stripe_sync_index",
-      "community": 13,
-      "norm_label": "index.js"
-    },
-    {
-      "label": "StripeSync",
-      "file_type": "code",
-      "source_file": "packages/stripe-sync/index.js",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "stripe_sync_index_stripesync",
-      "community": 13,
-      "norm_label": "stripesync"
-    },
-    {
-      "label": ".constructor()",
-      "file_type": "code",
-      "source_file": "packages/stripe-sync/index.js",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "stripe_sync_index_stripesync_constructor",
-      "community": 13,
-      "norm_label": ".constructor()"
-    },
-    {
-      "label": ".handleWebhook()",
-      "file_type": "code",
-      "source_file": "packages/stripe-sync/index.js",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "stripe_sync_index_stripesync_handlewebhook",
-      "community": 13,
-      "norm_label": ".handlewebhook()"
-    },
-    {
-      "label": "package.json",
-      "file_type": "code",
-      "source_file": "packages/stripe-sync/package.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "stripe_sync_package",
-      "community": 5,
-      "norm_label": "package.json"
-    },
-    {
-      "label": "name",
-      "file_type": "code",
-      "source_file": "packages/stripe-sync/package.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "stripe_sync_package_name",
-      "community": 5,
-      "norm_label": "name"
-    },
-    {
-      "label": "version",
-      "file_type": "code",
-      "source_file": "packages/stripe-sync/package.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "stripe_sync_package_version",
-      "community": 5,
-      "norm_label": "version"
-    },
-    {
-      "label": "description",
-      "file_type": "code",
-      "source_file": "packages/stripe-sync/package.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "stripe_sync_package_description",
-      "community": 5,
-      "norm_label": "description"
-    },
-    {
-      "label": "main",
-      "file_type": "code",
-      "source_file": "packages/stripe-sync/package.json",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "stripe_sync_package_main",
-      "community": 5,
-      "norm_label": "main"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "packages/stripe-sync/package.json",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "stripe_sync_package_type",
-      "community": 5,
-      "norm_label": "type"
-    },
-    {
-      "label": "dependencies",
-      "file_type": "code",
-      "source_file": "packages/stripe-sync/package.json",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "stripe_sync_package_dependencies",
-      "community": 5,
-      "norm_label": "dependencies"
-    },
-    {
-      "label": "stripe",
-      "file_type": "code",
-      "source_file": "packages/stripe-sync/package.json",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "stripe_sync_package_dependencies_stripe",
-      "community": 5,
-      "norm_label": "stripe"
-    },
-    {
-      "label": "WalletCard.jsx",
-      "file_type": "code",
-      "source_file": "packages/ui/WalletCard.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "ui_walletcard",
-      "community": 29,
-      "norm_label": "walletcard.jsx"
-    },
-    {
-      "label": "WalletCard()",
-      "file_type": "code",
-      "source_file": "packages/ui/WalletCard.jsx",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "ui_walletcard_walletcard",
-      "community": 29,
-      "norm_label": "walletcard()"
-    },
-    {
-      "label": "dev.js",
-      "file_type": "code",
-      "source_file": "scripts/dev.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scripts_dev",
-      "community": 10,
-      "norm_label": "dev.js"
-    },
-    {
-      "label": "__filename",
-      "file_type": "code",
-      "source_file": "scripts/dev.js",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "scripts_dev_filename",
-      "community": 10,
-      "norm_label": "__filename"
-    },
-    {
-      "label": "__dirname",
-      "file_type": "code",
-      "source_file": "scripts/dev.js",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "scripts_dev_dirname",
-      "community": 10,
-      "norm_label": "__dirname"
-    },
-    {
-      "label": "rootDir",
-      "file_type": "code",
-      "source_file": "scripts/dev.js",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "scripts_dev_rootdir",
-      "community": 10,
-      "norm_label": "rootdir"
-    },
-    {
-      "label": "server",
-      "file_type": "code",
-      "source_file": "scripts/dev.js",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "scripts_dev_server",
-      "community": 10,
-      "norm_label": "server"
-    },
-    {
-      "label": "dashboard",
-      "file_type": "code",
-      "source_file": "scripts/dev.js",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "scripts_dev_dashboard",
-      "community": 10,
-      "norm_label": "dashboard"
-    },
-    {
-      "label": "constants.js",
-      "file_type": "code",
-      "source_file": "shared/constants.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "shared_constants",
-      "community": 25,
-      "norm_label": "constants.js"
-    },
-    {
-      "label": "PROVIDERS",
-      "file_type": "code",
-      "source_file": "shared/constants.js",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "shared_constants_providers",
-      "community": 25,
-      "norm_label": "providers"
-    },
-    {
-      "label": "HTTP_STATUS",
-      "file_type": "code",
-      "source_file": "shared/constants.js",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "shared_constants_http_status",
-      "community": 25,
-      "norm_label": "http_status"
-    },
-    {
-      "label": "turbo.json",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "turbo",
-      "community": 40,
-      "norm_label": "turbo.json"
-    },
-    {
-      "label": "$schema",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "turbo_schema",
-      "community": 40,
-      "norm_label": "$schema"
-    },
-    {
-      "label": "globalDependencies",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "turbo_globaldependencies",
-      "community": 40,
-      "norm_label": "globaldependencies"
-    },
-    {
-      "label": "tasks",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "turbo_tasks",
-      "community": 40,
-      "norm_label": "tasks"
-    },
-    {
-      "label": "build",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "turbo_tasks_build",
-      "community": 40,
-      "norm_label": "build"
-    },
-    {
-      "label": "dependsOn",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "turbo_build_dependson",
-      "community": 40,
-      "norm_label": "dependson"
-    },
-    {
-      "label": "outputs",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "turbo_build_outputs",
-      "community": 40,
-      "norm_label": "outputs"
-    },
-    {
-      "label": "build:leaf",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "turbo_tasks_build_leaf",
-      "community": 40,
-      "norm_label": "build:leaf"
-    },
-    {
-      "label": "dependsOn",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "turbo_build_leaf_dependson",
-      "community": 40,
-      "norm_label": "dependson"
-    },
-    {
-      "label": "outputs",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "turbo_build_leaf_outputs",
-      "community": 40,
-      "norm_label": "outputs"
-    },
-    {
-      "label": "cache",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "turbo_build_leaf_cache",
-      "community": 40,
-      "norm_label": "cache"
-    },
-    {
-      "label": "dev",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "turbo_tasks_dev",
-      "community": 40,
-      "norm_label": "dev"
-    },
-    {
-      "label": "dependsOn",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "turbo_dev_dependson",
-      "community": 40,
-      "norm_label": "dependson"
-    },
-    {
-      "label": "cache",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "turbo_dev_cache",
-      "community": 40,
-      "norm_label": "cache"
-    },
-    {
-      "label": "persistent",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L17",
-      "_origin": "ast",
-      "id": "turbo_dev_persistent",
-      "community": 40,
-      "norm_label": "persistent"
-    },
-    {
-      "label": "lint",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "turbo_tasks_lint",
-      "community": 40,
-      "norm_label": "lint"
-    },
-    {
-      "label": "dependsOn",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "turbo_lint_dependson",
-      "community": 40,
-      "norm_label": "dependson"
-    },
-    {
-      "label": "outputs",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L21",
-      "_origin": "ast",
-      "id": "turbo_lint_outputs",
-      "community": 40,
-      "norm_label": "outputs"
-    },
-    {
-      "label": "test",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L23",
-      "_origin": "ast",
-      "id": "turbo_tasks_test",
-      "community": 40,
-      "norm_label": "test"
-    },
-    {
-      "label": "dependsOn",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L24",
-      "_origin": "ast",
-      "id": "turbo_test_dependson",
-      "community": 40,
-      "norm_label": "dependson"
-    },
-    {
-      "label": "outputs",
-      "file_type": "code",
-      "source_file": "turbo.json",
-      "source_location": "L25",
-      "_origin": "ast",
-      "id": "turbo_test_outputs",
-      "community": 40,
-      "norm_label": "outputs"
-    },
-    {
-      "label": "vite-plugin-solas.js",
-      "file_type": "code",
-      "source_file": "vite/vite-plugin-solas.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "vite_vite_plugin_solas",
-      "community": 30,
-      "norm_label": "vite-plugin-solas.js"
-    },
-    {
-      "label": "vitePluginSolas()",
-      "file_type": "code",
-      "source_file": "vite/vite-plugin-solas.js",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "vite_vite_plugin_solas_vitepluginsolas",
-      "community": 30,
-      "norm_label": "vitepluginsolas()"
-    },
-    {
-      "label": "skill.md",
-      "file_type": "document",
-      "source_file": ".agents/skills/billing/skill.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "billing_skill",
-      "community": 32,
-      "norm_label": "skill.md"
-    },
-    {
-      "label": "Agent Billing Skill",
-      "file_type": "document",
-      "source_file": ".agents/skills/billing/skill.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "billing_skill_agent_billing_skill",
-      "community": 32,
-      "norm_label": "agent billing skill"
-    },
-    {
-      "label": "Description",
-      "file_type": "document",
-      "source_file": ".agents/skills/billing/skill.md",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "billing_skill_description",
-      "community": 32,
-      "norm_label": "description"
-    },
-    {
-      "label": "Tools",
-      "file_type": "document",
-      "source_file": ".agents/skills/billing/skill.md",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "billing_skill_tools",
-      "community": 32,
-      "norm_label": "tools"
-    },
-    {
-      "label": "skill.md",
-      "file_type": "document",
-      "source_file": ".agents/skills/checkout/skill.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "checkout_skill",
-      "community": 34,
-      "norm_label": "skill.md"
-    },
-    {
-      "label": "Agent Checkout Skill",
-      "file_type": "document",
-      "source_file": ".agents/skills/checkout/skill.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "checkout_skill_agent_checkout_skill",
-      "community": 34,
-      "norm_label": "agent checkout skill"
-    },
-    {
-      "label": "Description",
-      "file_type": "document",
-      "source_file": ".agents/skills/checkout/skill.md",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "checkout_skill_description",
-      "community": 34,
-      "norm_label": "description"
-    },
-    {
-      "label": "CLAUDE.md",
-      "file_type": "document",
-      "source_file": ".claude/CLAUDE.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "claude_claude",
-      "community": 33,
-      "norm_label": "claude.md"
-    },
-    {
-      "label": "CLAUDE.md - Solas Billing Commands & Conventions",
-      "file_type": "document",
-      "source_file": ".claude/CLAUDE.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "claude_claude_claude_md_solas_billing_commands_conventions",
-      "community": 33,
-      "norm_label": "claude.md - solas billing commands & conventions"
-    },
-    {
-      "label": "Build & Run Commands",
-      "file_type": "document",
-      "source_file": ".claude/CLAUDE.md",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "claude_claude_build_run_commands",
-      "community": 33,
-      "norm_label": "build & run commands"
-    },
-    {
-      "label": "Code Style & Guidelines",
-      "file_type": "document",
-      "source_file": ".claude/CLAUDE.md",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "claude_claude_code_style_guidelines",
-      "community": 33,
-      "norm_label": "code style & guidelines"
-    },
-    {
-      "label": "DECISIONS.md",
-      "file_type": "document",
-      "source_file": ".context/migration-interface/DECISIONS.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "migration_interface_decisions",
-      "community": 35,
-      "norm_label": "decisions.md"
-    },
-    {
-      "label": "Architectural Decisions: Database Selection",
-      "file_type": "document",
-      "source_file": ".context/migration-interface/DECISIONS.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "migration_interface_decisions_architectural_decisions_database_selection",
-      "community": 35,
-      "norm_label": "architectural decisions: database selection"
-    },
-    {
-      "label": "ADR 1: Keep SQLite for local self-hosted developers",
-      "file_type": "document",
-      "source_file": ".context/migration-interface/DECISIONS.md",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "migration_interface_decisions_adr_1_keep_sqlite_for_local_self_hosted_developers",
-      "community": 35,
-      "norm_label": "adr 1: keep sqlite for local self-hosted developers"
-    },
-    {
-      "label": "PROPOSAL.md",
-      "file_type": "document",
-      "source_file": ".context/migration-interface/PROPOSAL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "migration_interface_proposal",
-      "community": 31,
-      "norm_label": "proposal.md"
-    },
-    {
-      "label": "Proposal: Multi-Tenant Database Scale Migration (SQLite to PostgreSQL)",
-      "file_type": "document",
-      "source_file": ".context/migration-interface/PROPOSAL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "migration_interface_proposal_proposal_multi_tenant_database_scale_migration_sqlite_to_postgresql",
-      "community": 31,
-      "norm_label": "proposal: multi-tenant database scale migration (sqlite to postgresql)"
-    },
-    {
-      "label": "Background",
-      "file_type": "document",
-      "source_file": ".context/migration-interface/PROPOSAL.md",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "migration_interface_proposal_background",
-      "community": 31,
-      "norm_label": "background"
-    },
-    {
-      "label": "Target Schema Architecture",
-      "file_type": "document",
-      "source_file": ".context/migration-interface/PROPOSAL.md",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "migration_interface_proposal_target_schema_architecture",
-      "community": 31,
-      "norm_label": "target schema architecture"
-    },
-    {
-      "label": "Migration Plan",
-      "file_type": "document",
-      "source_file": ".context/migration-interface/PROPOSAL.md",
-      "source_location": "L24",
-      "_origin": "ast",
-      "id": "migration_interface_proposal_migration_plan",
-      "community": 31,
-      "norm_label": "migration plan"
-    },
-    {
-      "label": "STATUS.md",
-      "file_type": "document",
-      "source_file": ".context/migration-interface/STATUS.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "migration_interface_status",
-      "community": 36,
-      "norm_label": "status.md"
-    },
-    {
-      "label": "Database Migration Status",
-      "file_type": "document",
-      "source_file": ".context/migration-interface/STATUS.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "migration_interface_status_database_migration_status",
-      "community": 36,
-      "norm_label": "database migration status"
-    },
-    {
-      "label": "roadmap.md",
-      "file_type": "document",
-      "source_file": ".plans/roadmap.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "plans_roadmap",
-      "community": 9,
-      "norm_label": "roadmap.md"
-    },
-    {
-      "label": "Solas Billing Development Roadmap",
-      "file_type": "document",
-      "source_file": ".plans/roadmap.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "plans_roadmap_solas_billing_development_roadmap",
-      "community": 9,
-      "norm_label": "solas billing development roadmap"
-    },
-    {
-      "label": "Milestone 1: Core Proxy & SQLite Ledger (Completed)",
-      "file_type": "document",
-      "source_file": ".plans/roadmap.md",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "plans_roadmap_milestone_1_core_proxy_sqlite_ledger_completed",
-      "community": 9,
-      "norm_label": "milestone 1: core proxy & sqlite ledger (completed)"
-    },
-    {
-      "label": "Milestone 2: Advanced Fallbacks & Rate Limiting (Completed)",
-      "file_type": "document",
-      "source_file": ".plans/roadmap.md",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "plans_roadmap_milestone_2_advanced_fallbacks_rate_limiting_completed",
-      "community": 9,
-      "norm_label": "milestone 2: advanced fallbacks & rate limiting (completed)"
-    },
-    {
-      "label": "Milestone 3: Distributed Multi-Tenant & PostgreSQL (Q3 2026)",
-      "file_type": "document",
-      "source_file": ".plans/roadmap.md",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "plans_roadmap_milestone_3_distributed_multi_tenant_postgresql_q3_2026",
-      "community": 9,
-      "norm_label": "milestone 3: distributed multi-tenant & postgresql (q3 2026)"
-    },
-    {
-      "label": "README.md",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "readme",
-      "community": 4,
-      "norm_label": "readme.md"
-    },
-    {
-      "label": "Solas Billing",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "readme_solas_billing",
-      "community": 4,
-      "norm_label": "solas billing"
-    },
-    {
-      "label": "\u26a1 Key Features",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "readme_key_features",
-      "community": 4,
-      "norm_label": "\u26a1 key features"
-    },
-    {
-      "label": "\ud83d\udcc2 Codebase Structure",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "readme_codebase_structure",
-      "community": 4,
-      "norm_label": "\ud83d\udcc2 codebase structure"
-    },
-    {
-      "label": "\ud83d\udee0\ufe0f Getting Started",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "readme_getting_started",
-      "community": 4,
-      "norm_label": "\ud83d\udee0\ufe0f getting started"
-    },
-    {
-      "label": "1. Start the Proxy Server",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L39",
-      "_origin": "ast",
-      "id": "readme_1_start_the_proxy_server",
-      "community": 4,
-      "norm_label": "1. start the proxy server"
-    },
-    {
-      "label": "2. Start the Admin Dashboard",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L48",
-      "_origin": "ast",
-      "id": "readme_2_start_the_admin_dashboard",
-      "community": 4,
-      "norm_label": "2. start the admin dashboard"
-    },
-    {
-      "label": "\ud83d\ude80 How to use (Client Example)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L59",
-      "_origin": "ast",
-      "id": "readme_how_to_use_client_example",
-      "community": 4,
-      "norm_label": "\ud83d\ude80 how to use (client example)"
-    },
-    {
       "label": "README.md",
       "file_type": "document",
       "source_file": "apps/dashboard/README.md",
@@ -3184,34 +14,3144 @@
       "norm_label": "readme.md"
     },
     {
-      "label": "React + Vite",
+      "label": "Solas Billing Dashboard",
       "file_type": "document",
       "source_file": "apps/dashboard/README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "dashboard_readme_react_vite",
+      "id": "dashboard_readme_solas_billing_dashboard",
       "community": 12,
-      "norm_label": "react + vite"
+      "norm_label": "solas billing dashboard"
     },
     {
-      "label": "React Compiler",
+      "label": "Development",
       "file_type": "document",
       "source_file": "apps/dashboard/README.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "dashboard_readme_development",
+      "community": 12,
+      "norm_label": "development"
+    },
+    {
+      "label": "Features",
+      "file_type": "document",
+      "source_file": "apps/dashboard/README.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "dashboard_readme_features",
+      "community": 12,
+      "norm_label": "features"
+    },
+    {
+      "label": "checkout.js",
+      "file_type": "code",
+      "source_file": "apps/checkout/checkout.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 26,
+      "norm_label": "checkout.js",
+      "id": "checkout_checkout"
+    },
+    {
+      "label": "simulateCheckout()",
+      "file_type": "code",
+      "source_file": "apps/checkout/checkout.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 26,
+      "norm_label": "simulatecheckout()",
+      "id": "checkout_checkout_simulatecheckout"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "package.json",
+      "id": "dashboard_package"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "name",
+      "id": "dashboard_package_name"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "private",
+      "id": "dashboard_package_private"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "version",
+      "id": "dashboard_package_version"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "type",
+      "id": "dashboard_package_type"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "scripts",
+      "id": "dashboard_package_scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "dev",
+      "id": "dashboard_package_scripts_dev"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "build",
+      "id": "dashboard_package_scripts_build"
+    },
+    {
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "lint",
+      "id": "dashboard_package_scripts_lint"
+    },
+    {
+      "label": "preview",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "dashboard_readme_react_compiler",
-      "community": 12,
-      "norm_label": "react compiler"
+      "community": 1,
+      "norm_label": "preview",
+      "id": "dashboard_package_scripts_preview"
     },
     {
-      "label": "Expanding the Oxlint configuration",
-      "file_type": "document",
-      "source_file": "apps/dashboard/README.md",
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "dependencies",
+      "id": "dashboard_package_dependencies"
+    },
+    {
+      "label": "lucide-react",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "lucide-react",
+      "id": "dashboard_package_dependencies_lucide_react"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "dashboard_readme_expanding_the_oxlint_configuration",
-      "community": 12,
-      "norm_label": "expanding the oxlint configuration"
+      "community": 1,
+      "norm_label": "react",
+      "id": "dashboard_package_dependencies_react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "react-dom",
+      "id": "dashboard_package_dependencies_react_dom"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "devdependencies",
+      "id": "dashboard_package_devdependencies"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "@types/react",
+      "id": "dashboard_package_devdependencies_types_react"
+    },
+    {
+      "label": "@types/react-dom",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "@types/react-dom",
+      "id": "dashboard_package_devdependencies_types_react_dom"
+    },
+    {
+      "label": "@vitejs/plugin-react",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "@vitejs/plugin-react",
+      "id": "dashboard_package_devdependencies_vitejs_plugin_react"
+    },
+    {
+      "label": "oxlint",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "oxlint",
+      "id": "dashboard_package_devdependencies_oxlint"
+    },
+    {
+      "label": "vite",
+      "file_type": "code",
+      "source_file": "apps/dashboard/package.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "vite",
+      "id": "dashboard_package_devdependencies_vite"
+    },
+    {
+      "label": "App.jsx",
+      "file_type": "code",
+      "source_file": "apps/dashboard/src/App.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "app.jsx",
+      "id": "src_app"
+    },
+    {
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "apps/dashboard/src/App.jsx",
+      "source_location": "L22",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "app()",
+      "id": "src_app_app"
+    },
+    {
+      "label": "main.jsx",
+      "file_type": "code",
+      "source_file": "apps/dashboard/src/main.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "main.jsx",
+      "id": "apps_dashboard_src_main_jsx_src_main"
+    },
+    {
+      "label": "vite.config.js",
+      "file_type": "code",
+      "source_file": "apps/dashboard/vite.config.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 16,
+      "norm_label": "vite.config.js",
+      "id": "dashboard_vite_config"
+    },
+    {
+      "label": "credit_lock.rs",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "credit_lock.rs",
+      "id": "src_credit_lock"
+    },
+    {
+      "label": "CreditLockManager",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L14",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "creditlockmanager",
+      "id": "src_credit_lock_creditlockmanager"
+    },
+    {
+      "label": "Mutex",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "mutex",
+      "id": "mutex"
+    },
+    {
+      "label": "HashMap",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "hashmap",
+      "id": "hashmap"
+    },
+    {
+      "label": "String",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "string",
+      "id": "string"
+    },
+    {
+      "label": "Arc",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "arc",
+      "id": "arc"
+    },
+    {
+      "label": "Semaphore",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "semaphore",
+      "id": "semaphore"
+    },
+    {
+      "label": ".new()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": ".new()",
+      "id": "src_credit_lock_creditlockmanager_new"
+    },
+    {
+      "label": "Self",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "self",
+      "id": "self"
+    },
+    {
+      "label": ".get_lock()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L26",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": ".get_lock()",
+      "id": "src_credit_lock_creditlockmanager_get_lock"
+    },
+    {
+      "label": "db.rs",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "db.rs",
+      "id": "src_db"
+    },
+    {
+      "label": "init_db()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "init_db()",
+      "id": "src_db_init_db"
+    },
+    {
+      "label": "Connection",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "connection",
+      "id": "connection"
+    },
+    {
+      "label": "UserRecord",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L76",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "userrecord",
+      "id": "src_db_userrecord"
+    },
+    {
+      "label": "ModelPricing",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L87",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "modelpricing",
+      "id": "src_db_modelpricing"
+    },
+    {
+      "label": "get_user_by_key()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L95",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "get_user_by_key()",
+      "id": "src_db_get_user_by_key"
+    },
+    {
+      "label": "Option",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "option",
+      "id": "option"
+    },
+    {
+      "label": "get_model_pricing()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L114",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "get_model_pricing()",
+      "id": "src_db_get_model_pricing"
+    },
+    {
+      "label": "check_rpm()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L131",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "check_rpm()",
+      "id": "src_db_check_rpm"
+    },
+    {
+      "label": "check_tpm()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L141",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "check_tpm()",
+      "id": "src_db_check_tpm"
+    },
+    {
+      "label": "deduct_and_log()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L151",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "deduct_and_log()",
+      "id": "src_db_deduct_and_log"
+    },
+    {
+      "label": "get_cached_response()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L196",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "get_cached_response()",
+      "id": "src_db_get_cached_response"
+    },
+    {
+      "label": "set_cached_response()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L208",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "set_cached_response()",
+      "id": "src_db_set_cached_response"
+    },
+    {
+      "label": "gateway.rs",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/gateway.rs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "gateway.rs",
+      "id": "src_gateway"
+    },
+    {
+      "label": "call_provider()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/gateway.rs",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "call_provider()",
+      "id": "src_gateway_call_provider"
+    },
+    {
+      "label": "Client",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "client",
+      "id": "client"
+    },
+    {
+      "label": "Result",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "result",
+      "id": "result"
+    },
+    {
+      "label": "Response",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "response",
+      "id": "response"
+    },
+    {
+      "label": "Error",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "error",
+      "id": "error"
+    },
+    {
+      "label": "jobs.rs",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "jobs.rs",
+      "id": "src_jobs"
+    },
+    {
+      "label": "BackgroundJob",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "backgroundjob",
+      "id": "src_jobs_backgroundjob"
+    },
+    {
+      "label": "AnalyticsEvent",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L29",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "analyticsevent",
+      "id": "src_jobs_analyticsevent"
+    },
+    {
+      "label": "spawn_job_processor()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L45",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "spawn_job_processor()",
+      "id": "src_jobs_spawn_job_processor"
+    },
+    {
+      "label": "UnboundedSender",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "unboundedsender",
+      "id": "unboundedsender"
+    },
+    {
+      "label": "spawn_cron_tasks()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L164",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "spawn_cron_tasks()",
+      "id": "src_jobs_spawn_cron_tasks"
+    },
+    {
+      "label": "main.rs",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "main.rs",
+      "id": "apps_leaf_src_main_rs_src_main"
+    },
+    {
+      "label": "AppState",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L27",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "appstate",
+      "id": "src_main_appstate"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L35",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "main()",
+      "id": "src_main_main"
+    },
+    {
+      "label": "health_check()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L74",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "health_check()",
+      "id": "src_main_health_check"
+    },
+    {
+      "label": "IntoResponse",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "intoresponse",
+      "id": "intoresponse"
+    },
+    {
+      "label": "stripe_webhook_handler()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L93",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "stripe_webhook_handler()",
+      "id": "src_main_stripe_webhook_handler"
+    },
+    {
+      "label": "State",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "state",
+      "id": "state"
+    },
+    {
+      "label": "Json",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "json",
+      "id": "json"
+    },
+    {
+      "label": "Value",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "value",
+      "id": "value"
+    },
+    {
+      "label": "proxy_handler()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L133",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "proxy_handler()",
+      "id": "src_main_proxy_handler"
+    },
+    {
+      "label": "HeaderMap",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "headermap",
+      "id": "headermap"
+    },
+    {
+      "label": "error_response()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L350",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "error_response()",
+      "id": "src_main_error_response"
+    },
+    {
+      "label": "StatusCode",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": "statuscode",
+      "id": "statuscode"
+    },
+    {
+      "label": "types.rs",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "types.rs",
+      "id": "src_types"
+    },
+    {
+      "label": "ChatMessage",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "chatmessage",
+      "id": "src_types_chatmessage"
+    },
+    {
+      "label": "ChatCompletionRequest",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "chatcompletionrequest",
+      "id": "src_types_chatcompletionrequest"
+    },
+    {
+      "label": "Vec",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "vec",
+      "id": "vec"
+    },
+    {
+      "label": "ChatCompletionResponse",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L26",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "chatcompletionresponse",
+      "id": "src_types_chatcompletionresponse"
+    },
+    {
+      "label": "CompletionChoice",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L36",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "completionchoice",
+      "id": "src_types_completionchoice"
+    },
+    {
+      "label": "UsageInfo",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L43",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "usageinfo",
+      "id": "src_types_usageinfo"
+    },
+    {
+      "label": "ErrorResponse",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L51",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "errorresponse",
+      "id": "src_types_errorresponse"
+    },
+    {
+      "label": "ErrorDetail",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L56",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "errordetail",
+      "id": "src_types_errordetail"
+    },
+    {
+      "label": "Provider",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L64",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "provider",
+      "id": "src_types_provider"
+    },
+    {
+      "label": ".from_str()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L71",
+      "_origin": "ast",
+      "community": 41,
+      "norm_label": ".from_str()",
+      "id": "src_types_provider_from_str"
+    },
+    {
+      "label": ".as_str()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L79",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": ".as_str()",
+      "id": "src_types_provider_as_str"
+    },
+    {
+      "label": "estimate_tokens()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L89",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "estimate_tokens()",
+      "id": "src_types_estimate_tokens"
+    },
+    {
+      "label": "estimate_messages_tokens()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L94",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "estimate_messages_tokens()",
+      "id": "src_types_estimate_messages_tokens"
+    },
+    {
+      "label": "compute_cache_key()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L103",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "compute_cache_key()",
+      "id": "src_types_compute_cache_key"
+    },
+    {
+      "label": "FailoverRoute",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L114",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "failoverroute",
+      "id": "src_types_failoverroute"
+    },
+    {
+      "label": "get_failover_route()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L120",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "get_failover_route()",
+      "id": "src_types_get_failover_route"
+    },
+    {
+      "label": "picker.js",
+      "file_type": "code",
+      "source_file": "apps/scope-picker/picker.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 28,
+      "norm_label": "picker.js",
+      "id": "scope_picker_picker"
+    },
+    {
+      "label": "validateScope()",
+      "file_type": "code",
+      "source_file": "apps/scope-picker/picker.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 28,
+      "norm_label": "validatescope()",
+      "id": "scope_picker_picker_validatescope"
+    },
+    {
+      "label": "integration.test.js",
+      "file_type": "code",
+      "source_file": "apps/sdk-test/integration.test.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 14,
+      "norm_label": "integration.test.js",
+      "id": "sdk_test_integration_test"
+    },
+    {
+      "label": "db.js",
+      "file_type": "code",
+      "source_file": "apps/server/db.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "db.js",
+      "id": "server_db"
+    },
+    {
+      "label": "__filename",
+      "file_type": "code",
+      "source_file": "apps/server/db.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "__filename",
+      "id": "server_db_filename"
+    },
+    {
+      "label": "__dirname",
+      "file_type": "code",
+      "source_file": "apps/server/db.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "__dirname",
+      "id": "server_db_dirname"
+    },
+    {
+      "label": "dbPath",
+      "file_type": "code",
+      "source_file": "apps/server/db.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "dbpath",
+      "id": "server_db_dbpath"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "apps/server/db.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "db",
+      "id": "server_db_db"
+    },
+    {
+      "label": "initDB()",
+      "file_type": "code",
+      "source_file": "apps/server/db.js",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "initdb()",
+      "id": "server_db_initdb"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "package.json",
+      "id": "server_package"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "name",
+      "id": "server_package_name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "version",
+      "id": "server_package_version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "description",
+      "id": "server_package_description"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "main",
+      "id": "server_package_main"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "type",
+      "id": "server_package_type"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "scripts",
+      "id": "server_package_scripts"
+    },
+    {
+      "label": "start",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "start",
+      "id": "server_package_scripts_start"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "dev",
+      "id": "server_package_scripts_dev"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "dependencies",
+      "id": "server_package_dependencies"
+    },
+    {
+      "label": "@fastify/cors",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "@fastify/cors",
+      "id": "server_package_dependencies_fastify_cors"
+    },
+    {
+      "label": "better-sqlite3",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "better-sqlite3",
+      "id": "server_package_dependencies_better_sqlite3"
+    },
+    {
+      "label": "dotenv",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "dotenv",
+      "id": "server_package_dependencies_dotenv"
+    },
+    {
+      "label": "fastify",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "fastify",
+      "id": "server_package_dependencies_fastify"
+    },
+    {
+      "label": "js-tiktoken",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "js-tiktoken",
+      "id": "server_package_dependencies_js_tiktoken"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "devdependencies",
+      "id": "server_package_devdependencies"
+    },
+    {
+      "label": "nodemon",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "nodemon",
+      "id": "server_package_devdependencies_nodemon"
+    },
+    {
+      "label": "server.js",
+      "file_type": "code",
+      "source_file": "apps/server/server.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "server.js",
+      "id": "server_server"
+    },
+    {
+      "label": "app",
+      "file_type": "code",
+      "source_file": "apps/server/server.js",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "app",
+      "id": "server_server_app"
+    },
+    {
+      "label": "generateApiKey()",
+      "file_type": "code",
+      "source_file": "apps/server/server.js",
+      "source_location": "L22",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "generateapikey()",
+      "id": "server_server_generateapikey"
+    },
+    {
+      "label": "FAILOVER_ROUTES",
+      "file_type": "code",
+      "source_file": "apps/server/server.js",
+      "source_location": "L27",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "failover_routes",
+      "id": "server_server_failover_routes"
+    },
+    {
+      "label": "executeProviderCall()",
+      "file_type": "code",
+      "source_file": "apps/server/server.js",
+      "source_location": "L160",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "executeprovidercall()",
+      "id": "server_server_executeprovidercall"
+    },
+    {
+      "label": "benchmark.js",
+      "file_type": "code",
+      "source_file": "apps/testbench/benchmark.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "benchmark.js",
+      "id": "testbench_benchmark"
+    },
+    {
+      "label": "__filename",
+      "file_type": "code",
+      "source_file": "apps/testbench/benchmark.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "__filename",
+      "id": "testbench_benchmark_filename"
+    },
+    {
+      "label": "__dirname",
+      "file_type": "code",
+      "source_file": "apps/testbench/benchmark.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "__dirname",
+      "id": "testbench_benchmark_dirname"
+    },
+    {
+      "label": "dbPath",
+      "file_type": "code",
+      "source_file": "apps/testbench/benchmark.js",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "dbpath",
+      "id": "testbench_benchmark_dbpath"
+    },
+    {
+      "label": "biome.json",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 38,
+      "norm_label": "biome.json",
+      "id": "biome"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 38,
+      "norm_label": "$schema",
+      "id": "biome_schema"
+    },
+    {
+      "label": "vcs",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 38,
+      "norm_label": "vcs",
+      "id": "biome_vcs"
+    },
+    {
+      "label": "enabled",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 38,
+      "norm_label": "enabled",
+      "id": "biome_vcs_enabled"
+    },
+    {
+      "label": "clientKind",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 38,
+      "norm_label": "clientkind",
+      "id": "biome_vcs_clientkind"
+    },
+    {
+      "label": "useIgnoreFile",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 38,
+      "norm_label": "useignorefile",
+      "id": "biome_vcs_useignorefile"
+    },
+    {
+      "label": "files",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 38,
+      "norm_label": "files",
+      "id": "biome_files"
+    },
+    {
+      "label": "ignoreUnknown",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 38,
+      "norm_label": "ignoreunknown",
+      "id": "biome_files_ignoreunknown"
+    },
+    {
+      "label": "formatter",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 38,
+      "norm_label": "formatter",
+      "id": "biome_formatter"
+    },
+    {
+      "label": "enabled",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 38,
+      "norm_label": "enabled",
+      "id": "biome_formatter_enabled"
+    },
+    {
+      "label": "indentStyle",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 38,
+      "norm_label": "indentstyle",
+      "id": "biome_formatter_indentstyle"
+    },
+    {
+      "label": "linter",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 38,
+      "norm_label": "linter",
+      "id": "biome_linter"
+    },
+    {
+      "label": "enabled",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 38,
+      "norm_label": "enabled",
+      "id": "biome_linter_enabled"
+    },
+    {
+      "label": "rules",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "community": 38,
+      "norm_label": "rules",
+      "id": "biome_linter_rules"
+    },
+    {
+      "label": "recommended",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 38,
+      "norm_label": "recommended",
+      "id": "biome_rules_recommended"
+    },
+    {
+      "label": "javascript",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 38,
+      "norm_label": "javascript",
+      "id": "biome_javascript"
+    },
+    {
+      "label": "formatter",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "community": 38,
+      "norm_label": "formatter",
+      "id": "biome_javascript_formatter"
+    },
+    {
+      "label": "quoteStyle",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L23",
+      "_origin": "ast",
+      "community": 38,
+      "norm_label": "quotestyle",
+      "id": "biome_formatter_quotestyle"
+    },
+    {
+      "label": "knip.json",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "knip.json",
+      "id": "knip"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "$schema",
+      "id": "knip_schema"
+    },
+    {
+      "label": "exclude",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "exclude",
+      "id": "knip_exclude"
+    },
+    {
+      "label": "ignoreWorkspaces",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "ignoreworkspaces",
+      "id": "knip_ignoreworkspaces"
+    },
+    {
+      "label": "workspaces",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "workspaces",
+      "id": "knip_workspaces"
+    },
+    {
+      "label": "apps/server",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "apps/server",
+      "id": "knip_workspaces_apps_server"
+    },
+    {
+      "label": "entry",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "entry",
+      "id": "knip_apps_server_entry"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "project",
+      "id": "knip_apps_server_project"
+    },
+    {
+      "label": "apps/dashboard",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L24",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "apps/dashboard",
+      "id": "knip_workspaces_apps_dashboard"
+    },
+    {
+      "label": "entry",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "entry",
+      "id": "knip_apps_dashboard_entry"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L26",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "project",
+      "id": "knip_apps_dashboard_project"
+    },
+    {
+      "label": "apps/checkout",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L28",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "apps/checkout",
+      "id": "knip_workspaces_apps_checkout"
+    },
+    {
+      "label": "entry",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L29",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "entry",
+      "id": "knip_apps_checkout_entry"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "project",
+      "id": "knip_apps_checkout_project"
+    },
+    {
+      "label": "apps/docs",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L32",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "apps/docs",
+      "id": "knip_workspaces_apps_docs"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L33",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "project",
+      "id": "knip_apps_docs_project"
+    },
+    {
+      "label": "apps/leaf",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L35",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "apps/leaf",
+      "id": "knip_workspaces_apps_leaf"
+    },
+    {
+      "label": "entry",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L36",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "entry",
+      "id": "knip_apps_leaf_entry"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L37",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "project",
+      "id": "knip_apps_leaf_project"
+    },
+    {
+      "label": "apps/scope-picker",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L39",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "apps/scope-picker",
+      "id": "knip_workspaces_apps_scope_picker"
+    },
+    {
+      "label": "entry",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L40",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "entry",
+      "id": "knip_apps_scope_picker_entry"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L41",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "project",
+      "id": "knip_apps_scope_picker_project"
+    },
+    {
+      "label": "apps/sdk-test",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L43",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "apps/sdk-test",
+      "id": "knip_workspaces_apps_sdk_test"
+    },
+    {
+      "label": "entry",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L44",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "entry",
+      "id": "knip_apps_sdk_test_entry"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L45",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "project",
+      "id": "knip_apps_sdk_test_project"
+    },
+    {
+      "label": "apps/testbench",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L47",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "apps/testbench",
+      "id": "knip_workspaces_apps_testbench"
+    },
+    {
+      "label": "entry",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L48",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "entry",
+      "id": "knip_apps_testbench_entry"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L49",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "project",
+      "id": "knip_apps_testbench_project"
+    },
+    {
+      "label": "apps/website",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L51",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "apps/website",
+      "id": "knip_workspaces_apps_website"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L52",
+      "_origin": "ast",
+      "community": 37,
+      "norm_label": "project",
+      "id": "knip_apps_website_project"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "package.json",
+      "id": "package"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "name",
+      "id": "package_name"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "private",
+      "id": "package_private"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "version",
+      "id": "package_version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "description",
+      "id": "package_description"
+    },
+    {
+      "label": "workspaces",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "workspaces",
+      "id": "package_workspaces"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "scripts",
+      "id": "package_scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "dev",
+      "id": "package_scripts_dev"
+    },
+    {
+      "label": "dev:server",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "dev:server",
+      "id": "package_scripts_dev_server"
+    },
+    {
+      "label": "dev:dashboard",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "dev:dashboard",
+      "id": "package_scripts_dev_dashboard"
+    },
+    {
+      "label": "install:all",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "install:all",
+      "id": "package_scripts_install_all"
+    },
+    {
+      "label": "build:leaf",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "build:leaf",
+      "id": "package_scripts_build_leaf"
+    },
+    {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "packages/auth/index.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 14,
+      "norm_label": "index.js",
+      "id": "auth_index"
+    },
+    {
+      "label": "hashApiKey()",
+      "file_type": "code",
+      "source_file": "packages/auth/index.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 14,
+      "norm_label": "hashapikey()",
+      "id": "auth_index_hashapikey"
+    },
+    {
+      "label": "verifyApiKey()",
+      "file_type": "code",
+      "source_file": "packages/auth/index.js",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 14,
+      "norm_label": "verifyapikey()",
+      "id": "auth_index_verifyapikey"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "package.json",
+      "id": "auth_package"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "name",
+      "id": "auth_package_name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "version",
+      "id": "auth_package_version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "description",
+      "id": "auth_package_description"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "main",
+      "id": "auth_package_main"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "type",
+      "id": "auth_package_type"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "packages/auth/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "dependencies",
+      "id": "auth_package_dependencies"
+    },
+    {
+      "label": "gateway-router.js",
+      "file_type": "code",
+      "source_file": "packages/gateway/gateway-router.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 27,
+      "norm_label": "gateway-router.js",
+      "id": "gateway_gateway_router"
+    },
+    {
+      "label": "getBackendEndpoint()",
+      "file_type": "code",
+      "source_file": "packages/gateway/gateway-router.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 27,
+      "norm_label": "getbackendendpoint()",
+      "id": "gateway_gateway_router_getbackendendpoint"
+    },
+    {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "packages/ksuid/index.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 20,
+      "norm_label": "index.js",
+      "id": "ksuid_index"
+    },
+    {
+      "label": "generateKsuid()",
+      "file_type": "code",
+      "source_file": "packages/ksuid/index.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 20,
+      "norm_label": "generateksuid()",
+      "id": "ksuid_index_generateksuid"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "packages/ksuid/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 17,
+      "norm_label": "package.json",
+      "id": "ksuid_package"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "packages/ksuid/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 17,
+      "norm_label": "name",
+      "id": "ksuid_package_name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "packages/ksuid/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 17,
+      "norm_label": "version",
+      "id": "ksuid_package_version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "packages/ksuid/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 17,
+      "norm_label": "description",
+      "id": "ksuid_package_description"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "packages/ksuid/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 17,
+      "norm_label": "main",
+      "id": "ksuid_package_main"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "packages/ksuid/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 17,
+      "norm_label": "type",
+      "id": "ksuid_package_type"
+    },
+    {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "packages/logging/index.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 19,
+      "norm_label": "index.js",
+      "id": "logging_index"
+    },
+    {
+      "label": "logInfo()",
+      "file_type": "code",
+      "source_file": "packages/logging/index.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 19,
+      "norm_label": "loginfo()",
+      "id": "logging_index_loginfo"
+    },
+    {
+      "label": "logError()",
+      "file_type": "code",
+      "source_file": "packages/logging/index.js",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 19,
+      "norm_label": "logerror()",
+      "id": "logging_index_logerror"
+    },
+    {
+      "label": "logWarn()",
+      "file_type": "code",
+      "source_file": "packages/logging/index.js",
+      "source_location": "L26",
+      "_origin": "ast",
+      "community": 19,
+      "norm_label": "logwarn()",
+      "id": "logging_index_logwarn"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "packages/logging/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 18,
+      "norm_label": "package.json",
+      "id": "logging_package"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "packages/logging/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 18,
+      "norm_label": "name",
+      "id": "logging_package_name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "packages/logging/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 18,
+      "norm_label": "version",
+      "id": "logging_package_version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "packages/logging/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 18,
+      "norm_label": "description",
+      "id": "logging_package_description"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "packages/logging/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 18,
+      "norm_label": "main",
+      "id": "logging_package_main"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "packages/logging/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 18,
+      "norm_label": "type",
+      "id": "logging_package_type"
+    },
+    {
+      "label": "mcp-server.js",
+      "file_type": "code",
+      "source_file": "packages/mcp/mcp-server.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 24,
+      "norm_label": "mcp-server.js",
+      "id": "mcp_mcp_server"
+    },
+    {
+      "label": "mcpTools",
+      "file_type": "code",
+      "source_file": "packages/mcp/mcp-server.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 24,
+      "norm_label": "mcptools",
+      "id": "mcp_mcp_server_mcptools"
+    },
+    {
+      "label": "handleMcpRequest()",
+      "file_type": "code",
+      "source_file": "packages/mcp/mcp-server.js",
+      "source_location": "L31",
+      "_origin": "ast",
+      "community": 24,
+      "norm_label": "handlemcprequest()",
+      "id": "mcp_mcp_server_handlemcprequest"
+    },
+    {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/index.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 11,
+      "norm_label": "index.js",
+      "id": "solas_sdk_index"
+    },
+    {
+      "label": "SolasClient",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/index.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 11,
+      "norm_label": "solasclient",
+      "id": "solas_sdk_index_solasclient"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/index.js",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 11,
+      "norm_label": ".constructor()",
+      "id": "solas_sdk_index_solasclient_constructor"
+    },
+    {
+      "label": ".getOpenAIConfig()",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/index.js",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 11,
+      "norm_label": ".getopenaiconfig()",
+      "id": "solas_sdk_index_solasclient_getopenaiconfig"
+    },
+    {
+      "label": ".getBalance()",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/index.js",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 11,
+      "norm_label": ".getbalance()",
+      "id": "solas_sdk_index_solasclient_getbalance"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "package.json",
+      "id": "solas_sdk_package"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "name",
+      "id": "solas_sdk_package_name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "version",
+      "id": "solas_sdk_package_version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "description",
+      "id": "solas_sdk_package_description"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "main",
+      "id": "solas_sdk_package_main"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "type",
+      "id": "solas_sdk_package_type"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "packages/solas-sdk/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "dependencies",
+      "id": "solas_sdk_package_dependencies"
+    },
+    {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/index.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 13,
+      "norm_label": "index.js",
+      "id": "stripe_sync_index"
+    },
+    {
+      "label": "StripeSync",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/index.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 13,
+      "norm_label": "stripesync",
+      "id": "stripe_sync_index_stripesync"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/index.js",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 13,
+      "norm_label": ".constructor()",
+      "id": "stripe_sync_index_stripesync_constructor"
+    },
+    {
+      "label": ".handleWebhook()",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/index.js",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 13,
+      "norm_label": ".handlewebhook()",
+      "id": "stripe_sync_index_stripesync_handlewebhook"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "package.json",
+      "id": "stripe_sync_package"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "name",
+      "id": "stripe_sync_package_name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "version",
+      "id": "stripe_sync_package_version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "description",
+      "id": "stripe_sync_package_description"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "main",
+      "id": "stripe_sync_package_main"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "type",
+      "id": "stripe_sync_package_type"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "dependencies",
+      "id": "stripe_sync_package_dependencies"
+    },
+    {
+      "label": "stripe",
+      "file_type": "code",
+      "source_file": "packages/stripe-sync/package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "stripe",
+      "id": "stripe_sync_package_dependencies_stripe"
+    },
+    {
+      "label": "WalletCard.jsx",
+      "file_type": "code",
+      "source_file": "packages/ui/WalletCard.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 29,
+      "norm_label": "walletcard.jsx",
+      "id": "ui_walletcard"
+    },
+    {
+      "label": "WalletCard()",
+      "file_type": "code",
+      "source_file": "packages/ui/WalletCard.jsx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 29,
+      "norm_label": "walletcard()",
+      "id": "ui_walletcard_walletcard"
+    },
+    {
+      "label": "dev.js",
+      "file_type": "code",
+      "source_file": "scripts/dev.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 10,
+      "norm_label": "dev.js",
+      "id": "scripts_dev"
+    },
+    {
+      "label": "__filename",
+      "file_type": "code",
+      "source_file": "scripts/dev.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 10,
+      "norm_label": "__filename",
+      "id": "scripts_dev_filename"
+    },
+    {
+      "label": "__dirname",
+      "file_type": "code",
+      "source_file": "scripts/dev.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 10,
+      "norm_label": "__dirname",
+      "id": "scripts_dev_dirname"
+    },
+    {
+      "label": "rootDir",
+      "file_type": "code",
+      "source_file": "scripts/dev.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 10,
+      "norm_label": "rootdir",
+      "id": "scripts_dev_rootdir"
+    },
+    {
+      "label": "server",
+      "file_type": "code",
+      "source_file": "scripts/dev.js",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 10,
+      "norm_label": "server",
+      "id": "scripts_dev_server"
+    },
+    {
+      "label": "dashboard",
+      "file_type": "code",
+      "source_file": "scripts/dev.js",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 10,
+      "norm_label": "dashboard",
+      "id": "scripts_dev_dashboard"
+    },
+    {
+      "label": "constants.js",
+      "file_type": "code",
+      "source_file": "shared/constants.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 25,
+      "norm_label": "constants.js",
+      "id": "shared_constants"
+    },
+    {
+      "label": "PROVIDERS",
+      "file_type": "code",
+      "source_file": "shared/constants.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 25,
+      "norm_label": "providers",
+      "id": "shared_constants_providers"
+    },
+    {
+      "label": "HTTP_STATUS",
+      "file_type": "code",
+      "source_file": "shared/constants.js",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 25,
+      "norm_label": "http_status",
+      "id": "shared_constants_http_status"
+    },
+    {
+      "label": "turbo.json",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "turbo.json",
+      "id": "turbo"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "$schema",
+      "id": "turbo_schema"
+    },
+    {
+      "label": "globalDependencies",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "globaldependencies",
+      "id": "turbo_globaldependencies"
+    },
+    {
+      "label": "tasks",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "tasks",
+      "id": "turbo_tasks"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "build",
+      "id": "turbo_tasks_build"
+    },
+    {
+      "label": "dependsOn",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "dependson",
+      "id": "turbo_build_dependson"
+    },
+    {
+      "label": "outputs",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "outputs",
+      "id": "turbo_build_outputs"
+    },
+    {
+      "label": "build:leaf",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "build:leaf",
+      "id": "turbo_tasks_build_leaf"
+    },
+    {
+      "label": "dependsOn",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "dependson",
+      "id": "turbo_build_leaf_dependson"
+    },
+    {
+      "label": "outputs",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "outputs",
+      "id": "turbo_build_leaf_outputs"
+    },
+    {
+      "label": "cache",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "cache",
+      "id": "turbo_build_leaf_cache"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "dev",
+      "id": "turbo_tasks_dev"
+    },
+    {
+      "label": "dependsOn",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "dependson",
+      "id": "turbo_dev_dependson"
+    },
+    {
+      "label": "cache",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "cache",
+      "id": "turbo_dev_cache"
+    },
+    {
+      "label": "persistent",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "persistent",
+      "id": "turbo_dev_persistent"
+    },
+    {
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "lint",
+      "id": "turbo_tasks_lint"
+    },
+    {
+      "label": "dependsOn",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "dependson",
+      "id": "turbo_lint_dependson"
+    },
+    {
+      "label": "outputs",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "outputs",
+      "id": "turbo_lint_outputs"
+    },
+    {
+      "label": "test",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L23",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "test",
+      "id": "turbo_tasks_test"
+    },
+    {
+      "label": "dependsOn",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L24",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "dependson",
+      "id": "turbo_test_dependson"
+    },
+    {
+      "label": "outputs",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "outputs",
+      "id": "turbo_test_outputs"
+    },
+    {
+      "label": "vite-plugin-solas.js",
+      "file_type": "code",
+      "source_file": "vite/vite-plugin-solas.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 30,
+      "norm_label": "vite-plugin-solas.js",
+      "id": "vite_vite_plugin_solas"
+    },
+    {
+      "label": "vitePluginSolas()",
+      "file_type": "code",
+      "source_file": "vite/vite-plugin-solas.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 30,
+      "norm_label": "vitepluginsolas()",
+      "id": "vite_vite_plugin_solas_vitepluginsolas"
+    },
+    {
+      "label": "skill.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/billing/skill.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 32,
+      "norm_label": "skill.md",
+      "id": "billing_skill"
+    },
+    {
+      "label": "Agent Billing Skill",
+      "file_type": "document",
+      "source_file": ".agents/skills/billing/skill.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 32,
+      "norm_label": "agent billing skill",
+      "id": "billing_skill_agent_billing_skill"
+    },
+    {
+      "label": "Description",
+      "file_type": "document",
+      "source_file": ".agents/skills/billing/skill.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 32,
+      "norm_label": "description",
+      "id": "billing_skill_description"
+    },
+    {
+      "label": "Tools",
+      "file_type": "document",
+      "source_file": ".agents/skills/billing/skill.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 32,
+      "norm_label": "tools",
+      "id": "billing_skill_tools"
+    },
+    {
+      "label": "skill.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/checkout/skill.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 34,
+      "norm_label": "skill.md",
+      "id": "checkout_skill"
+    },
+    {
+      "label": "Agent Checkout Skill",
+      "file_type": "document",
+      "source_file": ".agents/skills/checkout/skill.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 34,
+      "norm_label": "agent checkout skill",
+      "id": "checkout_skill_agent_checkout_skill"
+    },
+    {
+      "label": "Description",
+      "file_type": "document",
+      "source_file": ".agents/skills/checkout/skill.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 34,
+      "norm_label": "description",
+      "id": "checkout_skill_description"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": ".claude/CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 33,
+      "norm_label": "claude.md",
+      "id": "claude_claude"
+    },
+    {
+      "label": "CLAUDE.md - Solas Billing Commands & Conventions",
+      "file_type": "document",
+      "source_file": ".claude/CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 33,
+      "norm_label": "claude.md - solas billing commands & conventions",
+      "id": "claude_claude_claude_md_solas_billing_commands_conventions"
+    },
+    {
+      "label": "Build & Run Commands",
+      "file_type": "document",
+      "source_file": ".claude/CLAUDE.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 33,
+      "norm_label": "build & run commands",
+      "id": "claude_claude_build_run_commands"
+    },
+    {
+      "label": "Code Style & Guidelines",
+      "file_type": "document",
+      "source_file": ".claude/CLAUDE.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 33,
+      "norm_label": "code style & guidelines",
+      "id": "claude_claude_code_style_guidelines"
+    },
+    {
+      "label": "DECISIONS.md",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/DECISIONS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "decisions.md",
+      "id": "migration_interface_decisions"
+    },
+    {
+      "label": "Architectural Decisions: Database Selection",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/DECISIONS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "architectural decisions: database selection",
+      "id": "migration_interface_decisions_architectural_decisions_database_selection"
+    },
+    {
+      "label": "ADR 1: Keep SQLite for local self-hosted developers",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/DECISIONS.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 35,
+      "norm_label": "adr 1: keep sqlite for local self-hosted developers",
+      "id": "migration_interface_decisions_adr_1_keep_sqlite_for_local_self_hosted_developers"
+    },
+    {
+      "label": "PROPOSAL.md",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/PROPOSAL.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 31,
+      "norm_label": "proposal.md",
+      "id": "migration_interface_proposal"
+    },
+    {
+      "label": "Proposal: Multi-Tenant Database Scale Migration (SQLite to PostgreSQL)",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/PROPOSAL.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 31,
+      "norm_label": "proposal: multi-tenant database scale migration (sqlite to postgresql)",
+      "id": "migration_interface_proposal_proposal_multi_tenant_database_scale_migration_sqlite_to_postgresql"
+    },
+    {
+      "label": "Background",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/PROPOSAL.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 31,
+      "norm_label": "background",
+      "id": "migration_interface_proposal_background"
+    },
+    {
+      "label": "Target Schema Architecture",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/PROPOSAL.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 31,
+      "norm_label": "target schema architecture",
+      "id": "migration_interface_proposal_target_schema_architecture"
+    },
+    {
+      "label": "Migration Plan",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/PROPOSAL.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "community": 31,
+      "norm_label": "migration plan",
+      "id": "migration_interface_proposal_migration_plan"
+    },
+    {
+      "label": "STATUS.md",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/STATUS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 36,
+      "norm_label": "status.md",
+      "id": "migration_interface_status"
+    },
+    {
+      "label": "Database Migration Status",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/STATUS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 36,
+      "norm_label": "database migration status",
+      "id": "migration_interface_status_database_migration_status"
+    },
+    {
+      "label": "roadmap.md",
+      "file_type": "document",
+      "source_file": ".plans/roadmap.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "roadmap.md",
+      "id": "plans_roadmap"
+    },
+    {
+      "label": "Solas Billing Development Roadmap",
+      "file_type": "document",
+      "source_file": ".plans/roadmap.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "solas billing development roadmap",
+      "id": "plans_roadmap_solas_billing_development_roadmap"
+    },
+    {
+      "label": "Milestone 1: Core Proxy & SQLite Ledger (Completed)",
+      "file_type": "document",
+      "source_file": ".plans/roadmap.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "milestone 1: core proxy & sqlite ledger (completed)",
+      "id": "plans_roadmap_milestone_1_core_proxy_sqlite_ledger_completed"
+    },
+    {
+      "label": "Milestone 2: Advanced Fallbacks & Rate Limiting (Completed)",
+      "file_type": "document",
+      "source_file": ".plans/roadmap.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "milestone 2: advanced fallbacks & rate limiting (completed)",
+      "id": "plans_roadmap_milestone_2_advanced_fallbacks_rate_limiting_completed"
+    },
+    {
+      "label": "Milestone 3: Distributed Multi-Tenant & PostgreSQL (Q3 2026)",
+      "file_type": "document",
+      "source_file": ".plans/roadmap.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "milestone 3: distributed multi-tenant & postgresql (q3 2026)",
+      "id": "plans_roadmap_milestone_3_distributed_multi_tenant_postgresql_q3_2026"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "readme.md",
+      "id": "readme"
+    },
+    {
+      "label": "Solas Billing",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "solas billing",
+      "id": "readme_solas_billing"
+    },
+    {
+      "label": "\u26a1 Key Features",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "\u26a1 key features",
+      "id": "readme_key_features"
+    },
+    {
+      "label": "\ud83d\udcc2 Codebase Structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "\ud83d\udcc2 codebase structure",
+      "id": "readme_codebase_structure"
+    },
+    {
+      "label": "\ud83d\udee0\ufe0f Getting Started",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "\ud83d\udee0\ufe0f getting started",
+      "id": "readme_getting_started"
+    },
+    {
+      "label": "1. Start the Proxy Server",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "1. start the proxy server",
+      "id": "readme_1_start_the_proxy_server"
+    },
+    {
+      "label": "2. Start the Admin Dashboard",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "2. start the admin dashboard",
+      "id": "readme_2_start_the_admin_dashboard"
+    },
+    {
+      "label": "\ud83d\ude80 How to use (Client Example)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L59",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "\ud83d\ude80 how to use (client example)",
+      "id": "readme_how_to_use_client_example"
     },
     {
       "label": "architecture.md",
@@ -3219,9 +3159,9 @@
       "source_file": "apps/docs/architecture.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_architecture",
       "community": 22,
-      "norm_label": "architecture.md"
+      "norm_label": "architecture.md",
+      "id": "docs_architecture"
     },
     {
       "label": "Solas Billing Architecture Documentation",
@@ -3229,9 +3169,9 @@
       "source_file": "apps/docs/architecture.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_architecture_solas_billing_architecture_documentation",
       "community": 22,
-      "norm_label": "solas billing architecture documentation"
+      "norm_label": "solas billing architecture documentation",
+      "id": "docs_architecture_solas_billing_architecture_documentation"
     },
     {
       "label": "Request Intercept Lifecycle",
@@ -3239,12 +3179,42 @@
       "source_file": "apps/docs/architecture.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "docs_architecture_request_intercept_lifecycle",
       "community": 22,
-      "norm_label": "request intercept lifecycle"
+      "norm_label": "request intercept lifecycle",
+      "id": "docs_architecture_request_intercept_lifecycle"
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "dashboard_readme",
+      "target": "dashboard_readme_solas_billing_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "dashboard_readme_solas_billing_dashboard",
+      "target": "dashboard_readme_development",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/dashboard/README.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "dashboard_readme_solas_billing_dashboard",
+      "target": "dashboard_readme_features",
+      "confidence_score": 1.0
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -3254,56 +3224,6 @@
       "confidence_score": 1.0,
       "source": "checkout_checkout",
       "target": "checkout_checkout_simulatecheckout"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/dashboard/.oxlintrc.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_oxlintrc",
-      "target": "dashboard_oxlintrc_plugins"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/dashboard/.oxlintrc.json",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_oxlintrc",
-      "target": "dashboard_oxlintrc_rules"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/dashboard/.oxlintrc.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_oxlintrc",
-      "target": "dashboard_oxlintrc_schema"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/dashboard/.oxlintrc.json",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_oxlintrc_rules",
-      "target": "dashboard_oxlintrc_rules_react_only_export_components"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/dashboard/.oxlintrc.json",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_oxlintrc_rules",
-      "target": "dashboard_oxlintrc_rules_react_rules_of_hooks"
     },
     {
       "relation": "contains",
@@ -3502,9 +3422,9 @@
       "source_file": "apps/dashboard/src/main.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_dashboard_src_main_jsx_src_main",
-      "target": "src_app",
-      "confidence_score": 1.0
+      "target": "src_app"
     },
     {
       "relation": "contains",
@@ -3523,9 +3443,9 @@
       "source_file": "apps/dashboard/src/main.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_dashboard_src_main_jsx_src_main",
-      "target": "src_app_app",
-      "confidence_score": 1.0
+      "target": "src_app_app"
     },
     {
       "relation": "imports_from",
@@ -3534,9 +3454,9 @@
       "source_file": "apps/dashboard/src/main.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_dashboard_src_main_jsx_src_main",
-      "target": "client",
-      "confidence_score": 1.0
+      "target": "client"
     },
     {
       "relation": "imports_from",
@@ -3588,9 +3508,9 @@
       "source_location": "L20",
       "weight": 1.0,
       "context": "import",
+      "confidence_score": 1.0,
       "source": "apps_leaf_src_main_rs_src_main",
-      "target": "src_credit_lock_creditlockmanager",
-      "confidence_score": 1.0
+      "target": "src_credit_lock_creditlockmanager"
     },
     {
       "relation": "references",
@@ -4027,9 +3947,9 @@
       "source_location": "L14",
       "weight": 1.0,
       "context": "import",
+      "confidence_score": 1.0,
       "source": "apps_leaf_src_main_rs_src_main",
-      "target": "connection",
-      "confidence_score": 1.0
+      "target": "connection"
     },
     {
       "relation": "references",
@@ -4572,9 +4492,9 @@
       "source_location": "L15",
       "weight": 1.0,
       "context": "import",
+      "confidence_score": 1.0,
       "source": "apps_leaf_src_main_rs_src_main",
-      "target": "json",
-      "confidence_score": 1.0
+      "target": "json"
     },
     {
       "relation": "contains",
@@ -4582,9 +4502,9 @@
       "source_file": "apps/leaf/src/main.rs",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_leaf_src_main_rs_src_main",
-      "target": "src_main_appstate",
-      "confidence_score": 1.0
+      "target": "src_main_appstate"
     },
     {
       "relation": "contains",
@@ -4592,9 +4512,9 @@
       "source_file": "apps/leaf/src/main.rs",
       "source_location": "L350",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_leaf_src_main_rs_src_main",
-      "target": "src_main_error_response",
-      "confidence_score": 1.0
+      "target": "src_main_error_response"
     },
     {
       "relation": "contains",
@@ -4602,9 +4522,9 @@
       "source_file": "apps/leaf/src/main.rs",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_leaf_src_main_rs_src_main",
-      "target": "src_main_health_check",
-      "confidence_score": 1.0
+      "target": "src_main_health_check"
     },
     {
       "relation": "contains",
@@ -4612,9 +4532,9 @@
       "source_file": "apps/leaf/src/main.rs",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_leaf_src_main_rs_src_main",
-      "target": "src_main_main",
-      "confidence_score": 1.0
+      "target": "src_main_main"
     },
     {
       "relation": "contains",
@@ -4622,9 +4542,9 @@
       "source_file": "apps/leaf/src/main.rs",
       "source_location": "L133",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_leaf_src_main_rs_src_main",
-      "target": "src_main_proxy_handler",
-      "confidence_score": 1.0
+      "target": "src_main_proxy_handler"
     },
     {
       "relation": "contains",
@@ -4632,9 +4552,9 @@
       "source_file": "apps/leaf/src/main.rs",
       "source_location": "L93",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_leaf_src_main_rs_src_main",
-      "target": "src_main_stripe_webhook_handler",
-      "confidence_score": 1.0
+      "target": "src_main_stripe_webhook_handler"
     },
     {
       "relation": "references",
@@ -7067,36 +6987,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "apps/dashboard/README.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_readme",
-      "target": "dashboard_readme_react_vite"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/dashboard/README.md",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_readme_react_vite",
-      "target": "dashboard_readme_expanding_the_oxlint_configuration"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/dashboard/README.md",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_readme_react_vite",
-      "target": "dashboard_readme_react_compiler"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "apps/docs/architecture.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -7116,5 +7006,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "58aa676923c7958dfb3ebecaac92412aae87dee1"
+  "built_at_commit": "6db07eff49c9742dc040aef85be233edfd19d4a7"
 }

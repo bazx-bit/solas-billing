@@ -128,6 +128,8 @@ export default function App() {
         setIsUserModalOpen(false);
         setNewUserEmail('');
         loadData();
+      } else {
+        throw new Error('Server returned error status');
       }
     } catch (err) {
       // Mock Action
@@ -167,6 +169,8 @@ export default function App() {
         setAdjustAmount('');
         setAdjustDesc('');
         loadData();
+      } else {
+        throw new Error('Server returned error status');
       }
     } catch (err) {
       // Mock Action
@@ -191,10 +195,15 @@ export default function App() {
   const handleDeleteUser = async (id) => {
     if (!confirm('Are you sure you want to delete this user?')) return;
     try {
-      await fetch(`${API_BASE}/users/${id}`, { method: 'DELETE' });
-      loadData();
+      const res = await fetch(`${API_BASE}/users/${id}`, { method: 'DELETE' });
+      if (res.ok) {
+        loadData();
+      } else {
+        throw new Error('Server returned error status');
+      }
     } catch (err) {
-      // Mock Action
+      console.error('Delete API failed, falling back to local state:', err);
+      // Fallback local deletion
       const updated = users.filter(u => u.id !== id);
       setUsers(updated);
       setStats(prev => ({ ...prev, totalUsers: updated.length }));

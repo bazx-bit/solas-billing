@@ -95,7 +95,8 @@ app.post('/api/users', async (request, reply) => {
 
     return { id, email, api_key: apiKey, credits: startCredits, rate_limit_rpm: rpm, rate_limit_tpm: tpm, fallback_allowed: fallback };
   } catch (error) {
-    reply.status(500).send({ error: 'Failed to create user' });
+    app.log.error(error);
+    reply.status(500).send({ error: 'Failed to create user', details: error.message });
   }
 });
 
