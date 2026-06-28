@@ -1,16 +1,16 @@
 # Graph Report - solas-billing  (2026-06-29)
 
 ## Corpus Check
-- 39 files · ~10,052 words
+- 45 files · ~10,410 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 169 nodes · 144 edges · 31 communities (23 shown, 8 thin omitted)
+- 190 nodes · 159 edges · 37 communities (26 shown, 11 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2e879dfa`
+- Built from commit: `bb386f95`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -38,18 +38,24 @@
 - [[_COMMUNITY_Community 23|Community 23]]
 - [[_COMMUNITY_Community 24|Community 24]]
 - [[_COMMUNITY_Community 25|Community 25]]
+- [[_COMMUNITY_Community 31|Community 31]]
+- [[_COMMUNITY_Community 32|Community 32]]
+- [[_COMMUNITY_Community 33|Community 33]]
+- [[_COMMUNITY_Community 34|Community 34]]
+- [[_COMMUNITY_Community 35|Community 35]]
+- [[_COMMUNITY_Community 36|Community 36]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `scripts` - 5 edges
 2. `scripts` - 5 edges
 3. `Solas Billing` - 5 edges
-4. `SolasClient` - 4 edges
-5. `Solas Billing Development Roadmap` - 4 edges
-6. `rules` - 3 edges
-7. `scripts` - 3 edges
-8. `hashApiKey()` - 3 edges
-9. `verifyApiKey()` - 3 edges
-10. `StripeSync` - 3 edges
+4. `Proposal: Multi-Tenant Database Scale Migration (SQLite to PostgreSQL)` - 4 edges
+5. `SolasClient` - 4 edges
+6. `Solas Billing Development Roadmap` - 4 edges
+7. `Agent Billing Skill` - 3 edges
+8. `CLAUDE.md - Solas Billing Commands & Conventions` - 3 edges
+9. `rules` - 3 edges
+10. `scripts` - 3 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -57,7 +63,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (31 total, 8 thin omitted)
+## Communities (37 total, 11 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.12
@@ -119,16 +125,28 @@ Nodes (5): description, main, name, type, version
 Cohesion: 0.50
 Nodes (3): dbPath, __dirname, __filename
 
+### Community 31 - "Community 31"
+Cohesion: 0.40
+Nodes (4): Background, Migration Plan, Proposal: Multi-Tenant Database Scale Migration (SQLite to PostgreSQL), Target Schema Architecture
+
+### Community 32 - "Community 32"
+Cohesion: 0.50
+Nodes (3): Agent Billing Skill, Description, Tools
+
+### Community 33 - "Community 33"
+Cohesion: 0.50
+Nodes (3): Build & Run Commands, CLAUDE.md - Solas Billing Commands & Conventions, Code Style & Guidelines
+
 ## Knowledge Gaps
-- **96 isolated node(s):** `$schema`, `plugins`, `react/rules-of-hooks`, `react/only-export-components`, `name` (+91 more)
+- **106 isolated node(s):** `Description`, `Tools`, `Description`, `Build & Run Commands`, `Code Style & Guidelines` (+101 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **What connects `$schema`, `plugins`, `react/rules-of-hooks` to the rest of the system?**
-  _96 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `Description`, `Tools`, `Description` to the rest of the system?**
+  _106 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

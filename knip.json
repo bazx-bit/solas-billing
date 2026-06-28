@@ -1,0 +1,55 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "exclude": [
+    "dependencies",
+    "unlisted",
+    "unresolved",
+    "binaries",
+    "catalog",
+    "exports",
+    "types",
+    "enumMembers",
+    "duplicates"
+  ],
+  "ignoreWorkspaces": [
+    "packages/solas-sdk",
+    "packages/auth",
+    "packages/gateway"
+  ],
+  "workspaces": {
+    "apps/server": {
+      "entry": ["server.js"],
+      "project": ["*.js"]
+    },
+    "apps/dashboard": {
+      "entry": ["src/main.jsx"],
+      "project": ["src/**/*.{js,jsx}"]
+    },
+    "apps/checkout": {
+      "entry": ["checkout.js"],
+      "project": ["*.js"]
+    },
+    "apps/docs": {
+      "project": ["*.md"]
+    },
+    "apps/leaf": {
+      "entry": ["leaf-engine.js"],
+      "project": ["*.js"]
+    },
+    "apps/scope-picker": {
+      "entry": ["picker.js"],
+      "project": ["*.js"]
+    },
+    "apps/sdk-test": {
+      "entry": ["integration.test.js"],
+      "project": ["*.js"]
+    },
+    "apps/testbench": {
+      "entry": ["benchmark.js"],
+      "project": ["*.js"]
+    },
+    "apps/website": {
+      "project": ["*.html"]
+    }
+  }
+}

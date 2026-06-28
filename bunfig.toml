@@ -1,0 +1,10 @@
+# Bun configuration for test preloading
+[test]
+timeout = 10000
+
+[test.env]
+NODE_ENV = "test"
+PORT = 8081
+
+[install]
+minimumReleaseAge = 259200

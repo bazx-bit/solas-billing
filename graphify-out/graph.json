@@ -4,14 +4,224 @@
   "graph": {},
   "nodes": [
     {
+      "label": "skill.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/billing/skill.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "billing_skill",
+      "community": 32,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Agent Billing Skill",
+      "file_type": "document",
+      "source_file": ".agents/skills/billing/skill.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "billing_skill_agent_billing_skill",
+      "community": 32,
+      "norm_label": "agent billing skill"
+    },
+    {
+      "label": "Description",
+      "file_type": "document",
+      "source_file": ".agents/skills/billing/skill.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "billing_skill_description",
+      "community": 32,
+      "norm_label": "description"
+    },
+    {
+      "label": "Tools",
+      "file_type": "document",
+      "source_file": ".agents/skills/billing/skill.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "billing_skill_tools",
+      "community": 32,
+      "norm_label": "tools"
+    },
+    {
+      "label": "skill.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/checkout/skill.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "checkout_skill",
+      "community": 34,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Agent Checkout Skill",
+      "file_type": "document",
+      "source_file": ".agents/skills/checkout/skill.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "checkout_skill_agent_checkout_skill",
+      "community": 34,
+      "norm_label": "agent checkout skill"
+    },
+    {
+      "label": "Description",
+      "file_type": "document",
+      "source_file": ".agents/skills/checkout/skill.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "checkout_skill_description",
+      "community": 34,
+      "norm_label": "description"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": ".claude/CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude_claude",
+      "community": 33,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "CLAUDE.md - Solas Billing Commands & Conventions",
+      "file_type": "document",
+      "source_file": ".claude/CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude_claude_claude_md_solas_billing_commands_conventions",
+      "community": 33,
+      "norm_label": "claude.md - solas billing commands & conventions"
+    },
+    {
+      "label": "Build & Run Commands",
+      "file_type": "document",
+      "source_file": ".claude/CLAUDE.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "claude_claude_build_run_commands",
+      "community": 33,
+      "norm_label": "build & run commands"
+    },
+    {
+      "label": "Code Style & Guidelines",
+      "file_type": "document",
+      "source_file": ".claude/CLAUDE.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "claude_claude_code_style_guidelines",
+      "community": 33,
+      "norm_label": "code style & guidelines"
+    },
+    {
+      "label": "DECISIONS.md",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/DECISIONS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "migration_interface_decisions",
+      "community": 35,
+      "norm_label": "decisions.md"
+    },
+    {
+      "label": "Architectural Decisions: Database Selection",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/DECISIONS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "migration_interface_decisions_architectural_decisions_database_selection",
+      "community": 35,
+      "norm_label": "architectural decisions: database selection"
+    },
+    {
+      "label": "ADR 1: Keep SQLite for local self-hosted developers",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/DECISIONS.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "migration_interface_decisions_adr_1_keep_sqlite_for_local_self_hosted_developers",
+      "community": 35,
+      "norm_label": "adr 1: keep sqlite for local self-hosted developers"
+    },
+    {
+      "label": "PROPOSAL.md",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/PROPOSAL.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "migration_interface_proposal",
+      "community": 31,
+      "norm_label": "proposal.md"
+    },
+    {
+      "label": "Proposal: Multi-Tenant Database Scale Migration (SQLite to PostgreSQL)",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/PROPOSAL.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "migration_interface_proposal_proposal_multi_tenant_database_scale_migration_sqlite_to_postgresql",
+      "community": 31,
+      "norm_label": "proposal: multi-tenant database scale migration (sqlite to postgresql)"
+    },
+    {
+      "label": "Background",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/PROPOSAL.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "migration_interface_proposal_background",
+      "community": 31,
+      "norm_label": "background"
+    },
+    {
+      "label": "Target Schema Architecture",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/PROPOSAL.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "migration_interface_proposal_target_schema_architecture",
+      "community": 31,
+      "norm_label": "target schema architecture"
+    },
+    {
+      "label": "Migration Plan",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/PROPOSAL.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "migration_interface_proposal_migration_plan",
+      "community": 31,
+      "norm_label": "migration plan"
+    },
+    {
+      "label": "STATUS.md",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/STATUS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "migration_interface_status",
+      "community": 36,
+      "norm_label": "status.md"
+    },
+    {
+      "label": "Database Migration Status",
+      "file_type": "document",
+      "source_file": ".context/migration-interface/STATUS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "migration_interface_status_database_migration_status",
+      "community": 36,
+      "norm_label": "database migration status"
+    },
+    {
       "label": "checkout.js",
       "file_type": "code",
       "source_file": "apps/checkout/checkout.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "checkout_checkout",
       "community": 26,
-      "norm_label": "checkout.js"
+      "norm_label": "checkout.js",
+      "id": "checkout_checkout"
     },
     {
       "label": "simulateCheckout()",
@@ -19,9 +229,9 @@
       "source_file": "apps/checkout/checkout.js",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "checkout_checkout_simulatecheckout",
       "community": 26,
-      "norm_label": "simulatecheckout()"
+      "norm_label": "simulatecheckout()",
+      "id": "checkout_checkout_simulatecheckout"
     },
     {
       "label": ".oxlintrc.json",
@@ -29,9 +239,9 @@
       "source_file": "apps/dashboard/.oxlintrc.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "dashboard_oxlintrc",
       "community": 8,
-      "norm_label": ".oxlintrc.json"
+      "norm_label": ".oxlintrc.json",
+      "id": "dashboard_oxlintrc"
     },
     {
       "label": "$schema",
@@ -39,9 +249,9 @@
       "source_file": "apps/dashboard/.oxlintrc.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "dashboard_oxlintrc_schema",
       "community": 8,
-      "norm_label": "$schema"
+      "norm_label": "$schema",
+      "id": "dashboard_oxlintrc_schema"
     },
     {
       "label": "plugins",
@@ -49,9 +259,9 @@
       "source_file": "apps/dashboard/.oxlintrc.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "dashboard_oxlintrc_plugins",
       "community": 8,
-      "norm_label": "plugins"
+      "norm_label": "plugins",
+      "id": "dashboard_oxlintrc_plugins"
     },
     {
       "label": "rules",
@@ -59,9 +269,9 @@
       "source_file": "apps/dashboard/.oxlintrc.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "dashboard_oxlintrc_rules",
       "community": 8,
-      "norm_label": "rules"
+      "norm_label": "rules",
+      "id": "dashboard_oxlintrc_rules"
     },
     {
       "label": "react/rules-of-hooks",
@@ -69,9 +279,9 @@
       "source_file": "apps/dashboard/.oxlintrc.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "dashboard_oxlintrc_rules_react_rules_of_hooks",
       "community": 8,
-      "norm_label": "react/rules-of-hooks"
+      "norm_label": "react/rules-of-hooks",
+      "id": "dashboard_oxlintrc_rules_react_rules_of_hooks"
     },
     {
       "label": "react/only-export-components",
@@ -79,9 +289,9 @@
       "source_file": "apps/dashboard/.oxlintrc.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "dashboard_oxlintrc_rules_react_only_export_components",
       "community": 8,
-      "norm_label": "react/only-export-components"
+      "norm_label": "react/only-export-components",
+      "id": "dashboard_oxlintrc_rules_react_only_export_components"
     },
     {
       "label": "package.json",
@@ -89,9 +299,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "dashboard_package",
       "community": 1,
-      "norm_label": "package.json"
+      "norm_label": "package.json",
+      "id": "dashboard_package"
     },
     {
       "label": "name",
@@ -99,9 +309,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "dashboard_package_name",
       "community": 1,
-      "norm_label": "name"
+      "norm_label": "name",
+      "id": "dashboard_package_name"
     },
     {
       "label": "private",
@@ -109,9 +319,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "dashboard_package_private",
       "community": 1,
-      "norm_label": "private"
+      "norm_label": "private",
+      "id": "dashboard_package_private"
     },
     {
       "label": "version",
@@ -119,9 +329,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "dashboard_package_version",
       "community": 1,
-      "norm_label": "version"
+      "norm_label": "version",
+      "id": "dashboard_package_version"
     },
     {
       "label": "type",
@@ -129,9 +339,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "dashboard_package_type",
       "community": 1,
-      "norm_label": "type"
+      "norm_label": "type",
+      "id": "dashboard_package_type"
     },
     {
       "label": "scripts",
@@ -139,9 +349,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "dashboard_package_scripts",
       "community": 1,
-      "norm_label": "scripts"
+      "norm_label": "scripts",
+      "id": "dashboard_package_scripts"
     },
     {
       "label": "dev",
@@ -149,9 +359,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "dashboard_package_scripts_dev",
       "community": 1,
-      "norm_label": "dev"
+      "norm_label": "dev",
+      "id": "dashboard_package_scripts_dev"
     },
     {
       "label": "build",
@@ -159,9 +369,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "dashboard_package_scripts_build",
       "community": 1,
-      "norm_label": "build"
+      "norm_label": "build",
+      "id": "dashboard_package_scripts_build"
     },
     {
       "label": "lint",
@@ -169,9 +379,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "dashboard_package_scripts_lint",
       "community": 1,
-      "norm_label": "lint"
+      "norm_label": "lint",
+      "id": "dashboard_package_scripts_lint"
     },
     {
       "label": "preview",
@@ -179,9 +389,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "dashboard_package_scripts_preview",
       "community": 1,
-      "norm_label": "preview"
+      "norm_label": "preview",
+      "id": "dashboard_package_scripts_preview"
     },
     {
       "label": "dependencies",
@@ -189,9 +399,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "dashboard_package_dependencies",
       "community": 1,
-      "norm_label": "dependencies"
+      "norm_label": "dependencies",
+      "id": "dashboard_package_dependencies"
     },
     {
       "label": "lucide-react",
@@ -199,9 +409,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "dashboard_package_dependencies_lucide_react",
       "community": 1,
-      "norm_label": "lucide-react"
+      "norm_label": "lucide-react",
+      "id": "dashboard_package_dependencies_lucide_react"
     },
     {
       "label": "react",
@@ -209,9 +419,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "dashboard_package_dependencies_react",
       "community": 1,
-      "norm_label": "react"
+      "norm_label": "react",
+      "id": "dashboard_package_dependencies_react"
     },
     {
       "label": "react-dom",
@@ -219,9 +429,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "dashboard_package_dependencies_react_dom",
       "community": 1,
-      "norm_label": "react-dom"
+      "norm_label": "react-dom",
+      "id": "dashboard_package_dependencies_react_dom"
     },
     {
       "label": "devDependencies",
@@ -229,9 +439,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L17",
       "_origin": "ast",
-      "id": "dashboard_package_devdependencies",
       "community": 1,
-      "norm_label": "devdependencies"
+      "norm_label": "devdependencies",
+      "id": "dashboard_package_devdependencies"
     },
     {
       "label": "@types/react",
@@ -239,9 +449,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L18",
       "_origin": "ast",
-      "id": "dashboard_package_devdependencies_types_react",
       "community": 1,
-      "norm_label": "@types/react"
+      "norm_label": "@types/react",
+      "id": "dashboard_package_devdependencies_types_react"
     },
     {
       "label": "@types/react-dom",
@@ -249,9 +459,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "dashboard_package_devdependencies_types_react_dom",
       "community": 1,
-      "norm_label": "@types/react-dom"
+      "norm_label": "@types/react-dom",
+      "id": "dashboard_package_devdependencies_types_react_dom"
     },
     {
       "label": "@vitejs/plugin-react",
@@ -259,9 +469,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "dashboard_package_devdependencies_vitejs_plugin_react",
       "community": 1,
-      "norm_label": "@vitejs/plugin-react"
+      "norm_label": "@vitejs/plugin-react",
+      "id": "dashboard_package_devdependencies_vitejs_plugin_react"
     },
     {
       "label": "oxlint",
@@ -269,9 +479,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L21",
       "_origin": "ast",
-      "id": "dashboard_package_devdependencies_oxlint",
       "community": 1,
-      "norm_label": "oxlint"
+      "norm_label": "oxlint",
+      "id": "dashboard_package_devdependencies_oxlint"
     },
     {
       "label": "vite",
@@ -279,9 +489,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "dashboard_package_devdependencies_vite",
       "community": 1,
-      "norm_label": "vite"
+      "norm_label": "vite",
+      "id": "dashboard_package_devdependencies_vite"
     },
     {
       "label": "App.jsx",
@@ -289,9 +499,9 @@
       "source_file": "apps/dashboard/src/App.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_app",
       "community": 15,
-      "norm_label": "app.jsx"
+      "norm_label": "app.jsx",
+      "id": "src_app"
     },
     {
       "label": "App()",
@@ -299,9 +509,9 @@
       "source_file": "apps/dashboard/src/App.jsx",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "src_app_app",
       "community": 15,
-      "norm_label": "app()"
+      "norm_label": "app()",
+      "id": "src_app_app"
     },
     {
       "label": "main.jsx",
@@ -309,9 +519,9 @@
       "source_file": "apps/dashboard/src/main.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_main",
       "community": 15,
-      "norm_label": "main.jsx"
+      "norm_label": "main.jsx",
+      "id": "src_main"
     },
     {
       "label": "vite.config.js",
@@ -319,9 +529,9 @@
       "source_file": "apps/dashboard/vite.config.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "dashboard_vite_config",
       "community": 16,
-      "norm_label": "vite.config.js"
+      "norm_label": "vite.config.js",
+      "id": "dashboard_vite_config"
     },
     {
       "label": "leaf-engine.js",
@@ -329,9 +539,9 @@
       "source_file": "apps/leaf/leaf-engine.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "leaf_leaf_engine",
       "community": 23,
-      "norm_label": "leaf-engine.js"
+      "norm_label": "leaf-engine.js",
+      "id": "leaf_leaf_engine"
     },
     {
       "label": "LeafEngine",
@@ -339,9 +549,9 @@
       "source_file": "apps/leaf/leaf-engine.js",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "leaf_leaf_engine_leafengine",
       "community": 23,
-      "norm_label": "leafengine"
+      "norm_label": "leafengine",
+      "id": "leaf_leaf_engine_leafengine"
     },
     {
       "label": ".constructor()",
@@ -349,9 +559,9 @@
       "source_file": "apps/leaf/leaf-engine.js",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "leaf_leaf_engine_leafengine_constructor",
       "community": 23,
-      "norm_label": ".constructor()"
+      "norm_label": ".constructor()",
+      "id": "leaf_leaf_engine_leafengine_constructor"
     },
     {
       "label": "picker.js",
@@ -359,9 +569,9 @@
       "source_file": "apps/scope-picker/picker.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "scope_picker_picker",
       "community": 28,
-      "norm_label": "picker.js"
+      "norm_label": "picker.js",
+      "id": "scope_picker_picker"
     },
     {
       "label": "validateScope()",
@@ -369,9 +579,9 @@
       "source_file": "apps/scope-picker/picker.js",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "scope_picker_picker_validatescope",
       "community": 28,
-      "norm_label": "validatescope()"
+      "norm_label": "validatescope()",
+      "id": "scope_picker_picker_validatescope"
     },
     {
       "label": "integration.test.js",
@@ -379,9 +589,9 @@
       "source_file": "apps/sdk-test/integration.test.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "sdk_test_integration_test",
       "community": 14,
-      "norm_label": "integration.test.js"
+      "norm_label": "integration.test.js",
+      "id": "sdk_test_integration_test"
     },
     {
       "label": "db.js",
@@ -389,9 +599,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "server_db",
       "community": 3,
-      "norm_label": "db.js"
+      "norm_label": "db.js",
+      "id": "server_db"
     },
     {
       "label": "__filename",
@@ -399,9 +609,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "server_db_filename",
       "community": 3,
-      "norm_label": "__filename"
+      "norm_label": "__filename",
+      "id": "server_db_filename"
     },
     {
       "label": "__dirname",
@@ -409,9 +619,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "server_db_dirname",
       "community": 3,
-      "norm_label": "__dirname"
+      "norm_label": "__dirname",
+      "id": "server_db_dirname"
     },
     {
       "label": "dbPath",
@@ -419,9 +629,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "server_db_dbpath",
       "community": 3,
-      "norm_label": "dbpath"
+      "norm_label": "dbpath",
+      "id": "server_db_dbpath"
     },
     {
       "label": "db",
@@ -429,9 +639,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "server_db_db",
       "community": 3,
-      "norm_label": "db"
+      "norm_label": "db",
+      "id": "server_db_db"
     },
     {
       "label": "initDB()",
@@ -439,9 +649,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "server_db_initdb",
       "community": 3,
-      "norm_label": "initdb()"
+      "norm_label": "initdb()",
+      "id": "server_db_initdb"
     },
     {
       "label": "package.json",
@@ -449,9 +659,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "server_package",
       "community": 0,
-      "norm_label": "package.json"
+      "norm_label": "package.json",
+      "id": "server_package"
     },
     {
       "label": "name",
@@ -459,9 +669,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "server_package_name",
       "community": 0,
-      "norm_label": "name"
+      "norm_label": "name",
+      "id": "server_package_name"
     },
     {
       "label": "version",
@@ -469,9 +679,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "server_package_version",
       "community": 0,
-      "norm_label": "version"
+      "norm_label": "version",
+      "id": "server_package_version"
     },
     {
       "label": "description",
@@ -479,9 +689,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "server_package_description",
       "community": 0,
-      "norm_label": "description"
+      "norm_label": "description",
+      "id": "server_package_description"
     },
     {
       "label": "main",
@@ -489,9 +699,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "server_package_main",
       "community": 0,
-      "norm_label": "main"
+      "norm_label": "main",
+      "id": "server_package_main"
     },
     {
       "label": "type",
@@ -499,9 +709,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "server_package_type",
       "community": 0,
-      "norm_label": "type"
+      "norm_label": "type",
+      "id": "server_package_type"
     },
     {
       "label": "scripts",
@@ -509,9 +719,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "server_package_scripts",
       "community": 0,
-      "norm_label": "scripts"
+      "norm_label": "scripts",
+      "id": "server_package_scripts"
     },
     {
       "label": "start",
@@ -519,9 +729,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "server_package_scripts_start",
       "community": 0,
-      "norm_label": "start"
+      "norm_label": "start",
+      "id": "server_package_scripts_start"
     },
     {
       "label": "dev",
@@ -529,9 +739,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "server_package_scripts_dev",
       "community": 0,
-      "norm_label": "dev"
+      "norm_label": "dev",
+      "id": "server_package_scripts_dev"
     },
     {
       "label": "dependencies",
@@ -539,9 +749,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "server_package_dependencies",
       "community": 0,
-      "norm_label": "dependencies"
+      "norm_label": "dependencies",
+      "id": "server_package_dependencies"
     },
     {
       "label": "@fastify/cors",
@@ -549,9 +759,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "server_package_dependencies_fastify_cors",
       "community": 0,
-      "norm_label": "@fastify/cors"
+      "norm_label": "@fastify/cors",
+      "id": "server_package_dependencies_fastify_cors"
     },
     {
       "label": "better-sqlite3",
@@ -559,9 +769,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "server_package_dependencies_better_sqlite3",
       "community": 0,
-      "norm_label": "better-sqlite3"
+      "norm_label": "better-sqlite3",
+      "id": "server_package_dependencies_better_sqlite3"
     },
     {
       "label": "dotenv",
@@ -569,9 +779,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "server_package_dependencies_dotenv",
       "community": 0,
-      "norm_label": "dotenv"
+      "norm_label": "dotenv",
+      "id": "server_package_dependencies_dotenv"
     },
     {
       "label": "fastify",
@@ -579,9 +789,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "server_package_dependencies_fastify",
       "community": 0,
-      "norm_label": "fastify"
+      "norm_label": "fastify",
+      "id": "server_package_dependencies_fastify"
     },
     {
       "label": "js-tiktoken",
@@ -589,9 +799,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "server_package_dependencies_js_tiktoken",
       "community": 0,
-      "norm_label": "js-tiktoken"
+      "norm_label": "js-tiktoken",
+      "id": "server_package_dependencies_js_tiktoken"
     },
     {
       "label": "devDependencies",
@@ -599,9 +809,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L18",
       "_origin": "ast",
-      "id": "server_package_devdependencies",
       "community": 0,
-      "norm_label": "devdependencies"
+      "norm_label": "devdependencies",
+      "id": "server_package_devdependencies"
     },
     {
       "label": "nodemon",
@@ -609,9 +819,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "server_package_devdependencies_nodemon",
       "community": 0,
-      "norm_label": "nodemon"
+      "norm_label": "nodemon",
+      "id": "server_package_devdependencies_nodemon"
     },
     {
       "label": "server.js",
@@ -619,9 +829,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "server_server",
       "community": 3,
-      "norm_label": "server.js"
+      "norm_label": "server.js",
+      "id": "server_server"
     },
     {
       "label": "app",
@@ -629,9 +839,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "server_server_app",
       "community": 3,
-      "norm_label": "app"
+      "norm_label": "app",
+      "id": "server_server_app"
     },
     {
       "label": "generateApiKey()",
@@ -639,9 +849,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "server_server_generateapikey",
       "community": 3,
-      "norm_label": "generateapikey()"
+      "norm_label": "generateapikey()",
+      "id": "server_server_generateapikey"
     },
     {
       "label": "benchmark.js",
@@ -649,9 +859,9 @@
       "source_file": "apps/testbench/benchmark.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "testbench_benchmark",
       "community": 21,
-      "norm_label": "benchmark.js"
+      "norm_label": "benchmark.js",
+      "id": "testbench_benchmark"
     },
     {
       "label": "__filename",
@@ -659,9 +869,9 @@
       "source_file": "apps/testbench/benchmark.js",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "testbench_benchmark_filename",
       "community": 21,
-      "norm_label": "__filename"
+      "norm_label": "__filename",
+      "id": "testbench_benchmark_filename"
     },
     {
       "label": "__dirname",
@@ -669,9 +879,9 @@
       "source_file": "apps/testbench/benchmark.js",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "testbench_benchmark_dirname",
       "community": 21,
-      "norm_label": "__dirname"
+      "norm_label": "__dirname",
+      "id": "testbench_benchmark_dirname"
     },
     {
       "label": "dbPath",
@@ -679,9 +889,9 @@
       "source_file": "apps/testbench/benchmark.js",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "testbench_benchmark_dbpath",
       "community": 21,
-      "norm_label": "dbpath"
+      "norm_label": "dbpath",
+      "id": "testbench_benchmark_dbpath"
     },
     {
       "label": "package.json",
@@ -689,9 +899,9 @@
       "source_file": "package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "package",
       "community": 2,
-      "norm_label": "package.json"
+      "norm_label": "package.json",
+      "id": "package"
     },
     {
       "label": "name",
@@ -699,9 +909,9 @@
       "source_file": "package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "package_name",
       "community": 2,
-      "norm_label": "name"
+      "norm_label": "name",
+      "id": "package_name"
     },
     {
       "label": "private",
@@ -709,9 +919,9 @@
       "source_file": "package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "package_private",
       "community": 2,
-      "norm_label": "private"
+      "norm_label": "private",
+      "id": "package_private"
     },
     {
       "label": "version",
@@ -719,9 +929,9 @@
       "source_file": "package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "package_version",
       "community": 2,
-      "norm_label": "version"
+      "norm_label": "version",
+      "id": "package_version"
     },
     {
       "label": "description",
@@ -729,9 +939,9 @@
       "source_file": "package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "package_description",
       "community": 2,
-      "norm_label": "description"
+      "norm_label": "description",
+      "id": "package_description"
     },
     {
       "label": "workspaces",
@@ -739,9 +949,9 @@
       "source_file": "package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "package_workspaces",
       "community": 2,
-      "norm_label": "workspaces"
+      "norm_label": "workspaces",
+      "id": "package_workspaces"
     },
     {
       "label": "scripts",
@@ -749,9 +959,9 @@
       "source_file": "package.json",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "package_scripts",
       "community": 2,
-      "norm_label": "scripts"
+      "norm_label": "scripts",
+      "id": "package_scripts"
     },
     {
       "label": "dev",
@@ -759,9 +969,9 @@
       "source_file": "package.json",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "package_scripts_dev",
       "community": 2,
-      "norm_label": "dev"
+      "norm_label": "dev",
+      "id": "package_scripts_dev"
     },
     {
       "label": "dev:server",
@@ -769,9 +979,9 @@
       "source_file": "package.json",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "package_scripts_dev_server",
       "community": 2,
-      "norm_label": "dev:server"
+      "norm_label": "dev:server",
+      "id": "package_scripts_dev_server"
     },
     {
       "label": "dev:dashboard",
@@ -779,9 +989,9 @@
       "source_file": "package.json",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "package_scripts_dev_dashboard",
       "community": 2,
-      "norm_label": "dev:dashboard"
+      "norm_label": "dev:dashboard",
+      "id": "package_scripts_dev_dashboard"
     },
     {
       "label": "install:all",
@@ -789,9 +999,9 @@
       "source_file": "package.json",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "package_scripts_install_all",
       "community": 2,
-      "norm_label": "install:all"
+      "norm_label": "install:all",
+      "id": "package_scripts_install_all"
     },
     {
       "label": "index.js",
@@ -799,9 +1009,9 @@
       "source_file": "packages/auth/index.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "auth_index",
       "community": 14,
-      "norm_label": "index.js"
+      "norm_label": "index.js",
+      "id": "auth_index"
     },
     {
       "label": "hashApiKey()",
@@ -809,9 +1019,9 @@
       "source_file": "packages/auth/index.js",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "auth_index_hashapikey",
       "community": 14,
-      "norm_label": "hashapikey()"
+      "norm_label": "hashapikey()",
+      "id": "auth_index_hashapikey"
     },
     {
       "label": "verifyApiKey()",
@@ -819,9 +1029,9 @@
       "source_file": "packages/auth/index.js",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "auth_index_verifyapikey",
       "community": 14,
-      "norm_label": "verifyapikey()"
+      "norm_label": "verifyapikey()",
+      "id": "auth_index_verifyapikey"
     },
     {
       "label": "package.json",
@@ -829,9 +1039,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "auth_package",
       "community": 6,
-      "norm_label": "package.json"
+      "norm_label": "package.json",
+      "id": "auth_package"
     },
     {
       "label": "name",
@@ -839,9 +1049,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "auth_package_name",
       "community": 6,
-      "norm_label": "name"
+      "norm_label": "name",
+      "id": "auth_package_name"
     },
     {
       "label": "version",
@@ -849,9 +1059,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "auth_package_version",
       "community": 6,
-      "norm_label": "version"
+      "norm_label": "version",
+      "id": "auth_package_version"
     },
     {
       "label": "description",
@@ -859,9 +1069,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "auth_package_description",
       "community": 6,
-      "norm_label": "description"
+      "norm_label": "description",
+      "id": "auth_package_description"
     },
     {
       "label": "main",
@@ -869,9 +1079,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "auth_package_main",
       "community": 6,
-      "norm_label": "main"
+      "norm_label": "main",
+      "id": "auth_package_main"
     },
     {
       "label": "type",
@@ -879,9 +1089,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "auth_package_type",
       "community": 6,
-      "norm_label": "type"
+      "norm_label": "type",
+      "id": "auth_package_type"
     },
     {
       "label": "dependencies",
@@ -889,9 +1099,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "auth_package_dependencies",
       "community": 6,
-      "norm_label": "dependencies"
+      "norm_label": "dependencies",
+      "id": "auth_package_dependencies"
     },
     {
       "label": "gateway-router.js",
@@ -899,9 +1109,9 @@
       "source_file": "packages/gateway/gateway-router.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "gateway_gateway_router",
       "community": 27,
-      "norm_label": "gateway-router.js"
+      "norm_label": "gateway-router.js",
+      "id": "gateway_gateway_router"
     },
     {
       "label": "getBackendEndpoint()",
@@ -909,9 +1119,9 @@
       "source_file": "packages/gateway/gateway-router.js",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "gateway_gateway_router_getbackendendpoint",
       "community": 27,
-      "norm_label": "getbackendendpoint()"
+      "norm_label": "getbackendendpoint()",
+      "id": "gateway_gateway_router_getbackendendpoint"
     },
     {
       "label": "index.js",
@@ -919,9 +1129,9 @@
       "source_file": "packages/ksuid/index.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "ksuid_index",
       "community": 20,
-      "norm_label": "index.js"
+      "norm_label": "index.js",
+      "id": "ksuid_index"
     },
     {
       "label": "generateKsuid()",
@@ -929,9 +1139,9 @@
       "source_file": "packages/ksuid/index.js",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "ksuid_index_generateksuid",
       "community": 20,
-      "norm_label": "generateksuid()"
+      "norm_label": "generateksuid()",
+      "id": "ksuid_index_generateksuid"
     },
     {
       "label": "package.json",
@@ -939,9 +1149,9 @@
       "source_file": "packages/ksuid/package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "ksuid_package",
       "community": 17,
-      "norm_label": "package.json"
+      "norm_label": "package.json",
+      "id": "ksuid_package"
     },
     {
       "label": "name",
@@ -949,9 +1159,9 @@
       "source_file": "packages/ksuid/package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "ksuid_package_name",
       "community": 17,
-      "norm_label": "name"
+      "norm_label": "name",
+      "id": "ksuid_package_name"
     },
     {
       "label": "version",
@@ -959,9 +1169,9 @@
       "source_file": "packages/ksuid/package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "ksuid_package_version",
       "community": 17,
-      "norm_label": "version"
+      "norm_label": "version",
+      "id": "ksuid_package_version"
     },
     {
       "label": "description",
@@ -969,9 +1179,9 @@
       "source_file": "packages/ksuid/package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "ksuid_package_description",
       "community": 17,
-      "norm_label": "description"
+      "norm_label": "description",
+      "id": "ksuid_package_description"
     },
     {
       "label": "main",
@@ -979,9 +1189,9 @@
       "source_file": "packages/ksuid/package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "ksuid_package_main",
       "community": 17,
-      "norm_label": "main"
+      "norm_label": "main",
+      "id": "ksuid_package_main"
     },
     {
       "label": "type",
@@ -989,9 +1199,9 @@
       "source_file": "packages/ksuid/package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "ksuid_package_type",
       "community": 17,
-      "norm_label": "type"
+      "norm_label": "type",
+      "id": "ksuid_package_type"
     },
     {
       "label": "index.js",
@@ -999,9 +1209,9 @@
       "source_file": "packages/logging/index.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "logging_index",
       "community": 19,
-      "norm_label": "index.js"
+      "norm_label": "index.js",
+      "id": "logging_index"
     },
     {
       "label": "logInfo()",
@@ -1009,9 +1219,9 @@
       "source_file": "packages/logging/index.js",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "logging_index_loginfo",
       "community": 19,
-      "norm_label": "loginfo()"
+      "norm_label": "loginfo()",
+      "id": "logging_index_loginfo"
     },
     {
       "label": "logError()",
@@ -1019,9 +1229,9 @@
       "source_file": "packages/logging/index.js",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "logging_index_logerror",
       "community": 19,
-      "norm_label": "logerror()"
+      "norm_label": "logerror()",
+      "id": "logging_index_logerror"
     },
     {
       "label": "logWarn()",
@@ -1029,9 +1239,9 @@
       "source_file": "packages/logging/index.js",
       "source_location": "L26",
       "_origin": "ast",
-      "id": "logging_index_logwarn",
       "community": 19,
-      "norm_label": "logwarn()"
+      "norm_label": "logwarn()",
+      "id": "logging_index_logwarn"
     },
     {
       "label": "package.json",
@@ -1039,9 +1249,9 @@
       "source_file": "packages/logging/package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "logging_package",
       "community": 18,
-      "norm_label": "package.json"
+      "norm_label": "package.json",
+      "id": "logging_package"
     },
     {
       "label": "name",
@@ -1049,9 +1259,9 @@
       "source_file": "packages/logging/package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "logging_package_name",
       "community": 18,
-      "norm_label": "name"
+      "norm_label": "name",
+      "id": "logging_package_name"
     },
     {
       "label": "version",
@@ -1059,9 +1269,9 @@
       "source_file": "packages/logging/package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "logging_package_version",
       "community": 18,
-      "norm_label": "version"
+      "norm_label": "version",
+      "id": "logging_package_version"
     },
     {
       "label": "description",
@@ -1069,9 +1279,9 @@
       "source_file": "packages/logging/package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "logging_package_description",
       "community": 18,
-      "norm_label": "description"
+      "norm_label": "description",
+      "id": "logging_package_description"
     },
     {
       "label": "main",
@@ -1079,9 +1289,9 @@
       "source_file": "packages/logging/package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "logging_package_main",
       "community": 18,
-      "norm_label": "main"
+      "norm_label": "main",
+      "id": "logging_package_main"
     },
     {
       "label": "type",
@@ -1089,9 +1299,9 @@
       "source_file": "packages/logging/package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "logging_package_type",
       "community": 18,
-      "norm_label": "type"
+      "norm_label": "type",
+      "id": "logging_package_type"
     },
     {
       "label": "mcp-server.js",
@@ -1099,9 +1309,9 @@
       "source_file": "packages/mcp/mcp-server.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "mcp_mcp_server",
       "community": 24,
-      "norm_label": "mcp-server.js"
+      "norm_label": "mcp-server.js",
+      "id": "mcp_mcp_server"
     },
     {
       "label": "mcpTools",
@@ -1109,9 +1319,9 @@
       "source_file": "packages/mcp/mcp-server.js",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "mcp_mcp_server_mcptools",
       "community": 24,
-      "norm_label": "mcptools"
+      "norm_label": "mcptools",
+      "id": "mcp_mcp_server_mcptools"
     },
     {
       "label": "handleMcpRequest()",
@@ -1119,9 +1329,9 @@
       "source_file": "packages/mcp/mcp-server.js",
       "source_location": "L31",
       "_origin": "ast",
-      "id": "mcp_mcp_server_handlemcprequest",
       "community": 24,
-      "norm_label": "handlemcprequest()"
+      "norm_label": "handlemcprequest()",
+      "id": "mcp_mcp_server_handlemcprequest"
     },
     {
       "label": "index.js",
@@ -1129,9 +1339,9 @@
       "source_file": "packages/solas-sdk/index.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "solas_sdk_index",
       "community": 11,
-      "norm_label": "index.js"
+      "norm_label": "index.js",
+      "id": "solas_sdk_index"
     },
     {
       "label": "SolasClient",
@@ -1139,9 +1349,9 @@
       "source_file": "packages/solas-sdk/index.js",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "solas_sdk_index_solasclient",
       "community": 11,
-      "norm_label": "solasclient"
+      "norm_label": "solasclient",
+      "id": "solas_sdk_index_solasclient"
     },
     {
       "label": ".constructor()",
@@ -1149,9 +1359,9 @@
       "source_file": "packages/solas-sdk/index.js",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "solas_sdk_index_solasclient_constructor",
       "community": 11,
-      "norm_label": ".constructor()"
+      "norm_label": ".constructor()",
+      "id": "solas_sdk_index_solasclient_constructor"
     },
     {
       "label": ".getOpenAIConfig()",
@@ -1159,9 +1369,9 @@
       "source_file": "packages/solas-sdk/index.js",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "solas_sdk_index_solasclient_getopenaiconfig",
       "community": 11,
-      "norm_label": ".getopenaiconfig()"
+      "norm_label": ".getopenaiconfig()",
+      "id": "solas_sdk_index_solasclient_getopenaiconfig"
     },
     {
       "label": ".getBalance()",
@@ -1169,9 +1379,9 @@
       "source_file": "packages/solas-sdk/index.js",
       "source_location": "L30",
       "_origin": "ast",
-      "id": "solas_sdk_index_solasclient_getbalance",
       "community": 11,
-      "norm_label": ".getbalance()"
+      "norm_label": ".getbalance()",
+      "id": "solas_sdk_index_solasclient_getbalance"
     },
     {
       "label": "package.json",
@@ -1179,9 +1389,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "solas_sdk_package",
       "community": 7,
-      "norm_label": "package.json"
+      "norm_label": "package.json",
+      "id": "solas_sdk_package"
     },
     {
       "label": "name",
@@ -1189,9 +1399,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "solas_sdk_package_name",
       "community": 7,
-      "norm_label": "name"
+      "norm_label": "name",
+      "id": "solas_sdk_package_name"
     },
     {
       "label": "version",
@@ -1199,9 +1409,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "solas_sdk_package_version",
       "community": 7,
-      "norm_label": "version"
+      "norm_label": "version",
+      "id": "solas_sdk_package_version"
     },
     {
       "label": "description",
@@ -1209,9 +1419,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "solas_sdk_package_description",
       "community": 7,
-      "norm_label": "description"
+      "norm_label": "description",
+      "id": "solas_sdk_package_description"
     },
     {
       "label": "main",
@@ -1219,9 +1429,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "solas_sdk_package_main",
       "community": 7,
-      "norm_label": "main"
+      "norm_label": "main",
+      "id": "solas_sdk_package_main"
     },
     {
       "label": "type",
@@ -1229,9 +1439,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "solas_sdk_package_type",
       "community": 7,
-      "norm_label": "type"
+      "norm_label": "type",
+      "id": "solas_sdk_package_type"
     },
     {
       "label": "dependencies",
@@ -1239,9 +1449,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "solas_sdk_package_dependencies",
       "community": 7,
-      "norm_label": "dependencies"
+      "norm_label": "dependencies",
+      "id": "solas_sdk_package_dependencies"
     },
     {
       "label": "index.js",
@@ -1249,9 +1459,9 @@
       "source_file": "packages/stripe-sync/index.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "stripe_sync_index",
       "community": 13,
-      "norm_label": "index.js"
+      "norm_label": "index.js",
+      "id": "stripe_sync_index"
     },
     {
       "label": "StripeSync",
@@ -1259,9 +1469,9 @@
       "source_file": "packages/stripe-sync/index.js",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "stripe_sync_index_stripesync",
       "community": 13,
-      "norm_label": "stripesync"
+      "norm_label": "stripesync",
+      "id": "stripe_sync_index_stripesync"
     },
     {
       "label": ".constructor()",
@@ -1269,9 +1479,9 @@
       "source_file": "packages/stripe-sync/index.js",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "stripe_sync_index_stripesync_constructor",
       "community": 13,
-      "norm_label": ".constructor()"
+      "norm_label": ".constructor()",
+      "id": "stripe_sync_index_stripesync_constructor"
     },
     {
       "label": ".handleWebhook()",
@@ -1279,9 +1489,9 @@
       "source_file": "packages/stripe-sync/index.js",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "stripe_sync_index_stripesync_handlewebhook",
       "community": 13,
-      "norm_label": ".handlewebhook()"
+      "norm_label": ".handlewebhook()",
+      "id": "stripe_sync_index_stripesync_handlewebhook"
     },
     {
       "label": "package.json",
@@ -1289,9 +1499,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "stripe_sync_package",
       "community": 5,
-      "norm_label": "package.json"
+      "norm_label": "package.json",
+      "id": "stripe_sync_package"
     },
     {
       "label": "name",
@@ -1299,9 +1509,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "stripe_sync_package_name",
       "community": 5,
-      "norm_label": "name"
+      "norm_label": "name",
+      "id": "stripe_sync_package_name"
     },
     {
       "label": "version",
@@ -1309,9 +1519,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "stripe_sync_package_version",
       "community": 5,
-      "norm_label": "version"
+      "norm_label": "version",
+      "id": "stripe_sync_package_version"
     },
     {
       "label": "description",
@@ -1319,9 +1529,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "stripe_sync_package_description",
       "community": 5,
-      "norm_label": "description"
+      "norm_label": "description",
+      "id": "stripe_sync_package_description"
     },
     {
       "label": "main",
@@ -1329,9 +1539,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "stripe_sync_package_main",
       "community": 5,
-      "norm_label": "main"
+      "norm_label": "main",
+      "id": "stripe_sync_package_main"
     },
     {
       "label": "type",
@@ -1339,9 +1549,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "stripe_sync_package_type",
       "community": 5,
-      "norm_label": "type"
+      "norm_label": "type",
+      "id": "stripe_sync_package_type"
     },
     {
       "label": "dependencies",
@@ -1349,9 +1559,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "stripe_sync_package_dependencies",
       "community": 5,
-      "norm_label": "dependencies"
+      "norm_label": "dependencies",
+      "id": "stripe_sync_package_dependencies"
     },
     {
       "label": "stripe",
@@ -1359,9 +1569,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "stripe_sync_package_dependencies_stripe",
       "community": 5,
-      "norm_label": "stripe"
+      "norm_label": "stripe",
+      "id": "stripe_sync_package_dependencies_stripe"
     },
     {
       "label": "WalletCard.jsx",
@@ -1369,9 +1579,9 @@
       "source_file": "packages/ui/WalletCard.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "ui_walletcard",
       "community": 29,
-      "norm_label": "walletcard.jsx"
+      "norm_label": "walletcard.jsx",
+      "id": "ui_walletcard"
     },
     {
       "label": "WalletCard()",
@@ -1379,9 +1589,9 @@
       "source_file": "packages/ui/WalletCard.jsx",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "ui_walletcard_walletcard",
       "community": 29,
-      "norm_label": "walletcard()"
+      "norm_label": "walletcard()",
+      "id": "ui_walletcard_walletcard"
     },
     {
       "label": "dev.js",
@@ -1389,9 +1599,9 @@
       "source_file": "scripts/dev.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "scripts_dev",
       "community": 10,
-      "norm_label": "dev.js"
+      "norm_label": "dev.js",
+      "id": "scripts_dev"
     },
     {
       "label": "__filename",
@@ -1399,9 +1609,9 @@
       "source_file": "scripts/dev.js",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "scripts_dev_filename",
       "community": 10,
-      "norm_label": "__filename"
+      "norm_label": "__filename",
+      "id": "scripts_dev_filename"
     },
     {
       "label": "__dirname",
@@ -1409,9 +1619,9 @@
       "source_file": "scripts/dev.js",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "scripts_dev_dirname",
       "community": 10,
-      "norm_label": "__dirname"
+      "norm_label": "__dirname",
+      "id": "scripts_dev_dirname"
     },
     {
       "label": "rootDir",
@@ -1419,9 +1629,9 @@
       "source_file": "scripts/dev.js",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "scripts_dev_rootdir",
       "community": 10,
-      "norm_label": "rootdir"
+      "norm_label": "rootdir",
+      "id": "scripts_dev_rootdir"
     },
     {
       "label": "server",
@@ -1429,9 +1639,9 @@
       "source_file": "scripts/dev.js",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "scripts_dev_server",
       "community": 10,
-      "norm_label": "server"
+      "norm_label": "server",
+      "id": "scripts_dev_server"
     },
     {
       "label": "dashboard",
@@ -1439,9 +1649,9 @@
       "source_file": "scripts/dev.js",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "scripts_dev_dashboard",
       "community": 10,
-      "norm_label": "dashboard"
+      "norm_label": "dashboard",
+      "id": "scripts_dev_dashboard"
     },
     {
       "label": "constants.js",
@@ -1449,9 +1659,9 @@
       "source_file": "shared/constants.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "shared_constants",
       "community": 25,
-      "norm_label": "constants.js"
+      "norm_label": "constants.js",
+      "id": "shared_constants"
     },
     {
       "label": "PROVIDERS",
@@ -1459,9 +1669,9 @@
       "source_file": "shared/constants.js",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "shared_constants_providers",
       "community": 25,
-      "norm_label": "providers"
+      "norm_label": "providers",
+      "id": "shared_constants_providers"
     },
     {
       "label": "HTTP_STATUS",
@@ -1469,9 +1679,9 @@
       "source_file": "shared/constants.js",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "shared_constants_http_status",
       "community": 25,
-      "norm_label": "http_status"
+      "norm_label": "http_status",
+      "id": "shared_constants_http_status"
     },
     {
       "label": "vite-plugin-solas.js",
@@ -1479,9 +1689,9 @@
       "source_file": "vite/vite-plugin-solas.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "vite_vite_plugin_solas",
       "community": 30,
-      "norm_label": "vite-plugin-solas.js"
+      "norm_label": "vite-plugin-solas.js",
+      "id": "vite_vite_plugin_solas"
     },
     {
       "label": "vitePluginSolas()",
@@ -1489,9 +1699,9 @@
       "source_file": "vite/vite-plugin-solas.js",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "vite_vite_plugin_solas_vitepluginsolas",
       "community": 30,
-      "norm_label": "vitepluginsolas()"
+      "norm_label": "vitepluginsolas()",
+      "id": "vite_vite_plugin_solas_vitepluginsolas"
     },
     {
       "label": "roadmap.md",
@@ -1499,9 +1709,9 @@
       "source_file": ".plans/roadmap.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "plans_roadmap",
       "community": 9,
-      "norm_label": "roadmap.md"
+      "norm_label": "roadmap.md",
+      "id": "plans_roadmap"
     },
     {
       "label": "Solas Billing Development Roadmap",
@@ -1509,9 +1719,9 @@
       "source_file": ".plans/roadmap.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "plans_roadmap_solas_billing_development_roadmap",
       "community": 9,
-      "norm_label": "solas billing development roadmap"
+      "norm_label": "solas billing development roadmap",
+      "id": "plans_roadmap_solas_billing_development_roadmap"
     },
     {
       "label": "Milestone 1: Core Proxy & SQLite Ledger (Completed)",
@@ -1519,9 +1729,9 @@
       "source_file": ".plans/roadmap.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "plans_roadmap_milestone_1_core_proxy_sqlite_ledger_completed",
       "community": 9,
-      "norm_label": "milestone 1: core proxy & sqlite ledger (completed)"
+      "norm_label": "milestone 1: core proxy & sqlite ledger (completed)",
+      "id": "plans_roadmap_milestone_1_core_proxy_sqlite_ledger_completed"
     },
     {
       "label": "Milestone 2: Advanced Fallbacks & Rate Limiting (Completed)",
@@ -1529,9 +1739,9 @@
       "source_file": ".plans/roadmap.md",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "plans_roadmap_milestone_2_advanced_fallbacks_rate_limiting_completed",
       "community": 9,
-      "norm_label": "milestone 2: advanced fallbacks & rate limiting (completed)"
+      "norm_label": "milestone 2: advanced fallbacks & rate limiting (completed)",
+      "id": "plans_roadmap_milestone_2_advanced_fallbacks_rate_limiting_completed"
     },
     {
       "label": "Milestone 3: Distributed Multi-Tenant & PostgreSQL (Q3 2026)",
@@ -1539,9 +1749,9 @@
       "source_file": ".plans/roadmap.md",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "plans_roadmap_milestone_3_distributed_multi_tenant_postgresql_q3_2026",
       "community": 9,
-      "norm_label": "milestone 3: distributed multi-tenant & postgresql (q3 2026)"
+      "norm_label": "milestone 3: distributed multi-tenant & postgresql (q3 2026)",
+      "id": "plans_roadmap_milestone_3_distributed_multi_tenant_postgresql_q3_2026"
     },
     {
       "label": "README.md",
@@ -1549,9 +1759,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "readme",
       "community": 4,
-      "norm_label": "readme.md"
+      "norm_label": "readme.md",
+      "id": "readme"
     },
     {
       "label": "Solas Billing",
@@ -1559,9 +1769,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "readme_solas_billing",
       "community": 4,
-      "norm_label": "solas billing"
+      "norm_label": "solas billing",
+      "id": "readme_solas_billing"
     },
     {
       "label": "\u26a1 Key Features",
@@ -1569,9 +1779,9 @@
       "source_file": "README.md",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "readme_key_features",
       "community": 4,
-      "norm_label": "\u26a1 key features"
+      "norm_label": "\u26a1 key features",
+      "id": "readme_key_features"
     },
     {
       "label": "\ud83d\udcc2 Codebase Structure",
@@ -1579,9 +1789,9 @@
       "source_file": "README.md",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "readme_codebase_structure",
       "community": 4,
-      "norm_label": "\ud83d\udcc2 codebase structure"
+      "norm_label": "\ud83d\udcc2 codebase structure",
+      "id": "readme_codebase_structure"
     },
     {
       "label": "\ud83d\udee0\ufe0f Getting Started",
@@ -1589,9 +1799,9 @@
       "source_file": "README.md",
       "source_location": "L37",
       "_origin": "ast",
-      "id": "readme_getting_started",
       "community": 4,
-      "norm_label": "\ud83d\udee0\ufe0f getting started"
+      "norm_label": "\ud83d\udee0\ufe0f getting started",
+      "id": "readme_getting_started"
     },
     {
       "label": "1. Start the Proxy Server",
@@ -1599,9 +1809,9 @@
       "source_file": "README.md",
       "source_location": "L39",
       "_origin": "ast",
-      "id": "readme_1_start_the_proxy_server",
       "community": 4,
-      "norm_label": "1. start the proxy server"
+      "norm_label": "1. start the proxy server",
+      "id": "readme_1_start_the_proxy_server"
     },
     {
       "label": "2. Start the Admin Dashboard",
@@ -1609,9 +1819,9 @@
       "source_file": "README.md",
       "source_location": "L48",
       "_origin": "ast",
-      "id": "readme_2_start_the_admin_dashboard",
       "community": 4,
-      "norm_label": "2. start the admin dashboard"
+      "norm_label": "2. start the admin dashboard",
+      "id": "readme_2_start_the_admin_dashboard"
     },
     {
       "label": "\ud83d\ude80 How to use (Client Example)",
@@ -1619,9 +1829,9 @@
       "source_file": "README.md",
       "source_location": "L59",
       "_origin": "ast",
-      "id": "readme_how_to_use_client_example",
       "community": 4,
-      "norm_label": "\ud83d\ude80 how to use (client example)"
+      "norm_label": "\ud83d\ude80 how to use (client example)",
+      "id": "readme_how_to_use_client_example"
     },
     {
       "label": "README.md",
@@ -1629,9 +1839,9 @@
       "source_file": "apps/dashboard/README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "dashboard_readme",
       "community": 12,
-      "norm_label": "readme.md"
+      "norm_label": "readme.md",
+      "id": "dashboard_readme"
     },
     {
       "label": "React + Vite",
@@ -1639,9 +1849,9 @@
       "source_file": "apps/dashboard/README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "dashboard_readme_react_vite",
       "community": 12,
-      "norm_label": "react + vite"
+      "norm_label": "react + vite",
+      "id": "dashboard_readme_react_vite"
     },
     {
       "label": "React Compiler",
@@ -1649,9 +1859,9 @@
       "source_file": "apps/dashboard/README.md",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "dashboard_readme_react_compiler",
       "community": 12,
-      "norm_label": "react compiler"
+      "norm_label": "react compiler",
+      "id": "dashboard_readme_react_compiler"
     },
     {
       "label": "Expanding the Oxlint configuration",
@@ -1659,9 +1869,9 @@
       "source_file": "apps/dashboard/README.md",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "dashboard_readme_expanding_the_oxlint_configuration",
       "community": 12,
-      "norm_label": "expanding the oxlint configuration"
+      "norm_label": "expanding the oxlint configuration",
+      "id": "dashboard_readme_expanding_the_oxlint_configuration"
     },
     {
       "label": "architecture.md",
@@ -1669,9 +1879,9 @@
       "source_file": "apps/docs/architecture.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_architecture",
       "community": 22,
-      "norm_label": "architecture.md"
+      "norm_label": "architecture.md",
+      "id": "docs_architecture"
     },
     {
       "label": "Solas Billing Architecture Documentation",
@@ -1679,9 +1889,9 @@
       "source_file": "apps/docs/architecture.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_architecture_solas_billing_architecture_documentation",
       "community": 22,
-      "norm_label": "solas billing architecture documentation"
+      "norm_label": "solas billing architecture documentation",
+      "id": "docs_architecture_solas_billing_architecture_documentation"
     },
     {
       "label": "Request Intercept Lifecycle",
@@ -1689,12 +1899,162 @@
       "source_file": "apps/docs/architecture.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "docs_architecture_request_intercept_lifecycle",
       "community": 22,
-      "norm_label": "request intercept lifecycle"
+      "norm_label": "request intercept lifecycle",
+      "id": "docs_architecture_request_intercept_lifecycle"
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/billing/skill.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "billing_skill",
+      "target": "billing_skill_agent_billing_skill",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/billing/skill.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "billing_skill_agent_billing_skill",
+      "target": "billing_skill_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/billing/skill.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "billing_skill_agent_billing_skill",
+      "target": "billing_skill_tools",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/checkout/skill.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "checkout_skill",
+      "target": "checkout_skill_agent_checkout_skill",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/checkout/skill.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "checkout_skill_agent_checkout_skill",
+      "target": "checkout_skill_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "claude_claude",
+      "target": "claude_claude_claude_md_solas_billing_commands_conventions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/CLAUDE.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "claude_claude_claude_md_solas_billing_commands_conventions",
+      "target": "claude_claude_build_run_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/CLAUDE.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "claude_claude_claude_md_solas_billing_commands_conventions",
+      "target": "claude_claude_code_style_guidelines",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".context/migration-interface/DECISIONS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "migration_interface_decisions",
+      "target": "migration_interface_decisions_architectural_decisions_database_selection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".context/migration-interface/DECISIONS.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "migration_interface_decisions_architectural_decisions_database_selection",
+      "target": "migration_interface_decisions_adr_1_keep_sqlite_for_local_self_hosted_developers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".context/migration-interface/PROPOSAL.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "migration_interface_proposal",
+      "target": "migration_interface_proposal_proposal_multi_tenant_database_scale_migration_sqlite_to_postgresql",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".context/migration-interface/PROPOSAL.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "migration_interface_proposal_proposal_multi_tenant_database_scale_migration_sqlite_to_postgresql",
+      "target": "migration_interface_proposal_background",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".context/migration-interface/PROPOSAL.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "migration_interface_proposal_proposal_multi_tenant_database_scale_migration_sqlite_to_postgresql",
+      "target": "migration_interface_proposal_migration_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".context/migration-interface/PROPOSAL.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "migration_interface_proposal_proposal_multi_tenant_database_scale_migration_sqlite_to_postgresql",
+      "target": "migration_interface_proposal_target_schema_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".context/migration-interface/STATUS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "migration_interface_status",
+      "target": "migration_interface_status_database_migration_status",
+      "confidence_score": 1.0
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -2014,9 +2374,9 @@
       "source_file": "apps/sdk-test/integration.test.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sdk_test_integration_test",
-      "target": "auth_index",
-      "confidence_score": 1.0
+      "target": "auth_index"
     },
     {
       "relation": "imports",
@@ -3146,5 +3506,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "2e879dfa30735e81585c808db697948f2d7a5fe6"
+  "built_at_commit": "bb386f95cf35a604a441c4bf4c8a727bab2b85ea"
 }

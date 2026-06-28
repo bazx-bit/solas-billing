@@ -243,5 +243,35 @@
     "mtime": 1782679112.4666839,
     "ast_hash": "c0b31dfbe16f24a75507088baa3c3970",
     "semantic_hash": ""
+  },
+  ".agents/skills/billing/skill.md": {
+    "mtime": 1782679198.8026268,
+    "ast_hash": "65bcf1e4d4ef7b72cc617f9927e2a4ea",
+    "semantic_hash": ""
+  },
+  ".agents/skills/checkout/skill.md": {
+    "mtime": 1782679202.7058444,
+    "ast_hash": "2c4b32e4b569a83646281db80bfac327",
+    "semantic_hash": ""
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1782679195.246661,
+    "ast_hash": "a17b1a901a1faa3ca6bafa0341255df9",
+    "semantic_hash": ""
+  },
+  ".context/migration-interface/DECISIONS.md": {
+    "mtime": 1782679191.187247,
+    "ast_hash": "ecb27984c5761f54e57faa7579148f0a",
+    "semantic_hash": ""
+  },
+  ".context/migration-interface/PROPOSAL.md": {
+    "mtime": 1782679182.9350278,
+    "ast_hash": "3a623077ce2a532e25cedc43d6d940c1",
+    "semantic_hash": ""
+  },
+  ".context/migration-interface/STATUS.md": {
+    "mtime": 1782679187.281668,
+    "ast_hash": "bcd091d0e97722a19b263655205588f8",
+    "semantic_hash": ""
   }
 }
