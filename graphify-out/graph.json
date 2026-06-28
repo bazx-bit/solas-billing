@@ -4,6 +4,66 @@
   "graph": {},
   "nodes": [
     {
+      "label": "db.js",
+      "file_type": "code",
+      "source_file": "apps/server/db.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "server_db",
+      "community": 3,
+      "norm_label": "db.js"
+    },
+    {
+      "label": "__filename",
+      "file_type": "code",
+      "source_file": "apps/server/db.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "server_db_filename",
+      "community": 3,
+      "norm_label": "__filename"
+    },
+    {
+      "label": "__dirname",
+      "file_type": "code",
+      "source_file": "apps/server/db.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "server_db_dirname",
+      "community": 3,
+      "norm_label": "__dirname"
+    },
+    {
+      "label": "dbPath",
+      "file_type": "code",
+      "source_file": "apps/server/db.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "server_db_dbpath",
+      "community": 3,
+      "norm_label": "dbpath"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "apps/server/db.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "server_db_db",
+      "community": 3,
+      "norm_label": "db"
+    },
+    {
+      "label": "initDB()",
+      "file_type": "code",
+      "source_file": "apps/server/db.js",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "server_db_initdb",
+      "community": 3,
+      "norm_label": "initdb()"
+    },
+    {
       "label": "server.js",
       "file_type": "code",
       "source_file": "apps/server/server.js",
@@ -47,7 +107,7 @@
       "label": "executeProviderCall()",
       "file_type": "code",
       "source_file": "apps/server/server.js",
-      "source_location": "L159",
+      "source_location": "L160",
       "_origin": "ast",
       "id": "server_server_executeprovidercall",
       "community": 3,
@@ -1122,66 +1182,6 @@
       "community": 14,
       "norm_label": "integration.test.js",
       "id": "sdk_test_integration_test"
-    },
-    {
-      "label": "db.js",
-      "file_type": "code",
-      "source_file": "apps/server/db.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "db.js",
-      "id": "server_db"
-    },
-    {
-      "label": "__filename",
-      "file_type": "code",
-      "source_file": "apps/server/db.js",
-      "source_location": "L5",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "__filename",
-      "id": "server_db_filename"
-    },
-    {
-      "label": "__dirname",
-      "file_type": "code",
-      "source_file": "apps/server/db.js",
-      "source_location": "L6",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "__dirname",
-      "id": "server_db_dirname"
-    },
-    {
-      "label": "dbPath",
-      "file_type": "code",
-      "source_file": "apps/server/db.js",
-      "source_location": "L8",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "dbpath",
-      "id": "server_db_dbpath"
-    },
-    {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "apps/server/db.js",
-      "source_location": "L9",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "db",
-      "id": "server_db_db"
-    },
-    {
-      "label": "initDB()",
-      "file_type": "code",
-      "source_file": "apps/server/db.js",
-      "source_location": "L15",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "initdb()",
-      "id": "server_db_initdb"
     },
     {
       "label": "package.json",
@@ -2406,6 +2406,56 @@
   ],
   "links": [
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/db.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db",
+      "target": "server_db_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/db.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db",
+      "target": "server_db_dbpath"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/db.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db",
+      "target": "server_db_dirname"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/db.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db",
+      "target": "server_db_filename"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/db.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db",
+      "target": "server_db_initdb"
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -2454,9 +2504,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L159",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_server",
-      "target": "server_server_executeprovidercall",
-      "confidence_score": 1.0
+      "target": "server_server_executeprovidercall"
     },
     {
       "relation": "contains",
@@ -2464,9 +2514,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_server",
-      "target": "server_server_failover_routes",
-      "confidence_score": 1.0
+      "target": "server_server_failover_routes"
     },
     {
       "relation": "contains",
@@ -3432,56 +3482,6 @@
       "confidence_score": 1.0,
       "source": "sdk_test_integration_test",
       "target": "auth_index_verifyapikey"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/db.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db",
-      "target": "server_db_db"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/db.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db",
-      "target": "server_db_dbpath"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/db.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db",
-      "target": "server_db_dirname"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/db.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db",
-      "target": "server_db_filename"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/db.js",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db",
-      "target": "server_db_initdb"
     },
     {
       "relation": "contains",
@@ -4486,5 +4486,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "7392f00212c13009ecba011d8e6f82c2a8203e45"
+  "built_at_commit": "3b4fabe053b98568613e52a1900f7d19b5bc58dd"
 }

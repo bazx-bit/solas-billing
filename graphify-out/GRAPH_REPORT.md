@@ -1,7 +1,7 @@
 # Graph Report - solas-billing  (2026-06-29)
 
 ## Corpus Check
-- 47 files · ~10,611 words
+- 47 files · ~10,882 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7392f002`
+- Built from commit: `3b4fabe0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -148,14 +148,14 @@ Cohesion: 0.11
 Nodes (17): files, ignoreUnknown, formatter, enabled, indentStyle, quoteStyle, javascript, formatter (+9 more)
 
 ## Knowledge Gaps
-- **136 isolated node(s):** `app`, `FAILOVER_ROUTES`, `$schema`, `enabled`, `clientKind` (+131 more)
+- **136 isolated node(s):** `__filename`, `__dirname`, `dbPath`, `app`, `FAILOVER_ROUTES` (+131 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **What connects `app`, `FAILOVER_ROUTES`, `$schema` to the rest of the system?**
+- **What connects `__filename`, `__dirname`, `dbPath` to the rest of the system?**
   _136 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._

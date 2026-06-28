@@ -11,6 +11,7 @@
     "dev": "node scripts/dev.js",
     "dev:server": "npm run dev --workspace=apps/server",
     "dev:dashboard": "npm run dev --workspace=apps/dashboard",
-    "install:all": "npm install --workspaces"
+    "install:all": "npm install --workspaces",
+    "build:leaf": "cd apps/leaf && cargo build --release"
   }
 }
