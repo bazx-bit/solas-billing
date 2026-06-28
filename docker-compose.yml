@@ -1,6 +1,7 @@
 version: '3.8'
 
 services:
+  # Node.js Admin API & Dashboard Backend
   server:
     build:
       context: ./apps/server
@@ -11,10 +12,34 @@ services:
       - PORT=8080
       - NODE_ENV=production
       - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
     volumes:
       - solas_db_data:/usr/src/app/data
     restart: always
 
+  # Rust High-Performance Proxy Engine
+  leaf:
+    build:
+      context: ./apps/leaf
+      dockerfile: Dockerfile
+    ports:
+      - "9090:9090"
+    environment:
+      - PORT=9090
+      - DATABASE_URL=/data/solas.db
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - TINYBIRD_INGEST_URL=${TINYBIRD_INGEST_URL}
+      - TINYBIRD_TOKEN=${TINYBIRD_TOKEN}
+    volumes:
+      - solas_db_data:/data
+    depends_on:
+      - server
+    restart: always
+
+  # React Admin Dashboard (Nginx)
   dashboard:
     build:
       context: ./apps/dashboard

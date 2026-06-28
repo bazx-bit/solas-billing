@@ -4,6 +4,356 @@
   "graph": {},
   "nodes": [
     {
+      "label": "credit_lock.rs",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_credit_lock",
+      "community": 41,
+      "norm_label": "credit_lock.rs"
+    },
+    {
+      "label": "CreditLockManager",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "src_credit_lock_creditlockmanager",
+      "community": 41,
+      "norm_label": "creditlockmanager"
+    },
+    {
+      "label": "Mutex",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "mutex",
+      "community": 41,
+      "norm_label": "mutex"
+    },
+    {
+      "label": "HashMap",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "hashmap",
+      "community": 41,
+      "norm_label": "hashmap"
+    },
+    {
+      "label": "String",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "string",
+      "community": 39,
+      "norm_label": "string"
+    },
+    {
+      "label": "Arc",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "arc",
+      "community": 41,
+      "norm_label": "arc"
+    },
+    {
+      "label": "Semaphore",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "semaphore",
+      "community": 41,
+      "norm_label": "semaphore"
+    },
+    {
+      "label": ".new()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "src_credit_lock_creditlockmanager_new",
+      "community": 41,
+      "norm_label": ".new()"
+    },
+    {
+      "label": "Self",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "self",
+      "community": 41,
+      "norm_label": "self"
+    },
+    {
+      "label": ".get_lock()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "src_credit_lock_creditlockmanager_get_lock",
+      "community": 41,
+      "norm_label": ".get_lock()"
+    },
+    {
+      "label": "db.rs",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_db",
+      "community": 15,
+      "norm_label": "db.rs"
+    },
+    {
+      "label": "init_db()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "src_db_init_db",
+      "community": 15,
+      "norm_label": "init_db()"
+    },
+    {
+      "label": "Connection",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "connection",
+      "community": 15,
+      "norm_label": "connection"
+    },
+    {
+      "label": "UserRecord",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "src_db_userrecord",
+      "community": 15,
+      "norm_label": "userrecord"
+    },
+    {
+      "label": "ModelPricing",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "src_db_modelpricing",
+      "community": 15,
+      "norm_label": "modelpricing"
+    },
+    {
+      "label": "get_user_by_key()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L95",
+      "_origin": "ast",
+      "id": "src_db_get_user_by_key",
+      "community": 15,
+      "norm_label": "get_user_by_key()"
+    },
+    {
+      "label": "Option",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "option",
+      "community": 15,
+      "norm_label": "option"
+    },
+    {
+      "label": "get_model_pricing()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L114",
+      "_origin": "ast",
+      "id": "src_db_get_model_pricing",
+      "community": 15,
+      "norm_label": "get_model_pricing()"
+    },
+    {
+      "label": "check_rpm()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L131",
+      "_origin": "ast",
+      "id": "src_db_check_rpm",
+      "community": 15,
+      "norm_label": "check_rpm()"
+    },
+    {
+      "label": "check_tpm()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L141",
+      "_origin": "ast",
+      "id": "src_db_check_tpm",
+      "community": 15,
+      "norm_label": "check_tpm()"
+    },
+    {
+      "label": "deduct_and_log()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L151",
+      "_origin": "ast",
+      "id": "src_db_deduct_and_log",
+      "community": 15,
+      "norm_label": "deduct_and_log()"
+    },
+    {
+      "label": "get_cached_response()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L196",
+      "_origin": "ast",
+      "id": "src_db_get_cached_response",
+      "community": 15,
+      "norm_label": "get_cached_response()"
+    },
+    {
+      "label": "set_cached_response()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L208",
+      "_origin": "ast",
+      "id": "src_db_set_cached_response",
+      "community": 15,
+      "norm_label": "set_cached_response()"
+    },
+    {
+      "label": "gateway.rs",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/gateway.rs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_gateway",
+      "community": 39,
+      "norm_label": "gateway.rs"
+    },
+    {
+      "label": "call_provider()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/gateway.rs",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "src_gateway_call_provider",
+      "community": 39,
+      "norm_label": "call_provider()"
+    },
+    {
+      "label": "Client",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "client",
+      "community": 39,
+      "norm_label": "client"
+    },
+    {
+      "label": "Result",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "result",
+      "community": 39,
+      "norm_label": "result"
+    },
+    {
+      "label": "Response",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "response",
+      "community": 15,
+      "norm_label": "response"
+    },
+    {
+      "label": "Error",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "error",
+      "community": 39,
+      "norm_label": "error"
+    },
+    {
+      "label": "jobs.rs",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_jobs",
+      "community": 41,
+      "norm_label": "jobs.rs"
+    },
+    {
+      "label": "BackgroundJob",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "src_jobs_backgroundjob",
+      "community": 41,
+      "norm_label": "backgroundjob"
+    },
+    {
+      "label": "AnalyticsEvent",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "src_jobs_analyticsevent",
+      "community": 41,
+      "norm_label": "analyticsevent"
+    },
+    {
+      "label": "spawn_job_processor()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "src_jobs_spawn_job_processor",
+      "community": 41,
+      "norm_label": "spawn_job_processor()"
+    },
+    {
+      "label": "UnboundedSender",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "unboundedsender",
+      "community": 41,
+      "norm_label": "unboundedsender"
+    },
+    {
+      "label": "spawn_cron_tasks()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L164",
+      "_origin": "ast",
+      "id": "src_jobs_spawn_cron_tasks",
+      "community": 41,
+      "norm_label": "spawn_cron_tasks()"
+    },
+    {
       "label": "main.rs",
       "file_type": "code",
       "source_file": "apps/leaf/src/main.rs",
@@ -17,141 +367,51 @@
       "label": "AppState",
       "file_type": "code",
       "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L13",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "src_main_appstate",
-      "community": 15,
+      "community": 41,
       "norm_label": "appstate"
-    },
-    {
-      "label": "Arc",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "arc",
-      "community": 15,
-      "norm_label": "arc"
-    },
-    {
-      "label": "Mutex",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "mutex",
-      "community": 15,
-      "norm_label": "mutex"
-    },
-    {
-      "label": "Connection",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "connection",
-      "community": 15,
-      "norm_label": "connection"
-    },
-    {
-      "label": "Client",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "client",
-      "community": 15,
-      "norm_label": "client"
-    },
-    {
-      "label": "ChatMessage",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "src_main_chatmessage",
-      "community": 15,
-      "norm_label": "chatmessage"
-    },
-    {
-      "label": "String",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "string",
-      "community": 15,
-      "norm_label": "string"
-    },
-    {
-      "label": "ChatCompletionRequest",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L25",
-      "_origin": "ast",
-      "id": "src_main_chatcompletionrequest",
-      "community": 15,
-      "norm_label": "chatcompletionrequest"
-    },
-    {
-      "label": "Vec",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "vec",
-      "community": 15,
-      "norm_label": "vec"
-    },
-    {
-      "label": "Option",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "option",
-      "community": 15,
-      "norm_label": "option"
-    },
-    {
-      "label": "ErrorDetail",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L32",
-      "_origin": "ast",
-      "id": "src_main_errordetail",
-      "community": 15,
-      "norm_label": "errordetail"
-    },
-    {
-      "label": "ErrorResponse",
-      "file_type": "code",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L39",
-      "_origin": "ast",
-      "id": "src_main_errorresponse",
-      "community": 15,
-      "norm_label": "errorresponse"
     },
     {
       "label": "main()",
       "file_type": "code",
       "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L44",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "src_main_main",
-      "community": 15,
+      "community": 41,
       "norm_label": "main()"
     },
     {
-      "label": "handle_chat_completions()",
+      "label": "health_check()",
       "file_type": "code",
       "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L75",
+      "source_location": "L74",
       "_origin": "ast",
-      "id": "src_main_handle_chat_completions",
+      "id": "src_main_health_check",
       "community": 15,
-      "norm_label": "handle_chat_completions()"
+      "norm_label": "health_check()"
+    },
+    {
+      "label": "IntoResponse",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "intoresponse",
+      "community": 15,
+      "norm_label": "intoresponse"
+    },
+    {
+      "label": "stripe_webhook_handler()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L93",
+      "_origin": "ast",
+      "id": "src_main_stripe_webhook_handler",
+      "community": 15,
+      "norm_label": "stripe_webhook_handler()"
     },
     {
       "label": "State",
@@ -164,16 +424,6 @@
       "norm_label": "state"
     },
     {
-      "label": "HeaderMap",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "headermap",
-      "community": 15,
-      "norm_label": "headermap"
-    },
-    {
       "label": "Json",
       "file_type": "code",
       "source_file": "",
@@ -184,14 +434,434 @@
       "norm_label": "json"
     },
     {
-      "label": "Response",
+      "label": "Value",
       "file_type": "code",
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "response",
+      "id": "value",
       "community": 15,
-      "norm_label": "response"
+      "norm_label": "value"
+    },
+    {
+      "label": "proxy_handler()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L133",
+      "_origin": "ast",
+      "id": "src_main_proxy_handler",
+      "community": 15,
+      "norm_label": "proxy_handler()"
+    },
+    {
+      "label": "HeaderMap",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "headermap",
+      "community": 15,
+      "norm_label": "headermap"
+    },
+    {
+      "label": "error_response()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L350",
+      "_origin": "ast",
+      "id": "src_main_error_response",
+      "community": 15,
+      "norm_label": "error_response()"
+    },
+    {
+      "label": "StatusCode",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "statuscode",
+      "community": 15,
+      "norm_label": "statuscode"
+    },
+    {
+      "label": "types.rs",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_types",
+      "community": 39,
+      "norm_label": "types.rs"
+    },
+    {
+      "label": "ChatMessage",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "src_types_chatmessage",
+      "community": 39,
+      "norm_label": "chatmessage"
+    },
+    {
+      "label": "ChatCompletionRequest",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "src_types_chatcompletionrequest",
+      "community": 39,
+      "norm_label": "chatcompletionrequest"
+    },
+    {
+      "label": "Vec",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "vec",
+      "community": 39,
+      "norm_label": "vec"
+    },
+    {
+      "label": "ChatCompletionResponse",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "src_types_chatcompletionresponse",
+      "community": 39,
+      "norm_label": "chatcompletionresponse"
+    },
+    {
+      "label": "CompletionChoice",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "src_types_completionchoice",
+      "community": 39,
+      "norm_label": "completionchoice"
+    },
+    {
+      "label": "UsageInfo",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "src_types_usageinfo",
+      "community": 39,
+      "norm_label": "usageinfo"
+    },
+    {
+      "label": "ErrorResponse",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "src_types_errorresponse",
+      "community": 39,
+      "norm_label": "errorresponse"
+    },
+    {
+      "label": "ErrorDetail",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "src_types_errordetail",
+      "community": 39,
+      "norm_label": "errordetail"
+    },
+    {
+      "label": "Provider",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "src_types_provider",
+      "community": 39,
+      "norm_label": "provider"
+    },
+    {
+      "label": ".from_str()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "src_types_provider_from_str",
+      "community": 41,
+      "norm_label": ".from_str()"
+    },
+    {
+      "label": ".as_str()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "src_types_provider_as_str",
+      "community": 39,
+      "norm_label": ".as_str()"
+    },
+    {
+      "label": "estimate_tokens()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "src_types_estimate_tokens",
+      "community": 39,
+      "norm_label": "estimate_tokens()"
+    },
+    {
+      "label": "estimate_messages_tokens()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L94",
+      "_origin": "ast",
+      "id": "src_types_estimate_messages_tokens",
+      "community": 39,
+      "norm_label": "estimate_messages_tokens()"
+    },
+    {
+      "label": "compute_cache_key()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L103",
+      "_origin": "ast",
+      "id": "src_types_compute_cache_key",
+      "community": 39,
+      "norm_label": "compute_cache_key()"
+    },
+    {
+      "label": "FailoverRoute",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L114",
+      "_origin": "ast",
+      "id": "src_types_failoverroute",
+      "community": 39,
+      "norm_label": "failoverroute"
+    },
+    {
+      "label": "get_failover_route()",
+      "file_type": "code",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L120",
+      "_origin": "ast",
+      "id": "src_types_get_failover_route",
+      "community": 15,
+      "norm_label": "get_failover_route()"
+    },
+    {
+      "label": "turbo.json",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "turbo",
+      "community": 40,
+      "norm_label": "turbo.json"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "turbo_schema",
+      "community": 40,
+      "norm_label": "$schema"
+    },
+    {
+      "label": "globalDependencies",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "turbo_globaldependencies",
+      "community": 40,
+      "norm_label": "globaldependencies"
+    },
+    {
+      "label": "tasks",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "turbo_tasks",
+      "community": 40,
+      "norm_label": "tasks"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "turbo_tasks_build",
+      "community": 40,
+      "norm_label": "build"
+    },
+    {
+      "label": "dependsOn",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "turbo_build_dependson",
+      "community": 40,
+      "norm_label": "dependson"
+    },
+    {
+      "label": "outputs",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "turbo_build_outputs",
+      "community": 40,
+      "norm_label": "outputs"
+    },
+    {
+      "label": "build:leaf",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "turbo_tasks_build_leaf",
+      "community": 40,
+      "norm_label": "build:leaf"
+    },
+    {
+      "label": "dependsOn",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "turbo_build_leaf_dependson",
+      "community": 40,
+      "norm_label": "dependson"
+    },
+    {
+      "label": "outputs",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "turbo_build_leaf_outputs",
+      "community": 40,
+      "norm_label": "outputs"
+    },
+    {
+      "label": "cache",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "turbo_build_leaf_cache",
+      "community": 40,
+      "norm_label": "cache"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "turbo_tasks_dev",
+      "community": 40,
+      "norm_label": "dev"
+    },
+    {
+      "label": "dependsOn",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "turbo_dev_dependson",
+      "community": 40,
+      "norm_label": "dependson"
+    },
+    {
+      "label": "cache",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "turbo_dev_cache",
+      "community": 40,
+      "norm_label": "cache"
+    },
+    {
+      "label": "persistent",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "turbo_dev_persistent",
+      "community": 40,
+      "norm_label": "persistent"
+    },
+    {
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "turbo_tasks_lint",
+      "community": 40,
+      "norm_label": "lint"
+    },
+    {
+      "label": "dependsOn",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "turbo_lint_dependson",
+      "community": 40,
+      "norm_label": "dependson"
+    },
+    {
+      "label": "outputs",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "turbo_lint_outputs",
+      "community": 40,
+      "norm_label": "outputs"
+    },
+    {
+      "label": "test",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "turbo_tasks_test",
+      "community": 40,
+      "norm_label": "test"
+    },
+    {
+      "label": "dependsOn",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "turbo_test_dependson",
+      "community": 40,
+      "norm_label": "dependson"
+    },
+    {
+      "label": "outputs",
+      "file_type": "code",
+      "source_file": "turbo.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "turbo_test_outputs",
+      "community": 40,
+      "norm_label": "outputs"
     },
     {
       "label": "package.json",
@@ -199,9 +869,9 @@
       "source_file": "package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "package",
       "community": 2,
-      "norm_label": "package.json"
+      "norm_label": "package.json",
+      "id": "package"
     },
     {
       "label": "name",
@@ -209,9 +879,9 @@
       "source_file": "package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "package_name",
       "community": 2,
-      "norm_label": "name"
+      "norm_label": "name",
+      "id": "package_name"
     },
     {
       "label": "private",
@@ -219,9 +889,9 @@
       "source_file": "package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "package_private",
       "community": 2,
-      "norm_label": "private"
+      "norm_label": "private",
+      "id": "package_private"
     },
     {
       "label": "version",
@@ -229,9 +899,9 @@
       "source_file": "package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "package_version",
       "community": 2,
-      "norm_label": "version"
+      "norm_label": "version",
+      "id": "package_version"
     },
     {
       "label": "description",
@@ -239,9 +909,9 @@
       "source_file": "package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "package_description",
       "community": 2,
-      "norm_label": "description"
+      "norm_label": "description",
+      "id": "package_description"
     },
     {
       "label": "workspaces",
@@ -249,9 +919,9 @@
       "source_file": "package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "package_workspaces",
       "community": 2,
-      "norm_label": "workspaces"
+      "norm_label": "workspaces",
+      "id": "package_workspaces"
     },
     {
       "label": "scripts",
@@ -259,9 +929,9 @@
       "source_file": "package.json",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "package_scripts",
       "community": 2,
-      "norm_label": "scripts"
+      "norm_label": "scripts",
+      "id": "package_scripts"
     },
     {
       "label": "dev",
@@ -269,9 +939,9 @@
       "source_file": "package.json",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "package_scripts_dev",
       "community": 2,
-      "norm_label": "dev"
+      "norm_label": "dev",
+      "id": "package_scripts_dev"
     },
     {
       "label": "dev:server",
@@ -279,9 +949,9 @@
       "source_file": "package.json",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "package_scripts_dev_server",
       "community": 2,
-      "norm_label": "dev:server"
+      "norm_label": "dev:server",
+      "id": "package_scripts_dev_server"
     },
     {
       "label": "dev:dashboard",
@@ -289,9 +959,9 @@
       "source_file": "package.json",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "package_scripts_dev_dashboard",
       "community": 2,
-      "norm_label": "dev:dashboard"
+      "norm_label": "dev:dashboard",
+      "id": "package_scripts_dev_dashboard"
     },
     {
       "label": "install:all",
@@ -299,9 +969,9 @@
       "source_file": "package.json",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "package_scripts_install_all",
       "community": 2,
-      "norm_label": "install:all"
+      "norm_label": "install:all",
+      "id": "package_scripts_install_all"
     },
     {
       "label": "build:leaf",
@@ -309,9 +979,9 @@
       "source_file": "package.json",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "package_scripts_build_leaf",
       "community": 2,
-      "norm_label": "build:leaf"
+      "norm_label": "build:leaf",
+      "id": "package_scripts_build_leaf"
     },
     {
       "label": "db.js",
@@ -2597,6 +3267,1044 @@
   "links": [
     {
       "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "context": "import",
+      "source": "src_credit_lock",
+      "target": "arc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import",
+      "source": "src_credit_lock",
+      "target": "hashmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "context": "import",
+      "source": "src_credit_lock",
+      "target": "semaphore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_credit_lock",
+      "target": "src_credit_lock_creditlockmanager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_credit_lock_creditlockmanager",
+      "target": "arc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_credit_lock_creditlockmanager",
+      "target": "hashmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_credit_lock_creditlockmanager",
+      "target": "mutex",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_credit_lock_creditlockmanager",
+      "target": "semaphore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "src_credit_lock_creditlockmanager",
+      "target": "src_credit_lock_creditlockmanager_get_lock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "src_credit_lock_creditlockmanager",
+      "target": "src_credit_lock_creditlockmanager_new",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_credit_lock_creditlockmanager",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L20",
+      "weight": 1.0,
+      "context": "import",
+      "source": "src_main",
+      "target": "src_credit_lock_creditlockmanager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L30",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_main_appstate",
+      "target": "src_credit_lock_creditlockmanager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "confidence_score": 1.0,
+      "source": "src_main_appstate",
+      "target": "mutex"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L196",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_db_get_cached_response",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L89",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_db_modelpricing",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L78",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_db_userrecord",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L39",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_jobs_analyticsevent",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L45",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_jobs_spawn_job_processor",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_types_chatcompletionrequest",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L30",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_types_chatcompletionresponse",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_types_chatmessage",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L39",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_types_completionchoice",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L103",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_types_compute_cache_key",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L59",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_types_errordetail",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_credit_lock_creditlockmanager_get_lock",
+      "target": "arc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "field",
+      "confidence_score": 1.0,
+      "source": "src_main_appstate",
+      "target": "arc"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L133",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_proxy_handler",
+      "target": "arc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L93",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_stripe_webhook_handler",
+      "target": "arc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_credit_lock_creditlockmanager_get_lock",
+      "target": "semaphore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "src_credit_lock_creditlockmanager_get_lock",
+      "target": "src_credit_lock_creditlockmanager_new",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/credit_lock.rs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_credit_lock_creditlockmanager_new",
+      "target": "self",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L71",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_types_provider_from_str",
+      "target": "self",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "src_db",
+      "target": "src_db_check_rpm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "src_db",
+      "target": "src_db_check_tpm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "src_db",
+      "target": "src_db_deduct_and_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "src_db",
+      "target": "src_db_get_cached_response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "src_db",
+      "target": "src_db_get_model_pricing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "src_db",
+      "target": "src_db_get_user_by_key",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_db",
+      "target": "src_db_init_db",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "src_db",
+      "target": "src_db_modelpricing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L208",
+      "weight": 1.0,
+      "source": "src_db",
+      "target": "src_db_set_cached_response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "src_db",
+      "target": "src_db_userrecord",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_db_init_db",
+      "target": "connection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "src_main_main",
+      "target": "src_db_init_db"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L131",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_db_check_rpm",
+      "target": "connection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L141",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_db_check_tpm",
+      "target": "connection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L151",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_db_deduct_and_log",
+      "target": "connection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L196",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_db_get_cached_response",
+      "target": "connection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L114",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_db_get_model_pricing",
+      "target": "connection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L95",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_db_get_user_by_key",
+      "target": "connection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L208",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_db_set_cached_response",
+      "target": "connection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "import",
+      "source": "src_main",
+      "target": "connection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "confidence_score": 1.0,
+      "source": "src_main_appstate",
+      "target": "connection"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L95",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_db_get_user_by_key",
+      "target": "src_db_userrecord",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L114",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_db_get_model_pricing",
+      "target": "src_db_modelpricing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L95",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_db_get_user_by_key",
+      "target": "option",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "src_main_proxy_handler",
+      "target": "src_db_get_user_by_key"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L151",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_db_deduct_and_log",
+      "target": "option",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L196",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_db_get_cached_response",
+      "target": "option",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/db.rs",
+      "source_location": "L114",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_db_get_model_pricing",
+      "target": "option",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_types_chatcompletionrequest",
+      "target": "option",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L120",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_types_get_failover_route",
+      "target": "option",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L193",
+      "weight": 1.0,
+      "source": "src_main_proxy_handler",
+      "target": "src_db_get_model_pricing"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L179",
+      "weight": 1.0,
+      "source": "src_main_proxy_handler",
+      "target": "src_db_check_rpm"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L183",
+      "weight": 1.0,
+      "source": "src_main_proxy_handler",
+      "target": "src_db_check_tpm"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L249",
+      "weight": 1.0,
+      "source": "src_main_proxy_handler",
+      "target": "src_db_deduct_and_log"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L243",
+      "weight": 1.0,
+      "source": "src_main_proxy_handler",
+      "target": "src_db_get_cached_response"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L313",
+      "weight": 1.0,
+      "source": "src_main_proxy_handler",
+      "target": "src_db_set_cached_response"
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/gateway.rs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import",
+      "source": "src_gateway",
+      "target": "client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/gateway.rs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "context": "import",
+      "source": "src_gateway",
+      "target": "json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/gateway.rs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_gateway",
+      "target": "src_gateway_call_provider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/gateway.rs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_gateway_call_provider",
+      "target": "client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/gateway.rs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_gateway_call_provider",
+      "target": "error",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/gateway.rs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_gateway_call_provider",
+      "target": "response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/gateway.rs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_gateway_call_provider",
+      "target": "result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/gateway.rs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_gateway_call_provider",
+      "target": "src_types_chatcompletionrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/gateway.rs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_gateway_call_provider",
+      "target": "src_types_chatmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/gateway.rs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_gateway_call_provider",
+      "target": "src_types_provider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L265",
+      "weight": 1.0,
+      "source": "src_main_proxy_handler",
+      "target": "src_gateway_call_provider"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "field",
+      "confidence_score": 1.0,
+      "source": "src_main_appstate",
+      "target": "client"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L350",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_main_error_response",
+      "target": "response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L133",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_main_proxy_handler",
+      "target": "response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "src_jobs",
+      "target": "src_jobs_analyticsevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_jobs",
+      "target": "src_jobs_backgroundjob",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "src_jobs",
+      "target": "src_jobs_spawn_cron_tasks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "src_jobs",
+      "target": "src_jobs_spawn_job_processor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L164",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_jobs_spawn_cron_tasks",
+      "target": "src_jobs_backgroundjob",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L45",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_jobs_spawn_job_processor",
+      "target": "src_jobs_backgroundjob",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L31",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_appstate",
+      "target": "src_jobs_backgroundjob",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L45",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_jobs_spawn_job_processor",
+      "target": "unboundedsender",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "src_main_main",
+      "target": "src_jobs_spawn_job_processor"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/jobs.rs",
+      "source_location": "L164",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_jobs_spawn_cron_tasks",
+      "target": "unboundedsender",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L31",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_main_appstate",
+      "target": "unboundedsender",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "src_main_main",
+      "target": "src_jobs_spawn_cron_tasks"
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "import",
+      "source": "src_main",
+      "target": "json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "apps/dashboard/src/main.jsx",
@@ -2623,58 +4331,28 @@
       "source_file": "apps/leaf/src/main.rs",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_main",
-      "target": "src_main_appstate",
+      "target": "src_main_appstate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L350",
+      "weight": 1.0,
+      "source": "src_main",
+      "target": "src_main_error_response",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L25",
+      "source_location": "L74",
       "weight": 1.0,
       "source": "src_main",
-      "target": "src_main_chatcompletionrequest",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L19",
-      "weight": 1.0,
-      "source": "src_main",
-      "target": "src_main_chatmessage",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L32",
-      "weight": 1.0,
-      "source": "src_main",
-      "target": "src_main_errordetail",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L39",
-      "weight": 1.0,
-      "source": "src_main",
-      "target": "src_main_errorresponse",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L75",
-      "weight": 1.0,
-      "source": "src_main",
-      "target": "src_main_handle_chat_completions",
+      "target": "src_main_health_check",
       "confidence_score": 1.0
     },
     {
@@ -2683,62 +4361,38 @@
       "source_file": "apps/leaf/src/main.rs",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_main",
-      "target": "src_main_main",
-      "confidence_score": 1.0
+      "target": "src_main_main"
     },
     {
-      "relation": "references",
+      "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L14",
+      "source_location": "L133",
       "weight": 1.0,
-      "context": "field",
-      "source": "src_main_appstate",
-      "target": "arc",
+      "source": "src_main",
+      "target": "src_main_proxy_handler",
       "confidence_score": 1.0
     },
     {
-      "relation": "references",
+      "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L15",
+      "source_location": "L93",
       "weight": 1.0,
-      "context": "field",
-      "source": "src_main_appstate",
-      "target": "client",
+      "source": "src_main",
+      "target": "src_main_stripe_webhook_handler",
       "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L14",
+      "source_location": "L133",
       "weight": 1.0,
       "context": "generic_arg",
-      "source": "src_main_appstate",
-      "target": "connection",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L14",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "source": "src_main_appstate",
-      "target": "mutex",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L75",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "source": "src_main_handle_chat_completions",
+      "source": "src_main_proxy_handler",
       "target": "src_main_appstate",
       "confidence_score": 1.0
     },
@@ -2746,120 +4400,32 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L75",
+      "source_location": "L93",
       "weight": 1.0,
       "context": "generic_arg",
-      "source": "src_main_handle_chat_completions",
-      "target": "arc",
+      "source": "src_main_stripe_webhook_handler",
+      "target": "src_main_appstate",
       "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L27",
+      "source_location": "L74",
       "weight": 1.0,
-      "context": "generic_arg",
-      "source": "src_main_chatcompletionrequest",
-      "target": "src_main_chatmessage",
+      "context": "return_type",
+      "source": "src_main_health_check",
+      "target": "intoresponse",
       "confidence_score": 1.0
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L21",
-      "weight": 1.0,
-      "context": "field",
-      "source": "src_main_chatmessage",
-      "target": "string",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L26",
-      "weight": 1.0,
-      "context": "field",
-      "source": "src_main_chatcompletionrequest",
-      "target": "string",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L35",
-      "weight": 1.0,
-      "context": "field",
-      "source": "src_main_errordetail",
-      "target": "string",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L28",
-      "weight": 1.0,
-      "context": "field",
-      "source": "src_main_chatcompletionrequest",
-      "target": "option",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L27",
-      "weight": 1.0,
-      "context": "field",
-      "source": "src_main_chatcompletionrequest",
-      "target": "vec",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/leaf/src/main.rs",
       "source_location": "L75",
       "weight": 1.0,
-      "context": "generic_arg",
-      "source": "src_main_handle_chat_completions",
-      "target": "src_main_chatcompletionrequest",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L40",
-      "weight": 1.0,
-      "context": "field",
-      "source": "src_main_errorresponse",
-      "target": "src_main_errordetail",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L75",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "src_main_handle_chat_completions",
-      "target": "headermap",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L75",
-      "weight": 1.0,
-      "source": "src_main_handle_chat_completions",
+      "source": "src_main_health_check",
       "target": "json",
       "confidence_score": 1.0
     },
@@ -2867,22 +4433,647 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L75",
+      "source_location": "L93",
       "weight": 1.0,
       "context": "return_type",
-      "source": "src_main_handle_chat_completions",
-      "target": "response",
+      "source": "src_main_stripe_webhook_handler",
+      "target": "intoresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "src_main_stripe_webhook_handler",
+      "target": "json",
       "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "apps/leaf/src/main.rs",
-      "source_location": "L75",
+      "source_location": "L93",
       "weight": 1.0,
       "context": "parameter_type",
-      "source": "src_main_handle_chat_completions",
+      "source": "src_main_stripe_webhook_handler",
       "target": "state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L93",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_stripe_webhook_handler",
+      "target": "value",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L133",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_proxy_handler",
+      "target": "state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L351",
+      "weight": 1.0,
+      "source": "src_main_error_response",
+      "target": "json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L133",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_proxy_handler",
+      "target": "json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L133",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_proxy_handler",
+      "target": "headermap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "src_main_proxy_handler",
+      "target": "src_main_error_response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L133",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_proxy_handler",
+      "target": "src_types_chatcompletionrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L240",
+      "weight": 1.0,
+      "source": "src_main_proxy_handler",
+      "target": "src_types_compute_cache_key"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L176",
+      "weight": 1.0,
+      "source": "src_main_proxy_handler",
+      "target": "src_types_estimate_messages_tokens"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L299",
+      "weight": 1.0,
+      "source": "src_main_proxy_handler",
+      "target": "src_types_estimate_tokens"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L267",
+      "weight": 1.0,
+      "source": "src_main_proxy_handler",
+      "target": "src_types_get_failover_route"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/main.rs",
+      "source_location": "L350",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_error_response",
+      "target": "statuscode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_types",
+      "target": "src_types_chatcompletionrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "src_types",
+      "target": "src_types_chatcompletionresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_types",
+      "target": "src_types_chatmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "src_types",
+      "target": "src_types_completionchoice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "src_types",
+      "target": "src_types_compute_cache_key",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "src_types",
+      "target": "src_types_errordetail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "src_types",
+      "target": "src_types_errorresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "src_types",
+      "target": "src_types_estimate_messages_tokens",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "src_types",
+      "target": "src_types_estimate_tokens",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "src_types",
+      "target": "src_types_failoverroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "src_types",
+      "target": "src_types_get_failover_route",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "src_types",
+      "target": "src_types_provider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "src_types",
+      "target": "src_types_usageinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_types_chatcompletionrequest",
+      "target": "src_types_chatmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L38",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_types_completionchoice",
+      "target": "src_types_chatmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L103",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_types_compute_cache_key",
+      "target": "src_types_chatmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L94",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_types_estimate_messages_tokens",
+      "target": "src_types_chatmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_types_chatcompletionrequest",
+      "target": "vec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L31",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_types_chatcompletionresponse",
+      "target": "vec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L31",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_types_chatcompletionresponse",
+      "target": "src_types_completionchoice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L32",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_types_chatcompletionresponse",
+      "target": "src_types_usageinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L52",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_types_errorresponse",
+      "target": "src_types_errordetail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L116",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_types_failoverroute",
+      "target": "src_types_provider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "src_types_provider",
+      "target": "src_types_provider_as_str",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "src_types_provider",
+      "target": "src_types_provider_from_str",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "src_types_estimate_messages_tokens",
+      "target": "src_types_estimate_tokens",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/leaf/src/types.rs",
+      "source_location": "L120",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_types_get_failover_route",
+      "target": "src_types_failoverroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "turbo",
+      "target": "turbo_globaldependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "turbo",
+      "target": "turbo_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "turbo",
+      "target": "turbo_tasks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "turbo_tasks",
+      "target": "turbo_tasks_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "turbo_tasks",
+      "target": "turbo_tasks_build_leaf",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "turbo_tasks",
+      "target": "turbo_tasks_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "turbo_tasks",
+      "target": "turbo_tasks_lint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "turbo_tasks",
+      "target": "turbo_tasks_test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "turbo_tasks_build",
+      "target": "turbo_build_dependson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "turbo_tasks_build",
+      "target": "turbo_build_outputs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "turbo_tasks_build_leaf",
+      "target": "turbo_build_leaf_cache",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "turbo_tasks_build_leaf",
+      "target": "turbo_build_leaf_dependson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "turbo_tasks_build_leaf",
+      "target": "turbo_build_leaf_outputs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "turbo_tasks_dev",
+      "target": "turbo_dev_cache",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "turbo_tasks_dev",
+      "target": "turbo_dev_dependson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "turbo_tasks_dev",
+      "target": "turbo_dev_persistent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "turbo_tasks_lint",
+      "target": "turbo_lint_dependson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "turbo_tasks_lint",
+      "target": "turbo_lint_outputs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "turbo_tasks_test",
+      "target": "turbo_test_dependson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "turbo.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "turbo_tasks_test",
+      "target": "turbo_test_outputs",
       "confidence_score": 1.0
     },
     {
@@ -2951,9 +5142,9 @@
       "source_file": "package.json",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_scripts",
-      "target": "package_scripts_build_leaf",
-      "confidence_score": 1.0
+      "target": "package_scripts_build_leaf"
     },
     {
       "relation": "contains",
@@ -4954,5 +7145,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1d101d7cd6f5ea575b2b48eecb211057adcf8547"
+  "built_at_commit": "80b24b4a83dcf4c4ba4780fd66c3d47daee702fc"
 }
