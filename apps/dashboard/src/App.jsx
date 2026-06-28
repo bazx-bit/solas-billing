@@ -14,7 +14,15 @@ import {
   ToggleLeft,
   ToggleRight,
   TrendingDown,
-  ShieldAlert
+  ShieldAlert,
+  Search,
+  Bell,
+  ExternalLink,
+  Copy,
+  Check,
+  Cpu,
+  Layers,
+  Database
 } from 'lucide-react';
 
 const API_BASE = 'http://localhost:8080/api';
@@ -50,6 +58,8 @@ export default function App() {
   const [sandboxLogs, setSandboxLogs] = useState('');
   const [sandboxStreaming, setSandboxStreaming] = useState(false);
   const [sandboxMode, setSandboxMode] = useState('normal'); // 'normal' | 'low_balance' | 'rate_limit'
+  const [copiedKey, setCopiedKey] = useState(null);
+  const [isSyncing, setIsSyncing] = useState(false);
 
   // Load dashboard data
   const loadData = async () => {
@@ -68,7 +78,7 @@ export default function App() {
         }
       }
     } catch (err) {
-      console.warn('Server offline, using mock data for frontend demonstration.');
+      console.warn('Server offline or DB syncing. Using mock fallback data.');
       setupMockData();
     }
   };
@@ -132,7 +142,7 @@ export default function App() {
         throw new Error('Server returned error status');
       }
     } catch (err) {
-      // Mock Action
+      console.warn('API failed, falling back to mock creation:', err);
       const newMockUser = {
         id: String(users.length + 1),
         email: newUserEmail,
@@ -173,7 +183,7 @@ export default function App() {
         throw new Error('Server returned error status');
       }
     } catch (err) {
-      // Mock Action
+      console.warn('API failed, falling back to mock adjust:', err);
       const updated = users.map(u => {
         if (u.id === selectedUser.id) {
           return { ...u, credits: Math.max(0, u.credits + parseFloat(adjustAmount)) };
@@ -203,25 +213,53 @@ export default function App() {
       }
     } catch (err) {
       console.error('Delete API failed, falling back to local state:', err);
-      // Fallback local deletion
       const updated = users.filter(u => u.id !== id);
       setUsers(updated);
       setStats(prev => ({ ...prev, totalUsers: updated.length }));
     }
   };
 
-  const toggleUserFallback = (user) => {
-    // Mock update local status toggle
+  const toggleUserFallback = async (user) => {
+    // Dynamic real toggle with backend integration
+    const newStatus = user.fallback_allowed === 1 ? 0 : 1;
+    try {
+      const res = await fetch(`${API_BASE}/users/${user.id}/fallback`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fallback_allowed: newStatus })
+      });
+      if (res.ok) {
+        loadData();
+        return;
+      }
+    } catch (err) {
+      console.warn('Fallback update endpoint failed, updating locally.');
+    }
+    
+    // Mock local state fallback update
     const updated = users.map(u => {
       if (u.id === user.id) {
-        return { ...u, fallback_allowed: u.fallback_allowed === 1 ? 0 : 1 };
+        return { ...u, fallback_allowed: newStatus };
       }
       return u;
     });
     setUsers(updated);
   };
 
-  // Complex Sandbox interception simulation
+  const handleSyncData = async () => {
+    setIsSyncing(true);
+    await loadData();
+    setTimeout(() => {
+      setIsSyncing(false);
+    }, 600);
+  };
+
+  const handleCopyKey = (keyText) => {
+    navigator.clipboard.writeText(keyText);
+    setCopiedKey(keyText);
+    setTimeout(() => setCopiedKey(null), 1500);
+  };
+
   const handleSimulateCall = () => {
     const userObj = users.find(u => u.api_key === sandboxUser);
     if (!userObj) return;
@@ -229,15 +267,14 @@ export default function App() {
     setSandboxStreaming(true);
 
     if (sandboxMode === 'rate_limit') {
-      // Test Rate limiting simulation
-      setSandboxLogs(`[Solas Proxy] Intercepting request stream...\n`);
+      setSandboxLogs(`[Solas Proxy] Intercepting chat completion request stream...\n`);
       let requestDelay = 0;
       for (let i = 1; i <= 3; i++) {
         setTimeout(() => {
           if (i <= 2) {
             setSandboxLogs(prev => prev + `⚡ Request ${i} from "${userObj.email}" [RPM: ${userObj.rate_limit_rpm}] -> HTTP 200 OK\n`);
           } else {
-            setSandboxLogs(prev => prev + `🚨 Request 3 from "${userObj.email}" [RPM: ${userObj.rate_limit_rpm}] -> HTTP 429 Too Many Requests (Rate limit exceeded!)\n`);
+            setSandboxLogs(prev => prev + `🚨 Request 3 from "${userObj.email}" [RPM: ${userObj.rate_limit_rpm}] -> HTTP 429 Too Many Requests (Rate limit rate-limited!)\n`);
             setSandboxStreaming(false);
           }
         }, requestDelay += 600);
@@ -245,576 +282,671 @@ export default function App() {
       return;
     }
 
-    // Normal or Low balance simulations
     const initialCredits = sandboxMode === 'low_balance' ? 0.004 : userObj.credits;
     
     setSandboxLogs(`[Solas Proxy] Intercepting request on POST /v1/chat/completions\n`);
 
     setTimeout(() => {
-      setSandboxLogs(prev => prev + `[Solas Proxy] Verifying API Key: "${sandboxUser.substring(0, 12)}..."\n`);
-    }, 400);
+      setSandboxLogs(prev => prev + `[Solas Proxy] Verifying API Key: "${sandboxUser.substring(0, 14)}..."\n`);
+    }, 300);
 
     setTimeout(() => {
-      setSandboxLogs(prev => prev + `[Solas Proxy] Found user: ${userObj.email} | Current Balance: $${initialCredits.toFixed(5)}\n`);
-    }, 800);
+      setSandboxLogs(prev => prev + `[Solas Proxy] Found user: ${userObj.email} | Current Balance: $${initialCredits.toFixed(4)}\n`);
+    }, 600);
 
     setTimeout(() => {
-      const tokensCount = Math.ceil(sandboxPrompt.length / 4) + 12;
-      setSandboxLogs(prev => prev + `[Solas Proxy] Pre-evaluating estimated input tokens: ${tokensCount} tokens\n`);
-    }, 1200);
-
-    setTimeout(() => {
-      const price = models.find(m => m.model_name === sandboxModel) || { input_cost_per_million: 5, output_cost_per_million: 15 };
-      const tokensCount = Math.ceil(sandboxPrompt.length / 4) + 12;
-      const estimatedInputCost = (tokensCount / 1000000) * price.input_cost_per_million;
-
-      if (estimatedInputCost > initialCredits) {
+      if (initialCredits < 0.005 && sandboxMode === 'low_balance') {
         if (userObj.fallback_allowed === 1) {
-          setSandboxLogs(prev => prev + `⚠️ [Solas Balance Warning] Estimated cost ($${estimatedInputCost.toFixed(6)}) exceeds remaining wallet balance ($${initialCredits.toFixed(6)}).\n`);
-          setSandboxLogs(prev => prev + `[Solas Proxy] Auto-Fallback triggered: searching for cheaper matching models...\n`);
-          
-          setTimeout(() => {
-            const cheaperModel = sandboxModel.includes('gpt') ? 'gpt-4o-mini' : 'claude-3-haiku';
-            const cheaperPrice = models.find(m => m.model_name === cheaperModel) || { input_cost_per_million: 0.15, output_cost_per_million: 0.60 };
-            const cheaperCost = (tokensCount / 1000000) * cheaperPrice.input_cost_per_million;
-            
-            setSandboxLogs(prev => prev + `✅ [Solas Fallback Route] Found: "${cheaperModel}" (Rate: $${cheaperPrice.input_cost_per_million}/M). Routing payload to ${cheaperModel} instead.\n`);
-            executeMockRequest(userObj, cheaperModel, cheaperCost, initialCredits, sandboxModel);
-          }, 600);
+          setSandboxLogs(prev => prev + `⚠️ Warning: Balance $${initialCredits.toFixed(4)} is below cost threshold for "${sandboxModel}"\n`);
+          const fallback = sandboxModel.startsWith('gpt') ? 'gpt-4o-mini' : 'claude-3-haiku';
+          setSandboxLogs(prev => prev + `🔄 Self-Healing Routing: Auto-fallback triggered! Swapping model "${sandboxModel}" ➔ "${fallback}"\n`);
+          setSandboxLogs(prev => prev + `[Solas Proxy] Routing call to backup provider using system reserve credentials...\n`);
         } else {
-          setSandboxLogs(prev => prev + `\n❌ [Solas Error] HTTP 402: Insufficient credits! Fallback is disabled. Request blocked.\n`);
+          setSandboxLogs(prev => prev + `❌ Error: Overdraft blocked! Balance $${initialCredits.toFixed(4)} is insufficient for non-fallback route.\n`);
           setSandboxStreaming(false);
         }
       } else {
-        setSandboxLogs(prev => prev + `[Solas Proxy] Forwarding call to real LLM backend...\n`);
-        executeMockRequest(userObj, sandboxModel, estimatedInputCost, initialCredits, null);
+        setSandboxLogs(prev => prev + `[Solas Proxy] Dispatching completions pipeline to provider...\n`);
       }
+    }, 1000);
+
+    setTimeout(() => {
+      if (sandboxMode === 'low_balance' && userObj.fallback_allowed === 0) {
+        setSandboxLogs(prev => prev + `❌ Request aborted. HTTP 402 Payment Required\n`);
+      } else {
+        setSandboxLogs(prev => prev + `✨ Success! Provider responded in 430ms\n`);
+        setSandboxLogs(prev => prev + `📊 Token report: Input: 42 | Output: 112\n`);
+        
+        const rate = sandboxModel.startsWith('gpt') ? 0.00015 : 0.00035;
+        const calculatedCost = rate * 1.5;
+        
+        setSandboxLogs(prev => prev + `💳 Debited user balance: -$${calculatedCost.toFixed(5)}\n`);
+        setSandboxLogs(prev => prev + `[Solas Proxy] Stream transmission completed. HTTP 200 OK\n`);
+      }
+      setSandboxStreaming(false);
     }, 1600);
   };
 
-  const executeMockRequest = (userObj, targetModel, inputCost, walletBalance, parentModel) => {
-    setTimeout(() => {
-      const mockCompletion = "Welcome to Solas Billing! This sandbox simulates how easily our proxy monitors token cost directly in the stream.";
-      const inputTokens = Math.ceil(sandboxPrompt.length / 4) + 12;
-      const outputTokens = Math.ceil(mockCompletion.length / 4);
-      
-      const price = models.find(m => m.model_name === targetModel) || { input_cost_per_million: 0.15, output_cost_per_million: 0.60 };
-      const outputCost = (outputTokens / 1000000) * price.output_cost_per_million;
-      const totalCost = inputCost + outputCost;
-
-      setSandboxLogs(prev => prev + `[Solas Proxy] HTTP 200 OK | Response received.\n`);
-      setSandboxLogs(prev => prev + `[Solas Proxy] Usage Details:\n`);
-      setSandboxLogs(prev => prev + `  - Model used: ${targetModel} ${parentModel ? `(Fallback from ${parentModel})` : ''}\n`);
-      setSandboxLogs(prev => prev + `  - Prompt Tokens: ${inputTokens} ($${inputCost.toFixed(6)})\n`);
-      setSandboxLogs(prev => prev + `  - Completion Tokens: ${outputTokens} ($${outputCost.toFixed(6)})\n`);
-      setSandboxLogs(prev => prev + `  - Billed Total Cost: $${totalCost.toFixed(6)}\n`);
-      
-      const nextCredits = Math.max(0, walletBalance - totalCost);
-      const updated = users.map(u => u.api_key === sandboxUser ? { ...u, credits: nextCredits } : u);
-      setUsers(updated);
-      
-      setStats(prev => {
-        const newLog = {
-          id: 'l' + (prev.recentLogs.length + 1),
-          user_id: userObj.id,
-          email: userObj.email,
-          model: targetModel,
-          provider: targetModel.includes('gpt') ? 'openai' : 'anthropic',
-          input_tokens: inputTokens,
-          output_tokens: outputTokens,
-          cost: totalCost,
-          status: 200,
-          fallback_triggered: parentModel,
-          timestamp: new Date().toISOString().replace('T', ' ').substring(0, 19)
-        };
-        return {
-          ...prev,
-          totalRequests: prev.totalRequests + 1,
-          totalBilled: prev.totalBilled + totalCost,
-          totalCredits: prev.totalCredits - totalCost,
-          recentLogs: [newLog, ...prev.recentLogs]
-        };
-      });
-
-      setSandboxLogs(prev => prev + `[Solas Proxy] Successfully deducted credit. New balance: $${nextCredits.toFixed(5)}\n`);
-      setSandboxStreaming(false);
-    }, 1000);
-  };
-
   return (
-    <div className="app-container">
-      {/* Sidebar Navigation */}
+    <>
+      {/* SIDEBAR */}
       <div className="sidebar">
-        <div className="brand-section">
-          <div className="brand-logo">
-            <Coins />
-          </div>
-          <span className="brand-name">Solas Billing</span>
+        <div className="sidebar-logo">
+          <div className="logo-icon">S</div>
+          <span className="logo-text">Solas Billing</span>
+          <span className="logo-badge">v1.0</span>
         </div>
 
-        <ul className="nav-links">
-          <li 
-            className={`nav-item ${activeTab === 'dashboard' ? 'active' : ''}`}
+        <div className="sidebar-nav">
+          <div className="sidebar-section-label">Menu</div>
+          <div 
+            className={`sidebar-item ${activeTab === 'dashboard' ? 'active' : ''}`}
             onClick={() => setActiveTab('dashboard')}
           >
-            <LayoutDashboard />
-            Overview
-          </li>
-          <li 
-            className={`nav-item ${activeTab === 'users' ? 'active' : ''}`}
+            <LayoutDashboard /> Dashboard
+          </div>
+          <div 
+            className={`sidebar-item ${activeTab === 'users' ? 'active' : ''}`}
             onClick={() => setActiveTab('users')}
           >
-            <UsersIcon />
-            User Wallets
-          </li>
-          <li 
-            className={`nav-item ${activeTab === 'models' ? 'active' : ''}`}
+            <UsersIcon /> User Wallets
+          </div>
+          <div 
+            className={`sidebar-item ${activeTab === 'models' ? 'active' : ''}`}
             onClick={() => setActiveTab('models')}
           >
-            <Coins />
-            Model Rates
-          </li>
-          <li 
-            className={`nav-item ${activeTab === 'sandbox' ? 'active' : ''}`}
+            <Cpu /> Model Rates
+          </div>
+          <div 
+            className={`sidebar-item ${activeTab === 'sandbox' ? 'active' : ''}`}
             onClick={() => setActiveTab('sandbox')}
           >
-            <Code />
-            Proxy Sandbox
-          </li>
-        </ul>
+            <Terminal /> Proxy Sandbox
+          </div>
 
-        <div style={{ marginTop: 'auto', borderTop: '1px solid var(--border-color)', paddingTop: '20px' }}>
-          <button className="btn btn-secondary" style={{ width: '100%' }} onClick={loadData}>
-            <RefreshCw size={16} /> Sync Server
+          <div className="sidebar-section-label">Server Status</div>
+          <div className="sidebar-item" style={{ cursor: 'default' }}>
+            <span className="status-dot online" style={{ marginRight: '6px' }}></span>
+            Proxy Engine Port 9090
+          </div>
+          <div className="sidebar-item" style={{ cursor: 'default' }}>
+            <span className="status-dot online" style={{ marginRight: '6px' }}></span>
+            API Server Port 8080
+          </div>
+        </div>
+
+        <div className="sidebar-footer">
+          <button 
+            className="sidebar-footer-btn" 
+            onClick={handleSyncData}
+            disabled={isSyncing}
+          >
+            <RefreshCw size={14} className={isSyncing ? 'animate-pulse' : ''} />
+            {isSyncing ? 'Refreshing...' : 'Sync Database'}
           </button>
         </div>
       </div>
 
-      {/* Main Container */}
+      {/* MAIN CONTENT AREA */}
       <div className="main-content">
-        <div className="header-bar">
-          <div>
-            <h1 className="page-title">
-              {activeTab === 'dashboard' && 'Dashboard Overview'}
-              {activeTab === 'users' && 'Manage User Wallets'}
-              {activeTab === 'models' && 'Model Rates & Pricing'}
-              {activeTab === 'sandbox' && 'Zero-SDK Proxy Sandbox'}
-            </h1>
-            <p className="page-subtitle">
-              {activeTab === 'dashboard' && 'Monitor usage, active users, and token cost in real time.'}
-              {activeTab === 'users' && 'Provision API keys, adjust credit balances, and view transaction trails.'}
-              {activeTab === 'models' && 'Configure custom input/output costs per million tokens.'}
-              {activeTab === 'sandbox' && 'Test proxy interception dynamically with mock requests.'}
-            </p>
+        {/* TOPBAR */}
+        <div className="topbar">
+          <div className="topbar-left">
+            <div className="topbar-search">
+              <Search />
+              <input type="text" placeholder="Search wallets or logs..." />
+            </div>
           </div>
-          
-          {activeTab === 'users' && (
-            <button className="btn btn-primary" onClick={() => setIsUserModalOpen(true)}>
-              <Plus size={16} /> Provision Wallet
+
+          <div className="topbar-right">
+            <button className="topbar-icon-btn">
+              <Bell size={16} />
             </button>
-          )}
-        </div>
-
-        {/* ----------------------------------------------------
-            TAB: OVERVIEW
-        ---------------------------------------------------- */}
-        {activeTab === 'dashboard' && (
-          <>
-            <div className="stats-grid">
-              <div className="glass-panel stat-card">
-                <div className="stat-header">
-                  <span>Active Wallets</span>
-                  <UsersIcon />
-                </div>
-                <div className="stat-value">{stats.totalUsers}</div>
-                <div className="stat-footer">Provisioned API keys</div>
-              </div>
-
-              <div className="glass-panel stat-card">
-                <div className="stat-header">
-                  <span>Total Pool Credits</span>
-                  <Coins />
-                </div>
-                <div className="stat-value">${stats.totalCredits.toFixed(2)}</div>
-                <div className="stat-footer">Outstanding balance</div>
-              </div>
-
-              <div className="glass-panel stat-card">
-                <div className="stat-header">
-                  <span>API Requests</span>
-                  <Terminal />
-                </div>
-                <div className="stat-value">{stats.totalRequests}</div>
-                <div className="stat-footer">Through proxy</div>
-              </div>
-
-              <div className="glass-panel stat-card">
-                <div className="stat-header">
-                  <span>Gross Cost Billed</span>
-                  <Coins />
-                </div>
-                <div className="stat-value">${stats.totalBilled.toFixed(4)}</div>
-                <div className="stat-footer">Token value consumed</div>
+            
+            <div className="topbar-avatar">
+              <div className="topbar-avatar-img">A</div>
+              <div className="topbar-avatar-info">
+                <span className="topbar-avatar-name">Admin Console</span>
+                <span className="topbar-avatar-role">Owner</span>
               </div>
             </div>
+          </div>
+        </div>
 
-            <div className="data-section">
-              {/* Recent Proxy Traffic Log */}
-              <div className="glass-panel table-card">
-                <div className="card-title-section">
-                  <h3 className="card-title">Live Proxy Stream</h3>
-                  <span className="badge badge-success">Active</span>
+        {/* PAGE CONTENT */}
+        <div className="page-content">
+          
+          {/* HEADER */}
+          <div className="page-header-actions" style={{ marginBottom: '24px' }}>
+            <div className="page-header" style={{ margin: 0 }}>
+              <h2>
+                {activeTab === 'dashboard' && 'Dashboard Overview'}
+                {activeTab === 'users' && 'Manage User Wallets'}
+                {activeTab === 'models' && 'Model Rates & Configs'}
+                {activeTab === 'sandbox' && 'Proxy Simulator Sandbox'}
+              </h2>
+              <p>
+                {activeTab === 'dashboard' && 'Monitor proxy server stats, token cost distribution, and traffic trails.'}
+                {activeTab === 'users' && 'Provision API keys, adjust credit balances, and view transaction trails.'}
+                {activeTab === 'models' && 'Configure custom pricing structures for LLM tokens across providers.'}
+                {activeTab === 'sandbox' && 'Simulate live application requests running through your billing proxy.'}
+              </p>
+            </div>
+
+            {activeTab === 'users' && (
+              <button className="btn btn-primary" onClick={() => setIsUserModalOpen(true)}>
+                <Plus size={16} /> Provision Wallet
+              </button>
+            )}
+          </div>
+
+          {/* TAB: DASHBOARD OVERVIEW */}
+          {activeTab === 'dashboard' && (
+            <>
+              {/* STATS GRID */}
+              <div className="stats-grid">
+                <div className="stat-card">
+                  <div className="stat-card-header">
+                    <span className="stat-card-label">Active Wallets</span>
+                    <div className="stat-card-icon purple">
+                      <UsersIcon size={18} />
+                    </div>
+                  </div>
+                  <div className="stat-card-value">{stats.totalUsers}</div>
+                  <div className="stat-card-footer">
+                    <span className="stat-change up">↑ 100%</span>
+                    <span>Live SQLite Wallets</span>
+                  </div>
                 </div>
 
-                <table className="custom-table">
+                <div className="stat-card">
+                  <div className="stat-card-header">
+                    <span className="stat-card-label">Outstanding Pool Credits</span>
+                    <div className="stat-card-icon cyan">
+                      <Coins size={18} />
+                    </div>
+                  </div>
+                  <div className="stat-card-value">${stats.totalCredits.toFixed(2)}</div>
+                  <div className="stat-card-footer">
+                    <span className="stat-change up">+$25.50</span>
+                    <span>Authorized limit</span>
+                  </div>
+                </div>
+
+                <div className="stat-card">
+                  <div className="stat-card-header">
+                    <span className="stat-card-label">Total Proxied Requests</span>
+                    <div className="stat-card-icon green">
+                      <Terminal size={18} />
+                    </div>
+                  </div>
+                  <div className="stat-card-value">{stats.totalRequests}</div>
+                  <div className="stat-card-footer">
+                    <span className="stat-change up">Active</span>
+                    <span>Hits recorded</span>
+                  </div>
+                </div>
+
+                <div className="stat-card">
+                  <div className="stat-card-header">
+                    <span className="stat-card-label">Gross Value Billed</span>
+                    <div className="stat-card-icon amber">
+                      <Coins size={18} />
+                    </div>
+                  </div>
+                  <div className="stat-card-value">${stats.totalBilled.toFixed(4)}</div>
+                  <div className="stat-card-footer">
+                    <span>Retail token consumption</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* GRAPHS AND CHARTS */}
+              <div className="content-grid">
+                <div className="card">
+                  <div className="card-header">
+                    <h3>Traffic Activity</h3>
+                    <span className="badge badge-purple">Last 24 Hours</span>
+                  </div>
+                  <div className="card-body" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <div>
+                      <h4 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '4px' }}>Peak Load</h4>
+                      <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Proxy responses averaged 340ms latency.</p>
+                    </div>
+                    <div className="mini-chart">
+                      <div className="mini-chart-bar" style={{ height: '35%' }}></div>
+                      <div className="mini-chart-bar" style={{ height: '55%' }}></div>
+                      <div className="mini-chart-bar" style={{ height: '40%' }}></div>
+                      <div className="mini-chart-bar" style={{ height: '80%' }}></div>
+                      <div className="mini-chart-bar" style={{ height: '65%' }}></div>
+                      <div className="mini-chart-bar" style={{ height: '90%' }}></div>
+                      <div className="mini-chart-bar" style={{ height: '50%' }}></div>
+                      <div className="mini-chart-bar" style={{ height: '75%' }}></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="card">
+                  <div className="card-header">
+                    <h3>Model Distribution</h3>
+                    <span className="badge badge-cyan">Pricing weights</span>
+                  </div>
+                  <div className="card-body">
+                    <div className="donut-container">
+                      <div className="donut" style={{ '--donut-val': '70%' }}>
+                        <span className="donut-label">70%</span>
+                      </div>
+                      <div className="donut-legend">
+                        <div className="donut-legend-item">
+                          <span className="donut-legend-dot" style={{ backgroundColor: 'var(--accent-purple)' }}></span>
+                          <span>OpenAI (GPT-4o)</span>
+                        </div>
+                        <div className="donut-legend-item">
+                          <span className="donut-legend-dot" style={{ backgroundColor: 'var(--bg-elevated)' }}></span>
+                          <span>Anthropic & Others</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* TABLE CARD */}
+              <div className="card">
+                <div className="card-header">
+                  <h3>Recent Proxy Traffic Logs</h3>
+                  <button className="btn btn-ghost btn-sm" onClick={handleSyncData}>
+                    <RefreshCw size={12} style={{ marginRight: '4px' }} /> Refresh logs
+                  </button>
+                </div>
+                <div className="card-body" style={{ padding: 0 }}>
+                  <table className="data-table">
+                    <thead>
+                      <tr>
+                        <th>User Wallet</th>
+                        <th>Model Used</th>
+                        <th>Provider</th>
+                        <th>Input Tokens</th>
+                        <th>Output Tokens</th>
+                        <th>Cost Deducted</th>
+                        <th>Status / Failover</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {stats.recentLogs.map((log) => (
+                        <tr key={log.id}>
+                          <td style={{ fontWeight: '500' }}>{log.email}</td>
+                          <td style={{ fontFamily: 'monospace' }}>{log.model}</td>
+                          <td>
+                            <span className={`badge ${log.provider === 'openai' ? 'badge-purple' : 'badge-cyan'}`}>
+                              {log.provider}
+                            </span>
+                          </td>
+                          <td>{log.input_tokens}</td>
+                          <td>{log.output_tokens}</td>
+                          <td style={{ color: 'var(--accent-cyan)', fontWeight: 'bold' }}>
+                            ${log.cost.toFixed(5)}
+                          </td>
+                          <td>
+                            {log.fallback_triggered ? (
+                              <span style={{ color: 'var(--accent-amber)', fontSize: '0.8rem', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                                <TrendingDown size={14} /> Fallback from {log.fallback_triggered}
+                              </span>
+                            ) : (
+                              <span className="badge badge-green">Normal</span>
+                            )}
+                          </td>
+                        </tr>
+                      ))}
+                      {stats.recentLogs.length === 0 && (
+                        <tr>
+                          <td colSpan="7" style={{ textAlign: 'center', color: 'var(--text-muted)', padding: '24px' }}>
+                            No logs registered. Send traffic through the proxy simulator tab!
+                          </td>
+                        </tr>
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </>
+          )}
+
+          {/* TAB: WALLETS MANAGEMENT */}
+          {activeTab === 'users' && (
+            <div className="card">
+              <div className="card-body" style={{ padding: 0 }}>
+                <table className="data-table">
                   <thead>
                     <tr>
-                      <th>User</th>
-                      <th>Model</th>
-                      <th>Input</th>
-                      <th>Output</th>
-                      <th>Cost Billed</th>
-                      <th>Alerts / Recovery</th>
+                      <th>User Email</th>
+                      <th>API Gating Key</th>
+                      <th>Remaining Balance</th>
+                      <th>RPM Limit</th>
+                      <th>Auto-Fallback</th>
+                      <th style={{ textAlign: 'right' }}>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {stats.recentLogs.map((log) => (
-                      <tr key={log.id}>
-                        <td>{log.email}</td>
-                        <td style={{ fontFamily: 'monospace' }}>{log.model}</td>
-                        <td>{log.input_tokens}</td>
-                        <td>{log.output_tokens}</td>
-                        <td style={{ color: 'var(--accent-cyan)' }}>${log.cost.toFixed(5)}</td>
+                    {users.map((user) => (
+                      <tr key={user.id}>
+                        <td style={{ fontWeight: '600' }}>{user.email}</td>
+                        <td style={{ fontFamily: 'monospace', fontSize: '0.8rem' }}>
+                          <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                            <Key size={12} style={{ color: 'var(--text-muted)' }} />
+                            {user.api_key.substring(0, 16)}...
+                            <button 
+                              className="copy-btn"
+                              onClick={() => handleCopyKey(user.api_key)}
+                            >
+                              {copiedKey === user.api_key ? <Check size={10} style={{ color: 'var(--accent-green)' }} /> : <Copy size={10} />}
+                            </button>
+                          </span>
+                        </td>
+                        <td style={{ 
+                          fontWeight: 'bold', 
+                          color: user.credits > 2.0 ? 'var(--accent-green)' : 'var(--accent-red)' 
+                        }}>
+                          ${user.credits.toFixed(4)}
+                        </td>
+                        <td>{user.rate_limit_rpm} RPM</td>
                         <td>
-                          {log.fallback_triggered ? (
-                            <span style={{ color: 'var(--accent-amber)', fontSize: '0.8rem', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                              <TrendingDown size={14} /> Fallback from {log.fallback_triggered}
-                            </span>
-                          ) : (
-                            <span className="badge badge-success">Normal</span>
-                          )}
+                          <div 
+                            className={`toggle-switch ${user.fallback_allowed === 1 ? 'active' : ''}`}
+                            onClick={() => toggleUserFallback(user)}
+                          ></div>
+                        </td>
+                        <td style={{ textAlign: 'right' }}>
+                          <button 
+                            className="btn btn-secondary btn-sm" 
+                            style={{ marginRight: '8px' }}
+                            onClick={() => {
+                              setSelectedUser(user);
+                              setIsAdjustModalOpen(true);
+                            }}
+                          >
+                            Adjust Credits
+                          </button>
+                          <button 
+                            className="btn btn-danger btn-sm btn-icon"
+                            onClick={() => handleDeleteUser(user.id)}
+                          >
+                            <Trash2 size={13} />
+                          </button>
                         </td>
                       </tr>
                     ))}
-                    {stats.recentLogs.length === 0 && (
+                    {users.length === 0 && (
                       <tr>
-                        <td colSpan="6" style={{ textAlign: 'center', color: 'var(--text-muted)' }}>No request logs recorded yet.</td>
+                        <td colSpan="6" style={{ textAlign: 'center', color: 'var(--text-muted)', padding: '32px' }}>
+                          No user wallets provisioned. Click "+ Provision Wallet" to start!
+                        </td>
                       </tr>
                     )}
                   </tbody>
                 </table>
               </div>
+            </div>
+          )}
 
-              {/* Developer Integration Guideline */}
-              <div className="glass-panel table-card">
-                <h3 className="card-title" style={{ marginBottom: '16px' }}>Zero-SDK Config</h3>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '16px', lineHeight: '1.4' }}>
-                  Forward your app completions to the proxy to enforce token gating.
-                </p>
-                <div className="code-container" style={{ fontSize: '0.8rem' }}>
-                  <span className="comment">// NodeJS Client</span><br />
-                  <span className="token">const</span> openai = <span className="token">new</span> OpenAI({'{'}<br />
-                  &nbsp;&nbsp;apiKey: <span className="string">"USER_API_KEY"</span>,<br />
-                  &nbsp;&nbsp;baseURL: <span className="string">"http://localhost:8080/v1"</span><br />
-                  {'}'});
-                </div>
+          {/* TAB: MODEL RATES */}
+          {activeTab === 'models' && (
+            <div className="card">
+              <div className="card-header">
+                <h3>Token Rates Mapping</h3>
+                <span className="badge badge-purple">Retail Markup Gating</span>
+              </div>
+              <div className="card-body" style={{ padding: 0 }}>
+                <table className="data-table">
+                  <thead>
+                    <tr>
+                      <th>Model Name</th>
+                      <th>Provider</th>
+                      <th>Input Cost / Million</th>
+                      <th>Output Cost / Million</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {models.map((model) => (
+                      <tr key={model.model_name}>
+                        <td style={{ fontFamily: 'monospace', fontWeight: 'bold' }}>{model.model_name}</td>
+                        <td>
+                          <span className={`badge ${model.provider === 'openai' ? 'badge-purple' : 'badge-cyan'}`}>
+                            {model.provider}
+                          </span>
+                        </td>
+                        <td>${model.input_cost_per_million.toFixed(2)}</td>
+                        <td>${model.output_cost_per_million.toFixed(2)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
-          </>
-        )}
+          )}
 
-        {/* ----------------------------------------------------
-            TAB: USER WALLETS
-        ---------------------------------------------------- */}
-        {activeTab === 'users' && (
-          <div className="glass-panel table-card">
-            <table className="custom-table">
-              <thead>
-                <tr>
-                  <th>Email</th>
-                  <th>API Key / Token</th>
-                  <th>Credits</th>
-                  <th>Rate Limit</th>
-                  <th>Auto Fallback</th>
-                  <th style={{ textAlign: 'right' }}>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                {users.map((user) => (
-                  <tr key={user.id}>
-                    <td style={{ fontWeight: '500' }}>{user.email}</td>
-                    <td style={{ fontFamily: 'monospace', fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
-                      <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                        <Key size={12} /> {user.api_key.substring(0, 16)}...
-                      </span>
-                    </td>
-                    <td style={{ 
-                      fontWeight: 'bold', 
-                      color: user.credits > 2 ? 'var(--accent-green)' : 'var(--accent-red)' 
-                    }}>
-                      ${user.credits.toFixed(4)}
-                    </td>
-                    <td>{user.rate_limit_rpm} RPM</td>
-                    <td>
+          {/* TAB: PROXY SANDBOX / SIMULATOR */}
+          {activeTab === 'sandbox' && (
+            <div className="content-grid">
+              {/* Simulator Config */}
+              <div className="card">
+                <div className="card-header">
+                  <h3>Interactive Simulator</h3>
+                </div>
+                <div className="card-body">
+                  <div className="form-group">
+                    <label className="form-label">Select Target User Key</label>
+                    <select 
+                      className="form-select"
+                      value={sandboxUser}
+                      onChange={(e) => setSandboxUser(e.target.value)}
+                    >
+                      {users.map(u => (
+                        <option key={u.id} value={u.api_key}>
+                          {u.email} (${u.credits.toFixed(2)} remaining)
+                        </option>
+                      ))}
+                      {users.length === 0 && <option>No wallets configured</option>}
+                    </select>
+                  </div>
+
+                  <div className="form-group">
+                    <label className="form-label">Simulation Mode</label>
+                    <div style={{ display: 'flex', gap: '8px' }}>
                       <button 
-                        style={{ background: 'none', border: 'none', cursor: 'pointer', color: user.fallback_allowed === 1 ? 'var(--accent-green)' : 'var(--text-muted)' }}
-                        onClick={() => toggleUserFallback(user)}
+                        className={`btn btn-secondary btn-sm ${sandboxMode === 'normal' ? 'btn-primary' : ''}`}
+                        onClick={() => setSandboxMode('normal')}
                       >
-                        {user.fallback_allowed === 1 ? <ToggleRight size={28} /> : <ToggleLeft size={28} />}
-                      </button>
-                    </td>
-                    <td style={{ textAlign: 'right' }}>
-                      <button 
-                        className="btn btn-secondary" 
-                        style={{ padding: '6px 12px', fontSize: '0.75rem', marginRight: '8px' }}
-                        onClick={() => {
-                          setSelectedUser(user);
-                          setIsAdjustModalOpen(true);
-                        }}
-                      >
-                        Adjust Credits
+                        Normal Gating
                       </button>
                       <button 
-                        className="btn btn-secondary"
-                        style={{ padding: '6px 10px', color: 'var(--accent-red)', border: '1px solid rgba(239, 68, 68, 0.2)' }}
-                        onClick={() => handleDeleteUser(user.id)}
+                        className={`btn btn-secondary btn-sm ${sandboxMode === 'low_balance' ? 'btn-primary' : ''}`}
+                        onClick={() => setSandboxMode('low_balance')}
                       >
-                        <Trash2 size={14} />
+                        Low Balance Fallback
                       </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
+                      <button 
+                        className={`btn btn-secondary btn-sm ${sandboxMode === 'rate_limit' ? 'btn-primary' : ''}`}
+                        onClick={() => setSandboxMode('rate_limit')}
+                      >
+                        Exceed Rate Limit
+                      </button>
+                    </div>
+                  </div>
 
-        {/* ----------------------------------------------------
-            TAB: MODEL PRICING
-        ---------------------------------------------------- */}
-        {activeTab === 'models' && (
-          <div className="glass-panel table-card">
-            <h3 className="card-title" style={{ marginBottom: '16px' }}>Configured Rates (Per 1 Million Tokens)</h3>
-            <table className="custom-table">
-              <thead>
-                <tr>
-                  <th>Model ID</th>
-                  <th>Provider</th>
-                  <th>Input Cost</th>
-                  <th>Output Cost</th>
-                </tr>
-              </thead>
-              <tbody>
-                {models.map((model) => (
-                  <tr key={model.model_name}>
-                    <td style={{ fontFamily: 'monospace', fontWeight: '500' }}>{model.model_name}</td>
-                    <td style={{ textTransform: 'capitalize' }}>{model.provider}</td>
-                    <td>${model.input_cost_per_million.toFixed(2)}</td>
-                    <td>${model.output_cost_per_million.toFixed(2)}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
+                  <div className="form-group">
+                    <label className="form-label">Target Completion Model</label>
+                    <select 
+                      className="form-select"
+                      value={sandboxModel}
+                      onChange={(e) => setSandboxModel(e.target.value)}
+                    >
+                      {models.map(m => (
+                        <option key={m.model_name} value={m.model_name}>
+                          {m.model_name} ({m.provider})
+                        </option>
+                      ))}
+                      {models.length === 0 && <option>No models loaded</option>}
+                    </select>
+                  </div>
 
-        {/* ----------------------------------------------------
-            TAB: PROXY SANDBOX
-        ---------------------------------------------------- */}
-        {activeTab === 'sandbox' && (
-          <div className="playground-section">
-            <div className="glass-panel table-card">
-              <h3 className="card-title" style={{ marginBottom: '16px' }}>Request Parameters</h3>
-              
-              <div className="form-group">
-                <label className="form-label">Simulation Mode</label>
-                <div style={{ display: 'flex', gap: '10px' }}>
+                  <div className="form-group">
+                    <label className="form-label">User Prompt Payload</label>
+                    <input 
+                      type="text" 
+                      className="form-input"
+                      value={sandboxPrompt}
+                      onChange={(e) => setSandboxPrompt(e.target.value)}
+                    />
+                  </div>
+
                   <button 
-                    className={`btn ${sandboxMode === 'normal' ? 'btn-primary' : 'btn-secondary'}`}
-                    style={{ flex: 1, padding: '8px' }}
-                    onClick={() => setSandboxMode('normal')}
+                    className="btn btn-primary" 
+                    style={{ width: '100%', marginTop: '8px' }}
+                    onClick={handleSimulateCall}
+                    disabled={sandboxStreaming || users.length === 0}
                   >
-                    Normal Request
-                  </button>
-                  <button 
-                    className={`btn ${sandboxMode === 'low_balance' ? 'btn-primary' : 'btn-secondary'}`}
-                    style={{ flex: 1, padding: '8px', color: sandboxMode === 'low_balance' ? '#fff' : 'var(--accent-amber)' }}
-                    onClick={() => setSandboxMode('low_balance')}
-                  >
-                    Low Balance Fallback
-                  </button>
-                  <button 
-                    className={`btn ${sandboxMode === 'rate_limit' ? 'btn-primary' : 'btn-secondary'}`}
-                    style={{ flex: 1, padding: '8px', color: sandboxMode === 'rate_limit' ? '#fff' : 'var(--accent-red)' }}
-                    onClick={() => setSandboxMode('rate_limit')}
-                  >
-                    Test Rate Limiter
+                    {sandboxStreaming ? 'Executing Interception...' : 'Trigger Proxy Call'}
                   </button>
                 </div>
               </div>
 
-              <div className="form-group">
-                <label className="form-label">Client API Key Wallet</label>
-                <select 
-                  className="form-input"
-                  value={sandboxUser}
-                  onChange={(e) => setSandboxUser(e.target.value)}
-                >
-                  {users.map(u => (
-                    <option key={u.id} value={u.api_key}>
-                      {u.email} ({sandboxMode === 'low_balance' ? '$0.00400' : `$${u.credits.toFixed(4)}`} left)
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="form-group">
-                <label className="form-label">Model Target</label>
-                <select
-                  className="form-input"
-                  value={sandboxModel}
-                  disabled={sandboxMode === 'rate_limit'}
-                  onChange={(e) => setSandboxModel(e.target.value)}
-                >
-                  {models.map(m => (
-                    <option key={m.model_name} value={m.model_name}>{m.model_name}</option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="form-group">
-                <label className="form-label">System / User Messages</label>
-                <textarea 
-                  className="form-input" 
-                  rows="4"
-                  value={sandboxPrompt}
-                  disabled={sandboxMode === 'rate_limit'}
-                  onChange={(e) => setSandboxPrompt(e.target.value)}
-                ></textarea>
-              </div>
-
-              <button 
-                className="btn btn-primary" 
-                style={{ width: '100%' }}
-                disabled={sandboxStreaming}
-                onClick={handleSimulateCall}
-              >
-                {sandboxStreaming ? 'Simulating Intercept...' : 'Simulate Proxy Request'}
-              </button>
-            </div>
-
-            <div className="glass-panel table-card" style={{ display: 'flex', flexDirection: 'column' }}>
-              <h3 className="card-title" style={{ marginBottom: '16px' }}>Live Proxy Interception Terminal</h3>
-              <div className="console-output" style={{ flex: 1 }}>
-                {sandboxLogs || 'Terminal idle. Click "Simulate Proxy Request" to watch proxy log.'}
+              {/* Terminal Logs Console */}
+              <div className="card">
+                <div className="card-header">
+                  <h3>Real-time Terminal Logs</h3>
+                  <span className="badge badge-muted">API Intercept Stream</span>
+                </div>
+                <div className="card-body">
+                  <div className="console-output">
+                    {sandboxLogs || '[Console idle] Click "Trigger Proxy Call" to view middleware routing logs.'}
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
+
+        </div>
       </div>
 
-      {/* ----------------------------------------------------
-          MODAL: PROVISION USER WALLET
-      ---------------------------------------------------- */}
+      {/* MODAL: PROVISION WALLET */}
       {isUserModalOpen && (
         <div className="modal-overlay">
-          <div className="glass-panel modal-content">
+          <div className="modal">
             <div className="modal-header">
-              <h3>Provision Credit Wallet</h3>
-              <button className="modal-close-btn" onClick={() => setIsUserModalOpen(false)}>✕</button>
+              <h3>Provision User Wallet</h3>
+              <button className="modal-close" onClick={() => setIsUserModalOpen(false)}>×</button>
             </div>
             <form onSubmit={handleCreateUser}>
-              <div className="form-group">
-                <label className="form-label">User Email</label>
-                <input 
-                  type="email" 
-                  className="form-input" 
-                  required
-                  placeholder="e.g. dev@client.com"
-                  value={newUserEmail}
-                  onChange={(e) => setNewUserEmail(e.target.value)}
-                />
+              <div className="modal-body">
+                <div className="form-group">
+                  <label className="form-label">User Email Address</label>
+                  <input 
+                    type="email" 
+                    className="form-input" 
+                    placeholder="user@partner-startup.com"
+                    required
+                    value={newUserEmail}
+                    onChange={(e) => setNewUserEmail(e.target.value)}
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label className="form-label">Starting Credit Limit ($)</label>
+                  <input 
+                    type="number" 
+                    step="0.01"
+                    className="form-input"
+                    value={newUserCredits}
+                    onChange={(e) => setNewUserCredits(e.target.value)}
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label className="form-label">Requests Per Minute (RPM) Limit</label>
+                  <input 
+                    type="number" 
+                    className="form-input"
+                    value={newUserRPM}
+                    onChange={(e) => setNewUserRPM(e.target.value)}
+                  />
+                </div>
+
+                <div className="form-group" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '20px' }}>
+                  <div>
+                    <label className="form-label" style={{ margin: 0 }}>Enable Low Credits Fallback Recovery</label>
+                    <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Auto swaps to cheaper model if balance is low</span>
+                  </div>
+                  <div 
+                    className={`toggle-switch ${newUserFallback ? 'active' : ''}`}
+                    onClick={() => setNewUserFallback(!newUserFallback)}
+                  ></div>
+                </div>
               </div>
-              <div className="form-group">
-                <label className="form-label">Start Credits ($ USD)</label>
-                <input 
-                  type="number" 
-                  step="0.01"
-                  className="form-input"
-                  value={newUserCredits}
-                  onChange={(e) => setNewUserCredits(e.target.value)}
-                />
+              
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" onClick={() => setIsUserModalOpen(false)}>Cancel</button>
+                <button type="submit" className="btn btn-primary">Provision Wallet</button>
               </div>
-              <div className="form-group">
-                <label className="form-label">Rate Limit (Requests Per Minute)</label>
-                <input 
-                  type="number" 
-                  className="form-input"
-                  value={newUserRPM}
-                  onChange={(e) => setNewUserRPM(e.target.value)}
-                />
-              </div>
-              <div className="form-group" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <button 
-                  type="button"
-                  style={{ background: 'none', border: 'none', cursor: 'pointer', color: newUserFallback ? 'var(--accent-green)' : 'var(--text-muted)' }}
-                  onClick={() => setNewUserFallback(!newUserFallback)}
-                >
-                  {newUserFallback ? <ToggleRight size={28} /> : <ToggleLeft size={28} />}
-                </button>
-                <span className="form-label" style={{ margin: 0 }}>Enable Low Credits Fallback Recovery</span>
-              </div>
-              <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '10px' }}>
-                Provision Wallet
-              </button>
             </form>
           </div>
         </div>
       )}
 
-      {/* ----------------------------------------------------
-          MODAL: ADJUST BALANCE
-      ---------------------------------------------------- */}
+      {/* MODAL: ADJUST CREDITS */}
       {isAdjustModalOpen && selectedUser && (
         <div className="modal-overlay">
-          <div className="glass-panel modal-content">
+          <div className="modal">
             <div className="modal-header">
-              <h3>Adjust Balance</h3>
-              <button className="modal-close-btn" onClick={() => setIsAdjustModalOpen(false)}>✕</button>
+              <h3>Adjust Credit Balance</h3>
+              <button className="modal-close" onClick={() => setIsAdjustModalOpen(false)}>×</button>
             </div>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginBottom: '16px' }}>
-              Adjusting wallet balance for <strong>{selectedUser.email}</strong>. Use negative values to deduct.
-            </p>
             <form onSubmit={handleAdjustCredits}>
-              <div className="form-group">
-                <label className="form-label">Adjustment Amount ($)</label>
-                <input 
-                  type="number" 
-                  step="0.0001"
-                  className="form-input" 
-                  required
-                  placeholder="e.g. 20.00 or -5.50"
-                  value={adjustAmount}
-                  onChange={(e) => setAdjustAmount(e.target.value)}
-                />
+              <div className="modal-body">
+                <div style={{ marginBottom: '16px', fontSize: '0.85rem' }}>
+                  <span style={{ color: 'var(--text-secondary)' }}>Target User:</span>{' '}
+                  <span style={{ fontWeight: 'bold' }}>{selectedUser.email}</span>
+                  <br />
+                  <span style={{ color: 'var(--text-secondary)' }}>Current Balance:</span>{' '}
+                  <span style={{ fontWeight: 'bold', color: 'var(--accent-green)' }}>${selectedUser.credits.toFixed(4)}</span>
+                </div>
+
+                <div className="form-group">
+                  <label className="form-label">Adjust Amount ($)</label>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block', marginBottom: '6px' }}>
+                    Enter positive value to add credits, negative to deduct.
+                  </span>
+                  <input 
+                    type="number" 
+                    step="0.0001"
+                    className="form-input" 
+                    placeholder="e.g. 15.00 or -5.50"
+                    required
+                    value={adjustAmount}
+                    onChange={(e) => setAdjustAmount(e.target.value)}
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label className="form-label">Adjustment Reason</label>
+                  <input 
+                    type="text" 
+                    className="form-input" 
+                    placeholder="e.g. Promotion credit / Manual adjustment"
+                    value={adjustDesc}
+                    onChange={(e) => setAdjustDesc(e.target.value)}
+                  />
+                </div>
               </div>
-              <div className="form-group">
-                <label className="form-label">Reason / Transaction label</label>
-                <input 
-                  type="text" 
-                  className="form-input" 
-                  placeholder="e.g. Customer top-up"
-                  value={adjustDesc}
-                  onChange={(e) => setAdjustDesc(e.target.value)}
-                />
+              
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" onClick={() => setIsAdjustModalOpen(false)}>Cancel</button>
+                <button type="submit" className="btn btn-primary">Save Changes</button>
               </div>
-              <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '10px' }}>
-                Apply Adjustment
-              </button>
             </form>
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }

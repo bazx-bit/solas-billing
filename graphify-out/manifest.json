@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   "apps/dashboard/src/App.jsx": {
-    "mtime": 1782678857.0299306,
-    "ast_hash": "2f2f177edbb66fd84b41174baa4c4ed8",
+    "mtime": 1782682698.7470756,
+    "ast_hash": "624e28f3192497297f8630d54ff0a676",
     "semantic_hash": ""
   },
   "apps/dashboard/src/main.jsx": {
@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "apps/server/server.js": {
-    "mtime": 1782679437.3586082,
-    "ast_hash": "7cf55aa7cce6e0e79a2883d266caef97",
+    "mtime": 1782682320.3373947,
+    "ast_hash": "829d5dfabc172db0d0b0b2e512f515dc",
     "semantic_hash": ""
   },
   "package.json": {
