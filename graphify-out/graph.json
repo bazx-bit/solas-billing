@@ -4,14 +4,494 @@
   "graph": {},
   "nodes": [
     {
+      "label": "biome.json",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "biome",
+      "community": 38,
+      "norm_label": "biome.json"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "biome_schema",
+      "community": 38,
+      "norm_label": "$schema"
+    },
+    {
+      "label": "vcs",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "biome_vcs",
+      "community": 38,
+      "norm_label": "vcs"
+    },
+    {
+      "label": "enabled",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "biome_vcs_enabled",
+      "community": 38,
+      "norm_label": "enabled"
+    },
+    {
+      "label": "clientKind",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "biome_vcs_clientkind",
+      "community": 38,
+      "norm_label": "clientkind"
+    },
+    {
+      "label": "useIgnoreFile",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "biome_vcs_useignorefile",
+      "community": 38,
+      "norm_label": "useignorefile"
+    },
+    {
+      "label": "files",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "biome_files",
+      "community": 38,
+      "norm_label": "files"
+    },
+    {
+      "label": "ignoreUnknown",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "biome_files_ignoreunknown",
+      "community": 38,
+      "norm_label": "ignoreunknown"
+    },
+    {
+      "label": "formatter",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "biome_formatter",
+      "community": 38,
+      "norm_label": "formatter"
+    },
+    {
+      "label": "enabled",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "biome_formatter_enabled",
+      "community": 38,
+      "norm_label": "enabled"
+    },
+    {
+      "label": "indentStyle",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "biome_formatter_indentstyle",
+      "community": 38,
+      "norm_label": "indentstyle"
+    },
+    {
+      "label": "linter",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "biome_linter",
+      "community": 38,
+      "norm_label": "linter"
+    },
+    {
+      "label": "enabled",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "biome_linter_enabled",
+      "community": 38,
+      "norm_label": "enabled"
+    },
+    {
+      "label": "rules",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "biome_linter_rules",
+      "community": 38,
+      "norm_label": "rules"
+    },
+    {
+      "label": "recommended",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "biome_rules_recommended",
+      "community": 38,
+      "norm_label": "recommended"
+    },
+    {
+      "label": "javascript",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "biome_javascript",
+      "community": 38,
+      "norm_label": "javascript"
+    },
+    {
+      "label": "formatter",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "biome_javascript_formatter",
+      "community": 38,
+      "norm_label": "formatter"
+    },
+    {
+      "label": "quoteStyle",
+      "file_type": "code",
+      "source_file": "biome.json",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "biome_formatter_quotestyle",
+      "community": 38,
+      "norm_label": "quotestyle"
+    },
+    {
+      "label": "knip.json",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "knip",
+      "community": 37,
+      "norm_label": "knip.json"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "knip_schema",
+      "community": 37,
+      "norm_label": "$schema"
+    },
+    {
+      "label": "exclude",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "knip_exclude",
+      "community": 37,
+      "norm_label": "exclude"
+    },
+    {
+      "label": "ignoreWorkspaces",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "knip_ignoreworkspaces",
+      "community": 37,
+      "norm_label": "ignoreworkspaces"
+    },
+    {
+      "label": "workspaces",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "knip_workspaces",
+      "community": 37,
+      "norm_label": "workspaces"
+    },
+    {
+      "label": "apps/server",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "knip_workspaces_apps_server",
+      "community": 37,
+      "norm_label": "apps/server"
+    },
+    {
+      "label": "entry",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "knip_apps_server_entry",
+      "community": 37,
+      "norm_label": "entry"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "knip_apps_server_project",
+      "community": 37,
+      "norm_label": "project"
+    },
+    {
+      "label": "apps/dashboard",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "knip_workspaces_apps_dashboard",
+      "community": 37,
+      "norm_label": "apps/dashboard"
+    },
+    {
+      "label": "entry",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "knip_apps_dashboard_entry",
+      "community": 37,
+      "norm_label": "entry"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "knip_apps_dashboard_project",
+      "community": 37,
+      "norm_label": "project"
+    },
+    {
+      "label": "apps/checkout",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "knip_workspaces_apps_checkout",
+      "community": 37,
+      "norm_label": "apps/checkout"
+    },
+    {
+      "label": "entry",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "knip_apps_checkout_entry",
+      "community": 37,
+      "norm_label": "entry"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "knip_apps_checkout_project",
+      "community": 37,
+      "norm_label": "project"
+    },
+    {
+      "label": "apps/docs",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "knip_workspaces_apps_docs",
+      "community": 37,
+      "norm_label": "apps/docs"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "knip_apps_docs_project",
+      "community": 37,
+      "norm_label": "project"
+    },
+    {
+      "label": "apps/leaf",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "knip_workspaces_apps_leaf",
+      "community": 37,
+      "norm_label": "apps/leaf"
+    },
+    {
+      "label": "entry",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "knip_apps_leaf_entry",
+      "community": 37,
+      "norm_label": "entry"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "knip_apps_leaf_project",
+      "community": 37,
+      "norm_label": "project"
+    },
+    {
+      "label": "apps/scope-picker",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "knip_workspaces_apps_scope_picker",
+      "community": 37,
+      "norm_label": "apps/scope-picker"
+    },
+    {
+      "label": "entry",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "knip_apps_scope_picker_entry",
+      "community": 37,
+      "norm_label": "entry"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "knip_apps_scope_picker_project",
+      "community": 37,
+      "norm_label": "project"
+    },
+    {
+      "label": "apps/sdk-test",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "knip_workspaces_apps_sdk_test",
+      "community": 37,
+      "norm_label": "apps/sdk-test"
+    },
+    {
+      "label": "entry",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "knip_apps_sdk_test_entry",
+      "community": 37,
+      "norm_label": "entry"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "knip_apps_sdk_test_project",
+      "community": 37,
+      "norm_label": "project"
+    },
+    {
+      "label": "apps/testbench",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "knip_workspaces_apps_testbench",
+      "community": 37,
+      "norm_label": "apps/testbench"
+    },
+    {
+      "label": "entry",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "knip_apps_testbench_entry",
+      "community": 37,
+      "norm_label": "entry"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "knip_apps_testbench_project",
+      "community": 37,
+      "norm_label": "project"
+    },
+    {
+      "label": "apps/website",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "knip_workspaces_apps_website",
+      "community": 37,
+      "norm_label": "apps/website"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "knip.json",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "knip_apps_website_project",
+      "community": 37,
+      "norm_label": "project"
+    },
+    {
       "label": "skill.md",
       "file_type": "document",
       "source_file": ".agents/skills/billing/skill.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "billing_skill",
       "community": 32,
-      "norm_label": "skill.md"
+      "norm_label": "skill.md",
+      "id": "billing_skill"
     },
     {
       "label": "Agent Billing Skill",
@@ -19,9 +499,9 @@
       "source_file": ".agents/skills/billing/skill.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "billing_skill_agent_billing_skill",
       "community": 32,
-      "norm_label": "agent billing skill"
+      "norm_label": "agent billing skill",
+      "id": "billing_skill_agent_billing_skill"
     },
     {
       "label": "Description",
@@ -29,9 +509,9 @@
       "source_file": ".agents/skills/billing/skill.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "billing_skill_description",
       "community": 32,
-      "norm_label": "description"
+      "norm_label": "description",
+      "id": "billing_skill_description"
     },
     {
       "label": "Tools",
@@ -39,9 +519,9 @@
       "source_file": ".agents/skills/billing/skill.md",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "billing_skill_tools",
       "community": 32,
-      "norm_label": "tools"
+      "norm_label": "tools",
+      "id": "billing_skill_tools"
     },
     {
       "label": "skill.md",
@@ -49,9 +529,9 @@
       "source_file": ".agents/skills/checkout/skill.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "checkout_skill",
       "community": 34,
-      "norm_label": "skill.md"
+      "norm_label": "skill.md",
+      "id": "checkout_skill"
     },
     {
       "label": "Agent Checkout Skill",
@@ -59,9 +539,9 @@
       "source_file": ".agents/skills/checkout/skill.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "checkout_skill_agent_checkout_skill",
       "community": 34,
-      "norm_label": "agent checkout skill"
+      "norm_label": "agent checkout skill",
+      "id": "checkout_skill_agent_checkout_skill"
     },
     {
       "label": "Description",
@@ -69,9 +549,9 @@
       "source_file": ".agents/skills/checkout/skill.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "checkout_skill_description",
       "community": 34,
-      "norm_label": "description"
+      "norm_label": "description",
+      "id": "checkout_skill_description"
     },
     {
       "label": "CLAUDE.md",
@@ -79,9 +559,9 @@
       "source_file": ".claude/CLAUDE.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "claude_claude",
       "community": 33,
-      "norm_label": "claude.md"
+      "norm_label": "claude.md",
+      "id": "claude_claude"
     },
     {
       "label": "CLAUDE.md - Solas Billing Commands & Conventions",
@@ -89,9 +569,9 @@
       "source_file": ".claude/CLAUDE.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "claude_claude_claude_md_solas_billing_commands_conventions",
       "community": 33,
-      "norm_label": "claude.md - solas billing commands & conventions"
+      "norm_label": "claude.md - solas billing commands & conventions",
+      "id": "claude_claude_claude_md_solas_billing_commands_conventions"
     },
     {
       "label": "Build & Run Commands",
@@ -99,9 +579,9 @@
       "source_file": ".claude/CLAUDE.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "claude_claude_build_run_commands",
       "community": 33,
-      "norm_label": "build & run commands"
+      "norm_label": "build & run commands",
+      "id": "claude_claude_build_run_commands"
     },
     {
       "label": "Code Style & Guidelines",
@@ -109,9 +589,9 @@
       "source_file": ".claude/CLAUDE.md",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "claude_claude_code_style_guidelines",
       "community": 33,
-      "norm_label": "code style & guidelines"
+      "norm_label": "code style & guidelines",
+      "id": "claude_claude_code_style_guidelines"
     },
     {
       "label": "DECISIONS.md",
@@ -119,9 +599,9 @@
       "source_file": ".context/migration-interface/DECISIONS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "migration_interface_decisions",
       "community": 35,
-      "norm_label": "decisions.md"
+      "norm_label": "decisions.md",
+      "id": "migration_interface_decisions"
     },
     {
       "label": "Architectural Decisions: Database Selection",
@@ -129,9 +609,9 @@
       "source_file": ".context/migration-interface/DECISIONS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "migration_interface_decisions_architectural_decisions_database_selection",
       "community": 35,
-      "norm_label": "architectural decisions: database selection"
+      "norm_label": "architectural decisions: database selection",
+      "id": "migration_interface_decisions_architectural_decisions_database_selection"
     },
     {
       "label": "ADR 1: Keep SQLite for local self-hosted developers",
@@ -139,9 +619,9 @@
       "source_file": ".context/migration-interface/DECISIONS.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "migration_interface_decisions_adr_1_keep_sqlite_for_local_self_hosted_developers",
       "community": 35,
-      "norm_label": "adr 1: keep sqlite for local self-hosted developers"
+      "norm_label": "adr 1: keep sqlite for local self-hosted developers",
+      "id": "migration_interface_decisions_adr_1_keep_sqlite_for_local_self_hosted_developers"
     },
     {
       "label": "PROPOSAL.md",
@@ -149,9 +629,9 @@
       "source_file": ".context/migration-interface/PROPOSAL.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "migration_interface_proposal",
       "community": 31,
-      "norm_label": "proposal.md"
+      "norm_label": "proposal.md",
+      "id": "migration_interface_proposal"
     },
     {
       "label": "Proposal: Multi-Tenant Database Scale Migration (SQLite to PostgreSQL)",
@@ -159,9 +639,9 @@
       "source_file": ".context/migration-interface/PROPOSAL.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "migration_interface_proposal_proposal_multi_tenant_database_scale_migration_sqlite_to_postgresql",
       "community": 31,
-      "norm_label": "proposal: multi-tenant database scale migration (sqlite to postgresql)"
+      "norm_label": "proposal: multi-tenant database scale migration (sqlite to postgresql)",
+      "id": "migration_interface_proposal_proposal_multi_tenant_database_scale_migration_sqlite_to_postgresql"
     },
     {
       "label": "Background",
@@ -169,9 +649,9 @@
       "source_file": ".context/migration-interface/PROPOSAL.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "migration_interface_proposal_background",
       "community": 31,
-      "norm_label": "background"
+      "norm_label": "background",
+      "id": "migration_interface_proposal_background"
     },
     {
       "label": "Target Schema Architecture",
@@ -179,9 +659,9 @@
       "source_file": ".context/migration-interface/PROPOSAL.md",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "migration_interface_proposal_target_schema_architecture",
       "community": 31,
-      "norm_label": "target schema architecture"
+      "norm_label": "target schema architecture",
+      "id": "migration_interface_proposal_target_schema_architecture"
     },
     {
       "label": "Migration Plan",
@@ -189,9 +669,9 @@
       "source_file": ".context/migration-interface/PROPOSAL.md",
       "source_location": "L24",
       "_origin": "ast",
-      "id": "migration_interface_proposal_migration_plan",
       "community": 31,
-      "norm_label": "migration plan"
+      "norm_label": "migration plan",
+      "id": "migration_interface_proposal_migration_plan"
     },
     {
       "label": "STATUS.md",
@@ -199,9 +679,9 @@
       "source_file": ".context/migration-interface/STATUS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "migration_interface_status",
       "community": 36,
-      "norm_label": "status.md"
+      "norm_label": "status.md",
+      "id": "migration_interface_status"
     },
     {
       "label": "Database Migration Status",
@@ -209,9 +689,9 @@
       "source_file": ".context/migration-interface/STATUS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "migration_interface_status_database_migration_status",
       "community": 36,
-      "norm_label": "database migration status"
+      "norm_label": "database migration status",
+      "id": "migration_interface_status_database_migration_status"
     },
     {
       "label": "checkout.js",
@@ -1908,12 +2388,472 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "biome.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "biome",
+      "target": "biome_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biome.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "biome",
+      "target": "biome_formatter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biome.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "biome",
+      "target": "biome_javascript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biome.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "biome",
+      "target": "biome_linter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biome.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "biome",
+      "target": "biome_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biome.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "biome",
+      "target": "biome_vcs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biome.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "biome_vcs",
+      "target": "biome_vcs_clientkind",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biome.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "biome_vcs",
+      "target": "biome_vcs_enabled",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biome.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "biome_vcs",
+      "target": "biome_vcs_useignorefile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biome.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "biome_files",
+      "target": "biome_files_ignoreunknown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biome.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "biome_formatter",
+      "target": "biome_formatter_enabled",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biome.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "biome_formatter",
+      "target": "biome_formatter_indentstyle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biome.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "biome_linter",
+      "target": "biome_linter_enabled",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biome.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "biome_linter",
+      "target": "biome_linter_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biome.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "biome_linter_rules",
+      "target": "biome_rules_recommended",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biome.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "biome_javascript",
+      "target": "biome_javascript_formatter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "biome.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "biome_javascript_formatter",
+      "target": "biome_formatter_quotestyle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "knip",
+      "target": "knip_exclude",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "knip",
+      "target": "knip_ignoreworkspaces",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "knip",
+      "target": "knip_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "knip",
+      "target": "knip_workspaces",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "knip_workspaces",
+      "target": "knip_workspaces_apps_checkout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "knip_workspaces",
+      "target": "knip_workspaces_apps_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "knip_workspaces",
+      "target": "knip_workspaces_apps_docs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "knip_workspaces",
+      "target": "knip_workspaces_apps_leaf",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "knip_workspaces",
+      "target": "knip_workspaces_apps_scope_picker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "knip_workspaces",
+      "target": "knip_workspaces_apps_sdk_test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "knip_workspaces",
+      "target": "knip_workspaces_apps_server",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "knip_workspaces",
+      "target": "knip_workspaces_apps_testbench",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "knip_workspaces",
+      "target": "knip_workspaces_apps_website",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "knip_workspaces_apps_server",
+      "target": "knip_apps_server_entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "knip_workspaces_apps_server",
+      "target": "knip_apps_server_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "knip_workspaces_apps_dashboard",
+      "target": "knip_apps_dashboard_entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "knip_workspaces_apps_dashboard",
+      "target": "knip_apps_dashboard_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "knip_workspaces_apps_checkout",
+      "target": "knip_apps_checkout_entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "knip_workspaces_apps_checkout",
+      "target": "knip_apps_checkout_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "knip_workspaces_apps_docs",
+      "target": "knip_apps_docs_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "knip_workspaces_apps_leaf",
+      "target": "knip_apps_leaf_entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "knip_workspaces_apps_leaf",
+      "target": "knip_apps_leaf_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "knip_workspaces_apps_scope_picker",
+      "target": "knip_apps_scope_picker_entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "knip_workspaces_apps_scope_picker",
+      "target": "knip_apps_scope_picker_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "knip_workspaces_apps_sdk_test",
+      "target": "knip_apps_sdk_test_entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "knip_workspaces_apps_sdk_test",
+      "target": "knip_apps_sdk_test_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "knip_workspaces_apps_testbench",
+      "target": "knip_apps_testbench_entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "knip_workspaces_apps_testbench",
+      "target": "knip_apps_testbench_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "knip.json",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "knip_workspaces_apps_website",
+      "target": "knip_apps_website_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": ".agents/skills/billing/skill.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "billing_skill",
-      "target": "billing_skill_agent_billing_skill",
-      "confidence_score": 1.0
+      "target": "billing_skill_agent_billing_skill"
     },
     {
       "relation": "contains",
@@ -1921,9 +2861,9 @@
       "source_file": ".agents/skills/billing/skill.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "billing_skill_agent_billing_skill",
-      "target": "billing_skill_description",
-      "confidence_score": 1.0
+      "target": "billing_skill_description"
     },
     {
       "relation": "contains",
@@ -1931,9 +2871,9 @@
       "source_file": ".agents/skills/billing/skill.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "billing_skill_agent_billing_skill",
-      "target": "billing_skill_tools",
-      "confidence_score": 1.0
+      "target": "billing_skill_tools"
     },
     {
       "relation": "contains",
@@ -1941,9 +2881,9 @@
       "source_file": ".agents/skills/checkout/skill.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "checkout_skill",
-      "target": "checkout_skill_agent_checkout_skill",
-      "confidence_score": 1.0
+      "target": "checkout_skill_agent_checkout_skill"
     },
     {
       "relation": "contains",
@@ -1951,9 +2891,9 @@
       "source_file": ".agents/skills/checkout/skill.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "checkout_skill_agent_checkout_skill",
-      "target": "checkout_skill_description",
-      "confidence_score": 1.0
+      "target": "checkout_skill_description"
     },
     {
       "relation": "contains",
@@ -1961,9 +2901,9 @@
       "source_file": ".claude/CLAUDE.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude",
-      "target": "claude_claude_claude_md_solas_billing_commands_conventions",
-      "confidence_score": 1.0
+      "target": "claude_claude_claude_md_solas_billing_commands_conventions"
     },
     {
       "relation": "contains",
@@ -1971,9 +2911,9 @@
       "source_file": ".claude/CLAUDE.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude_claude_md_solas_billing_commands_conventions",
-      "target": "claude_claude_build_run_commands",
-      "confidence_score": 1.0
+      "target": "claude_claude_build_run_commands"
     },
     {
       "relation": "contains",
@@ -1981,9 +2921,9 @@
       "source_file": ".claude/CLAUDE.md",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude_claude_md_solas_billing_commands_conventions",
-      "target": "claude_claude_code_style_guidelines",
-      "confidence_score": 1.0
+      "target": "claude_claude_code_style_guidelines"
     },
     {
       "relation": "contains",
@@ -1991,9 +2931,9 @@
       "source_file": ".context/migration-interface/DECISIONS.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "migration_interface_decisions",
-      "target": "migration_interface_decisions_architectural_decisions_database_selection",
-      "confidence_score": 1.0
+      "target": "migration_interface_decisions_architectural_decisions_database_selection"
     },
     {
       "relation": "contains",
@@ -2001,9 +2941,9 @@
       "source_file": ".context/migration-interface/DECISIONS.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "migration_interface_decisions_architectural_decisions_database_selection",
-      "target": "migration_interface_decisions_adr_1_keep_sqlite_for_local_self_hosted_developers",
-      "confidence_score": 1.0
+      "target": "migration_interface_decisions_adr_1_keep_sqlite_for_local_self_hosted_developers"
     },
     {
       "relation": "contains",
@@ -2011,9 +2951,9 @@
       "source_file": ".context/migration-interface/PROPOSAL.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "migration_interface_proposal",
-      "target": "migration_interface_proposal_proposal_multi_tenant_database_scale_migration_sqlite_to_postgresql",
-      "confidence_score": 1.0
+      "target": "migration_interface_proposal_proposal_multi_tenant_database_scale_migration_sqlite_to_postgresql"
     },
     {
       "relation": "contains",
@@ -2021,9 +2961,9 @@
       "source_file": ".context/migration-interface/PROPOSAL.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "migration_interface_proposal_proposal_multi_tenant_database_scale_migration_sqlite_to_postgresql",
-      "target": "migration_interface_proposal_background",
-      "confidence_score": 1.0
+      "target": "migration_interface_proposal_background"
     },
     {
       "relation": "contains",
@@ -2031,9 +2971,9 @@
       "source_file": ".context/migration-interface/PROPOSAL.md",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "migration_interface_proposal_proposal_multi_tenant_database_scale_migration_sqlite_to_postgresql",
-      "target": "migration_interface_proposal_migration_plan",
-      "confidence_score": 1.0
+      "target": "migration_interface_proposal_migration_plan"
     },
     {
       "relation": "contains",
@@ -2041,9 +2981,9 @@
       "source_file": ".context/migration-interface/PROPOSAL.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "migration_interface_proposal_proposal_multi_tenant_database_scale_migration_sqlite_to_postgresql",
-      "target": "migration_interface_proposal_target_schema_architecture",
-      "confidence_score": 1.0
+      "target": "migration_interface_proposal_target_schema_architecture"
     },
     {
       "relation": "contains",
@@ -2051,9 +2991,9 @@
       "source_file": ".context/migration-interface/STATUS.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "migration_interface_status",
-      "target": "migration_interface_status_database_migration_status",
-      "confidence_score": 1.0
+      "target": "migration_interface_status_database_migration_status"
     },
     {
       "relation": "contains",
@@ -3506,5 +4446,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "bb386f95cf35a604a441c4bf4c8a727bab2b85ea"
+  "built_at_commit": "062cba5dd45fca1b459347ab6bcbd141406515b9"
 }

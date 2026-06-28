@@ -273,5 +273,15 @@
     "mtime": 1782679187.281668,
     "ast_hash": "bcd091d0e97722a19b263655205588f8",
     "semantic_hash": ""
+  },
+  "biome.json": {
+    "mtime": 1782679248.682174,
+    "ast_hash": "879807c414aac3f3e08d3045b132c22c",
+    "semantic_hash": ""
+  },
+  "knip.json": {
+    "mtime": 1782679245.0373733,
+    "ast_hash": "a2369f3fe3e7b76c72f452280c4b47f8",
+    "semantic_hash": ""
   }
 }

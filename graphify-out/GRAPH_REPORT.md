@@ -1,16 +1,16 @@
 # Graph Report - solas-billing  (2026-06-29)
 
 ## Corpus Check
-- 45 files · ~10,410 words
+- 47 files · ~10,537 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 190 nodes · 159 edges · 37 communities (26 shown, 11 thin omitted)
+- 238 nodes · 205 edges · 39 communities (28 shown, 11 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `bb386f95`
+- Built from commit: `062cba5d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -44,18 +44,20 @@
 - [[_COMMUNITY_Community 34|Community 34]]
 - [[_COMMUNITY_Community 35|Community 35]]
 - [[_COMMUNITY_Community 36|Community 36]]
+- [[_COMMUNITY_Community 37|Community 37]]
+- [[_COMMUNITY_Community 38|Community 38]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `scripts` - 5 edges
+1. `workspaces` - 10 edges
 2. `scripts` - 5 edges
-3. `Solas Billing` - 5 edges
-4. `Proposal: Multi-Tenant Database Scale Migration (SQLite to PostgreSQL)` - 4 edges
-5. `SolasClient` - 4 edges
-6. `Solas Billing Development Roadmap` - 4 edges
-7. `Agent Billing Skill` - 3 edges
-8. `CLAUDE.md - Solas Billing Commands & Conventions` - 3 edges
-9. `rules` - 3 edges
-10. `scripts` - 3 edges
+3. `scripts` - 5 edges
+4. `Solas Billing` - 5 edges
+5. `vcs` - 4 edges
+6. `Proposal: Multi-Tenant Database Scale Migration (SQLite to PostgreSQL)` - 4 edges
+7. `SolasClient` - 4 edges
+8. `Solas Billing Development Roadmap` - 4 edges
+9. `formatter` - 3 edges
+10. `linter` - 3 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -63,7 +65,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (37 total, 11 thin omitted)
+## Communities (39 total, 11 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.12
@@ -137,17 +139,29 @@ Nodes (3): Agent Billing Skill, Description, Tools
 Cohesion: 0.50
 Nodes (3): Build & Run Commands, CLAUDE.md - Solas Billing Commands & Conventions, Code Style & Guidelines
 
+### Community 37 - "Community 37"
+Cohesion: 0.07
+Nodes (29): entry, project, entry, project, project, entry, project, entry (+21 more)
+
+### Community 38 - "Community 38"
+Cohesion: 0.11
+Nodes (17): files, ignoreUnknown, formatter, enabled, indentStyle, quoteStyle, javascript, formatter (+9 more)
+
 ## Knowledge Gaps
-- **106 isolated node(s):** `Description`, `Tools`, `Description`, `Build & Run Commands`, `Code Style & Guidelines` (+101 more)
+- **135 isolated node(s):** `$schema`, `enabled`, `clientKind`, `useIgnoreFile`, `ignoreUnknown` (+130 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **What connects `Description`, `Tools`, `Description` to the rest of the system?**
-  _106 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `$schema`, `enabled`, `clientKind` to the rest of the system?**
+  _135 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
+- **Should `Community 37` be split into smaller, more focused modules?**
+  _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
+- **Should `Community 38` be split into smaller, more focused modules?**
+  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
