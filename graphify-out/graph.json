@@ -4,14 +4,194 @@
   "graph": {},
   "nodes": [
     {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "packages/ksuid/index.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "ksuid_index",
+      "community": 20,
+      "norm_label": "index.js"
+    },
+    {
+      "label": "generateKsuid()",
+      "file_type": "code",
+      "source_file": "packages/ksuid/index.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "ksuid_index_generateksuid",
+      "community": 20,
+      "norm_label": "generateksuid()"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "packages/ksuid/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "ksuid_package",
+      "community": 17,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "packages/ksuid/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "ksuid_package_name",
+      "community": 17,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "packages/ksuid/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "ksuid_package_version",
+      "community": 17,
+      "norm_label": "version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "packages/ksuid/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "ksuid_package_description",
+      "community": 17,
+      "norm_label": "description"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "packages/ksuid/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "ksuid_package_main",
+      "community": 17,
+      "norm_label": "main"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "packages/ksuid/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "ksuid_package_type",
+      "community": 17,
+      "norm_label": "type"
+    },
+    {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "packages/logging/index.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "logging_index",
+      "community": 19,
+      "norm_label": "index.js"
+    },
+    {
+      "label": "logInfo()",
+      "file_type": "code",
+      "source_file": "packages/logging/index.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "logging_index_loginfo",
+      "community": 19,
+      "norm_label": "loginfo()"
+    },
+    {
+      "label": "logError()",
+      "file_type": "code",
+      "source_file": "packages/logging/index.js",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "logging_index_logerror",
+      "community": 19,
+      "norm_label": "logerror()"
+    },
+    {
+      "label": "logWarn()",
+      "file_type": "code",
+      "source_file": "packages/logging/index.js",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "logging_index_logwarn",
+      "community": 19,
+      "norm_label": "logwarn()"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "packages/logging/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "logging_package",
+      "community": 18,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "packages/logging/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "logging_package_name",
+      "community": 18,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "packages/logging/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "logging_package_version",
+      "community": 18,
+      "norm_label": "version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "packages/logging/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "logging_package_description",
+      "community": 18,
+      "norm_label": "description"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "packages/logging/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "logging_package_main",
+      "community": 18,
+      "norm_label": "main"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "packages/logging/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "logging_package_type",
+      "community": 18,
+      "norm_label": "type"
+    },
+    {
       "label": ".oxlintrc.json",
       "file_type": "code",
       "source_file": "apps/dashboard/.oxlintrc.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "dashboard_oxlintrc",
       "community": 8,
-      "norm_label": ".oxlintrc.json"
+      "norm_label": ".oxlintrc.json",
+      "id": "dashboard_oxlintrc"
     },
     {
       "label": "$schema",
@@ -19,9 +199,9 @@
       "source_file": "apps/dashboard/.oxlintrc.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "dashboard_oxlintrc_schema",
       "community": 8,
-      "norm_label": "$schema"
+      "norm_label": "$schema",
+      "id": "dashboard_oxlintrc_schema"
     },
     {
       "label": "plugins",
@@ -29,9 +209,9 @@
       "source_file": "apps/dashboard/.oxlintrc.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "dashboard_oxlintrc_plugins",
       "community": 8,
-      "norm_label": "plugins"
+      "norm_label": "plugins",
+      "id": "dashboard_oxlintrc_plugins"
     },
     {
       "label": "rules",
@@ -39,9 +219,9 @@
       "source_file": "apps/dashboard/.oxlintrc.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "dashboard_oxlintrc_rules",
       "community": 8,
-      "norm_label": "rules"
+      "norm_label": "rules",
+      "id": "dashboard_oxlintrc_rules"
     },
     {
       "label": "react/rules-of-hooks",
@@ -49,9 +229,9 @@
       "source_file": "apps/dashboard/.oxlintrc.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "dashboard_oxlintrc_rules_react_rules_of_hooks",
       "community": 8,
-      "norm_label": "react/rules-of-hooks"
+      "norm_label": "react/rules-of-hooks",
+      "id": "dashboard_oxlintrc_rules_react_rules_of_hooks"
     },
     {
       "label": "react/only-export-components",
@@ -59,9 +239,9 @@
       "source_file": "apps/dashboard/.oxlintrc.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "dashboard_oxlintrc_rules_react_only_export_components",
       "community": 8,
-      "norm_label": "react/only-export-components"
+      "norm_label": "react/only-export-components",
+      "id": "dashboard_oxlintrc_rules_react_only_export_components"
     },
     {
       "label": "package.json",
@@ -69,9 +249,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "dashboard_package",
       "community": 1,
-      "norm_label": "package.json"
+      "norm_label": "package.json",
+      "id": "dashboard_package"
     },
     {
       "label": "name",
@@ -79,9 +259,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "dashboard_package_name",
       "community": 1,
-      "norm_label": "name"
+      "norm_label": "name",
+      "id": "dashboard_package_name"
     },
     {
       "label": "private",
@@ -89,9 +269,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "dashboard_package_private",
       "community": 1,
-      "norm_label": "private"
+      "norm_label": "private",
+      "id": "dashboard_package_private"
     },
     {
       "label": "version",
@@ -99,9 +279,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "dashboard_package_version",
       "community": 1,
-      "norm_label": "version"
+      "norm_label": "version",
+      "id": "dashboard_package_version"
     },
     {
       "label": "type",
@@ -109,9 +289,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "dashboard_package_type",
       "community": 1,
-      "norm_label": "type"
+      "norm_label": "type",
+      "id": "dashboard_package_type"
     },
     {
       "label": "scripts",
@@ -119,9 +299,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "dashboard_package_scripts",
       "community": 1,
-      "norm_label": "scripts"
+      "norm_label": "scripts",
+      "id": "dashboard_package_scripts"
     },
     {
       "label": "dev",
@@ -129,9 +309,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "dashboard_package_scripts_dev",
       "community": 1,
-      "norm_label": "dev"
+      "norm_label": "dev",
+      "id": "dashboard_package_scripts_dev"
     },
     {
       "label": "build",
@@ -139,9 +319,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "dashboard_package_scripts_build",
       "community": 1,
-      "norm_label": "build"
+      "norm_label": "build",
+      "id": "dashboard_package_scripts_build"
     },
     {
       "label": "lint",
@@ -149,9 +329,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "dashboard_package_scripts_lint",
       "community": 1,
-      "norm_label": "lint"
+      "norm_label": "lint",
+      "id": "dashboard_package_scripts_lint"
     },
     {
       "label": "preview",
@@ -159,9 +339,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "dashboard_package_scripts_preview",
       "community": 1,
-      "norm_label": "preview"
+      "norm_label": "preview",
+      "id": "dashboard_package_scripts_preview"
     },
     {
       "label": "dependencies",
@@ -169,9 +349,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "dashboard_package_dependencies",
       "community": 1,
-      "norm_label": "dependencies"
+      "norm_label": "dependencies",
+      "id": "dashboard_package_dependencies"
     },
     {
       "label": "lucide-react",
@@ -179,9 +359,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "dashboard_package_dependencies_lucide_react",
       "community": 1,
-      "norm_label": "lucide-react"
+      "norm_label": "lucide-react",
+      "id": "dashboard_package_dependencies_lucide_react"
     },
     {
       "label": "react",
@@ -189,9 +369,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "dashboard_package_dependencies_react",
       "community": 1,
-      "norm_label": "react"
+      "norm_label": "react",
+      "id": "dashboard_package_dependencies_react"
     },
     {
       "label": "react-dom",
@@ -199,9 +379,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "dashboard_package_dependencies_react_dom",
       "community": 1,
-      "norm_label": "react-dom"
+      "norm_label": "react-dom",
+      "id": "dashboard_package_dependencies_react_dom"
     },
     {
       "label": "devDependencies",
@@ -209,9 +389,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L17",
       "_origin": "ast",
-      "id": "dashboard_package_devdependencies",
       "community": 9,
-      "norm_label": "devdependencies"
+      "norm_label": "devdependencies",
+      "id": "dashboard_package_devdependencies"
     },
     {
       "label": "@types/react",
@@ -219,9 +399,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L18",
       "_origin": "ast",
-      "id": "dashboard_package_devdependencies_types_react",
       "community": 9,
-      "norm_label": "@types/react"
+      "norm_label": "@types/react",
+      "id": "dashboard_package_devdependencies_types_react"
     },
     {
       "label": "@types/react-dom",
@@ -229,9 +409,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "dashboard_package_devdependencies_types_react_dom",
       "community": 9,
-      "norm_label": "@types/react-dom"
+      "norm_label": "@types/react-dom",
+      "id": "dashboard_package_devdependencies_types_react_dom"
     },
     {
       "label": "@vitejs/plugin-react",
@@ -239,9 +419,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "dashboard_package_devdependencies_vitejs_plugin_react",
       "community": 9,
-      "norm_label": "@vitejs/plugin-react"
+      "norm_label": "@vitejs/plugin-react",
+      "id": "dashboard_package_devdependencies_vitejs_plugin_react"
     },
     {
       "label": "oxlint",
@@ -249,9 +429,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L21",
       "_origin": "ast",
-      "id": "dashboard_package_devdependencies_oxlint",
       "community": 9,
-      "norm_label": "oxlint"
+      "norm_label": "oxlint",
+      "id": "dashboard_package_devdependencies_oxlint"
     },
     {
       "label": "vite",
@@ -259,9 +439,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "dashboard_package_devdependencies_vite",
       "community": 9,
-      "norm_label": "vite"
+      "norm_label": "vite",
+      "id": "dashboard_package_devdependencies_vite"
     },
     {
       "label": "App.jsx",
@@ -269,9 +449,9 @@
       "source_file": "apps/dashboard/src/App.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_app",
       "community": 15,
-      "norm_label": "app.jsx"
+      "norm_label": "app.jsx",
+      "id": "src_app"
     },
     {
       "label": "App()",
@@ -279,9 +459,9 @@
       "source_file": "apps/dashboard/src/App.jsx",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "src_app_app",
       "community": 15,
-      "norm_label": "app()"
+      "norm_label": "app()",
+      "id": "src_app_app"
     },
     {
       "label": "main.jsx",
@@ -289,9 +469,9 @@
       "source_file": "apps/dashboard/src/main.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_main",
       "community": 15,
-      "norm_label": "main.jsx"
+      "norm_label": "main.jsx",
+      "id": "src_main"
     },
     {
       "label": "vite.config.js",
@@ -299,9 +479,9 @@
       "source_file": "apps/dashboard/vite.config.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "dashboard_vite_config",
       "community": 16,
-      "norm_label": "vite.config.js"
+      "norm_label": "vite.config.js",
+      "id": "dashboard_vite_config"
     },
     {
       "label": "db.js",
@@ -309,9 +489,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "server_db",
       "community": 3,
-      "norm_label": "db.js"
+      "norm_label": "db.js",
+      "id": "server_db"
     },
     {
       "label": "__filename",
@@ -319,9 +499,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "server_db_filename",
       "community": 3,
-      "norm_label": "__filename"
+      "norm_label": "__filename",
+      "id": "server_db_filename"
     },
     {
       "label": "__dirname",
@@ -329,9 +509,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "server_db_dirname",
       "community": 3,
-      "norm_label": "__dirname"
+      "norm_label": "__dirname",
+      "id": "server_db_dirname"
     },
     {
       "label": "dbPath",
@@ -339,9 +519,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "server_db_dbpath",
       "community": 3,
-      "norm_label": "dbpath"
+      "norm_label": "dbpath",
+      "id": "server_db_dbpath"
     },
     {
       "label": "db",
@@ -349,9 +529,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "server_db_db",
       "community": 3,
-      "norm_label": "db"
+      "norm_label": "db",
+      "id": "server_db_db"
     },
     {
       "label": "initDB()",
@@ -359,9 +539,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "server_db_initdb",
       "community": 3,
-      "norm_label": "initdb()"
+      "norm_label": "initdb()",
+      "id": "server_db_initdb"
     },
     {
       "label": "package.json",
@@ -369,9 +549,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "server_package",
       "community": 0,
-      "norm_label": "package.json"
+      "norm_label": "package.json",
+      "id": "server_package"
     },
     {
       "label": "name",
@@ -379,9 +559,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "server_package_name",
       "community": 0,
-      "norm_label": "name"
+      "norm_label": "name",
+      "id": "server_package_name"
     },
     {
       "label": "version",
@@ -389,9 +569,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "server_package_version",
       "community": 0,
-      "norm_label": "version"
+      "norm_label": "version",
+      "id": "server_package_version"
     },
     {
       "label": "description",
@@ -399,9 +579,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "server_package_description",
       "community": 0,
-      "norm_label": "description"
+      "norm_label": "description",
+      "id": "server_package_description"
     },
     {
       "label": "main",
@@ -409,9 +589,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "server_package_main",
       "community": 0,
-      "norm_label": "main"
+      "norm_label": "main",
+      "id": "server_package_main"
     },
     {
       "label": "type",
@@ -419,9 +599,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "server_package_type",
       "community": 0,
-      "norm_label": "type"
+      "norm_label": "type",
+      "id": "server_package_type"
     },
     {
       "label": "scripts",
@@ -429,9 +609,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "server_package_scripts",
       "community": 0,
-      "norm_label": "scripts"
+      "norm_label": "scripts",
+      "id": "server_package_scripts"
     },
     {
       "label": "start",
@@ -439,9 +619,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "server_package_scripts_start",
       "community": 0,
-      "norm_label": "start"
+      "norm_label": "start",
+      "id": "server_package_scripts_start"
     },
     {
       "label": "dev",
@@ -449,9 +629,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "server_package_scripts_dev",
       "community": 0,
-      "norm_label": "dev"
+      "norm_label": "dev",
+      "id": "server_package_scripts_dev"
     },
     {
       "label": "dependencies",
@@ -459,9 +639,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "server_package_dependencies",
       "community": 0,
-      "norm_label": "dependencies"
+      "norm_label": "dependencies",
+      "id": "server_package_dependencies"
     },
     {
       "label": "@fastify/cors",
@@ -469,9 +649,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "server_package_dependencies_fastify_cors",
       "community": 0,
-      "norm_label": "@fastify/cors"
+      "norm_label": "@fastify/cors",
+      "id": "server_package_dependencies_fastify_cors"
     },
     {
       "label": "better-sqlite3",
@@ -479,9 +659,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "server_package_dependencies_better_sqlite3",
       "community": 0,
-      "norm_label": "better-sqlite3"
+      "norm_label": "better-sqlite3",
+      "id": "server_package_dependencies_better_sqlite3"
     },
     {
       "label": "dotenv",
@@ -489,9 +669,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "server_package_dependencies_dotenv",
       "community": 0,
-      "norm_label": "dotenv"
+      "norm_label": "dotenv",
+      "id": "server_package_dependencies_dotenv"
     },
     {
       "label": "fastify",
@@ -499,9 +679,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "server_package_dependencies_fastify",
       "community": 0,
-      "norm_label": "fastify"
+      "norm_label": "fastify",
+      "id": "server_package_dependencies_fastify"
     },
     {
       "label": "js-tiktoken",
@@ -509,9 +689,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "server_package_dependencies_js_tiktoken",
       "community": 0,
-      "norm_label": "js-tiktoken"
+      "norm_label": "js-tiktoken",
+      "id": "server_package_dependencies_js_tiktoken"
     },
     {
       "label": "devDependencies",
@@ -519,9 +699,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L18",
       "_origin": "ast",
-      "id": "server_package_devdependencies",
       "community": 0,
-      "norm_label": "devdependencies"
+      "norm_label": "devdependencies",
+      "id": "server_package_devdependencies"
     },
     {
       "label": "nodemon",
@@ -529,9 +709,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "server_package_devdependencies_nodemon",
       "community": 0,
-      "norm_label": "nodemon"
+      "norm_label": "nodemon",
+      "id": "server_package_devdependencies_nodemon"
     },
     {
       "label": "server.js",
@@ -539,9 +719,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "server_server",
       "community": 3,
-      "norm_label": "server.js"
+      "norm_label": "server.js",
+      "id": "server_server"
     },
     {
       "label": "app",
@@ -549,9 +729,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "server_server_app",
       "community": 3,
-      "norm_label": "app"
+      "norm_label": "app",
+      "id": "server_server_app"
     },
     {
       "label": "generateApiKey()",
@@ -559,9 +739,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "server_server_generateapikey",
       "community": 3,
-      "norm_label": "generateapikey()"
+      "norm_label": "generateapikey()",
+      "id": "server_server_generateapikey"
     },
     {
       "label": "package.json",
@@ -569,9 +749,9 @@
       "source_file": "package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "package",
       "community": 2,
-      "norm_label": "package.json"
+      "norm_label": "package.json",
+      "id": "package"
     },
     {
       "label": "name",
@@ -579,9 +759,9 @@
       "source_file": "package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "package_name",
       "community": 2,
-      "norm_label": "name"
+      "norm_label": "name",
+      "id": "package_name"
     },
     {
       "label": "private",
@@ -589,9 +769,9 @@
       "source_file": "package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "package_private",
       "community": 2,
-      "norm_label": "private"
+      "norm_label": "private",
+      "id": "package_private"
     },
     {
       "label": "version",
@@ -599,9 +779,9 @@
       "source_file": "package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "package_version",
       "community": 2,
-      "norm_label": "version"
+      "norm_label": "version",
+      "id": "package_version"
     },
     {
       "label": "description",
@@ -609,9 +789,9 @@
       "source_file": "package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "package_description",
       "community": 2,
-      "norm_label": "description"
+      "norm_label": "description",
+      "id": "package_description"
     },
     {
       "label": "workspaces",
@@ -619,9 +799,9 @@
       "source_file": "package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "package_workspaces",
       "community": 2,
-      "norm_label": "workspaces"
+      "norm_label": "workspaces",
+      "id": "package_workspaces"
     },
     {
       "label": "scripts",
@@ -629,9 +809,9 @@
       "source_file": "package.json",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "package_scripts",
       "community": 2,
-      "norm_label": "scripts"
+      "norm_label": "scripts",
+      "id": "package_scripts"
     },
     {
       "label": "dev",
@@ -639,9 +819,9 @@
       "source_file": "package.json",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "package_scripts_dev",
       "community": 2,
-      "norm_label": "dev"
+      "norm_label": "dev",
+      "id": "package_scripts_dev"
     },
     {
       "label": "dev:server",
@@ -649,9 +829,9 @@
       "source_file": "package.json",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "package_scripts_dev_server",
       "community": 2,
-      "norm_label": "dev:server"
+      "norm_label": "dev:server",
+      "id": "package_scripts_dev_server"
     },
     {
       "label": "dev:dashboard",
@@ -659,9 +839,9 @@
       "source_file": "package.json",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "package_scripts_dev_dashboard",
       "community": 2,
-      "norm_label": "dev:dashboard"
+      "norm_label": "dev:dashboard",
+      "id": "package_scripts_dev_dashboard"
     },
     {
       "label": "install:all",
@@ -669,9 +849,9 @@
       "source_file": "package.json",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "package_scripts_install_all",
       "community": 2,
-      "norm_label": "install:all"
+      "norm_label": "install:all",
+      "id": "package_scripts_install_all"
     },
     {
       "label": "index.js",
@@ -679,9 +859,9 @@
       "source_file": "packages/auth/index.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "auth_index",
       "community": 14,
-      "norm_label": "index.js"
+      "norm_label": "index.js",
+      "id": "auth_index"
     },
     {
       "label": "hashApiKey()",
@@ -689,9 +869,9 @@
       "source_file": "packages/auth/index.js",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "auth_index_hashapikey",
       "community": 14,
-      "norm_label": "hashapikey()"
+      "norm_label": "hashapikey()",
+      "id": "auth_index_hashapikey"
     },
     {
       "label": "verifyApiKey()",
@@ -699,9 +879,9 @@
       "source_file": "packages/auth/index.js",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "auth_index_verifyapikey",
       "community": 14,
-      "norm_label": "verifyapikey()"
+      "norm_label": "verifyapikey()",
+      "id": "auth_index_verifyapikey"
     },
     {
       "label": "package.json",
@@ -709,9 +889,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "auth_package",
       "community": 6,
-      "norm_label": "package.json"
+      "norm_label": "package.json",
+      "id": "auth_package"
     },
     {
       "label": "name",
@@ -719,9 +899,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "auth_package_name",
       "community": 6,
-      "norm_label": "name"
+      "norm_label": "name",
+      "id": "auth_package_name"
     },
     {
       "label": "version",
@@ -729,9 +909,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "auth_package_version",
       "community": 6,
-      "norm_label": "version"
+      "norm_label": "version",
+      "id": "auth_package_version"
     },
     {
       "label": "description",
@@ -739,9 +919,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "auth_package_description",
       "community": 6,
-      "norm_label": "description"
+      "norm_label": "description",
+      "id": "auth_package_description"
     },
     {
       "label": "main",
@@ -749,9 +929,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "auth_package_main",
       "community": 6,
-      "norm_label": "main"
+      "norm_label": "main",
+      "id": "auth_package_main"
     },
     {
       "label": "type",
@@ -759,9 +939,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "auth_package_type",
       "community": 6,
-      "norm_label": "type"
+      "norm_label": "type",
+      "id": "auth_package_type"
     },
     {
       "label": "dependencies",
@@ -769,9 +949,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "auth_package_dependencies",
       "community": 6,
-      "norm_label": "dependencies"
+      "norm_label": "dependencies",
+      "id": "auth_package_dependencies"
     },
     {
       "label": "index.js",
@@ -779,9 +959,9 @@
       "source_file": "packages/solas-sdk/index.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "solas_sdk_index",
       "community": 11,
-      "norm_label": "index.js"
+      "norm_label": "index.js",
+      "id": "solas_sdk_index"
     },
     {
       "label": "SolasClient",
@@ -789,9 +969,9 @@
       "source_file": "packages/solas-sdk/index.js",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "solas_sdk_index_solasclient",
       "community": 11,
-      "norm_label": "solasclient"
+      "norm_label": "solasclient",
+      "id": "solas_sdk_index_solasclient"
     },
     {
       "label": ".constructor()",
@@ -799,9 +979,9 @@
       "source_file": "packages/solas-sdk/index.js",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "solas_sdk_index_solasclient_constructor",
       "community": 11,
-      "norm_label": ".constructor()"
+      "norm_label": ".constructor()",
+      "id": "solas_sdk_index_solasclient_constructor"
     },
     {
       "label": ".getOpenAIConfig()",
@@ -809,9 +989,9 @@
       "source_file": "packages/solas-sdk/index.js",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "solas_sdk_index_solasclient_getopenaiconfig",
       "community": 11,
-      "norm_label": ".getopenaiconfig()"
+      "norm_label": ".getopenaiconfig()",
+      "id": "solas_sdk_index_solasclient_getopenaiconfig"
     },
     {
       "label": ".getBalance()",
@@ -819,9 +999,9 @@
       "source_file": "packages/solas-sdk/index.js",
       "source_location": "L30",
       "_origin": "ast",
-      "id": "solas_sdk_index_solasclient_getbalance",
       "community": 11,
-      "norm_label": ".getbalance()"
+      "norm_label": ".getbalance()",
+      "id": "solas_sdk_index_solasclient_getbalance"
     },
     {
       "label": "package.json",
@@ -829,9 +1009,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "solas_sdk_package",
       "community": 7,
-      "norm_label": "package.json"
+      "norm_label": "package.json",
+      "id": "solas_sdk_package"
     },
     {
       "label": "name",
@@ -839,9 +1019,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "solas_sdk_package_name",
       "community": 7,
-      "norm_label": "name"
+      "norm_label": "name",
+      "id": "solas_sdk_package_name"
     },
     {
       "label": "version",
@@ -849,9 +1029,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "solas_sdk_package_version",
       "community": 7,
-      "norm_label": "version"
+      "norm_label": "version",
+      "id": "solas_sdk_package_version"
     },
     {
       "label": "description",
@@ -859,9 +1039,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "solas_sdk_package_description",
       "community": 7,
-      "norm_label": "description"
+      "norm_label": "description",
+      "id": "solas_sdk_package_description"
     },
     {
       "label": "main",
@@ -869,9 +1049,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "solas_sdk_package_main",
       "community": 7,
-      "norm_label": "main"
+      "norm_label": "main",
+      "id": "solas_sdk_package_main"
     },
     {
       "label": "type",
@@ -879,9 +1059,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "solas_sdk_package_type",
       "community": 7,
-      "norm_label": "type"
+      "norm_label": "type",
+      "id": "solas_sdk_package_type"
     },
     {
       "label": "dependencies",
@@ -889,9 +1069,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "solas_sdk_package_dependencies",
       "community": 7,
-      "norm_label": "dependencies"
+      "norm_label": "dependencies",
+      "id": "solas_sdk_package_dependencies"
     },
     {
       "label": "index.js",
@@ -899,9 +1079,9 @@
       "source_file": "packages/stripe-sync/index.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "stripe_sync_index",
       "community": 13,
-      "norm_label": "index.js"
+      "norm_label": "index.js",
+      "id": "stripe_sync_index"
     },
     {
       "label": "StripeSync",
@@ -909,9 +1089,9 @@
       "source_file": "packages/stripe-sync/index.js",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "stripe_sync_index_stripesync",
       "community": 13,
-      "norm_label": "stripesync"
+      "norm_label": "stripesync",
+      "id": "stripe_sync_index_stripesync"
     },
     {
       "label": ".constructor()",
@@ -919,9 +1099,9 @@
       "source_file": "packages/stripe-sync/index.js",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "stripe_sync_index_stripesync_constructor",
       "community": 13,
-      "norm_label": ".constructor()"
+      "norm_label": ".constructor()",
+      "id": "stripe_sync_index_stripesync_constructor"
     },
     {
       "label": ".handleWebhook()",
@@ -929,9 +1109,9 @@
       "source_file": "packages/stripe-sync/index.js",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "stripe_sync_index_stripesync_handlewebhook",
       "community": 13,
-      "norm_label": ".handlewebhook()"
+      "norm_label": ".handlewebhook()",
+      "id": "stripe_sync_index_stripesync_handlewebhook"
     },
     {
       "label": "package.json",
@@ -939,9 +1119,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "stripe_sync_package",
       "community": 5,
-      "norm_label": "package.json"
+      "norm_label": "package.json",
+      "id": "stripe_sync_package"
     },
     {
       "label": "name",
@@ -949,9 +1129,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "stripe_sync_package_name",
       "community": 5,
-      "norm_label": "name"
+      "norm_label": "name",
+      "id": "stripe_sync_package_name"
     },
     {
       "label": "version",
@@ -959,9 +1139,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "stripe_sync_package_version",
       "community": 5,
-      "norm_label": "version"
+      "norm_label": "version",
+      "id": "stripe_sync_package_version"
     },
     {
       "label": "description",
@@ -969,9 +1149,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "stripe_sync_package_description",
       "community": 5,
-      "norm_label": "description"
+      "norm_label": "description",
+      "id": "stripe_sync_package_description"
     },
     {
       "label": "main",
@@ -979,9 +1159,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "stripe_sync_package_main",
       "community": 5,
-      "norm_label": "main"
+      "norm_label": "main",
+      "id": "stripe_sync_package_main"
     },
     {
       "label": "type",
@@ -989,9 +1169,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "stripe_sync_package_type",
       "community": 5,
-      "norm_label": "type"
+      "norm_label": "type",
+      "id": "stripe_sync_package_type"
     },
     {
       "label": "dependencies",
@@ -999,9 +1179,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "stripe_sync_package_dependencies",
       "community": 5,
-      "norm_label": "dependencies"
+      "norm_label": "dependencies",
+      "id": "stripe_sync_package_dependencies"
     },
     {
       "label": "stripe",
@@ -1009,9 +1189,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "stripe_sync_package_dependencies_stripe",
       "community": 5,
-      "norm_label": "stripe"
+      "norm_label": "stripe",
+      "id": "stripe_sync_package_dependencies_stripe"
     },
     {
       "label": "dev.js",
@@ -1019,9 +1199,9 @@
       "source_file": "scripts/dev.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "scripts_dev",
       "community": 10,
-      "norm_label": "dev.js"
+      "norm_label": "dev.js",
+      "id": "scripts_dev"
     },
     {
       "label": "__filename",
@@ -1029,9 +1209,9 @@
       "source_file": "scripts/dev.js",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "scripts_dev_filename",
       "community": 10,
-      "norm_label": "__filename"
+      "norm_label": "__filename",
+      "id": "scripts_dev_filename"
     },
     {
       "label": "__dirname",
@@ -1039,9 +1219,9 @@
       "source_file": "scripts/dev.js",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "scripts_dev_dirname",
       "community": 10,
-      "norm_label": "__dirname"
+      "norm_label": "__dirname",
+      "id": "scripts_dev_dirname"
     },
     {
       "label": "rootDir",
@@ -1049,9 +1229,9 @@
       "source_file": "scripts/dev.js",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "scripts_dev_rootdir",
       "community": 10,
-      "norm_label": "rootdir"
+      "norm_label": "rootdir",
+      "id": "scripts_dev_rootdir"
     },
     {
       "label": "server",
@@ -1059,9 +1239,9 @@
       "source_file": "scripts/dev.js",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "scripts_dev_server",
       "community": 10,
-      "norm_label": "server"
+      "norm_label": "server",
+      "id": "scripts_dev_server"
     },
     {
       "label": "dashboard",
@@ -1069,9 +1249,9 @@
       "source_file": "scripts/dev.js",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "scripts_dev_dashboard",
       "community": 10,
-      "norm_label": "dashboard"
+      "norm_label": "dashboard",
+      "id": "scripts_dev_dashboard"
     },
     {
       "label": "README.md",
@@ -1079,9 +1259,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "readme",
       "community": 4,
-      "norm_label": "readme.md"
+      "norm_label": "readme.md",
+      "id": "readme"
     },
     {
       "label": "Solas Billing",
@@ -1089,9 +1269,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "readme_solas_billing",
       "community": 4,
-      "norm_label": "solas billing"
+      "norm_label": "solas billing",
+      "id": "readme_solas_billing"
     },
     {
       "label": "\u26a1 Key Features",
@@ -1099,9 +1279,9 @@
       "source_file": "README.md",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "readme_key_features",
       "community": 4,
-      "norm_label": "\u26a1 key features"
+      "norm_label": "\u26a1 key features",
+      "id": "readme_key_features"
     },
     {
       "label": "\ud83d\udcc2 Codebase Structure",
@@ -1109,9 +1289,9 @@
       "source_file": "README.md",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "readme_codebase_structure",
       "community": 4,
-      "norm_label": "\ud83d\udcc2 codebase structure"
+      "norm_label": "\ud83d\udcc2 codebase structure",
+      "id": "readme_codebase_structure"
     },
     {
       "label": "\ud83d\udee0\ufe0f Getting Started",
@@ -1119,9 +1299,9 @@
       "source_file": "README.md",
       "source_location": "L37",
       "_origin": "ast",
-      "id": "readme_getting_started",
       "community": 4,
-      "norm_label": "\ud83d\udee0\ufe0f getting started"
+      "norm_label": "\ud83d\udee0\ufe0f getting started",
+      "id": "readme_getting_started"
     },
     {
       "label": "1. Start the Proxy Server",
@@ -1129,9 +1309,9 @@
       "source_file": "README.md",
       "source_location": "L39",
       "_origin": "ast",
-      "id": "readme_1_start_the_proxy_server",
       "community": 4,
-      "norm_label": "1. start the proxy server"
+      "norm_label": "1. start the proxy server",
+      "id": "readme_1_start_the_proxy_server"
     },
     {
       "label": "2. Start the Admin Dashboard",
@@ -1139,9 +1319,9 @@
       "source_file": "README.md",
       "source_location": "L48",
       "_origin": "ast",
-      "id": "readme_2_start_the_admin_dashboard",
       "community": 4,
-      "norm_label": "2. start the admin dashboard"
+      "norm_label": "2. start the admin dashboard",
+      "id": "readme_2_start_the_admin_dashboard"
     },
     {
       "label": "\ud83d\ude80 How to use (Client Example)",
@@ -1149,9 +1329,9 @@
       "source_file": "README.md",
       "source_location": "L59",
       "_origin": "ast",
-      "id": "readme_how_to_use_client_example",
       "community": 4,
-      "norm_label": "\ud83d\ude80 how to use (client example)"
+      "norm_label": "\ud83d\ude80 how to use (client example)",
+      "id": "readme_how_to_use_client_example"
     },
     {
       "label": "README.md",
@@ -1159,9 +1339,9 @@
       "source_file": "apps/dashboard/README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "dashboard_readme",
       "community": 12,
-      "norm_label": "readme.md"
+      "norm_label": "readme.md",
+      "id": "dashboard_readme"
     },
     {
       "label": "React + Vite",
@@ -1169,9 +1349,9 @@
       "source_file": "apps/dashboard/README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "dashboard_readme_react_vite",
       "community": 12,
-      "norm_label": "react + vite"
+      "norm_label": "react + vite",
+      "id": "dashboard_readme_react_vite"
     },
     {
       "label": "React Compiler",
@@ -1179,9 +1359,9 @@
       "source_file": "apps/dashboard/README.md",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "dashboard_readme_react_compiler",
       "community": 12,
-      "norm_label": "react compiler"
+      "norm_label": "react compiler",
+      "id": "dashboard_readme_react_compiler"
     },
     {
       "label": "Expanding the Oxlint configuration",
@@ -1189,21 +1369,161 @@
       "source_file": "apps/dashboard/README.md",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "dashboard_readme_expanding_the_oxlint_configuration",
       "community": 12,
-      "norm_label": "expanding the oxlint configuration"
+      "norm_label": "expanding the oxlint configuration",
+      "id": "dashboard_readme_expanding_the_oxlint_configuration"
     }
   ],
   "links": [
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "packages/ksuid/index.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "ksuid_index",
+      "target": "ksuid_index_generateksuid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/ksuid/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "ksuid_package",
+      "target": "ksuid_package_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/ksuid/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "ksuid_package",
+      "target": "ksuid_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/ksuid/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "ksuid_package",
+      "target": "ksuid_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/ksuid/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "ksuid_package",
+      "target": "ksuid_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/ksuid/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "ksuid_package",
+      "target": "ksuid_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/logging/index.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "logging_index",
+      "target": "logging_index_logerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/logging/index.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "logging_index",
+      "target": "logging_index_loginfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/logging/index.js",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "logging_index",
+      "target": "logging_index_logwarn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/logging/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "logging_package",
+      "target": "logging_package_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/logging/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "logging_package",
+      "target": "logging_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/logging/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "logging_package",
+      "target": "logging_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/logging/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "logging_package",
+      "target": "logging_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/logging/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "logging_package",
+      "target": "logging_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "apps/dashboard/.oxlintrc.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_oxlintrc",
-      "target": "dashboard_oxlintrc_plugins",
-      "confidence_score": 1.0
+      "target": "dashboard_oxlintrc_plugins"
     },
     {
       "relation": "contains",
@@ -1211,9 +1531,9 @@
       "source_file": "apps/dashboard/.oxlintrc.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_oxlintrc",
-      "target": "dashboard_oxlintrc_rules",
-      "confidence_score": 1.0
+      "target": "dashboard_oxlintrc_rules"
     },
     {
       "relation": "contains",
@@ -1221,9 +1541,9 @@
       "source_file": "apps/dashboard/.oxlintrc.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_oxlintrc",
-      "target": "dashboard_oxlintrc_schema",
-      "confidence_score": 1.0
+      "target": "dashboard_oxlintrc_schema"
     },
     {
       "relation": "contains",
@@ -1231,9 +1551,9 @@
       "source_file": "apps/dashboard/.oxlintrc.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_oxlintrc_rules",
-      "target": "dashboard_oxlintrc_rules_react_only_export_components",
-      "confidence_score": 1.0
+      "target": "dashboard_oxlintrc_rules_react_only_export_components"
     },
     {
       "relation": "contains",
@@ -1241,9 +1561,9 @@
       "source_file": "apps/dashboard/.oxlintrc.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_oxlintrc_rules",
-      "target": "dashboard_oxlintrc_rules_react_rules_of_hooks",
-      "confidence_score": 1.0
+      "target": "dashboard_oxlintrc_rules_react_rules_of_hooks"
     },
     {
       "relation": "contains",
@@ -1251,9 +1571,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package",
-      "target": "dashboard_package_dependencies",
-      "confidence_score": 1.0
+      "target": "dashboard_package_dependencies"
     },
     {
       "relation": "contains",
@@ -1261,9 +1581,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package",
-      "target": "dashboard_package_devdependencies",
-      "confidence_score": 1.0
+      "target": "dashboard_package_devdependencies"
     },
     {
       "relation": "contains",
@@ -1271,9 +1591,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package",
-      "target": "dashboard_package_name",
-      "confidence_score": 1.0
+      "target": "dashboard_package_name"
     },
     {
       "relation": "contains",
@@ -1281,9 +1601,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package",
-      "target": "dashboard_package_private",
-      "confidence_score": 1.0
+      "target": "dashboard_package_private"
     },
     {
       "relation": "contains",
@@ -1291,9 +1611,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package",
-      "target": "dashboard_package_scripts",
-      "confidence_score": 1.0
+      "target": "dashboard_package_scripts"
     },
     {
       "relation": "contains",
@@ -1301,9 +1621,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package",
-      "target": "dashboard_package_type",
-      "confidence_score": 1.0
+      "target": "dashboard_package_type"
     },
     {
       "relation": "contains",
@@ -1311,9 +1631,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package",
-      "target": "dashboard_package_version",
-      "confidence_score": 1.0
+      "target": "dashboard_package_version"
     },
     {
       "relation": "contains",
@@ -1321,9 +1641,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package_scripts",
-      "target": "dashboard_package_scripts_build",
-      "confidence_score": 1.0
+      "target": "dashboard_package_scripts_build"
     },
     {
       "relation": "contains",
@@ -1331,9 +1651,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package_scripts",
-      "target": "dashboard_package_scripts_dev",
-      "confidence_score": 1.0
+      "target": "dashboard_package_scripts_dev"
     },
     {
       "relation": "contains",
@@ -1341,9 +1661,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package_scripts",
-      "target": "dashboard_package_scripts_lint",
-      "confidence_score": 1.0
+      "target": "dashboard_package_scripts_lint"
     },
     {
       "relation": "contains",
@@ -1351,9 +1671,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package_scripts",
-      "target": "dashboard_package_scripts_preview",
-      "confidence_score": 1.0
+      "target": "dashboard_package_scripts_preview"
     },
     {
       "relation": "contains",
@@ -1361,9 +1681,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package_dependencies",
-      "target": "dashboard_package_dependencies_lucide_react",
-      "confidence_score": 1.0
+      "target": "dashboard_package_dependencies_lucide_react"
     },
     {
       "relation": "contains",
@@ -1371,9 +1691,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package_dependencies",
-      "target": "dashboard_package_dependencies_react",
-      "confidence_score": 1.0
+      "target": "dashboard_package_dependencies_react"
     },
     {
       "relation": "contains",
@@ -1381,9 +1701,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package_dependencies",
-      "target": "dashboard_package_dependencies_react_dom",
-      "confidence_score": 1.0
+      "target": "dashboard_package_dependencies_react_dom"
     },
     {
       "relation": "contains",
@@ -1391,9 +1711,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package_devdependencies",
-      "target": "dashboard_package_devdependencies_oxlint",
-      "confidence_score": 1.0
+      "target": "dashboard_package_devdependencies_oxlint"
     },
     {
       "relation": "contains",
@@ -1401,9 +1721,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package_devdependencies",
-      "target": "dashboard_package_devdependencies_types_react",
-      "confidence_score": 1.0
+      "target": "dashboard_package_devdependencies_types_react"
     },
     {
       "relation": "contains",
@@ -1411,9 +1731,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package_devdependencies",
-      "target": "dashboard_package_devdependencies_types_react_dom",
-      "confidence_score": 1.0
+      "target": "dashboard_package_devdependencies_types_react_dom"
     },
     {
       "relation": "contains",
@@ -1421,9 +1741,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package_devdependencies",
-      "target": "dashboard_package_devdependencies_vite",
-      "confidence_score": 1.0
+      "target": "dashboard_package_devdependencies_vite"
     },
     {
       "relation": "contains",
@@ -1431,9 +1751,9 @@
       "source_file": "apps/dashboard/package.json",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_package_devdependencies",
-      "target": "dashboard_package_devdependencies_vitejs_plugin_react",
-      "confidence_score": 1.0
+      "target": "dashboard_package_devdependencies_vitejs_plugin_react"
     },
     {
       "relation": "contains",
@@ -1441,9 +1761,9 @@
       "source_file": "apps/dashboard/src/App.jsx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app",
-      "target": "src_app_app",
-      "confidence_score": 1.0
+      "target": "src_app_app"
     },
     {
       "relation": "imports_from",
@@ -1452,9 +1772,9 @@
       "source_file": "apps/dashboard/src/main.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_main",
-      "target": "src_app",
-      "confidence_score": 1.0
+      "target": "src_app"
     },
     {
       "relation": "imports",
@@ -1463,9 +1783,9 @@
       "source_file": "apps/dashboard/src/main.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_main",
-      "target": "src_app_app",
-      "confidence_score": 1.0
+      "target": "src_app_app"
     },
     {
       "relation": "contains",
@@ -1473,9 +1793,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_db",
-      "target": "server_db_db",
-      "confidence_score": 1.0
+      "target": "server_db_db"
     },
     {
       "relation": "contains",
@@ -1483,9 +1803,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_db",
-      "target": "server_db_dbpath",
-      "confidence_score": 1.0
+      "target": "server_db_dbpath"
     },
     {
       "relation": "contains",
@@ -1493,9 +1813,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_db",
-      "target": "server_db_dirname",
-      "confidence_score": 1.0
+      "target": "server_db_dirname"
     },
     {
       "relation": "contains",
@@ -1503,9 +1823,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_db",
-      "target": "server_db_filename",
-      "confidence_score": 1.0
+      "target": "server_db_filename"
     },
     {
       "relation": "contains",
@@ -1513,9 +1833,9 @@
       "source_file": "apps/server/db.js",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_db",
-      "target": "server_db_initdb",
-      "confidence_score": 1.0
+      "target": "server_db_initdb"
     },
     {
       "relation": "imports_from",
@@ -1524,9 +1844,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_server",
-      "target": "server_db",
-      "confidence_score": 1.0
+      "target": "server_db"
     },
     {
       "relation": "imports",
@@ -1535,9 +1855,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_server",
-      "target": "server_db_db",
-      "confidence_score": 1.0
+      "target": "server_db_db"
     },
     {
       "relation": "imports",
@@ -1546,9 +1866,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_server",
-      "target": "server_db_initdb",
-      "confidence_score": 1.0
+      "target": "server_db_initdb"
     },
     {
       "relation": "contains",
@@ -1556,9 +1876,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_package",
-      "target": "server_package_dependencies",
-      "confidence_score": 1.0
+      "target": "server_package_dependencies"
     },
     {
       "relation": "contains",
@@ -1566,9 +1886,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_package",
-      "target": "server_package_description",
-      "confidence_score": 1.0
+      "target": "server_package_description"
     },
     {
       "relation": "contains",
@@ -1576,9 +1896,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_package",
-      "target": "server_package_devdependencies",
-      "confidence_score": 1.0
+      "target": "server_package_devdependencies"
     },
     {
       "relation": "contains",
@@ -1586,9 +1906,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_package",
-      "target": "server_package_main",
-      "confidence_score": 1.0
+      "target": "server_package_main"
     },
     {
       "relation": "contains",
@@ -1596,9 +1916,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_package",
-      "target": "server_package_name",
-      "confidence_score": 1.0
+      "target": "server_package_name"
     },
     {
       "relation": "contains",
@@ -1606,9 +1926,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_package",
-      "target": "server_package_scripts",
-      "confidence_score": 1.0
+      "target": "server_package_scripts"
     },
     {
       "relation": "contains",
@@ -1616,9 +1936,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_package",
-      "target": "server_package_type",
-      "confidence_score": 1.0
+      "target": "server_package_type"
     },
     {
       "relation": "contains",
@@ -1626,9 +1946,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_package",
-      "target": "server_package_version",
-      "confidence_score": 1.0
+      "target": "server_package_version"
     },
     {
       "relation": "contains",
@@ -1636,9 +1956,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_package_scripts",
-      "target": "server_package_scripts_dev",
-      "confidence_score": 1.0
+      "target": "server_package_scripts_dev"
     },
     {
       "relation": "contains",
@@ -1646,9 +1966,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_package_scripts",
-      "target": "server_package_scripts_start",
-      "confidence_score": 1.0
+      "target": "server_package_scripts_start"
     },
     {
       "relation": "contains",
@@ -1656,9 +1976,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_package_dependencies",
-      "target": "server_package_dependencies_better_sqlite3",
-      "confidence_score": 1.0
+      "target": "server_package_dependencies_better_sqlite3"
     },
     {
       "relation": "contains",
@@ -1666,9 +1986,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_package_dependencies",
-      "target": "server_package_dependencies_dotenv",
-      "confidence_score": 1.0
+      "target": "server_package_dependencies_dotenv"
     },
     {
       "relation": "contains",
@@ -1676,9 +1996,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_package_dependencies",
-      "target": "server_package_dependencies_fastify",
-      "confidence_score": 1.0
+      "target": "server_package_dependencies_fastify"
     },
     {
       "relation": "contains",
@@ -1686,9 +2006,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_package_dependencies",
-      "target": "server_package_dependencies_fastify_cors",
-      "confidence_score": 1.0
+      "target": "server_package_dependencies_fastify_cors"
     },
     {
       "relation": "contains",
@@ -1696,9 +2016,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_package_dependencies",
-      "target": "server_package_dependencies_js_tiktoken",
-      "confidence_score": 1.0
+      "target": "server_package_dependencies_js_tiktoken"
     },
     {
       "relation": "contains",
@@ -1706,9 +2026,9 @@
       "source_file": "apps/server/package.json",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_package_devdependencies",
-      "target": "server_package_devdependencies_nodemon",
-      "confidence_score": 1.0
+      "target": "server_package_devdependencies_nodemon"
     },
     {
       "relation": "contains",
@@ -1716,9 +2036,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_server",
-      "target": "server_server_app",
-      "confidence_score": 1.0
+      "target": "server_server_app"
     },
     {
       "relation": "contains",
@@ -1726,9 +2046,9 @@
       "source_file": "apps/server/server.js",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_server",
-      "target": "server_server_generateapikey",
-      "confidence_score": 1.0
+      "target": "server_server_generateapikey"
     },
     {
       "relation": "contains",
@@ -1736,9 +2056,9 @@
       "source_file": "package.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_description",
-      "confidence_score": 1.0
+      "target": "package_description"
     },
     {
       "relation": "contains",
@@ -1746,9 +2066,9 @@
       "source_file": "package.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_name",
-      "confidence_score": 1.0
+      "target": "package_name"
     },
     {
       "relation": "contains",
@@ -1756,9 +2076,9 @@
       "source_file": "package.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_private",
-      "confidence_score": 1.0
+      "target": "package_private"
     },
     {
       "relation": "contains",
@@ -1766,9 +2086,9 @@
       "source_file": "package.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_scripts",
-      "confidence_score": 1.0
+      "target": "package_scripts"
     },
     {
       "relation": "contains",
@@ -1776,9 +2096,9 @@
       "source_file": "package.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_version",
-      "confidence_score": 1.0
+      "target": "package_version"
     },
     {
       "relation": "contains",
@@ -1786,9 +2106,9 @@
       "source_file": "package.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_workspaces",
-      "confidence_score": 1.0
+      "target": "package_workspaces"
     },
     {
       "relation": "contains",
@@ -1796,9 +2116,9 @@
       "source_file": "package.json",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_scripts",
-      "target": "package_scripts_dev",
-      "confidence_score": 1.0
+      "target": "package_scripts_dev"
     },
     {
       "relation": "contains",
@@ -1806,9 +2126,9 @@
       "source_file": "package.json",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_scripts",
-      "target": "package_scripts_dev_dashboard",
-      "confidence_score": 1.0
+      "target": "package_scripts_dev_dashboard"
     },
     {
       "relation": "contains",
@@ -1816,9 +2136,9 @@
       "source_file": "package.json",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_scripts",
-      "target": "package_scripts_dev_server",
-      "confidence_score": 1.0
+      "target": "package_scripts_dev_server"
     },
     {
       "relation": "contains",
@@ -1826,9 +2146,9 @@
       "source_file": "package.json",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_scripts",
-      "target": "package_scripts_install_all",
-      "confidence_score": 1.0
+      "target": "package_scripts_install_all"
     },
     {
       "relation": "contains",
@@ -1836,9 +2156,9 @@
       "source_file": "packages/auth/index.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_index",
-      "target": "auth_index_hashapikey",
-      "confidence_score": 1.0
+      "target": "auth_index_hashapikey"
     },
     {
       "relation": "contains",
@@ -1846,9 +2166,9 @@
       "source_file": "packages/auth/index.js",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_index",
-      "target": "auth_index_verifyapikey",
-      "confidence_score": 1.0
+      "target": "auth_index_verifyapikey"
     },
     {
       "relation": "calls",
@@ -1857,9 +2177,9 @@
       "source_file": "packages/auth/index.js",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_index_verifyapikey",
-      "target": "auth_index_hashapikey",
-      "confidence_score": 1.0
+      "target": "auth_index_hashapikey"
     },
     {
       "relation": "contains",
@@ -1867,9 +2187,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_package",
-      "target": "auth_package_dependencies",
-      "confidence_score": 1.0
+      "target": "auth_package_dependencies"
     },
     {
       "relation": "contains",
@@ -1877,9 +2197,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_package",
-      "target": "auth_package_description",
-      "confidence_score": 1.0
+      "target": "auth_package_description"
     },
     {
       "relation": "contains",
@@ -1887,9 +2207,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_package",
-      "target": "auth_package_main",
-      "confidence_score": 1.0
+      "target": "auth_package_main"
     },
     {
       "relation": "contains",
@@ -1897,9 +2217,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_package",
-      "target": "auth_package_name",
-      "confidence_score": 1.0
+      "target": "auth_package_name"
     },
     {
       "relation": "contains",
@@ -1907,9 +2227,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_package",
-      "target": "auth_package_type",
-      "confidence_score": 1.0
+      "target": "auth_package_type"
     },
     {
       "relation": "contains",
@@ -1917,9 +2237,9 @@
       "source_file": "packages/auth/package.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_package",
-      "target": "auth_package_version",
-      "confidence_score": 1.0
+      "target": "auth_package_version"
     },
     {
       "relation": "contains",
@@ -1927,9 +2247,9 @@
       "source_file": "packages/solas-sdk/index.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "solas_sdk_index",
-      "target": "solas_sdk_index_solasclient",
-      "confidence_score": 1.0
+      "target": "solas_sdk_index_solasclient"
     },
     {
       "relation": "method",
@@ -1937,9 +2257,9 @@
       "source_file": "packages/solas-sdk/index.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "solas_sdk_index_solasclient",
-      "target": "solas_sdk_index_solasclient_constructor",
-      "confidence_score": 1.0
+      "target": "solas_sdk_index_solasclient_constructor"
     },
     {
       "relation": "method",
@@ -1947,9 +2267,9 @@
       "source_file": "packages/solas-sdk/index.js",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "solas_sdk_index_solasclient",
-      "target": "solas_sdk_index_solasclient_getbalance",
-      "confidence_score": 1.0
+      "target": "solas_sdk_index_solasclient_getbalance"
     },
     {
       "relation": "method",
@@ -1957,9 +2277,9 @@
       "source_file": "packages/solas-sdk/index.js",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "solas_sdk_index_solasclient",
-      "target": "solas_sdk_index_solasclient_getopenaiconfig",
-      "confidence_score": 1.0
+      "target": "solas_sdk_index_solasclient_getopenaiconfig"
     },
     {
       "relation": "contains",
@@ -1967,9 +2287,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "solas_sdk_package",
-      "target": "solas_sdk_package_dependencies",
-      "confidence_score": 1.0
+      "target": "solas_sdk_package_dependencies"
     },
     {
       "relation": "contains",
@@ -1977,9 +2297,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "solas_sdk_package",
-      "target": "solas_sdk_package_description",
-      "confidence_score": 1.0
+      "target": "solas_sdk_package_description"
     },
     {
       "relation": "contains",
@@ -1987,9 +2307,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "solas_sdk_package",
-      "target": "solas_sdk_package_main",
-      "confidence_score": 1.0
+      "target": "solas_sdk_package_main"
     },
     {
       "relation": "contains",
@@ -1997,9 +2317,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "solas_sdk_package",
-      "target": "solas_sdk_package_name",
-      "confidence_score": 1.0
+      "target": "solas_sdk_package_name"
     },
     {
       "relation": "contains",
@@ -2007,9 +2327,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "solas_sdk_package",
-      "target": "solas_sdk_package_type",
-      "confidence_score": 1.0
+      "target": "solas_sdk_package_type"
     },
     {
       "relation": "contains",
@@ -2017,9 +2337,9 @@
       "source_file": "packages/solas-sdk/package.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "solas_sdk_package",
-      "target": "solas_sdk_package_version",
-      "confidence_score": 1.0
+      "target": "solas_sdk_package_version"
     },
     {
       "relation": "contains",
@@ -2027,9 +2347,9 @@
       "source_file": "packages/stripe-sync/index.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stripe_sync_index",
-      "target": "stripe_sync_index_stripesync",
-      "confidence_score": 1.0
+      "target": "stripe_sync_index_stripesync"
     },
     {
       "relation": "method",
@@ -2037,9 +2357,9 @@
       "source_file": "packages/stripe-sync/index.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stripe_sync_index_stripesync",
-      "target": "stripe_sync_index_stripesync_constructor",
-      "confidence_score": 1.0
+      "target": "stripe_sync_index_stripesync_constructor"
     },
     {
       "relation": "method",
@@ -2047,9 +2367,9 @@
       "source_file": "packages/stripe-sync/index.js",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stripe_sync_index_stripesync",
-      "target": "stripe_sync_index_stripesync_handlewebhook",
-      "confidence_score": 1.0
+      "target": "stripe_sync_index_stripesync_handlewebhook"
     },
     {
       "relation": "contains",
@@ -2057,9 +2377,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stripe_sync_package",
-      "target": "stripe_sync_package_dependencies",
-      "confidence_score": 1.0
+      "target": "stripe_sync_package_dependencies"
     },
     {
       "relation": "contains",
@@ -2067,9 +2387,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stripe_sync_package",
-      "target": "stripe_sync_package_description",
-      "confidence_score": 1.0
+      "target": "stripe_sync_package_description"
     },
     {
       "relation": "contains",
@@ -2077,9 +2397,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stripe_sync_package",
-      "target": "stripe_sync_package_main",
-      "confidence_score": 1.0
+      "target": "stripe_sync_package_main"
     },
     {
       "relation": "contains",
@@ -2087,9 +2407,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stripe_sync_package",
-      "target": "stripe_sync_package_name",
-      "confidence_score": 1.0
+      "target": "stripe_sync_package_name"
     },
     {
       "relation": "contains",
@@ -2097,9 +2417,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stripe_sync_package",
-      "target": "stripe_sync_package_type",
-      "confidence_score": 1.0
+      "target": "stripe_sync_package_type"
     },
     {
       "relation": "contains",
@@ -2107,9 +2427,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stripe_sync_package",
-      "target": "stripe_sync_package_version",
-      "confidence_score": 1.0
+      "target": "stripe_sync_package_version"
     },
     {
       "relation": "contains",
@@ -2117,9 +2437,9 @@
       "source_file": "packages/stripe-sync/package.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stripe_sync_package_dependencies",
-      "target": "stripe_sync_package_dependencies_stripe",
-      "confidence_score": 1.0
+      "target": "stripe_sync_package_dependencies_stripe"
     },
     {
       "relation": "contains",
@@ -2127,9 +2447,9 @@
       "source_file": "scripts/dev.js",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_dev",
-      "target": "scripts_dev_dashboard",
-      "confidence_score": 1.0
+      "target": "scripts_dev_dashboard"
     },
     {
       "relation": "contains",
@@ -2137,9 +2457,9 @@
       "source_file": "scripts/dev.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_dev",
-      "target": "scripts_dev_dirname",
-      "confidence_score": 1.0
+      "target": "scripts_dev_dirname"
     },
     {
       "relation": "contains",
@@ -2147,9 +2467,9 @@
       "source_file": "scripts/dev.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_dev",
-      "target": "scripts_dev_filename",
-      "confidence_score": 1.0
+      "target": "scripts_dev_filename"
     },
     {
       "relation": "contains",
@@ -2157,9 +2477,9 @@
       "source_file": "scripts/dev.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_dev",
-      "target": "scripts_dev_rootdir",
-      "confidence_score": 1.0
+      "target": "scripts_dev_rootdir"
     },
     {
       "relation": "contains",
@@ -2167,9 +2487,9 @@
       "source_file": "scripts/dev.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_dev",
-      "target": "scripts_dev_server",
-      "confidence_score": 1.0
+      "target": "scripts_dev_server"
     },
     {
       "relation": "contains",
@@ -2177,9 +2497,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_solas_billing",
-      "confidence_score": 1.0
+      "target": "readme_solas_billing"
     },
     {
       "relation": "contains",
@@ -2187,9 +2507,9 @@
       "source_file": "README.md",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_solas_billing",
-      "target": "readme_codebase_structure",
-      "confidence_score": 1.0
+      "target": "readme_codebase_structure"
     },
     {
       "relation": "contains",
@@ -2197,9 +2517,9 @@
       "source_file": "README.md",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_solas_billing",
-      "target": "readme_getting_started",
-      "confidence_score": 1.0
+      "target": "readme_getting_started"
     },
     {
       "relation": "contains",
@@ -2207,9 +2527,9 @@
       "source_file": "README.md",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_solas_billing",
-      "target": "readme_how_to_use_client_example",
-      "confidence_score": 1.0
+      "target": "readme_how_to_use_client_example"
     },
     {
       "relation": "contains",
@@ -2217,9 +2537,9 @@
       "source_file": "README.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_solas_billing",
-      "target": "readme_key_features",
-      "confidence_score": 1.0
+      "target": "readme_key_features"
     },
     {
       "relation": "contains",
@@ -2227,9 +2547,9 @@
       "source_file": "README.md",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_getting_started",
-      "target": "readme_1_start_the_proxy_server",
-      "confidence_score": 1.0
+      "target": "readme_1_start_the_proxy_server"
     },
     {
       "relation": "contains",
@@ -2237,9 +2557,9 @@
       "source_file": "README.md",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_getting_started",
-      "target": "readme_2_start_the_admin_dashboard",
-      "confidence_score": 1.0
+      "target": "readme_2_start_the_admin_dashboard"
     },
     {
       "relation": "contains",
@@ -2247,9 +2567,9 @@
       "source_file": "apps/dashboard/README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_readme",
-      "target": "dashboard_readme_react_vite",
-      "confidence_score": 1.0
+      "target": "dashboard_readme_react_vite"
     },
     {
       "relation": "contains",
@@ -2257,9 +2577,9 @@
       "source_file": "apps/dashboard/README.md",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_readme_react_vite",
-      "target": "dashboard_readme_expanding_the_oxlint_configuration",
-      "confidence_score": 1.0
+      "target": "dashboard_readme_expanding_the_oxlint_configuration"
     },
     {
       "relation": "contains",
@@ -2267,11 +2587,11 @@
       "source_file": "apps/dashboard/README.md",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_readme_react_vite",
-      "target": "dashboard_readme_react_compiler",
-      "confidence_score": 1.0
+      "target": "dashboard_readme_react_compiler"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d36eaa198f5e73332528340e6c09e09d0f5411e1"
+  "built_at_commit": "9150e1a8d80a661d9ae4e68aa4a1e244534bf627"
 }

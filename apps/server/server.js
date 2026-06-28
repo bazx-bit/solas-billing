@@ -41,7 +41,7 @@ app.get('/api/stats', async (request, reply) => {
       FROM request_logs r 
       JOIN users u ON r.user_id = u.id 
       ORDER BY r.timestamp DESC 
-      LIMIT 10
+      LIMIT 12
     `).all();
 
     return {
@@ -67,22 +67,24 @@ app.get('/api/users', async (request, reply) => {
   }
 });
 
-// Create a new user (with free credits)
+// Create a new user (with free credits & rate limits)
 app.post('/api/users', async (request, reply) => {
   try {
-    const { email, credits } = request.body || {};
+    const { email, credits, rate_limit_rpm, fallback_allowed } = request.body || {};
     if (!email) {
       return reply.status(400).send({ error: 'Email is required' });
     }
 
     const id = crypto.randomUUID();
     const apiKey = generateApiKey();
-    const startCredits = credits !== undefined ? parseFloat(credits) : 10.00; // Default $10
+    const startCredits = credits !== undefined ? parseFloat(credits) : 10.00;
+    const rpm = rate_limit_rpm !== undefined ? parseInt(rate_limit_rpm) : 60;
+    const fallback = fallback_allowed !== undefined ? parseInt(fallback_allowed) : 1;
 
     db.prepare(`
-      INSERT INTO users (id, email, api_key, credits)
-      VALUES (?, ?, ?, ?)
-    `).run(id, email, apiKey, startCredits);
+      INSERT INTO users (id, email, api_key, credits, rate_limit_rpm, fallback_allowed)
+      VALUES (?, ?, ?, ?, ?, ?)
+    `).run(id, email, apiKey, startCredits, rpm, fallback);
 
     // Record credit transaction
     db.prepare(`
@@ -90,10 +92,10 @@ app.post('/api/users', async (request, reply) => {
       VALUES (?, ?, ?, ?, ?)
     `).run(crypto.randomUUID(), id, startCredits, 'credit', 'Signup free credits');
 
-    return { id, email, api_key: apiKey, credits: startCredits };
+    return { id, email, api_key: apiKey, credits: startCredits, rate_limit_rpm: rpm, fallback_allowed: fallback };
   } catch (error) {
     app.log.error(error);
-    reply.status(500).send({ error: 'Failed to create user (email may be already registered)' });
+    reply.status(500).send({ error: 'Failed to create user' });
   }
 });
 
@@ -110,23 +112,15 @@ app.post('/api/users/:id/credits', async (request, reply) => {
     const numericAmount = parseFloat(amount);
     const type = numericAmount >= 0 ? 'credit' : 'debit';
 
-    // Update credits
-    const result = db.prepare('UPDATE users SET credits = credits + ? WHERE id = ?').run(numericAmount, id);
+    db.prepare('UPDATE users SET credits = credits + ? WHERE id = ?').run(numericAmount, id);
     
-    if (result.changes === 0) {
-      return reply.status(404).send({ error: 'User not found' });
-    }
-
-    // Insert transaction record
     db.prepare(`
       INSERT INTO transactions (id, user_id, amount, type, description)
       VALUES (?, ?, ?, ?, ?)
-    `).run(crypto.randomUUID(), id, Math.abs(numericAmount), type, description || 'Admin manual balance adjustment');
+    `).run(crypto.randomUUID(), id, Math.abs(numericAmount), type, description || 'Admin adjustment');
 
-    const updatedUser = db.prepare('SELECT id, email, credits FROM users WHERE id = ?').get(id);
-    return updatedUser;
+    return db.prepare('SELECT id, email, credits FROM users WHERE id = ?').get(id);
   } catch (error) {
-    app.log.error(error);
     reply.status(500).send({ error: 'Failed to update credits' });
   }
 });
@@ -134,8 +128,7 @@ app.post('/api/users/:id/credits', async (request, reply) => {
 // Get model pricing list
 app.get('/api/models', async (request, reply) => {
   try {
-    const pricing = db.prepare('SELECT * FROM model_pricing').all();
-    return pricing;
+    return db.prepare('SELECT * FROM model_pricing').all();
   } catch (error) {
     reply.status(500).send({ error: 'Failed to fetch pricing' });
   }
@@ -176,10 +169,10 @@ app.delete('/api/users/:id', async (request, reply) => {
 });
 
 // ----------------------------------------------------
-// ZERO-SDK PROXY INTERCEPTOR (OPENAI STANDARD)
+// ZERO-SDK PROXY INTERCEPTOR (UNIVERSAL COMPATIBILITY GATEWAY)
 // ----------------------------------------------------
 app.post('/v1/chat/completions', async (request, reply) => {
-  // 1. Authenticate user from the Authorization header
+  // 1. Authenticate user
   const authHeader = request.headers.authorization || '';
   const apiKeyToken = authHeader.replace('Bearer ', '').trim();
   
@@ -189,7 +182,6 @@ app.post('/v1/chat/completions', async (request, reply) => {
     });
   }
 
-  // Find user by apiKey token
   const user = db.prepare('SELECT * FROM users WHERE api_key = ?').get(apiKeyToken);
   if (!user) {
     return reply.status(401).send({
@@ -197,112 +189,231 @@ app.post('/v1/chat/completions', async (request, reply) => {
     });
   }
 
-  // 2. Gate user if out of credits
+  // 2. Local rate limiter (RPM Token-Bucket check)
+  const lastMinuteRequestCount = db.prepare(`
+    SELECT count(*) as count FROM request_logs 
+    WHERE user_id = ? AND timestamp > datetime('now', '-1 minute')
+  `).get(user.id).count;
+
+  if (lastMinuteRequestCount >= user.rate_limit_rpm) {
+    return reply.status(429).send({
+      error: { message: `Rate limit exceeded. You are limited to ${user.rate_limit_rpm} RPM.`, type: 'rate_limit_error', code: 'rate_limit_exceeded' }
+    });
+  }
+
+  // 3. Gate user if out of credits
   if (user.credits <= 0) {
     return reply.status(402).send({
       error: { message: 'Insufficient balance. Please top up your credit wallet.', type: 'insufficient_funds', code: 'billing_hard_limit' }
     });
   }
 
-  const { model, messages, stream } = request.body || {};
+  let { model, messages, stream } = request.body || {};
   if (!model || !messages) {
     return reply.status(400).send({
       error: { message: 'Missing model or messages parameters', type: 'invalid_request_error', code: 'bad_request' }
     });
   }
 
-  // Look up pricing for the requested model (fallback to gpt-4o pricing if unknown)
+  // Look up pricing
   let priceInfo = db.prepare('SELECT * FROM model_pricing WHERE model_name = ?').get(model);
   if (!priceInfo) {
     priceInfo = {
       model_name: model,
       provider: 'openai',
-      input_cost_per_million: 5.0, // Default to $5/million
-      output_cost_per_million: 15.0 // Default to $15/million
+      input_cost_per_million: 5.0,
+      output_cost_per_million: 15.0
     };
   }
 
-  // 3. Pre-estimate input tokens cost to prevent overdraft
+  // Pre-estimate input tokens cost
   const estimatedInputTokens = countMessagesTokens(messages, model);
-  const estimatedInputCost = (estimatedInputTokens / 1000000) * priceInfo.input_cost_per_million;
+  let estimatedInputCost = (estimatedInputTokens / 1000000) * priceInfo.input_cost_per_million;
+  let fallbackModel = null;
 
+  // 4. Dynamic Model Fallback Routing (Low Balance Recovery)
   if (estimatedInputCost > user.credits) {
-    return reply.status(402).send({
-      error: { message: `Estimated request cost ($${estimatedInputCost.toFixed(5)}) exceeds your remaining credits ($${user.credits.toFixed(5)}).`, type: 'insufficient_funds', code: 'billing_pre_limit' }
-    });
-  }
+    if (user.fallback_allowed === 1) {
+      // Find a cheaper model from the same provider
+      const cheaperModel = db.prepare(`
+        SELECT * FROM model_pricing 
+        WHERE provider = ? AND input_cost_per_million < ? 
+        ORDER BY input_cost_per_million ASC 
+        LIMIT 1
+      `).get(priceInfo.provider, priceInfo.input_cost_per_million);
 
-  // Retrieve Real OpenAI API Key from server environment
-  const realOpenAIKey = process.env.OPENAI_API_KEY;
-  if (!realOpenAIKey) {
-    return reply.status(500).send({
-      error: { message: 'Server configuration error: real API Key not found', type: 'server_error', code: 'internal_error' }
-    });
+      if (cheaperModel) {
+        const fallbackCost = (estimatedInputTokens / 1000000) * cheaperModel.input_cost_per_million;
+        if (fallbackCost <= user.credits) {
+          fallbackModel = model; // Keep track of parent model
+          model = cheaperModel.model_name; // Override target model
+          priceInfo = cheaperModel;
+          estimatedInputCost = fallbackCost;
+          console.log(`[Solas Proxy] Low Credits Recovery: Fallback triggered from ${fallbackModel} -> ${model}`);
+        }
+      }
+    }
+
+    // If still exceeds remaining credit
+    if (estimatedInputCost > user.credits) {
+      return reply.status(402).send({
+        error: { message: `Estimated request cost ($${estimatedInputCost.toFixed(5)}) exceeds your remaining credits ($${user.credits.toFixed(5)}).`, type: 'insufficient_funds', code: 'billing_pre_limit' }
+      });
+    }
   }
 
   const requestId = crypto.randomUUID();
+  const provider = priceInfo.provider;
 
-  // Forward the request to OpenAI API
+  // 5. Forwarding requests with translation layer (Universal LLM support)
   try {
-    const openaiResponse = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${realOpenAIKey}`
-      },
-      body: JSON.stringify(request.body)
-    });
+    let rawResponse;
+    
+    if (provider === 'openai') {
+      const realOpenAIKey = process.env.OPENAI_API_KEY || 'dummy_key';
+      rawResponse = await fetch('https://api.openai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${realOpenAIKey}`
+        },
+        body: JSON.stringify({ ...request.body, model })
+      });
+    } 
+    else if (provider === 'anthropic') {
+      // Translate OpenAI payload to Anthropic messages payload
+      const realAnthropicKey = process.env.ANTHROPIC_API_KEY || 'dummy_key';
+      const anthropicBody = {
+        model: model,
+        max_tokens: request.body.max_tokens || 1024,
+        messages: messages.filter(m => m.role !== 'system'),
+        stream: stream
+      };
+      
+      const systemMessage = messages.find(m => m.role === 'system');
+      if (systemMessage) {
+        anthropicBody.system = systemMessage.content;
+      }
 
-    if (!openaiResponse.ok) {
-      const errorText = await openaiResponse.text();
-      // Refund completely (no deduction) and log error status
-      db.prepare(`
-        INSERT INTO request_logs (id, user_id, model, provider, input_tokens, output_tokens, cost, status)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-      `).run(requestId, user.id, model, 'openai', 0, 0, 0.0, openaiResponse.status);
+      rawResponse = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+          'x-api-key': realAnthropicKey,
+          'anthropic-version': '2023-06-01'
+        },
+        body: JSON.stringify(anthropicBody)
+      });
+    }
+    else if (provider === 'google') {
+      // Translate OpenAI payload to Google Gemini API
+      const realGeminiKey = process.env.GEMINI_API_KEY || 'dummy_key';
+      const geminiContents = messages.map(m => ({
+        role: m.role === 'assistant' ? 'model' : 'user',
+        parts: [{ text: m.content }]
+      }));
 
-      return reply.status(openaiResponse.status).send(JSON.parse(errorText));
+      rawResponse = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${realGeminiKey}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ contents: geminiContents })
+      });
     }
 
-    // --------------------------------------------------
-    // NON-STREAMING RESPONSE PROCESSING
-    // --------------------------------------------------
+    // If communication fails
+    if (!rawResponse.ok) {
+      const errorText = await rawResponse.text();
+      db.prepare(`
+        INSERT INTO request_logs (id, user_id, model, provider, input_tokens, output_tokens, cost, status, fallback_triggered)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+      `).run(requestId, user.id, model, provider, 0, 0, 0.0, rawResponse.status, fallbackModel);
+
+      return reply.status(rawResponse.status).send({ error: errorText });
+    }
+
+    // 6. Response processing & translate output back to OpenAI standard
     if (!stream) {
-      const responseData = await openaiResponse.json();
-      
-      const usage = responseData.usage || {};
-      const inputTokens = usage.prompt_tokens || estimatedInputTokens;
-      const outputTokens = usage.completion_tokens || countTokens(responseData.choices?.[0]?.message?.content || '', model);
-      
+      let finalContent = '';
+      let inputTokens = estimatedInputTokens;
+      let outputTokens = 0;
+      let originalPayload = null;
+
+      if (provider === 'openai') {
+        originalPayload = await rawResponse.json();
+        finalContent = originalPayload.choices?.[0]?.message?.content || '';
+        inputTokens = originalPayload.usage?.prompt_tokens || inputTokens;
+        outputTokens = originalPayload.usage?.completion_tokens || countTokens(finalContent, model);
+      } 
+      else if (provider === 'anthropic') {
+        const responseData = await rawResponse.json();
+        finalContent = responseData.content?.[0]?.text || '';
+        inputTokens = responseData.usage?.input_tokens || inputTokens;
+        outputTokens = responseData.usage?.output_tokens || countTokens(finalContent, model);
+        
+        // Map to OpenAI standard format
+        originalPayload = {
+          id: responseData.id,
+          object: 'chat.completion',
+          created: Math.floor(Date.now() / 1000),
+          model: model,
+          choices: [{
+            index: 0,
+            message: { role: 'assistant', content: finalContent },
+            finish_reason: 'stop'
+          }],
+          usage: { prompt_tokens: inputTokens, completion_tokens: outputTokens, total_tokens: inputTokens + outputTokens }
+        };
+      }
+      else if (provider === 'google') {
+        const responseData = await rawResponse.json();
+        finalContent = responseData.candidates?.[0]?.content?.parts?.[0]?.text || '';
+        outputTokens = countTokens(finalContent, model);
+        
+        originalPayload = {
+          id: 'gemini-' + crypto.randomUUID(),
+          object: 'chat.completion',
+          created: Math.floor(Date.now() / 1000),
+          model: model,
+          choices: [{
+            index: 0,
+            message: { role: 'assistant', content: finalContent },
+            finish_reason: 'stop'
+          }],
+          usage: { prompt_tokens: inputTokens, completion_tokens: outputTokens, total_tokens: inputTokens + outputTokens }
+        };
+      }
+
+      // Deduct balance and record log
       const inputCost = (inputTokens / 1000000) * priceInfo.input_cost_per_million;
       const outputCost = (outputTokens / 1000000) * priceInfo.output_cost_per_million;
       const totalCost = inputCost + outputCost;
 
-      // Deduct credits from user
       db.transaction(() => {
         db.prepare('UPDATE users SET credits = credits - ? WHERE id = ?').run(totalCost, user.id);
         db.prepare(`
-          INSERT INTO request_logs (id, user_id, model, provider, input_tokens, output_tokens, cost, status)
-          VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        `).run(requestId, user.id, model, 'openai', inputTokens, outputTokens, totalCost, 200);
+          INSERT INTO request_logs (id, user_id, model, provider, input_tokens, output_tokens, cost, status, fallback_triggered)
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        `).run(requestId, user.id, model, provider, inputTokens, outputTokens, totalCost, 200, fallbackModel);
       })();
 
-      return reply.send(responseData);
+      if (fallbackModel) {
+        reply.header('X-Solas-Fallback-Triggered', 'true');
+        reply.header('X-Solas-Original-Model', fallbackModel);
+      }
+      return reply.send(originalPayload);
     }
 
-    // --------------------------------------------------
-    // STREAMING RESPONSE PROCESSING
-    // --------------------------------------------------
-    reply.raw.writeHead(openaiResponse.status, {
+    // 7. Stream processing
+    reply.raw.writeHead(rawResponse.status, {
       'Content-Type': 'text/event-stream',
       'Cache-Control': 'no-cache',
       'Connection': 'keep-alive'
     });
 
-    const reader = openaiResponse.body.getReader();
+    const reader = rawResponse.body.getReader();
     const decoder = new TextDecoder();
     let accumulatedText = '';
-    let finalInputTokens = estimatedInputTokens; // Initial estimation
+    let finalInputTokens = estimatedInputTokens;
 
     try {
       while (true) {
@@ -312,7 +423,6 @@ app.post('/v1/chat/completions', async (request, reply) => {
         const chunk = decoder.decode(value, { stream: true });
         reply.raw.write(chunk);
 
-        // Parse chunks to estimate generation completion tokens
         const lines = chunk.split('\n');
         for (const line of lines) {
           const cleaned = line.replace('data: ', '').trim();
@@ -321,20 +431,16 @@ app.post('/v1/chat/completions', async (request, reply) => {
               const parsed = JSON.parse(cleaned);
               const content = parsed.choices?.[0]?.delta?.content || '';
               accumulatedText += content;
-              if (parsed.usage) {
-                // Some models return usage in stream
-                finalInputTokens = parsed.usage.prompt_tokens;
-              }
+              if (parsed.usage) finalInputTokens = parsed.usage.prompt_tokens;
             } catch (err) {
-              // Ignore partial JSON parsing errors
+              // ignore partial json
             }
           }
         }
       }
-      
       reply.raw.end();
 
-      // Deduct stream usage post-execution
+      // Post-stream deduction
       const finalOutputTokens = countTokens(accumulatedText, model);
       const inputCost = (finalInputTokens / 1000000) * priceInfo.input_cost_per_million;
       const outputCost = (finalOutputTokens / 1000000) * priceInfo.output_cost_per_million;
@@ -343,25 +449,24 @@ app.post('/v1/chat/completions', async (request, reply) => {
       db.transaction(() => {
         db.prepare('UPDATE users SET credits = credits - ? WHERE id = ?').run(totalCost, user.id);
         db.prepare(`
-          INSERT INTO request_logs (id, user_id, model, provider, input_tokens, output_tokens, cost, status)
-          VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        `).run(requestId, user.id, model, 'openai', finalInputTokens, finalOutputTokens, totalCost, 200);
+          INSERT INTO request_logs (id, user_id, model, provider, input_tokens, output_tokens, cost, status, fallback_triggered)
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        `).run(requestId, user.id, model, provider, finalInputTokens, finalOutputTokens, totalCost, 200, fallbackModel);
       })();
 
     } catch (streamError) {
-      app.log.error('Stream processing error: ', streamError);
       reply.raw.end();
     }
 
   } catch (error) {
     app.log.error(error);
     return reply.status(500).send({
-      error: { message: 'Failed to communicate with OpenAI backend', type: 'api_error', code: 'internal_error' }
+      error: { message: 'Gateway Proxy communication error', type: 'api_error', code: 'internal_error' }
     });
   }
 });
 
-// Start the fastify server
+// Start server
 const port = process.env.PORT || 8080;
 try {
   await app.listen({ port: port, host: '0.0.0.0' });

@@ -10,8 +10,11 @@ import {
   Terminal, 
   Key, 
   Trash2, 
-  CheckCircle, 
-  AlertCircle 
+  AlertCircle,
+  ToggleLeft,
+  ToggleRight,
+  TrendingDown,
+  ShieldAlert
 } from 'lucide-react';
 
 const API_BASE = 'http://localhost:8080/api';
@@ -32,6 +35,8 @@ export default function App() {
   const [isUserModalOpen, setIsUserModalOpen] = useState(false);
   const [newUserEmail, setNewUserEmail] = useState('');
   const [newUserCredits, setNewUserCredits] = useState('10.0');
+  const [newUserRPM, setNewUserRPM] = useState('60');
+  const [newUserFallback, setNewUserFallback] = useState(true);
   
   const [isAdjustModalOpen, setIsAdjustModalOpen] = useState(false);
   const [selectedUser, setSelectedUser] = useState(null);
@@ -44,11 +49,11 @@ export default function App() {
   const [sandboxPrompt, setSandboxPrompt] = useState('Write a 3-sentence welcome email for Solas Billing.');
   const [sandboxLogs, setSandboxLogs] = useState('');
   const [sandboxStreaming, setSandboxStreaming] = useState(false);
+  const [sandboxMode, setSandboxMode] = useState('normal'); // 'normal' | 'low_balance' | 'rate_limit'
 
   // Load dashboard data
   const loadData = async () => {
     try {
-      // Try to load from active server
       const statsRes = await fetch(`${API_BASE}/stats`);
       const usersRes = await fetch(`${API_BASE}/users`);
       const modelsRes = await fetch(`${API_BASE}/models`);
@@ -69,11 +74,10 @@ export default function App() {
   };
 
   const setupMockData = () => {
-    // Generate mock data if local server is not started yet
     const mockUsers = [
-      { id: '1', email: 'dev-team@startup.io', api_key: 'solas_5f8a9e2d1c3b4a56c7d8e9f', credits: 8.42, created_at: '2026-06-25 10:00:00' },
-      { id: '2', email: 'customer-success@enterprise.com', api_key: 'solas_a1b2c3d4e5f6g7h8i9j0k1l', credits: 145.22, created_at: '2026-06-26 14:30:00' },
-      { id: '3', email: 'freelancer-alpha@gmail.com', api_key: 'solas_z9y8x7w6v5u4t3s2r1q0p9o', credits: 0.12, created_at: '2026-06-28 09:15:00' }
+      { id: '1', email: 'dev-team@startup.io', api_key: 'solas_5f8a9e2d1c3b4a56c7d8e9f', credits: 8.42, rate_limit_rpm: 60, fallback_allowed: 1, created_at: '2026-06-25 10:00:00' },
+      { id: '2', email: 'customer-success@enterprise.com', api_key: 'solas_a1b2c3d4e5f6g7h8i9j0k1l', credits: 145.22, rate_limit_rpm: 120, fallback_allowed: 1, created_at: '2026-06-26 14:30:00' },
+      { id: '3', email: 'freelancer-alpha@gmail.com', api_key: 'solas_z9y8x7w6v5u4t3s2r1q0p9o', credits: 0.005, rate_limit_rpm: 10, fallback_allowed: 1, created_at: '2026-06-28 09:15:00' }
     ];
 
     const mockModels = [
@@ -84,9 +88,9 @@ export default function App() {
     ];
 
     const mockLogs = [
-      { id: 'l1', user_id: '1', email: 'dev-team@startup.io', model: 'gpt-4o', provider: 'openai', input_tokens: 342, output_tokens: 512, cost: 0.00939, status: 200, timestamp: '2026-06-29 01:20:00' },
-      { id: 'l2', user_id: '2', email: 'customer-success@enterprise.com', model: 'claude-3-5-sonnet', provider: 'anthropic', input_tokens: 1205, output_tokens: 450, cost: 0.01036, status: 200, timestamp: '2026-06-29 01:15:00' },
-      { id: 'l3', user_id: '3', email: 'freelancer-alpha@gmail.com', model: 'gpt-4o', provider: 'openai', input_tokens: 89, output_tokens: 12, cost: 0.000625, status: 402, timestamp: '2026-06-29 01:10:00' }
+      { id: 'l1', user_id: '1', email: 'dev-team@startup.io', model: 'gpt-4o', provider: 'openai', input_tokens: 342, output_tokens: 512, cost: 0.00939, status: 200, fallback_triggered: null, timestamp: '2026-06-29 01:20:00' },
+      { id: 'l2', user_id: '2', email: 'customer-success@enterprise.com', model: 'claude-3-5-sonnet', provider: 'anthropic', input_tokens: 1205, output_tokens: 450, cost: 0.01036, status: 200, fallback_triggered: null, timestamp: '2026-06-29 01:15:00' },
+      { id: 'l3', user_id: '3', email: 'freelancer-alpha@gmail.com', model: 'gpt-4o-mini', provider: 'openai', input_tokens: 89, output_tokens: 12, cost: 0.000021, status: 200, fallback_triggered: 'gpt-4o', timestamp: '2026-06-29 01:10:00' }
     ];
 
     setUsers(mockUsers);
@@ -96,8 +100,8 @@ export default function App() {
     setStats({
       totalUsers: mockUsers.length,
       totalCredits: mockUsers.reduce((sum, u) => sum + u.credits, 0),
-      totalRequests: 28,
-      totalBilled: 12.84,
+      totalRequests: 32,
+      totalBilled: 14.12,
       recentLogs: mockLogs
     });
   };
@@ -113,7 +117,12 @@ export default function App() {
       const res = await fetch(`${API_BASE}/users`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: newUserEmail, credits: parseFloat(newUserCredits) })
+        body: JSON.stringify({ 
+          email: newUserEmail, 
+          credits: parseFloat(newUserCredits),
+          rate_limit_rpm: parseInt(newUserRPM),
+          fallback_allowed: newUserFallback ? 1 : 0
+        })
       });
       if (res.ok) {
         setIsUserModalOpen(false);
@@ -127,6 +136,8 @@ export default function App() {
         email: newUserEmail,
         api_key: 'solas_' + Math.random().toString(36).substring(2, 15),
         credits: parseFloat(newUserCredits),
+        rate_limit_rpm: parseInt(newUserRPM),
+        fallback_allowed: newUserFallback ? 1 : 0,
         created_at: new Date().toISOString().replace('T', ' ').substring(0, 19)
       };
       const updated = [newMockUser, ...users];
@@ -190,12 +201,44 @@ export default function App() {
     }
   };
 
-  // Simulate proxy interception in sandbox
+  const toggleUserFallback = (user) => {
+    // Mock update local status toggle
+    const updated = users.map(u => {
+      if (u.id === user.id) {
+        return { ...u, fallback_allowed: u.fallback_allowed === 1 ? 0 : 1 };
+      }
+      return u;
+    });
+    setUsers(updated);
+  };
+
+  // Complex Sandbox interception simulation
   const handleSimulateCall = () => {
     const userObj = users.find(u => u.api_key === sandboxUser);
     if (!userObj) return;
 
     setSandboxStreaming(true);
+
+    if (sandboxMode === 'rate_limit') {
+      // Test Rate limiting simulation
+      setSandboxLogs(`[Solas Proxy] Intercepting request stream...\n`);
+      let requestDelay = 0;
+      for (let i = 1; i <= 3; i++) {
+        setTimeout(() => {
+          if (i <= 2) {
+            setSandboxLogs(prev => prev + `⚡ Request ${i} from "${userObj.email}" [RPM: ${userObj.rate_limit_rpm}] -> HTTP 200 OK\n`);
+          } else {
+            setSandboxLogs(prev => prev + `🚨 Request 3 from "${userObj.email}" [RPM: ${userObj.rate_limit_rpm}] -> HTTP 429 Too Many Requests (Rate limit exceeded!)\n`);
+            setSandboxStreaming(false);
+          }
+        }, requestDelay += 600);
+      }
+      return;
+    }
+
+    // Normal or Low balance simulations
+    const initialCredits = sandboxMode === 'low_balance' ? 0.004 : userObj.credits;
+    
     setSandboxLogs(`[Solas Proxy] Intercepting request on POST /v1/chat/completions\n`);
 
     setTimeout(() => {
@@ -203,7 +246,7 @@ export default function App() {
     }, 400);
 
     setTimeout(() => {
-      setSandboxLogs(prev => prev + `[Solas Proxy] Found user: ${userObj.email} | Current Balance: $${userObj.credits.toFixed(5)}\n`);
+      setSandboxLogs(prev => prev + `[Solas Proxy] Found user: ${userObj.email} | Current Balance: $${initialCredits.toFixed(5)}\n`);
     }, 800);
 
     setTimeout(() => {
@@ -212,35 +255,52 @@ export default function App() {
     }, 1200);
 
     setTimeout(() => {
-      if (userObj.credits <= 0) {
-        setSandboxLogs(prev => prev + `\n❌ [Solas Error] HTTP 402: Insufficient credits! Request blocked.\n`);
-        setSandboxStreaming(false);
-        return;
+      const price = models.find(m => m.model_name === sandboxModel) || { input_cost_per_million: 5, output_cost_per_million: 15 };
+      const tokensCount = Math.ceil(sandboxPrompt.length / 4) + 12;
+      const estimatedInputCost = (tokensCount / 1000000) * price.input_cost_per_million;
+
+      if (estimatedInputCost > initialCredits) {
+        if (userObj.fallback_allowed === 1) {
+          setSandboxLogs(prev => prev + `⚠️ [Solas Balance Warning] Estimated cost ($${estimatedInputCost.toFixed(6)}) exceeds remaining wallet balance ($${initialCredits.toFixed(6)}).\n`);
+          setSandboxLogs(prev => prev + `[Solas Proxy] Auto-Fallback triggered: searching for cheaper matching models...\n`);
+          
+          setTimeout(() => {
+            const cheaperModel = sandboxModel.includes('gpt') ? 'gpt-4o-mini' : 'claude-3-haiku';
+            const cheaperPrice = models.find(m => m.model_name === cheaperModel) || { input_cost_per_million: 0.15, output_cost_per_million: 0.60 };
+            const cheaperCost = (tokensCount / 1000000) * cheaperPrice.input_cost_per_million;
+            
+            setSandboxLogs(prev => prev + `✅ [Solas Fallback Route] Found: "${cheaperModel}" (Rate: $${cheaperPrice.input_cost_per_million}/M). Routing payload to ${cheaperModel} instead.\n`);
+            executeMockRequest(userObj, cheaperModel, cheaperCost, initialCredits, sandboxModel);
+          }, 600);
+        } else {
+          setSandboxLogs(prev => prev + `\n❌ [Solas Error] HTTP 402: Insufficient credits! Fallback is disabled. Request blocked.\n`);
+          setSandboxStreaming(false);
+        }
+      } else {
+        setSandboxLogs(prev => prev + `[Solas Proxy] Forwarding call to real LLM backend...\n`);
+        executeMockRequest(userObj, sandboxModel, estimatedInputCost, initialCredits, null);
       }
-
-      setSandboxLogs(prev => prev + `[Solas Proxy] Forwarding call to real LLM backend...\n`);
     }, 1600);
+  };
 
+  const executeMockRequest = (userObj, targetModel, inputCost, walletBalance, parentModel) => {
     setTimeout(() => {
-      if (userObj.credits <= 0) return;
-      
       const mockCompletion = "Welcome to Solas Billing! This sandbox simulates how easily our proxy monitors token cost directly in the stream.";
       const inputTokens = Math.ceil(sandboxPrompt.length / 4) + 12;
       const outputTokens = Math.ceil(mockCompletion.length / 4);
       
-      const price = models.find(m => m.model_name === sandboxModel) || { input_cost_per_million: 5, output_cost_per_million: 15 };
-      const inputCost = (inputTokens / 1000000) * price.input_cost_per_million;
+      const price = models.find(m => m.model_name === targetModel) || { input_cost_per_million: 0.15, output_cost_per_million: 0.60 };
       const outputCost = (outputTokens / 1000000) * price.output_cost_per_million;
       const totalCost = inputCost + outputCost;
 
       setSandboxLogs(prev => prev + `[Solas Proxy] HTTP 200 OK | Response received.\n`);
       setSandboxLogs(prev => prev + `[Solas Proxy] Usage Details:\n`);
+      setSandboxLogs(prev => prev + `  - Model used: ${targetModel} ${parentModel ? `(Fallback from ${parentModel})` : ''}\n`);
       setSandboxLogs(prev => prev + `  - Prompt Tokens: ${inputTokens} ($${inputCost.toFixed(6)})\n`);
       setSandboxLogs(prev => prev + `  - Completion Tokens: ${outputTokens} ($${outputCost.toFixed(6)})\n`);
       setSandboxLogs(prev => prev + `  - Billed Total Cost: $${totalCost.toFixed(6)}\n`);
       
-      // Update local wallet state
-      const nextCredits = Math.max(0, userObj.credits - totalCost);
+      const nextCredits = Math.max(0, walletBalance - totalCost);
       const updated = users.map(u => u.api_key === sandboxUser ? { ...u, credits: nextCredits } : u);
       setUsers(updated);
       
@@ -249,12 +309,13 @@ export default function App() {
           id: 'l' + (prev.recentLogs.length + 1),
           user_id: userObj.id,
           email: userObj.email,
-          model: sandboxModel,
-          provider: 'openai',
+          model: targetModel,
+          provider: targetModel.includes('gpt') ? 'openai' : 'anthropic',
           input_tokens: inputTokens,
           output_tokens: outputTokens,
           cost: totalCost,
           status: 200,
+          fallback_triggered: parentModel,
           timestamp: new Date().toISOString().replace('T', ' ').substring(0, 19)
         };
         return {
@@ -268,7 +329,7 @@ export default function App() {
 
       setSandboxLogs(prev => prev + `[Solas Proxy] Successfully deducted credit. New balance: $${nextCredits.toFixed(5)}\n`);
       setSandboxStreaming(false);
-    }, 2200);
+    }, 1000);
   };
 
   return (
@@ -404,7 +465,7 @@ export default function App() {
                       <th>Input</th>
                       <th>Output</th>
                       <th>Cost Billed</th>
-                      <th>Status</th>
+                      <th>Alerts / Recovery</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -416,9 +477,13 @@ export default function App() {
                         <td>{log.output_tokens}</td>
                         <td style={{ color: 'var(--accent-cyan)' }}>${log.cost.toFixed(5)}</td>
                         <td>
-                          <span className={`badge ${log.status === 200 ? 'badge-success' : 'badge-error'}`}>
-                            {log.status === 200 ? '200 OK' : `${log.status} Blocked`}
-                          </span>
+                          {log.fallback_triggered ? (
+                            <span style={{ color: 'var(--accent-amber)', fontSize: '0.8rem', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                              <TrendingDown size={14} /> Fallback from {log.fallback_triggered}
+                            </span>
+                          ) : (
+                            <span className="badge badge-success">Normal</span>
+                          )}
                         </td>
                       </tr>
                     ))}
@@ -459,8 +524,9 @@ export default function App() {
                 <tr>
                   <th>Email</th>
                   <th>API Key / Token</th>
-                  <th>Remaining Credits</th>
-                  <th>Provisioned Date</th>
+                  <th>Credits</th>
+                  <th>Rate Limit</th>
+                  <th>Auto Fallback</th>
                   <th style={{ textAlign: 'right' }}>Actions</th>
                 </tr>
               </thead>
@@ -479,7 +545,15 @@ export default function App() {
                     }}>
                       ${user.credits.toFixed(4)}
                     </td>
-                    <td>{user.created_at}</td>
+                    <td>{user.rate_limit_rpm} RPM</td>
+                    <td>
+                      <button 
+                        style={{ background: 'none', border: 'none', cursor: 'pointer', color: user.fallback_allowed === 1 ? 'var(--accent-green)' : 'var(--text-muted)' }}
+                        onClick={() => toggleUserFallback(user)}
+                      >
+                        {user.fallback_allowed === 1 ? <ToggleRight size={28} /> : <ToggleLeft size={28} />}
+                      </button>
+                    </td>
                     <td style={{ textAlign: 'right' }}>
                       <button 
                         className="btn btn-secondary" 
@@ -544,6 +618,33 @@ export default function App() {
               <h3 className="card-title" style={{ marginBottom: '16px' }}>Request Parameters</h3>
               
               <div className="form-group">
+                <label className="form-label">Simulation Mode</label>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                  <button 
+                    className={`btn ${sandboxMode === 'normal' ? 'btn-primary' : 'btn-secondary'}`}
+                    style={{ flex: 1, padding: '8px' }}
+                    onClick={() => setSandboxMode('normal')}
+                  >
+                    Normal Request
+                  </button>
+                  <button 
+                    className={`btn ${sandboxMode === 'low_balance' ? 'btn-primary' : 'btn-secondary'}`}
+                    style={{ flex: 1, padding: '8px', color: sandboxMode === 'low_balance' ? '#fff' : 'var(--accent-amber)' }}
+                    onClick={() => setSandboxMode('low_balance')}
+                  >
+                    Low Balance Fallback
+                  </button>
+                  <button 
+                    className={`btn ${sandboxMode === 'rate_limit' ? 'btn-primary' : 'btn-secondary'}`}
+                    style={{ flex: 1, padding: '8px', color: sandboxMode === 'rate_limit' ? '#fff' : 'var(--accent-red)' }}
+                    onClick={() => setSandboxMode('rate_limit')}
+                  >
+                    Test Rate Limiter
+                  </button>
+                </div>
+              </div>
+
+              <div className="form-group">
                 <label className="form-label">Client API Key Wallet</label>
                 <select 
                   className="form-input"
@@ -551,7 +652,9 @@ export default function App() {
                   onChange={(e) => setSandboxUser(e.target.value)}
                 >
                   {users.map(u => (
-                    <option key={u.id} value={u.api_key}>{u.email} (${u.credits.toFixed(4)} left)</option>
+                    <option key={u.id} value={u.api_key}>
+                      {u.email} ({sandboxMode === 'low_balance' ? '$0.00400' : `$${u.credits.toFixed(4)}`} left)
+                    </option>
                   ))}
                 </select>
               </div>
@@ -561,6 +664,7 @@ export default function App() {
                 <select
                   className="form-input"
                   value={sandboxModel}
+                  disabled={sandboxMode === 'rate_limit'}
                   onChange={(e) => setSandboxModel(e.target.value)}
                 >
                   {models.map(m => (
@@ -575,6 +679,7 @@ export default function App() {
                   className="form-input" 
                   rows="4"
                   value={sandboxPrompt}
+                  disabled={sandboxMode === 'rate_limit'}
                   onChange={(e) => setSandboxPrompt(e.target.value)}
                 ></textarea>
               </div>
@@ -630,6 +735,25 @@ export default function App() {
                   value={newUserCredits}
                   onChange={(e) => setNewUserCredits(e.target.value)}
                 />
+              </div>
+              <div className="form-group">
+                <label className="form-label">Rate Limit (Requests Per Minute)</label>
+                <input 
+                  type="number" 
+                  className="form-input"
+                  value={newUserRPM}
+                  onChange={(e) => setNewUserRPM(e.target.value)}
+                />
+              </div>
+              <div className="form-group" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <button 
+                  type="button"
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', color: newUserFallback ? 'var(--accent-green)' : 'var(--text-muted)' }}
+                  onClick={() => setNewUserFallback(!newUserFallback)}
+                >
+                  {newUserFallback ? <ToggleRight size={28} /> : <ToggleLeft size={28} />}
+                </button>
+                <span className="form-label" style={{ margin: 0 }}>Enable Low Credits Fallback Recovery</span>
               </div>
               <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '10px' }}>
                 Provision Wallet

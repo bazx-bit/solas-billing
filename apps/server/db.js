@@ -20,6 +20,8 @@ export function initDB() {
       email TEXT UNIQUE,
       api_key TEXT UNIQUE NOT NULL,
       credits REAL DEFAULT 10.0, -- Default $10 free credits
+      rate_limit_rpm INTEGER DEFAULT 60, -- Requests per minute limit
+      fallback_allowed INTEGER DEFAULT 1, -- 1 = Auto-fallback to cheaper models when credits are low
       stripe_customer_id TEXT,
       created_at DATETIME DEFAULT CURRENT_TIMESTAMP
     )
@@ -62,20 +64,21 @@ export function initDB() {
       output_tokens INTEGER DEFAULT 0,
       cost REAL DEFAULT 0.0,
       status INTEGER NOT NULL, -- HTTP response status (200, 400, etc.)
+      fallback_triggered TEXT, -- Records model name if fallback happened
       timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
       FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
     )
   `).run();
 
   // Seed default models if pricing table is empty
-  const count = db.prepare(`SELECT count(*) as count FROM model_pricing`).get();
+  const count = db.prepare('SELECT count(*) as count FROM model_pricing').get();
   if (count.count === 0) {
     const seed = db.prepare(`
       INSERT INTO model_pricing (model_name, provider, input_cost_per_million, output_cost_per_million)
       VALUES (?, ?, ?, ?)
     `);
 
-    // Standard prices as of 2026
+    // Standard prices
     const defaultModels = [
       ['gpt-4o', 'openai', 5.00, 15.00],
       ['gpt-4o-mini', 'openai', 0.150, 0.600],

@@ -1,16 +1,16 @@
 # Graph Report - solas-billing  (2026-06-29)
 
 ## Corpus Check
-- 18 files · ~7,408 words
+- 22 files · ~7,684 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 119 nodes · 107 edges · 17 communities (13 shown, 4 thin omitted)
+- 137 nodes · 121 edges · 21 communities (17 shown, 4 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d36eaa19`
+- Built from commit: `9150e1a8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -31,6 +31,8 @@
 - [[_COMMUNITY_Community 13|Community 13]]
 - [[_COMMUNITY_Community 14|Community 14]]
 - [[_COMMUNITY_Community 15|Community 15]]
+- [[_COMMUNITY_Community 17|Community 17]]
+- [[_COMMUNITY_Community 18|Community 18]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `scripts` - 5 edges
@@ -50,7 +52,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (17 total, 4 thin omitted)
+## Communities (21 total, 4 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.12
@@ -100,8 +102,16 @@ Nodes (5): dashboard, __dirname, __filename, rootDir, server
 Cohesion: 0.50
 Nodes (3): Expanding the Oxlint configuration, React Compiler, React + Vite
 
+### Community 17 - "Community 17"
+Cohesion: 0.33
+Nodes (5): description, main, name, type, version
+
+### Community 18 - "Community 18"
+Cohesion: 0.33
+Nodes (5): description, main, name, type, version
+
 ## Knowledge Gaps
-- **76 isolated node(s):** `$schema`, `plugins`, `react/rules-of-hooks`, `react/only-export-components`, `name` (+71 more)
+- **86 isolated node(s):** `name`, `version`, `description`, `main`, `type` (+81 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -109,9 +119,9 @@ Nodes (3): Expanding the Oxlint configuration, React Compiler, React + Vite
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `devDependencies` connect `Community 9` to `Community 1`?**
-  _High betweenness centrality (0.012) - this node is a cross-community bridge._
-- **What connects `$schema`, `plugins`, `react/rules-of-hooks` to the rest of the system?**
-  _76 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+- **What connects `name`, `version`, `description` to the rest of the system?**
+  _86 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
