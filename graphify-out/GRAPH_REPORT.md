@@ -1,16 +1,16 @@
 # Graph Report - solas-billing  (2026-06-29)
 
 ## Corpus Check
-- 54 files · ~14,076 words
+- 53 files · ~14,067 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 326 nodes · 376 edges · 42 communities (32 shown, 10 thin omitted)
+- 324 nodes · 375 edges · 41 communities (32 shown, 9 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 15 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `80b24b4a`
+- Built from commit: `58aa6769`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -35,7 +35,6 @@
 - [[_COMMUNITY_Community 18|Community 18]]
 - [[_COMMUNITY_Community 21|Community 21]]
 - [[_COMMUNITY_Community 22|Community 22]]
-- [[_COMMUNITY_Community 23|Community 23]]
 - [[_COMMUNITY_Community 24|Community 24]]
 - [[_COMMUNITY_Community 25|Community 25]]
 - [[_COMMUNITY_Community 31|Community 31]]
@@ -59,8 +58,8 @@
 6. `stripe_webhook_handler()` - 7 edges
 7. `ChatMessage` - 7 edges
 8. `ChatCompletionRequest` - 7 edges
-9. `tasks` - 6 edges
-10. `scripts` - 6 edges
+9. `scripts` - 6 edges
+10. `tasks` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `main()` --calls--> `init_db()`  [INFERRED]
@@ -77,7 +76,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (42 total, 10 thin omitted)
+## Communities (41 total, 9 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.12
@@ -128,8 +127,8 @@ Cohesion: 0.50
 Nodes (3): Expanding the Oxlint configuration, React Compiler, React + Vite
 
 ### Community 15 - "Community 15"
-Cohesion: 0.15
-Nodes (25): Connection, HeaderMap, IntoResponse, Json, Option, Response, App(), check_rpm() (+17 more)
+Cohesion: 0.17
+Nodes (23): Connection, HeaderMap, IntoResponse, Json, Option, Response, check_rpm(), check_tpm() (+15 more)
 
 ### Community 17 - "Community 17"
 Cohesion: 0.33
@@ -164,8 +163,8 @@ Cohesion: 0.11
 Nodes (17): files, ignoreUnknown, formatter, enabled, indentStyle, quoteStyle, javascript, formatter (+9 more)
 
 ### Community 39 - "Community 39"
-Cohesion: 0.18
-Nodes (18): Client, Error, Result, call_provider(), ChatCompletionRequest, ChatCompletionResponse, ChatMessage, CompletionChoice (+10 more)
+Cohesion: 0.15
+Nodes (20): Client, Error, Result, App(), call_provider(), ChatCompletionRequest, ChatCompletionResponse, ChatMessage (+12 more)
 
 ### Community 40 - "Community 40"
 Cohesion: 0.10
@@ -176,24 +175,24 @@ Cohesion: 0.20
 Nodes (13): Arc, HashMap, Mutex, Self, Semaphore, CreditLockManager, AnalyticsEvent, BackgroundJob (+5 more)
 
 ## Knowledge Gaps
-- **151 isolated node(s):** `$schema`, `globalDependencies`, `dependsOn`, `outputs`, `dependsOn` (+146 more)
+- **151 isolated node(s):** `$schema`, `plugins`, `react/rules-of-hooks`, `react/only-export-components`, `name` (+146 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `proxy_handler()` connect `Community 15` to `Community 41`, `Community 39`?**
   _High betweenness centrality (0.015) - this node is a cross-community bridge._
-- **Why does `CreditLockManager` connect `Community 41` to `Community 15`, `Community 39`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Why does `AppState` connect `Community 41` to `Community 39`, `Community 15`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Are the 12 inferred relationships involving `proxy_handler()` (e.g. with `check_rpm()` and `check_tpm()`) actually correct?**
   _`proxy_handler()` has 12 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `$schema`, `globalDependencies`, `dependsOn` to the rest of the system?**
+- **What connects `$schema`, `plugins`, `react/rules-of-hooks` to the rest of the system?**
   _151 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
-- **Should `Community 15` be split into smaller, more focused modules?**
-  _Cohesion score 0.14814814814814814 - nodes in this community are weakly interconnected._
+- **Should `Community 37` be split into smaller, more focused modules?**
+  _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._

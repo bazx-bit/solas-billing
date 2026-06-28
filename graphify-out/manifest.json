@@ -95,8 +95,8 @@
     "semantic_hash": ""
   },
   "docker-compose.yml": {
-    "mtime": 1782678648.5258825,
-    "ast_hash": "f2b867557d62805c0d480639770e538f",
+    "mtime": 1782680071.5840383,
+    "ast_hash": "a51ab503a565dc47c7655d5f3ce44bc6",
     "semantic_hash": ""
   },
   "apps/dashboard/public/favicon.svg": {
@@ -172,11 +172,6 @@
   "apps/checkout/checkout.js": {
     "mtime": 1782679120.789809,
     "ast_hash": "bbe3585cba3d9df1044eb60ab321b4dc",
-    "semantic_hash": ""
-  },
-  "apps/leaf/leaf-engine.js": {
-    "mtime": 1782679128.912298,
-    "ast_hash": "f9c33666723ce819b2a4a046b344b534",
     "semantic_hash": ""
   },
   "apps/scope-picker/picker.js": {
