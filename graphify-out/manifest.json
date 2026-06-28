@@ -148,5 +148,100 @@
     "mtime": 1782678756.9728193,
     "ast_hash": "929cbb521d0570468ff959dfb1ca549f",
     "semantic_hash": ""
+  },
+  ".vscode/launch.json": {
+    "mtime": 1782679076.8367977,
+    "ast_hash": "cedf6039f9273e8700ad88851d2e016a",
+    "semantic_hash": ""
+  },
+  ".vscode/settings.json": {
+    "mtime": 1782679073.6595082,
+    "ast_hash": "771372d0e99d3990e53a088fac1fb09c",
+    "semantic_hash": ""
+  },
+  ".zed/settings.json": {
+    "mtime": 1782679080.856865,
+    "ast_hash": "94b85ffbb5d6dac9264991ee719210a5",
+    "semantic_hash": ""
+  },
+  "ai/prompts.json": {
+    "mtime": 1782679089.2876647,
+    "ast_hash": "ec5325cc79070455395480ff1df47375",
+    "semantic_hash": ""
+  },
+  "apps/checkout/checkout.js": {
+    "mtime": 1782679120.789809,
+    "ast_hash": "bbe3585cba3d9df1044eb60ab321b4dc",
+    "semantic_hash": ""
+  },
+  "apps/leaf/leaf-engine.js": {
+    "mtime": 1782679128.912298,
+    "ast_hash": "f9c33666723ce819b2a4a046b344b534",
+    "semantic_hash": ""
+  },
+  "apps/scope-picker/picker.js": {
+    "mtime": 1782679132.484038,
+    "ast_hash": "d15a7bd464c1d2730395d3c2e2363835",
+    "semantic_hash": ""
+  },
+  "apps/sdk-test/integration.test.js": {
+    "mtime": 1782679136.2528336,
+    "ast_hash": "3d9d691e807e393982a717f24dfe80a6",
+    "semantic_hash": ""
+  },
+  "apps/testbench/benchmark.js": {
+    "mtime": 1782679140.7628846,
+    "ast_hash": "3851978fc29800d644493aa2a0a56712",
+    "semantic_hash": ""
+  },
+  "packages/agent-docs/agent_config.json": {
+    "mtime": 1782679100.683387,
+    "ast_hash": "331588a2733cccd21ff3eeb120cbdab9",
+    "semantic_hash": ""
+  },
+  "packages/gateway/gateway-router.js": {
+    "mtime": 1782679104.1306865,
+    "ast_hash": "1cfeb2f4d6d9eafb02374fe4c3661c14",
+    "semantic_hash": ""
+  },
+  "packages/mcp/mcp-server.js": {
+    "mtime": 1782679108.9074469,
+    "ast_hash": "d492a15616816fbee1d25998c924c20d",
+    "semantic_hash": ""
+  },
+  "packages/ui/WalletCard.jsx": {
+    "mtime": 1782679116.2917347,
+    "ast_hash": "4fa4b6a6f30ce251d3728bc6ec82eb10",
+    "semantic_hash": ""
+  },
+  "shared/constants.js": {
+    "mtime": 1782679093.0383923,
+    "ast_hash": "894a7a7364d100c272dde186115caec9",
+    "semantic_hash": ""
+  },
+  "vite/vite-plugin-solas.js": {
+    "mtime": 1782679096.669878,
+    "ast_hash": "68b2c2441b595826b806f16c9ecd7ca4",
+    "semantic_hash": ""
+  },
+  ".plans/roadmap.md": {
+    "mtime": 1782679085.3672032,
+    "ast_hash": "4c58cf1a8923605f72383c9e45bbe49b",
+    "semantic_hash": ""
+  },
+  "apps/docs/architecture.md": {
+    "mtime": 1782679125.008991,
+    "ast_hash": "e496b0c8590e8e56f7567c2b7749849e",
+    "semantic_hash": ""
+  },
+  "apps/website/index.html": {
+    "mtime": 1782679145.3609972,
+    "ast_hash": "faa30e97dc25eddfb28ab056598e0068",
+    "semantic_hash": ""
+  },
+  "packages/openapi/openapi.yaml": {
+    "mtime": 1782679112.4666839,
+    "ast_hash": "c0b31dfbe16f24a75507088baa3c3970",
+    "semantic_hash": ""
   }
 }
