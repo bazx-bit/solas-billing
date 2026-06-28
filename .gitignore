@@ -26,3 +26,17 @@ out/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Caching & Local Graphify docs
+graphify-out/
+.turbo/
+.cache/
+*.log
+solas.db
+solas.db-wal
+solas.db-shm
+
+# Rust build artifacts
+target/
+**/target/
+Cargo.lock
