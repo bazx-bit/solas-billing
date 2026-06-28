@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 80 80" fill="none">
+  <defs>
+    <linearGradient id="solas-brand-primary" x1="10" y1="10" x2="70" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="solas-brand-secondary" x1="70" y1="10" x2="10" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <linearGradient id="solas-brand-dark" x1="40" y1="10" x2="40" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1e1b4b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+  <circle cx="40" cy="40" r="36" fill="url(#solas-brand-dark)" stroke="url(#solas-brand-primary)" stroke-width="1.5" stroke-opacity="0.4" />
+  <path d="M20 54C20 42.9543 28.9543 34 40 34C51.0457 34 60 42.9543 60 54H48C48 49.5817 44.4183 46 40 46C35.5817 46 32 49.5817 32 54H20Z" fill="url(#solas-brand-primary)" />
+  <path d="M60 26C60 37.0457 51.0457 46 40 46C28.9543 46 20 37.0457 20 26H32C32 30.4183 35.5817 34 40 34C44.4183 34 48 30.4183 48 26H60Z" fill="url(#solas-brand-secondary)" style="mix-blend-mode: screen;" />
+  <path d="M40 22L48 34L40 46L32 34L40 22Z" fill="#ffffff" style="filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));" />
+</svg>
