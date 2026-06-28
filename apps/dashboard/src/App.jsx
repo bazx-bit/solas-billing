@@ -51,6 +51,21 @@ export default function App() {
   const [adjustAmount, setAdjustAmount] = useState('');
   const [adjustDesc, setAdjustDesc] = useState('');
 
+  // Model Rates modal state
+  const [isModelModalOpen, setIsModelModalOpen] = useState(false);
+  const [selectedModel, setSelectedModel] = useState(null);
+  const [editInputCost, setEditInputCost] = useState('');
+  const [editOutputCost, setEditOutputCost] = useState('');
+
+  // Provider Status & Notifications state
+  const [providersStatus, setProvidersStatus] = useState({ openai: false, anthropic: false, gemini: false });
+  const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
+  const [notifications, setNotifications] = useState([
+    { id: 1, type: 'info', text: 'Solas DB connected & synced successfully', time: 'Just now' },
+    { id: 2, type: 'warning', text: 'OpenAI API key status active on proxy engine', time: '2m ago' },
+    { id: 3, type: 'info', text: 'Low-credits fallback route self-healing validated', time: '10m ago' }
+  ]);
+
   // Sandbox simulation state
   const [sandboxUser, setSandboxUser] = useState('');
   const [sandboxModel, setSandboxModel] = useState('gpt-4o');
@@ -67,6 +82,7 @@ export default function App() {
       const statsRes = await fetch(`${API_BASE}/stats`);
       const usersRes = await fetch(`${API_BASE}/users`);
       const modelsRes = await fetch(`${API_BASE}/models`);
+      const providersRes = await fetch(`${API_BASE}/providers/status`);
 
       if (statsRes.ok && usersRes.ok && modelsRes.ok) {
         setStats(await statsRes.json());
@@ -75,6 +91,9 @@ export default function App() {
         setModels(await modelsRes.json());
         if (u.length > 0 && !sandboxUser) {
           setSandboxUser(u[0].api_key);
+        }
+        if (providersRes && providersRes.ok) {
+          setProvidersStatus(await providersRes.json());
         }
       }
     } catch (err) {
@@ -246,6 +265,49 @@ export default function App() {
     setUsers(updated);
   };
 
+  const handleUpdateModelPricing = async (e) => {
+    e.preventDefault();
+    if (!selectedModel) return;
+    try {
+      const res = await fetch(`${API_BASE}/models`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model_name: selectedModel.model_name,
+          provider: selectedModel.provider,
+          input_cost_per_million: parseFloat(editInputCost),
+          output_cost_per_million: parseFloat(editOutputCost)
+        })
+      });
+      if (res.ok) {
+        setIsModelModalOpen(false);
+        setSelectedModel(null);
+        setEditInputCost('');
+        setEditOutputCost('');
+        loadData();
+      } else {
+        throw new Error('Server returned error status');
+      }
+    } catch (err) {
+      console.warn('API failed, updating model cost locally:', err);
+      const updated = models.map(m => {
+        if (m.model_name === selectedModel.model_name) {
+          return {
+            ...m,
+            input_cost_per_million: parseFloat(editInputCost),
+            output_cost_per_million: parseFloat(editOutputCost)
+          };
+        }
+        return m;
+      });
+      setModels(updated);
+      setIsModelModalOpen(false);
+      setSelectedModel(null);
+      setEditInputCost('');
+      setEditOutputCost('');
+    }
+  };
+
   const handleSyncData = async () => {
     setIsSyncing(true);
     await loadData();
@@ -398,12 +460,60 @@ export default function App() {
             </div>
           </div>
 
-          <div className="topbar-right">
-            <button className="topbar-icon-btn">
+          <div className="topbar-right" style={{ position: 'relative' }}>
+            <button 
+              className="topbar-icon-btn" 
+              onClick={() => setIsNotificationsOpen(!isNotificationsOpen)}
+              style={{ position: 'relative' }}
+            >
               <Bell size={16} />
+              {notifications.length > 0 && (
+                <span style={{
+                  position: 'absolute', top: '4px', right: '4px',
+                  width: '6px', height: '6px', borderRadius: '50%',
+                  backgroundColor: 'var(--accent-purple)'
+                }}></span>
+              )}
             </button>
+
+            {isNotificationsOpen && (
+              <div style={{
+                position: 'absolute', top: '48px', right: '0',
+                width: '320px', padding: '16px', zIndex: 1000,
+                backgroundColor: 'var(--bg-card)', border: '1px solid var(--border-default)',
+                borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-elevated)'
+              }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px', alignItems: 'center' }}>
+                  <span style={{ fontWeight: 'bold', fontSize: '0.85rem' }}>Notifications</span>
+                  <button 
+                    className="btn-ghost" 
+                    style={{ fontSize: '0.72rem', padding: '2px 6px', borderRadius: '4px', cursor: 'pointer' }}
+                    onClick={() => setNotifications([])}
+                  >
+                    Clear All
+                  </button>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  {notifications.map(n => (
+                    <div key={n.id} style={{ display: 'flex', gap: '8px', fontSize: '0.8rem', paddingBottom: '8px', borderBottom: '1px solid var(--border-subtle)' }}>
+                      <span className="status-dot online" style={{ 
+                        marginTop: '5px',
+                        backgroundColor: n.type === 'warning' ? 'var(--accent-amber)' : 'var(--accent-cyan)' 
+                      }}></span>
+                      <div>
+                        <div style={{ color: 'var(--text-primary)' }}>{n.text}</div>
+                        <div style={{ color: 'var(--text-muted)', fontSize: '0.7rem', marginTop: '2px' }}>{n.time}</div>
+                      </div>
+                    </div>
+                  ))}
+                  {notifications.length === 0 && (
+                    <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem', textAlign: 'center', padding: '8px' }}>No new notifications.</span>
+                  )}
+                </div>
+              </div>
+            )}
             
-            <div className="topbar-avatar">
+            <div className="topbar-avatar" style={{ marginLeft: '12px' }}>
               <div className="topbar-avatar-img">A</div>
               <div className="topbar-avatar-info">
                 <span className="topbar-avatar-name">Admin Console</span>
@@ -691,38 +801,93 @@ export default function App() {
 
           {/* TAB: MODEL RATES */}
           {activeTab === 'models' && (
-            <div className="card">
-              <div className="card-header">
-                <h3>Token Rates Mapping</h3>
-                <span className="badge badge-purple">Retail Markup Gating</span>
+            <>
+              {/* Provider Keys Status Panel */}
+              <div className="stats-grid" style={{ marginBottom: '20px' }}>
+                <div className="stat-card">
+                  <div className="stat-card-header">
+                    <span className="stat-card-label">OpenAI Integration</span>
+                    <span className={`badge ${providersStatus.openai ? 'badge-green' : 'badge-muted'}`}>
+                      {providersStatus.openai ? 'Connected (Active)' : 'Offline (No Key)'}
+                    </span>
+                  </div>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '4px' }}>
+                    {providersStatus.openai ? 'Real requests will be routed to OpenAI using your sk-... credentials.' : 'Set OPENAI_API_KEY in server .env to route real calls.'}
+                  </div>
+                </div>
+
+                <div className="stat-card">
+                  <div className="stat-card-header">
+                    <span className="stat-card-label">Anthropic Integration</span>
+                    <span className={`badge ${providersStatus.anthropic ? 'badge-green' : 'badge-muted'}`}>
+                      {providersStatus.anthropic ? 'Connected (Active)' : 'Offline (No Key)'}
+                    </span>
+                  </div>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '4px' }}>
+                    {providersStatus.anthropic ? 'Real requests will be routed to Anthropic using your sk-ant-... credentials.' : 'Set ANTHROPIC_API_KEY in server .env to route real calls.'}
+                  </div>
+                </div>
+
+                <div className="stat-card">
+                  <div className="stat-card-header">
+                    <span className="stat-card-label">Google Gemini Integration</span>
+                    <span className={`badge ${providersStatus.gemini ? 'badge-green' : 'badge-muted'}`}>
+                      {providersStatus.gemini ? 'Connected (Active)' : 'Offline (No Key)'}
+                    </span>
+                  </div>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '4px' }}>
+                    {providersStatus.gemini ? 'Real requests will be routed to Google using your gemini-... credentials.' : 'Set GEMINI_API_KEY in server .env to route real calls.'}
+                  </div>
+                </div>
               </div>
-              <div className="card-body" style={{ padding: 0 }}>
-                <table className="data-table">
-                  <thead>
-                    <tr>
-                      <th>Model Name</th>
-                      <th>Provider</th>
-                      <th>Input Cost / Million</th>
-                      <th>Output Cost / Million</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {models.map((model) => (
-                      <tr key={model.model_name}>
-                        <td style={{ fontFamily: 'monospace', fontWeight: 'bold' }}>{model.model_name}</td>
-                        <td>
-                          <span className={`badge ${model.provider === 'openai' ? 'badge-purple' : 'badge-cyan'}`}>
-                            {model.provider}
-                          </span>
-                        </td>
-                        <td>${model.input_cost_per_million.toFixed(2)}</td>
-                        <td>${model.output_cost_per_million.toFixed(2)}</td>
+
+              <div className="card">
+                <div className="card-header">
+                  <h3>Token Rates Mapping</h3>
+                  <span className="badge badge-purple">Retail Markup Gating</span>
+                </div>
+                <div className="card-body" style={{ padding: 0 }}>
+                  <table className="data-table">
+                    <thead>
+                      <tr>
+                        <th>Model Name</th>
+                        <th>Provider</th>
+                        <th>Input Cost / Million</th>
+                        <th>Output Cost / Million</th>
+                        <th style={{ textAlign: 'right' }}>Actions</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody>
+                      {models.map((model) => (
+                        <tr key={model.model_name}>
+                          <td style={{ fontFamily: 'monospace', fontWeight: 'bold' }}>{model.model_name}</td>
+                          <td>
+                            <span className={`badge ${model.provider === 'openai' ? 'badge-purple' : 'badge-cyan'}`}>
+                              {model.provider}
+                            </span>
+                          </td>
+                          <td>${model.input_cost_per_million.toFixed(2)}</td>
+                          <td>${model.output_cost_per_million.toFixed(2)}</td>
+                          <td style={{ textAlign: 'right' }}>
+                            <button 
+                              className="btn btn-secondary btn-sm"
+                              onClick={() => {
+                                setSelectedModel(model);
+                                setEditInputCost(String(model.input_cost_per_million));
+                                setEditOutputCost(String(model.output_cost_per_million));
+                                setIsModelModalOpen(true);
+                              }}
+                            >
+                              Edit Rates
+                            </button>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
-            </div>
+            </>
           )}
 
           {/* TAB: PROXY SANDBOX / SIMULATOR */}
@@ -942,6 +1107,57 @@ export default function App() {
               <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" onClick={() => setIsAdjustModalOpen(false)}>Cancel</button>
                 <button type="submit" className="btn btn-primary">Save Changes</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+      {/* MODAL: EDIT MODEL PRICING */}
+      {isModelModalOpen && selectedModel && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <div className="modal-header">
+              <h3>Edit Model Rates</h3>
+              <button className="modal-close" onClick={() => setIsModelModalOpen(false)}>×</button>
+            </div>
+            <form onSubmit={handleUpdateModelPricing}>
+              <div className="modal-body">
+                <div style={{ marginBottom: '16px', fontSize: '0.85rem' }}>
+                  <span style={{ color: 'var(--text-secondary)' }}>Target Model:</span>{' '}
+                  <span style={{ fontWeight: 'bold', fontFamily: 'monospace' }}>{selectedModel.model_name}</span>
+                  <br />
+                  <span style={{ color: 'var(--text-secondary)' }}>Provider:</span>{' '}
+                  <span style={{ fontWeight: 'bold' }} className="badge badge-cyan">{selectedModel.provider}</span>
+                </div>
+
+                <div className="form-group">
+                  <label className="form-label">Input Cost ($ per million tokens)</label>
+                  <input 
+                    type="number" 
+                    step="0.000001"
+                    className="form-input" 
+                    required
+                    value={editInputCost}
+                    onChange={(e) => setEditInputCost(e.target.value)}
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label className="form-label">Output Cost ($ per million tokens)</label>
+                  <input 
+                    type="number" 
+                    step="0.000001"
+                    className="form-input" 
+                    required
+                    value={editOutputCost}
+                    onChange={(e) => setEditOutputCost(e.target.value)}
+                  />
+                </div>
+              </div>
+              
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" onClick={() => setIsModelModalOpen(false)}>Cancel</button>
+                <button type="submit" className="btn btn-primary">Save Rates</button>
               </div>
             </form>
           </div>

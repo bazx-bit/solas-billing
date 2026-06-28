@@ -155,6 +155,21 @@ app.delete('/api/users/:id', async (request, reply) => {
   }
 });
 
+app.get('/api/providers/status', async (request, reply) => {
+  try {
+    const openai = process.env.OPENAI_API_KEY;
+    const anthropic = process.env.ANTHROPIC_API_KEY;
+    const gemini = process.env.GEMINI_API_KEY;
+    return {
+      openai: !!openai && openai !== 'sk-your-openai-key-here' && openai.trim().length > 0,
+      anthropic: !!anthropic && anthropic !== 'sk-ant-your-anthropic-key-here' && anthropic.trim().length > 0,
+      gemini: !!gemini && gemini !== 'your-gemini-key-here' && gemini.trim().length > 0
+    };
+  } catch (error) {
+    reply.status(500).send({ error: 'Failed to get provider status' });
+  }
+});
+
 // ----------------------------------------------------
 // FETCH INTEGRATION LAYER WITH DYNAMIC TRANSLATORS
 // ----------------------------------------------------
