@@ -1,36 +1,24 @@
 <p align="center">
-  <svg width="144" height="144" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 16px 36px rgba(139, 92, 246, 0.5));">
+  <svg width="160" height="160" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 16px 36px rgba(99, 102, 241, 0.45));">
     <defs>
-      <linearGradient id="hex-grad" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stop-color="#8b5cf6" />
-        <stop offset="50%" stop-color="#d946ef" />
+      <linearGradient id="solas-brand-primary" x1="10" y1="10" x2="70" y2="70" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#a855f7" />
+        <stop offset="50%" stop-color="#6366f1" />
         <stop offset="100%" stop-color="#06b6d4" />
       </linearGradient>
-      <linearGradient id="coin-grad" x1="20" y1="20" x2="44" y2="44" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stop-color="#f59e0b" />
-        <stop offset="100%" stop-color="#ec4899" />
+      <linearGradient id="solas-brand-secondary" x1="70" y1="10" x2="10" y2="70" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#f43f5e" />
+        <stop offset="100%" stop-color="#8b5cf6" />
       </linearGradient>
-      <linearGradient id="arrow-grad" x1="16" y1="16" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stop-color="#10b981" />
-        <stop offset="100%" stop-color="#06b6d4" />
+      <linearGradient id="solas-brand-dark" x1="40" y1="10" x2="40" y2="70" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#1e1b4b" stop-opacity="0.8" />
+        <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
       </linearGradient>
     </defs>
-    <polygon points="32,4 56,18 56,46 32,60 8,46 8,18" stroke="url(#hex-grad)" stroke-width="3" stroke-linejoin="round" fill="rgba(17, 17, 24, 0.8)" />
-    <circle cx="56" cy="18" r="4.5" fill="#a855f7" />
-    <circle cx="56" cy="18" r="7" stroke="#a855f7" stroke-width="1" stroke-opacity="0.4" />
-    <line x1="32" y1="32" x2="56" y2="18" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6" />
-    <circle cx="8" cy="18" r="4.5" fill="#f97316" />
-    <circle cx="8" cy="18" r="7" stroke="#f97316" stroke-width="1" stroke-opacity="0.4" />
-    <line x1="32" y1="32" x2="8" y2="18" stroke="#f97316" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6" />
-    <circle cx="32" cy="60" r="4.5" fill="#06b6d4" />
-    <circle cx="32" cy="60" r="7" stroke="#06b6d4" stroke-width="1" stroke-opacity="0.4" />
-    <line x1="32" y1="32" x2="32" y2="60" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6" />
-    <path d="M 45 32 A 13 13 0 0 1 19 32" stroke="url(#arrow-grad)" stroke-width="2.5" stroke-linecap="round" />
-    <path d="M 19 32 A 13 13 0 0 1 45 32" stroke="url(#hex-grad)" stroke-width="2.5" stroke-linecap="round" />
-    <path d="M 48 30 L 45 35 L 42 30" fill="url(#arrow-grad)" stroke="url(#arrow-grad)" stroke-width="1" stroke-linejoin="round" />
-    <path d="M 16 34 L 19 29 L 22 34" fill="url(#hex-grad)" stroke="url(#hex-grad)" stroke-width="1" stroke-linejoin="round" />
-    <circle cx="32" cy="32" r="9.5" fill="url(#coin-grad)" stroke="#ffffff" stroke-width="1.5" />
-    <path d="M32 26V38 M30 28.5H33.5C35 28.5 35 31 33.5 32H30.5C29 32 29 34.5 30.5 35.5H34" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="40" cy="40" r="36" fill="url(#solas-brand-dark)" stroke="url(#solas-brand-primary)" stroke-width="1.5" stroke-opacity="0.4" />
+    <path d="M20 54C20 42.9543 28.9543 34 40 34C51.0457 34 60 42.9543 60 54H48C48 49.5817 44.4183 46 40 46C35.5817 46 32 49.5817 32 54H20Z" fill="url(#solas-brand-primary)" />
+    <path d="M60 26C60 37.0457 51.0457 46 40 46C28.9543 46 20 37.0457 20 26H32C32 30.4183 35.5817 34 40 34C44.4183 34 48 30.4183 48 26H60Z" fill="url(#solas-brand-secondary)" style="mix-blend-mode: screen;" />
+    <path d="M40 22L48 34L40 46L32 34L40 22Z" fill="#ffffff" style="filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));" />
   </svg>
 </p>
 
@@ -42,11 +30,10 @@
 ---
 
 ## 🎨 Architectural Identity & Logo Design
-The hand-coded SVG vector logo represents the structural pipeline of Solas Billing:
-*   **The Outer Hexagonal Shield:** The secure reverse-proxy gateway container that intercepts, validates, and gates incoming API queries.
-*   **The Three Outer Nodes:** LLM provider connections (OpenAI, Anthropic, Gemini) linked dynamically to the proxy gateway core.
-*   **The Interlocking Circular Arrows:** Self-healing fallback loops, swap routing when token rates or credit balances trigger limits.
-*   **The Central Gold Coin:** The transactional credit ledger, deducting retail token costs directly on successful completions.
+The premium geometric brand emblem represents the structural design of Solas Billing:
+*   **The Overlapping Gradient swooshes (Purple & Pink/Blue):** Represents the flow of request proxying, showing intercept routing and self-healing backup loops.
+*   **The Glowing White Core Diamond:** Represents the secure gated validation gateway ensuring transactions are fully credited before execution.
+*   **The Dark Orbiting Base Ring:** Represents the persistent SQLite WAL transaction ledger containing the billing state.tions.
 
 ---
 

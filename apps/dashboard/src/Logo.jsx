@@ -5,101 +5,64 @@ export default function Logo({ size = 32, className = '' }) {
     <svg 
       width={size} 
       height={size} 
-      viewBox="0 0 64 64" 
+      viewBox="0 0 80 80" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      style={{ filter: 'drop-shadow(0 4px 12px rgba(139, 92, 246, 0.4))' }}
     >
       <defs>
-        {/* Core Gradients */}
-        <linearGradient id="hex-grad" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#8b5cf6" /> {/* Purple */}
-          <stop offset="50%" stopColor="#d946ef" /> {/* Magenta */}
+        {/* Deep tech gradients */}
+        <linearGradient id="solas-brand-primary" x1="10" y1="10" x2="70" y2="70" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#a855f7" /> {/* Vibrant Purple */}
+          <stop offset="50%" stopColor="#6366f1" /> {/* Indigo */}
           <stop offset="100%" stopColor="#06b6d4" /> {/* Cyan */}
         </linearGradient>
 
-        <linearGradient id="coin-grad" x1="20" y1="20" x2="44" y2="44" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#f59e0b" /> {/* Gold */}
-          <stop offset="100%" stopColor="#ec4899" /> {/* Pinkish orange */}
+        <linearGradient id="solas-brand-secondary" x1="70" y1="10" x2="10" y2="70" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#f43f5e" /> {/* Rose */}
+          <stop offset="100%" stopColor="#8b5cf6" /> {/* Violet */}
         </linearGradient>
 
-        <linearGradient id="arrow-grad" x1="16" y1="16" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#10b981" /> {/* Green */}
-          <stop offset="100%" stopColor="#06b6d4" /> {/* Cyan */}
+        <linearGradient id="solas-brand-dark" x1="40" y1="10" x2="40" y2="70" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#1e1b4b" stopOpacity="0.8" />
+          <stop offset="100%" stopColor="#0f172a" stopOpacity="0.9" />
         </linearGradient>
 
-        {/* Glow filter */}
-        <filter id="glow-heavy" x="-30%" y="-30%" width="160%" height="160%">
-          <feGaussianBlur stdDeviation="2" result="blur" />
-          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        <filter id="premium-shadow" x="-20%" y="-20%" width="150%" height="150%">
+          <feDropShadow dx="0" dy="8" stdDeviation="6" floodColor="#6366f1" floodOpacity="0.3" />
         </filter>
       </defs>
 
-      {/* 1. Outer Gateway: Hexagonal Shield (Gated Security & Proxy) */}
-      <polygon 
-        points="32,4 56,18 56,46 32,60 8,46 8,18" 
-        stroke="url(#hex-grad)" 
-        strokeWidth="3" 
-        strokeLinejoin="round"
-        fill="rgba(17, 17, 24, 0.6)"
-      />
-
-      {/* 2. Provider Nodes (Small colored dots representing OpenAI, Anthropic, Gemini connected to proxy) */}
-      {/* OpenAI Node (Top Right) */}
-      <circle cx="56" cy="18" r="4.5" fill="#a855f7" />
-      <circle cx="56" cy="18" r="7" stroke="#a855f7" strokeWidth="1" strokeOpacity="0.4" />
-      <line x1="32" y1="32" x2="56" y2="18" stroke="#a855f7" strokeWidth="1.5" strokeDasharray="3 3" opacity="0.6" />
-
-      {/* Anthropic Node (Left) */}
-      <circle cx="8" cy="18" r="4.5" fill="#f97316" />
-      <circle cx="8" cy="18" r="7" stroke="#f97316" strokeWidth="1" strokeOpacity="0.4" />
-      <line x1="32" y1="32" x2="8" y2="18" stroke="#f97316" strokeWidth="1.5" strokeDasharray="3 3" opacity="0.6" />
-
-      {/* Gemini Node (Bottom) */}
-      <circle cx="32" cy="60" r="4.5" fill="#06b6d4" />
-      <circle cx="32" cy="60" r="7" stroke="#06b6d4" strokeWidth="1" strokeOpacity="0.4" />
-      <line x1="32" y1="32" x2="32" y2="60" stroke="#06b6d4" strokeWidth="1.5" strokeDasharray="3 3" opacity="0.6" />
-
-      {/* 3. Self-Healing Fallback: Interlocking Routing Loop Arrows */}
-      {/* Outer Routing Circle Path */}
-      <path 
-        d="M 45 32 A 13 13 0 0 1 19 32" 
-        stroke="url(#arrow-grad)" 
-        strokeWidth="2.5" 
-        strokeLinecap="round" 
-      />
-      <path 
-        d="M 19 32 A 13 13 0 0 1 45 32" 
-        stroke="url(#hex-grad)" 
-        strokeWidth="2.5" 
-        strokeLinecap="round"
-      />
-      
-      {/* Arrow Head 1 (Clockwise swap indicator) */}
-      <path d="M 48 30 L 45 35 L 42 30" fill="url(#arrow-grad)" stroke="url(#arrow-grad)" strokeWidth="1" strokeLinejoin="round" />
-      
-      {/* Arrow Head 2 (Clockwise swap indicator) */}
-      <path d="M 16 34 L 19 29 L 22 34" fill="url(#hex-grad)" stroke="url(#hex-grad)" strokeWidth="1" strokeLinejoin="round" />
-
-      {/* 4. Token Ledger: Central Gilded Credit Coin */}
+      {/* Outer base container ring */}
       <circle 
-        cx="32" 
-        cy="32" 
-        r="9.5" 
-        fill="url(#coin-grad)" 
-        stroke="#ffffff"
+        cx="40" 
+        cy="40" 
+        r="36" 
+        fill="url(#solas-brand-dark)" 
+        stroke="url(#solas-brand-primary)" 
         strokeWidth="1.5"
-        filter="url(#glow-heavy)"
+        strokeOpacity="0.4"
       />
-      
-      {/* Dollar Sign on Coin */}
-      <path 
-        d="M32 26V38 M30 28.5H33.5C35 28.5 35 31 33.5 32H30.5C29 32 29 34.5 30.5 35.5H34" 
-        stroke="#ffffff" 
-        strokeWidth="1.5" 
-        strokeLinecap="round" 
-        strokeLinejoin="round" 
+
+      {/* Geometric Ribbon 1 (Left Swoosh / Flow routing blade) */}
+      <path
+        d="M20 54C20 42.9543 28.9543 34 40 34C51.0457 34 60 42.9543 60 54H48C48 49.5817 44.4183 46 40 46C35.5817 46 32 49.5817 32 54H20Z"
+        fill="url(#solas-brand-primary)"
+        filter="url(#premium-shadow)"
+      />
+
+      {/* Geometric Ribbon 2 (Right Swoosh / Fallback loop blade) */}
+      <path
+        d="M60 26C60 37.0457 51.0457 46 40 46C28.9543 46 20 37.0457 20 26H32C32 30.4183 35.5817 34 40 34C44.4183 34 48 30.4183 48 26H60Z"
+        fill="url(#solas-brand-secondary)"
+        style={{ mixBlendMode: 'screen' }}
+      />
+
+      {/* Central Diamond core (representing Gated Token gateway) */}
+      <path
+        d="M40 22L48 34L40 46L32 34L40 22Z"
+        fill="#ffffff"
+        style={{ filter: 'drop-shadow(0 0 6px rgba(255, 255, 255, 0.8))' }}
       />
     </svg>
   );
