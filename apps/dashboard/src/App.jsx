@@ -3,26 +3,17 @@ import {
   LayoutDashboard, 
   Users as UsersIcon, 
   Coins, 
-  Code, 
   Plus, 
   RefreshCw, 
-  ArrowUpRight, 
   Terminal, 
   Key, 
   Trash2, 
-  AlertCircle,
-  ToggleLeft,
-  ToggleRight,
   TrendingDown,
-  ShieldAlert,
   Search,
   Bell,
-  ExternalLink,
   Copy,
   Check,
-  Cpu,
-  Layers,
-  Database
+  Cpu
 } from 'lucide-react';
 import Logo from './Logo';
 
@@ -98,7 +89,7 @@ export default function App() {
         }
       }
     } catch (err) {
-      console.warn('Server offline or DB syncing. Using mock fallback data.');
+      console.warn('Server offline or DB syncing. Using mock fallback data.', err);
       setupMockData();
     }
   };
@@ -253,7 +244,7 @@ export default function App() {
         return;
       }
     } catch (err) {
-      console.warn('Fallback update endpoint failed, updating locally.');
+      console.warn('Fallback update endpoint failed, updating locally.', err);
     }
     
     // Mock local state fallback update
