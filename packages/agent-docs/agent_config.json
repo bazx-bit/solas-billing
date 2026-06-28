@@ -1,0 +1,6 @@
+{
+  "agent_profile": {
+    "role": "billing_assistant",
+    "description": "Exposes billing configuration options to MCP servers for agent queries."
+  }
+}

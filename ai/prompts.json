@@ -1,0 +1,11 @@
+{
+  "routing_rules": {
+    "system_instruction": "You are routing requests based on credit limit. If credits are low, recommend downgrading model sizes to prevent session failures.",
+    "fallback_threshold_percent": 20,
+    "fallback_model_pairs": {
+      "gpt-4o": "gpt-4o-mini",
+      "claude-3-5-sonnet": "claude-3-haiku",
+      "gemini-1.5-pro": "gemini-1.5-flash"
+    }
+  }
+}

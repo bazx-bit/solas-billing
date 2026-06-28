@@ -1,0 +1,10 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/*.db": true
+  }
+}

@@ -1,7 +1,7 @@
 # Graph Report - solas-billing  (2026-06-29)
 
 ## Corpus Check
-- 22 files · ~7,684 words
+- 22 files · ~8,661 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9150e1a8`
+- Built from commit: `28359bc6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -111,7 +111,7 @@ Cohesion: 0.33
 Nodes (5): description, main, name, type, version
 
 ## Knowledge Gaps
-- **86 isolated node(s):** `name`, `version`, `description`, `main`, `type` (+81 more)
+- **86 isolated node(s):** `__filename`, `__dirname`, `dbPath`, `app`, `name` (+81 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -120,7 +120,7 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `devDependencies` connect `Community 9` to `Community 1`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **What connects `name`, `version`, `description` to the rest of the system?**
+- **What connects `__filename`, `__dirname`, `dbPath` to the rest of the system?**
   _86 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._

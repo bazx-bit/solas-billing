@@ -1,0 +1,29 @@
+openapi: 3.0.3
+info:
+  title: Solas Billing Proxy API
+  description: API documentation for Solas Billing Proxy routing and user wallet management.
+  version: 1.0.0
+paths:
+  /v1/chat/completions:
+    post:
+      summary: Intercept chat completion request
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Successful completion
+        '402':
+          description: Payment Required (Insufficient funds)
+        '429':
+          description: Rate limit exceeded
+  /api/users:
+    get:
+      summary: Retrieve all user wallets
+      responses:
+        '200':
+          description: A list of users
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
